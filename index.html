@@ -28,6 +28,7 @@
     @media(max-width:1000px){.wrap{width:calc(100% - 56px)}.hero{gap:40px}.hero-visual>img{height:510px}h1{font-size:64px}.header-links{gap:22px}.strip-items{gap:15px}.experience{gap:44px;padding:44px}.hero-actions{gap:10px}.hero-actions .text-link{padding-left:0}}
     @media(max-width:720px){.wrap{width:calc(100% - 40px)}.site-header{min-height:78px;gap:20px}.wordmark{font-size:21px}.header-links{gap:0}.header-links>a:not(.entry){display:none}.header-links .entry{font-size:11px;gap:13px}.hero{grid-template-columns:1fr;gap:30px;padding:36px 0}.hero-copy{padding:7px 0 0}.hero h1{font-size:clamp(43px,12.2vw,60px);max-width:440px}.hero-copy .eyebrow{font-size:9px;margin-bottom:21px}.hero-description{font-size:14px;margin:22px 0 24px;max-width:345px}.hero-actions{gap:18px}.personal-note{margin-top:16px;font-size:10px}.hero-visual>img{height:390px}.photo-caption{padding:75px 23px 24px}.photo-caption p{font-size:29px}.visual-foot{font-size:8px;gap:12px}.intro-strip{align-items:start;flex-direction:column;gap:13px;padding:20px 0}.intro-strip>p{font-size:12px}.strip-items{gap:16px;flex-wrap:wrap;font-size:9px}.worlds{padding:57px 0}.section-head{align-items:start;flex-direction:column;gap:14px;margin-bottom:25px}.section-head h2{font-size:39px}.section-head .eyebrow{margin-bottom:12px}.world-grid{grid-template-columns:1fr;gap:30px}.world-image{aspect-ratio:1.5}.world-image img{width:65%;height:90%}.world-title{margin-top:14px}.world-title h3{font-size:18px}.world-card p{font-size:12px}.experience{grid-template-columns:1fr;gap:32px;padding:30px 24px}.experience h2{font-size:39px}.experience-intro>p:last-child{max-width:100%;margin-top:18px}.steps li{gap:13px;padding:21px 0}.closing{padding:64px 0}.closing h2{font-size:40px}.closing p{font-size:13px;max-width:310px}.footer-top{align-items:start;flex-direction:column;gap:20px}.footer-links{gap:22px;flex-wrap:wrap}.footer-note{margin-top:20px}.site-footer{padding-bottom:28px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+  .new-experiences{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.new-experiences>a{padding:24px;border:1px solid var(--line);border-radius:9px;min-height:155px;background:#fbfcf8}.new-experiences h3{font-size:15px;font-weight:500;margin-bottom:12px}.new-experiences h3 span{float:right}.new-experiences p{font-size:12px;line-height:1.8;color:var(--muted)}@media(max-width:850px){.new-experiences{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:420px){.new-experiences>a{padding:20px 16px}.new-experiences h3{font-size:14px}.new-experiences p{font-size:11px}}
   </style>
 </head>
 <body>
@@ -39,6 +40,7 @@
         <a href="#experiencia">A experiência</a>
         <a href="elixir.html#explore">Fragrâncias</a>
         <a href="elixir.html#ingredients">Notas</a>
+        <a href="elixir.html#lab">Laboratório</a>
         <a class="entry" href="elixir.html#profile">Meu espaço <span class="arrow" aria-hidden="true">↗</span></a>
       </nav>
     </header>
@@ -49,10 +51,10 @@
           <h1 id="hero-title">Seu gosto tem<br>uma <em>história.</em></h1>
           <p class="hero-description">Alguns perfumes parecem dizer algo sobre você. Outros abrem um caminho novo. Descubra o que conecta essas escolhas.</p>
           <div class="hero-actions">
-            <a class="button" href="elixir.html?discover=1#profile">Descobrir minha assinatura <span class="arrow" aria-hidden="true">↗</span></a>
-            <a class="text-link" href="elixir.html#explore">Explorar fragrâncias <span aria-hidden="true">→</span></a>
+            <a class="button" href="elixir.html#lab">Testar a nova experiência <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link" href="elixir.html?discover=1#profile">Descobrir minha assinatura <span aria-hidden="true">→</span></a>
           </div>
-          <p class="personal-note">No seu tempo. Sem cadastro para começar.</p>
+          <p class="personal-note">Prateleiras, pessoas e novas descobertas. Sem cadastro para começar.</p>
         </div>
         <figure class="hero-visual">
           <img src="assets/products/forest.jpg" alt="Luz atravessando uma floresta verde, entre folhas e madeiras" width="1400" height="933" fetchpriority="high">
@@ -77,6 +79,7 @@
           <li><span class="step-no">03</span><div><h3>Guarde suas descobertas.</h3><p>Organize sua coleção, salve curiosidades e volte quando quiser conhecer outra possibilidade.</p></div></li>
         </ol>
       </section>
+      <section class="worlds" aria-labelledby="new-title"><header class="section-head"><div><p class="eyebrow">A nova edição do ELIXIR</p><h2 id="new-title">Mais espaço para experimentar.</h2></div><a class="text-link" href="elixir.html#lab">Abrir o laboratório ↗</a></header><div class="new-experiences"><a href="elixir.html#collection"><h3>Sua prateleira <span aria-hidden="true">↗</span></h3><p>Organize, marque experiências e crie suas próprias listas.</p></a><a href="elixir.html#people"><h3>Novas pessoas <span aria-hidden="true">↗</span></h3><p>Escolha quem seguir e crie perfis fictícios para testar.</p></a><a href="elixir.html#circle"><h3>Meu círculo <span aria-hidden="true">↗</span></h3><p>Guarde gostos e ideias de presentes em um espaço privado.</p></a><a href="elixir.html#discovery"><h3>Fora da bolha <span aria-hidden="true">↗</span></h3><p>Descubra opções familiares, de transição e diferentes.</p></a><a href="elixir.html#today"><h3>Usar hoje <span aria-hidden="true">↗</span></h3><p>Escolha um momento e explore os perfumes que possui.</p></a><a href="elixir.html#diary"><h3>Diário olfativo <span aria-hidden="true">↗</span></h3><p>Registre usos, memórias e o que surpreendeu.</p></a><a href="elixir.html#ingredients"><h3>Novas notas <span aria-hidden="true">↗</span></h3><p>Explore 44 notas e acordes, com novas ilustrações.</p></a><a href="elixir.html#connect"><h3>ELIXIR Connect <span aria-hidden="true">↗</span></h3><p>Teste um atendimento local, com autorização e revogação.</p></a></div></section>
       <section class="closing" aria-labelledby="closing-title"><p class="eyebrow">Seu gosto continua em movimento</p><h2 id="closing-title">A próxima afinidade<br>pode surpreender.</h2><p>Você não precisa saber explicar tudo o que gosta. Podemos começar com uma sensação.</p><a class="button" href="elixir.html?discover=1#profile">Começar minha descoberta <span class="arrow" aria-hidden="true">↗</span></a></section>
     </main>
     <footer class="site-footer"><div class="footer-top"><a class="wordmark" href="./">ELIXIR</a><nav class="footer-links" aria-label="Mais sobre o ELIXIR"><a href="elixir.html#explore">Catálogo</a><a href="elixir.html#ingredients">Notas e ingredientes</a><a href="elixir-apresentacao.html">Conheça o projeto</a></nav></div><p class="footer-note">Uma experiência de descoberta em evolução. Suas preferências e coleções ficam neste navegador, sem sincronização entre aparelhos. Recomendações são estimativas para orientar a experimentação. Os perfis e as interações da comunidade são demonstrativos. <a href="elixir.html#person/vincenzo">Conhecer a demonstração</a>.</p></footer>

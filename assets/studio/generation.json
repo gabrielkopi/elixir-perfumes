@@ -1,0 +1,126 @@
+{
+  "createdAt": "2026-10-31",
+  "description": "Ilustrações de notas olfativas, sem comprovação de composição ou identificação botânica. Exportações WebP com alpha para o site.",
+  "images": [
+    {
+      "id": "iris",
+      "file": "assets/ingredients/iris-v3.webp",
+      "generatedWith": "built-in image_gen",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "webSize": [
+        512,
+        512
+      ],
+      "transparent": true,
+      "prompt": "Use case: product-mockup. Asset type: a single square ingredient illustration for the ELIXIR fragrance library. Subject: a single violet-blue iris flower with elegant thin petals beside a small piece of beige dried iris rhizome. Style: refined realistic 3D botanical still life, tactile natural materials, soft studio light, subtle natural shadows on the objects only. Composition: a single isolated centered arrangement, all objects completely inside frame with generous clear margins, transparent background, no ground plane, no lettering, no typography, no frame, no watermark. Match the understated perfume ingredient catalogue aesthetic, recognizable at 160px. This is an illustrative scent reference, not a medical or scientific identification plate."
+    },
+    {
+      "id": "figo",
+      "file": "assets/ingredients/figo-v3.webp",
+      "generatedWith": "built-in image_gen",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "webSize": [
+        512,
+        512
+      ],
+      "transparent": true,
+      "prompt": "Use case: product-mockup. Asset type: a single square ingredient illustration for the ELIXIR fragrance library. Subject: one ripe purple fig cut in half, a second whole fig and one sculptural green fig leaf. Style: refined realistic 3D botanical still life, tactile natural materials, soft studio light, subtle natural shadows on the objects only. Composition: a single isolated centered arrangement, all objects completely inside frame with generous clear margins, transparent background, no ground plane, no lettering, no typography, no frame, no watermark. Match the understated perfume ingredient catalogue aesthetic, recognizable at 160px. This is an illustrative scent reference, not a medical or scientific identification plate."
+    },
+    {
+      "id": "coco",
+      "file": "assets/ingredients/coco-v3.webp",
+      "generatedWith": "built-in image_gen",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "webSize": [
+        512,
+        512
+      ],
+      "transparent": true,
+      "prompt": "Use case: product-mockup. Asset type: a single square ingredient illustration for the ELIXIR fragrance library. Subject: a freshly split coconut with white flesh, brown fibrous shell and a small coconut wedge. Style: refined realistic 3D botanical still life, tactile natural materials, soft studio light, subtle natural shadows on the objects only. Composition: a single isolated centered arrangement, all objects completely inside frame with generous clear margins, transparent background, no ground plane, no lettering, no typography, no frame, no watermark. Match the understated perfume ingredient catalogue aesthetic, recognizable at 160px. This is an illustrative scent reference, not a medical or scientific identification plate."
+    },
+    {
+      "id": "cafe",
+      "file": "assets/ingredients/cafe-v3.webp",
+      "generatedWith": "built-in image_gen",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "webSize": [
+        512,
+        512
+      ],
+      "transparent": true,
+      "prompt": "Use case: product-mockup. Asset type: a single square ingredient illustration for the ELIXIR fragrance library. Subject: a compact refined pile of roasted coffee beans with one small coffee branch bearing two green leaves. Style: refined realistic 3D botanical still life, tactile natural materials, soft studio light, subtle natural shadows on the objects only. Composition: a single isolated centered arrangement, all objects completely inside frame with generous clear margins, transparent background, no ground plane, no lettering, no typography, no frame, no watermark. Match the understated perfume ingredient catalogue aesthetic, recognizable at 160px. This is an illustrative scent reference, not a medical or scientific identification plate."
+    },
+    {
+      "id": "cha-verde",
+      "file": "assets/ingredients/cha-verde-v3.webp",
+      "generatedWith": "built-in image_gen",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "webSize": [
+        512,
+        512
+      ],
+      "transparent": true,
+      "prompt": "Use case: product-mockup. Asset type: a single square ingredient illustration for the ELIXIR fragrance library. Subject: a graceful fresh green tea sprig with young Camellia sinensis leaves beside a small pile of dried curled green tea leaves, no cup. Style: refined realistic 3D botanical still life, tactile natural materials, soft studio light, subtle natural shadows on the objects only. Composition: single isolated centered arrangement, all objects fully inside frame with generous clear margins, transparent background, no ground plane, no lettering, no typography, no frame, no watermark. Match an understated premium perfume ingredient catalogue, recognizable at 160px. Illustrative scent reference, not a scientific identification plate."
+    },
+    {
+      "id": "musgo-de-carvalho",
+      "file": "assets/ingredients/musgo-de-carvalho-v3.webp",
+      "generatedWith": "built-in image_gen",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "webSize": [
+        512,
+        512
+      ],
+      "transparent": true,
+      "prompt": "Use case: product-mockup. Asset type: a single square ingredient illustration for the ELIXIR fragrance library. Subject: a small sculptural piece of oak bark with branching pale grey-green oakmoss lichen, Evernia prunastri inspired, no grass, no landscape. Style: refined realistic 3D botanical still life, tactile natural materials, soft studio light, subtle natural shadows on the objects only. Composition: single isolated centered arrangement, all objects fully inside frame with generous clear margins, transparent background, no ground plane, no lettering, no typography, no frame, no watermark. Match an understated premium perfume ingredient catalogue, recognizable at 160px. Illustrative scent reference, not a scientific identification plate."
+    },
+    {
+      "id": "pera",
+      "file": "assets/ingredients/pera-v3.webp",
+      "generatedWith": "built-in image_gen",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "webSize": [
+        512,
+        512
+      ],
+      "transparent": true,
+      "prompt": "Use case: product-mockup. Asset type: a single square ingredient illustration for the ELIXIR fragrance library. Subject: a ripe pale-green pear, a half pear exposing the pale flesh and seeds, and a single small green leaf. Style: refined realistic 3D botanical still life, tactile natural materials, soft studio light, subtle natural shadows on the objects only. Composition: single isolated centered arrangement, all objects fully inside frame with generous clear margins, transparent background, no ground plane, no lettering, no typography, no frame, no watermark. Match an understated premium perfume ingredient catalogue, recognizable at 160px. Illustrative scent reference, not a scientific identification plate."
+    },
+    {
+      "id": "cassis",
+      "file": "assets/ingredients/cassis-v3.webp",
+      "generatedWith": "built-in image_gen",
+      "nativeSize": [
+        1254,
+        1254
+      ],
+      "webSize": [
+        512,
+        512
+      ],
+      "transparent": true,
+      "prompt": "Use case: product-mockup. Asset type: a single square ingredient illustration for the ELIXIR fragrance library. Subject: a small cluster of glossy dark purple blackcurrant berries on a twig with one serrated lobed green leaf. Style: refined realistic 3D botanical still life, tactile natural materials, soft studio light, subtle natural shadows on the objects only. Composition: single isolated centered arrangement, all objects fully inside frame with generous clear margins, transparent background, no ground plane, no lettering, no typography, no frame, no watermark. Match an understated premium perfume ingredient catalogue, recognizable at 160px. Illustrative scent reference, not a scientific identification plate."
+    }
+  ]
+}

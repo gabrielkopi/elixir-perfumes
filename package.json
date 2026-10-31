@@ -1,0 +1,16 @@
+{
+  "name": "elixir-studio",
+  "version": "3.0.0",
+  "private": true,
+  "description": "ELIXIR: descoberta e simulações locais de experiências olfativas",
+  "scripts": {
+    "test": "node verify-studio.cjs",
+    "check": "node --check assets/studio.js && node --check assets/studio-actions.js"
+  },
+  "devDependencies": {
+    "jsdom": "30.1.3"
+  },
+  "engines": {
+    "node": ">=24.15.0"
+  }
+}
