@@ -1,3 +1,19 @@
+## Catálogo v4
+
+[Abrir catálogo publicado](https://gabrielkopi.github.io/elixir-perfumes/elixir.html?v=catalog4#explore)
+
+280 registros no aplicativo: 106 WePink, 37 O Boticário, 26 Guerlain, 22 Rabanne, 6 Natura, Vibrato da Sospiro e outras marcas. A edição adiciona 179 registros aos 101 existentes (catálogo anterior e Exclusivo da comunidade).
+
+As notas possuem referências individuais. Foram recuperadas 94 pirâmides da aba oficial WePink; os outros 12 registros usam apenas destaques efetivamente citados na descrição oficial. A cobertura de 106 corresponde à categoria de perfumes individuais consultada em 31/10/2026, sem kits, roll-ons e body splashes; não afirma cobrir todos os lançamentos históricos. As fotos WePink são oficiais. Material O Boticário sem data não confirma disponibilidade atual. Classificações Scento são identificadas como classificação de catálogo, e famílias ausentes não são deduzidas como fatos.
+
+A nova página oferece notas ilustradas, filtros por camada, gráfico de barras/radar editorial, comparação, favoritos, prateleira e percepção pessoal de 0 a 5. O gráfico não mede intensidade na pele nem percentuais de ingredientes. Símbolos são ilustrativos e fotos indisponíveis permanecem identificadas. Percepções ficam no navegador e são preservadas na exportação/importação.
+
+Fontes: [WePink](https://www.wepink.com.br/), [O Boticário](https://static-cms.internacional.grupoboticario.digital/SEGREDINHO_Perfumaria_completa_2ff6b13fd2.pdf), [Natura](https://static.rede.natura.net/html/br/site_cf/10_2023/FAQs/FAQ-homem2.html), [Sospiro](https://sospirointernational.com/products/vibrato), [Scento CC BY 4.0](https://github.com/Scento-com/perfume-dataset). Dados por produto em `assets/catalog-expanded.json`.
+
+Validação: `npm run check` e `npm test`, incluindo filtros, paginação, fontes, arquivos de imagem, camadas, radar, percepção, importação e renderização de todos os perfumes.
+
+---
+
 # ELIXIR
 
 **Site:** https://gabrielkopi.github.io/elixir-perfumes/
