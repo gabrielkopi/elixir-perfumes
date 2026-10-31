@@ -130,6 +130,36 @@ async function check(name, test) { await test(); results.push(name); }
     await click('[data-lab=ingredient-like][data-value=avoid]'); assert(!state().preferences.likedNotes.includes('Íris')); assert(state().preferences.dislikedNotes.includes('Íris'));
     assert.equal(errors.length, 0, errors.join('\n'));
   });
+  await check('Expanded catalogue has unique products, real note references and local image files', async () => {
+    const perfumes=run('PERFUMES');assert.equal(perfumes.length,280);assert.equal(new Set(perfumes.map(p=>p.id)).size,280);
+    const expanded=run('CATALOG_EXPANDED.products');assert.equal(expanded.length,179);
+    assert.equal(expanded.filter(p=>p.brand==='WePink').length,106);
+    for(const p of expanded){assert.match(p.source,/^https:\/\//);assert(Object.values(p.notes).some(a=>a.length),p.id);if(p.image)assert(fs.existsSync(path.join(root,p.image)),p.image);}
+    const v=perfumes.find(p=>p.id==='sospiro-vibrato');assert.equal(v.notes.top.join('|'),'Toranja|Bergamota|Mandarina|Gengibre|Alecrim');assert.equal(v.notes.base.length,6);
+    const lovely=expanded.find(p=>p.name==='Obsessed Lovely');assert(lovely.notes.top.includes('Figo Leitoso'));assert.equal(lovely.family,'Frutado Floral');
+  });
+  await check('Brand, note search, sorting and pagination work across the expanded catalogue', async () => {
+    page('explore');await click('[data-scent=brand][data-value=WePink]');assert.equal(run('Minimal.catalogItems().length'),106);assert.equal(doc.querySelectorAll('#catalog-grid .product-card').length,24);
+    await click('[data-scent=more]');assert.equal(doc.querySelectorAll('#catalog-grid .product-card').length,48);
+    const input=query('#catalog-search');input.value='Obsessed Lovely';input.dispatchEvent(new win.Event('input',{bubbles:true}));assert.equal(doc.querySelectorAll('#catalog-grid .product-card').length,1);assert(doc.querySelector('.scent-results').textContent.startsWith('1 '));
+    await click('[data-scent=clear]');assert.equal(run('Minimal.catalogItems().length'),280);run("query='paco rabanne';");assert.equal(run('Minimal.catalogItems().length'),22);run("query='';");
+  });
+  await check('Perfume details switch layers and graphs without changing the route', async () => {
+    run("route={page:'perfume',id:'sospiro-vibrato'};render();");assert.equal(doc.querySelectorAll('.scent-note-tier').length,3);assert(query('.scent-family').textContent.includes('Não declarada'));
+    await click('[data-scent=stage][data-value=base]');assert.equal(doc.querySelectorAll('.scent-note-tier').length,1);assert(query('#scent-note-content').textContent.includes('Fava tonka'));assert(!query('#scent-note-content').textContent.includes('Toranja'));
+    await click('[data-scent=chart][data-value=radar]');assert(query('.scent-radar').getAttribute('aria-label').includes('editorial'));assert.equal(run('route.id'),'sospiro-vibrato');assert(doc.body.textContent.includes('Não representa porcentagem'));
+  });
+  await check('Personal perceptions persist independently of the reference, rating and ownership', async () => {
+    const rating=state().ratings['sospiro-vibrato'],oldNotes=JSON.stringify(run("byId('sospiro-vibrato').notes"));
+    query('#scent-perception [name="0"]').value='5';query('#scent-perception [name="7"]').value='0';await submit('scent-perception');
+    assert.equal(state().lab.perceptions['sospiro-vibrato'][0],5);assert.equal(state().lab.perceptions['sospiro-vibrato'][7],0);assert.equal(state().lab.perceptions['sospiro-vibrato'][3],undefined);assert(query('.scent-personal-bars').textContent.includes('sua percepção'));
+    run('render();');assert.equal(query('#scent-perception [name="0"]').value,'5');assert.equal(state().ratings['sospiro-vibrato'],rating);assert.equal(JSON.stringify(run("byId('sospiro-vibrato').notes")),oldNotes);
+    const imported=S.validateImport({product:'ELIXIR',version:3,state:S.snapshot()});assert.equal(imported.lab.perceptions['sospiro-vibrato'][7],0);
+  });
+  await check('Every perfume detail renders in reduced motion without runtime errors', async () => {
+    for(const p of run('PERFUMES')){run(`route={page:'perfume',id:${JSON.stringify(p.id)}};render();`);assert(query('.scent-hero-copy h1').textContent.length);}
+    assert.equal(errors.length,0,errors.join('\n'));
+  });
   process.stdout.write(JSON.stringify({ passed: results.length, checks: results, runtimeErrors: errors }, null, 2) + '\n');
   dom.window.close();
 })().catch(error => { process.stderr.write(error.stack + '\n'); dom.window.close(); process.exitCode = 1; });
