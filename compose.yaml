@@ -1,0 +1,19 @@
+services:
+  elixir:
+    build: .
+    image: elixir-prakyer:local
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${ELIXIR_PORT:-8087}:8080"
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
