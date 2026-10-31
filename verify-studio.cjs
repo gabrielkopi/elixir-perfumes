@@ -33,8 +33,8 @@ async function check(name, test) { await test(); results.push(name); }
 
 (async () => {
   await wait();
-  await check('Fresh installation: 44 notes, 12 people and no invented personal taste', async () => {
-    assert.equal(run('INGREDIENTS.length'), 44); assert.equal(run('Social.people.length'), 12);
+  await check('Fresh installation: expanded notes, 24 people and no invented personal taste', async () => {
+    assert(run('INGREDIENTS.length') >= 44); assert.equal(run('Social.people.length'), 24);
     assert.equal(Object.keys(state().ratings).length, 0); assert.equal(state().favorites.length, 0);
     assert(doc.body.textContent.includes('Mais jeitos de'));
     assert(doc.querySelector('.floating-dock [data-page=lab]'));
@@ -64,7 +64,7 @@ async function check(name, test) { await test(); results.push(name); }
     query('#studio-person-form [name=bio]').value = 'Uma pessoa fictícia'; S.ui.personDraft.favorites = ['arbo', 'coolwater'];
     await submit('studio-person-form'); S.syncPeople();
     assert.equal(state().lab.people.length, 1); const person = state().lab.people[0];
-    assert.equal(run('Social.people.length'), 13); page('people');
+    assert.equal(run('Social.people.length'), 25); page('people');
     await click(`[data-action=follow][data-id="${person.id}"]`);
     assert(state().following.includes(person.id)); assert.equal(doc.querySelectorAll('script').length, html.match(/<script/g).length);
   });
@@ -160,6 +160,9 @@ async function check(name, test) { await test(); results.push(name); }
     for(const p of run('PERFUMES')){run(`route={page:'perfume',id:${JSON.stringify(p.id)}};render();`);assert(query('.scent-hero-copy h1').textContent.length);}
     assert.equal(errors.length,0,errors.join('\n'));
   });
+  await check('Alchemy matches declared notes, supports exclusions and any/all modes',async()=>{ const V=win.ElixirAtelier;V.selected=new Set(['Gengibre','Alecrim']);V.mode='all';assert(V.results().some(p=>p.id==='sospiro-vibrato'));V.excluded.add('Bergamota');assert(!V.results().some(p=>p.id==='sospiro-vibrato'));V.excluded.clear();V.mode='any';assert(V.results().length>=1);run("route={page:'alchemy'};render();");assert(query('#v5-note-picker'));V.selected.clear();});
+  await check('Notes open referenced perfumes and add choices to alchemy',async()=>{run("route={page:'perfume',id:'sospiro-vibrato'};render();");assert(doc.querySelector('[data-v5=note]'));win.ElixirAtelier.note('Gengibre');assert(query('.v5-note-perfumes').textContent.includes('Vibrato'));await click('[data-v5=note-to-mix]');assert(win.ElixirAtelier.selected.has('Gengibre'));});
+  await check('Theme toggles and fictitious posts remain navigable',async()=>{win.ElixirAtelier.theme='system';page('home');await click('[data-v5=theme]');assert.equal(doc.documentElement.dataset.theme,'dark');assert.equal(win.localStorage.getItem('elixir-theme-v5'),'dark');assert.equal(run("Social.posts.filter(p=>p.id.startsWith('v5-post-')).length"),24);assert(query('.community-post'));assert.equal(errors.length,0,errors.join('\n'));});
   process.stdout.write(JSON.stringify({ passed: results.length, checks: results, runtimeErrors: errors }, null, 2) + '\n');
   dom.window.close();
 })().catch(error => { process.stderr.write(error.stack + '\n'); dom.window.close(); process.exitCode = 1; });
