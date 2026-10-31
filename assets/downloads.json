@@ -1,0 +1,73 @@
+{
+  "arbo": {
+    "path": "assets/products/arbo.jpg",
+    "url": "https://cdn.gbmedia.com.br/images/w_600,f_webp,q_auto:eco/v1/imagens/product/B74438/dc3c1f13-3d21-4274-9d50-4be908bb3f35-74438.jpg",
+    "bytes": 15872
+  },
+  "clash": {
+    "path": "assets/products/clash.jpg",
+    "url": "https://cdn.gbmedia.com.br/images/w_600,f_webp,q_auto:eco/v1/imagens/product/B50677/cae5b3cb-4709-4ad6-abac-8c54b813587e-bot-50677-clash-desodorante-colonia-frontal-01.jpg",
+    "bytes": 7326
+  },
+  "clash-editorial": {
+    "path": "assets/products/clash-editorial.jpg",
+    "url": "https://cdn.gbmedia.com.br/images/w_1200,f_webp,q_auto:eco/v1/imagens/product/B50677/7d4e80bb-6059-481a-8e2a-ac54935104a8-bot-50677-clash-desodorante-colonia-modelo-ambientada-05.jpg",
+    "bytes": 25764
+  },
+  "arbo-editorial": {
+    "path": "assets/products/arbo-editorial.jpg",
+    "url": "https://cdn.gbmedia.com.br/images/w_1200,f_webp,q_auto:eco/v1/imagens/products/B74438/DES-COL-ARBO_B74438_CONCEITO_.jpg",
+    "bytes": 204858
+  },
+  "polo": {
+    "path": "assets/products/polo.jpg",
+    "url": "https://www.ralphlaurenfragrances.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-ralphlauren-master-catalog/default/dw2ec40dd2/images/pdp/RLFE016/125/ralph-lauren-fragrances-polo-edt-125ml-bottle-packshot-carousel.webp?q=70&sfrm=jpg&sh=600&sm=cut&sw=600",
+    "bytes": 7830
+  },
+  "vetiver": {
+    "error": "HTTP Error 403: Forbidden",
+    "url": "https://www.guerlain.com/dw/image/v2/BDCZ_PRD/on/demandware.static/-/Sites-GSA_master_catalog/default/dw08f1a697/01-ProductsViewer/P030486/P030486_G030486_E01_hi-res.png?sh=600&sw=600"
+  },
+  "forest": {
+    "path": "assets/products/forest.jpg",
+    "url": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=85",
+    "bytes": 303906
+  },
+  "sea": {
+    "path": "assets/products/sea.jpg",
+    "url": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=85",
+    "bytes": 234896
+  },
+  "night": {
+    "path": "assets/products/night.jpg",
+    "url": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=85",
+    "bytes": 308086
+  },
+  "flowers": {
+    "path": "assets/products/flowers.jpg",
+    "url": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=85",
+    "bytes": 157918
+  },
+  "city": {
+    "path": "assets/products/city.jpg",
+    "url": "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1200&q=85",
+    "bytes": 155430
+  },
+  "coffee": {
+    "path": "assets/products/coffee.jpg",
+    "url": "https://cdn.gbmedia.com.br/images/w_600,f_webp,q_auto:eco/v1/imagens/products/B83757/B83757-Coffee-Man-Lucky-Desodorante-Colonia-100_.jpg"
+  },
+  "unico": {
+    "path": "assets/products/unico.jpg",
+    "url": "https://production.na01.natura.com/dw/image/v2/BFKR_PRD/on/demandware.static/-/Sites-natura-br-storefront-catalog/default/dw529cda89/produto-joia/background/desktop/103348.jpg"
+  },
+  "extreme": {
+    "path": "assets/products/extreme.jpg",
+    "url": "https://cdn.gbmedia.com.br/images/w_600,f_webp,q_auto:eco/v1/imagens/product/B86706/03152700-58ab-4d62-8a44-4336a9e20392-bt-15-26-clash-extreme-100ml-86706-1.jpg"
+  },
+  "malbec": {
+    "path": "assets/products/malbec.jpg",
+    "url": "https://cdn.gbmedia.com.br/images/w_600,f_webp,q_auto:eco/v1/imagens/product/B84387/3fcf35bd-e85f-416e-bbbb-755c89f39e95-bot-84387-malbec-malbec-desodorante-colonia-frontal-01.jpg",
+    "source": "https://www.boticario.com.br/produto/malbec-desodorante-colonia-100ml-v2"
+  }
+}

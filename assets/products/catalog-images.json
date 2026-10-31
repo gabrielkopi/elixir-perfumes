@@ -1,0 +1,689 @@
+{
+  "vetiver": {
+    "path": "assets/catalog-photos/vetiver.jpg",
+    "source": "https://www.scento.com/perfumes/vetiver-guerlain",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/b09a01f9-78df-4ff5-3cd2-4f81d6ac7700/campaign",
+    "bytes": 130299,
+    "optimized": "assets/catalog-photos/vetiver.jpg"
+  },
+  "polo": {
+    "path": "assets/products/polo.jpg",
+    "source": "Existing included product photo; see assets/downloads.json",
+    "optimized": "assets/catalog-photos/polo.jpg"
+  },
+  "arbo": {
+    "path": "assets/products/arbo.jpg",
+    "source": "Existing included product photo; see assets/downloads.json",
+    "optimized": "assets/catalog-photos/arbo.jpg"
+  },
+  "clash": {
+    "path": "assets/products/clash.jpg",
+    "source": "Existing included product photo; see assets/downloads.json",
+    "optimized": "assets/catalog-photos/clash.jpg"
+  },
+  "extreme": {
+    "path": "assets/products/extreme.jpg",
+    "source": "Existing included product photo; see assets/downloads.json",
+    "optimized": "assets/catalog-photos/extreme.jpg"
+  },
+  "malbec": {
+    "path": "assets/products/malbec.jpg",
+    "source": "Existing included product photo; see assets/downloads.json",
+    "optimized": "assets/catalog-photos/malbec.jpg"
+  },
+  "coffee": {
+    "path": "assets/products/coffee.jpg",
+    "source": "Existing included product photo; see assets/downloads.json",
+    "optimized": "assets/catalog-photos/coffee.jpg"
+  },
+  "unico": {
+    "path": "assets/catalog-photos/unico.jpg",
+    "optimized": "assets/catalog-photos/unico.jpg",
+    "source": "https://shopee.com.br/Essencial-Unico-Masculino-Natura-90ml-Deo-Parfum-i.310592386.18278453438",
+    "image_url": "https://down-br.img.susercontent.com/file/br-11134207-7qukw-lfneo7il3z0d9b",
+    "bytes": 346271
+  },
+  "sonar": {
+    "path": "assets/catalog-photos/sonar.jpg",
+    "optimized": "assets/catalog-photos/sonar.jpg",
+    "source": "https://www.fragrantica.es/perfume/Natura/Kaiak-Sonar-97372.html",
+    "image_url": "https://fimgs.net/mdimg/perfume-thumbs/375x500.97372.2x.jpg",
+    "bytes": 73606
+  },
+  "terre": {
+    "path": "assets/catalog-photos/terre.jpg",
+    "source": "https://www.black-elixir.com/en/products/hermes-terre-d-hermes-eau-de-toilette",
+    "image_url": "https://www.black-elixir.com/cdn/shop/files/Terre-d_Hermes-Eau-de-Toilette-HERMES-127942416.png?v=1747622545&width=1500",
+    "bytes": 50275,
+    "optimized": "assets/catalog-photos/terre.jpg"
+  },
+  "lemale": {
+    "path": "assets/catalog-photos/lemale.jpg",
+    "source": "https://www.scento.com/perfumes/le-male-elixir-jean-paul-gaultier",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/e1e656ea-b8c7-41ea-19e3-4f09cd384e00/campaign",
+    "bytes": 605508,
+    "optimized": "assets/catalog-photos/lemale.jpg"
+  },
+  "coolwater": {
+    "path": "assets/products/coolwater.jpg",
+    "source": "Existing included product photo; see assets/downloads.json",
+    "optimized": "assets/catalog-photos/coolwater.jpg"
+  },
+  "homem": {
+    "path": "assets/catalog-photos/homem.jpg",
+    "source": "https://www.natura.com.pe/p/natura-homem-eau-de-toilette-masculino-clasico-100-ml/NATPER-57351",
+    "image_url": "https://production.na01.natura.com/on/demandware.static/-/Sites-NatPeru-Library/default/dwb3a454fc/produto-joia/57351_widepic_1_desktop.jpg",
+    "bytes": 678397,
+    "optimized": "assets/catalog-photos/homem.jpg"
+  },
+  "hwyl": {
+    "path": "assets/catalog-photos/hwyl.jpg",
+    "source": "https://www.breuninger.com/de/marken/aesop/hwyl/1001073505/p/",
+    "image_url": "https://cms.brnstc.de/product_images/680x930_retina/cpro/s3li/1122x1536/20/06/9319944012941_0.jpg",
+    "bytes": 97575,
+    "optimized": "assets/catalog-photos/hwyl.jpg"
+  },
+  "santal": {
+    "path": "assets/products/santal.jpg",
+    "source": "Existing included product photo; see assets/downloads.json",
+    "optimized": "assets/catalog-photos/santal.jpg"
+  },
+  "philosykos": {
+    "path": "assets/products/philosykos.jpg",
+    "source": "Existing included product photo; see assets/downloads.json",
+    "optimized": "assets/catalog-photos/philosykos.jpg"
+  },
+  "sauvage": {
+    "path": "assets/catalog-photos/sauvage.jpg",
+    "source": "https://www.scento.com/perfumes/sauvage-dior",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/bd873acf-b40d-40aa-787a-0ad0c2d9fb00/campaign",
+    "bytes": 670608,
+    "optimized": "assets/catalog-photos/sauvage.jpg"
+  },
+  "chanel5": {
+    "path": "assets/catalog-photos/chanel5.jpg",
+    "source": "https://www.perfumeriajulia.es/910001102-n5-eau-parfum-vapo-100ml-no-recarg.html",
+    "image_url": "https://www.perfumeriajulia.es/176301-large_default/n5-eau-parfum-vapo-100ml-no-recarg.jpg",
+    "bytes": 171267,
+    "optimized": "assets/catalog-photos/chanel5.jpg"
+  },
+  "chance": {
+    "path": "assets/catalog-photos/chance.jpg",
+    "source": "https://www.woolworths.co.za/prod/_/A-503694470",
+    "image_url": "https://assets.woolworthsstatic.co.za/Eau-De-Toilette-Spray-50ml-503694470.jpg?V=Zver&o=eyJidWNrZXQiOiJ3dy1vbmxpbmUtaW1hZ2UtcmVzaXplIiwia2V5IjoiaW1hZ2VzL2VsYXN0aWNlcmEvcHJvZHVjdHMvaGVyby8yMDIxLTAxLTI4LzUwMzY5NDQ3MF81ME1MX2hlcm8uanBnIn0&q=75",
+    "bytes": 64442,
+    "optimized": "assets/catalog-photos/chance.jpg"
+  },
+  "blackorchid": {
+    "path": "assets/products/blackorchid.jpg",
+    "source": "Existing included product photo; see assets/downloads.json",
+    "optimized": "assets/catalog-photos/blackorchid.jpg"
+  },
+  "lightblue": {
+    "path": "assets/catalog-photos/lightblue.jpg",
+    "optimized": "assets/catalog-photos/lightblue.jpg",
+    "source": "https://swedishface.dk/dolce-gabbana-light-blue-edt-50ml",
+    "image_url": "https://swedishface.dk/image/cache/data/dolce-gabbana/dolce-gabbana-light-blue-edt-50ml-1200x1200.jpg",
+    "bytes": 31642
+  },
+  "jadore": {
+    "path": "assets/catalog-photos/jadore.jpg",
+    "source": "https://www.scento.com/perfumes/jadore-dior",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/3b3cdd4a-597e-43cb-5006-1ba3a8231a00/campaign",
+    "bytes": 632998,
+    "optimized": "assets/catalog-photos/jadore.jpg"
+  },
+  "bleu": {
+    "path": "assets/catalog-photos/bleu.jpg",
+    "source": "https://perfumes.ec/products/chanel-bleu-de-chanel-eau-de-parfum-100ml?srsltid=AfmBOorasMjOOGEtLLrZU12KKfzAjEAYMaTmcAhiOXWIzaKg1qxn9mbY",
+    "image_url": "https://perfumes.ec/cdn/shop/files/ChanelBleuDeChanelEauDeParfum100ml.png?v=1700321293",
+    "bytes": 404528,
+    "optimized": "assets/catalog-photos/bleu.jpg"
+  },
+  "ckone": {
+    "path": "assets/catalog-photos/ckone.jpg",
+    "source": "https://www.scento.com/perfumes/ck-one-calvin-klein",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/5bcf6bd0-6df1-426a-b627-f065270e2000/campaign",
+    "bytes": 116155,
+    "optimized": "assets/catalog-photos/ckone.jpg"
+  },
+  "ysl-libre": {
+    "path": "assets/catalog-photos/ysl-libre.jpg",
+    "source": "https://www.scento.com/perfumes/libre-yves-saint-laurent",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/45a041cd-1aff-44b1-f1ff-6f725d1e1200/campaign",
+    "bytes": 626301,
+    "optimized": "assets/catalog-photos/ysl-libre.jpg"
+  },
+  "ysl-black-opium": {
+    "path": "assets/catalog-photos/ysl-black-opium.jpg",
+    "source": "https://www.scento.com/perfumes/black-opium-yves-saint-laurent",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/473a80aa-9978-447f-3eaa-2c9e177ccb00/campaign",
+    "bytes": 701416,
+    "optimized": "assets/catalog-photos/ysl-black-opium.jpg"
+  },
+  "ysl-mon-paris": {
+    "path": "assets/catalog-photos/ysl-mon-paris.jpg",
+    "source": "https://www.scento.com/perfumes/mon-paris-yves-saint-laurent",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/42412b64-f9e8-420b-0a4f-a47489385c00/campaign",
+    "bytes": 697127,
+    "optimized": "assets/catalog-photos/ysl-mon-paris.jpg"
+  },
+  "ysl-manifesto": {
+    "path": "assets/catalog-photos/ysl-manifesto.jpg",
+    "optimized": "assets/catalog-photos/ysl-manifesto.jpg",
+    "source": "https://premierparfums.gr/products/yves-saint-laurent-manifesto-edp-90-ml",
+    "image_url": "https://premierparfums.gr/cdn/shop/files/yves-saint-laurent-manifesto-edp-90-ml.png?v=1737470333&width=990",
+    "bytes": 376005
+  },
+  "prada-paradoxe": {
+    "path": "assets/catalog-photos/prada-paradoxe.jpg",
+    "source": "https://www.scento.com/perfumes/prada-paradoxe-prada",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/e618a1c2-ba41-4710-6bc1-0be40c704a00/campaign",
+    "bytes": 766761,
+    "optimized": "assets/catalog-photos/prada-paradoxe.jpg"
+  },
+  "prada-la-femme-prada": {
+    "path": "assets/catalog-photos/prada-la-femme-prada.jpg",
+    "source": "https://www.scento.com/perfumes/prada-la-femme-prada",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/e2c2ba5e-c024-4bb8-b8d3-8aa307051d00/campaign",
+    "bytes": 840636,
+    "optimized": "assets/catalog-photos/prada-la-femme-prada.jpg"
+  },
+  "prada-candy": {
+    "path": "assets/catalog-photos/prada-candy.jpg",
+    "source": "https://www.scento.com/perfumes/prada-candy-prada",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/8cc46d43-903a-4c84-1109-5be739351500/campaign",
+    "bytes": 599894,
+    "optimized": "assets/catalog-photos/prada-candy.jpg"
+  },
+  "lancome-idole": {
+    "path": "assets/catalog-photos/lancome-idole.jpg",
+    "source": "https://www.scento.com/perfumes/idole-lancome",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/c402747d-055d-4d5a-f898-a5321c148b00/campaign",
+    "bytes": 706555,
+    "optimized": "assets/catalog-photos/lancome-idole.jpg"
+  },
+  "lancome-miracle": {
+    "path": "assets/catalog-photos/lancome-miracle.jpg",
+    "source": "https://www.scento.com/perfumes/miracle-lancome",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/ab5f0348-4c11-4414-2b48-5a6687deb800/campaign",
+    "bytes": 568651,
+    "optimized": "assets/catalog-photos/lancome-miracle.jpg"
+  },
+  "lancome-la-nuit-tresor": {
+    "path": "assets/catalog-photos/lancome-la-nuit-tresor.jpg",
+    "source": "https://www.scento.com/perfumes/la-nuit-tresor-lancome",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/eb95c6a3-f4af-49f1-eab3-e2a4f6f6c700/campaign",
+    "bytes": 717997,
+    "optimized": "assets/catalog-photos/lancome-la-nuit-tresor.jpg"
+  },
+  "lancome-poeme": {
+    "path": "assets/catalog-photos/lancome-poeme.jpg",
+    "source": "https://www.scento.com/perfumes/poeme-lancome",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/6f2b7674-3330-4ed0-3642-f6d99a6f9e00/campaign",
+    "bytes": 580353,
+    "optimized": "assets/catalog-photos/lancome-poeme.jpg"
+  },
+  "guerlain-shalimar": {
+    "path": "assets/catalog-photos/guerlain-shalimar.jpg",
+    "source": "https://www.scento.com/perfumes/shalimar-eau-de-parfum-guerlain",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/dc1b06de-295c-433d-e0be-a04933e15b00/campaign",
+    "bytes": 610376,
+    "optimized": "assets/catalog-photos/guerlain-shalimar.jpg"
+  },
+  "guerlain-mon-guerlain": {
+    "path": "assets/catalog-photos/guerlain-mon-guerlain.jpg",
+    "source": "https://www.scento.com/perfumes/mon-guerlain-guerlain",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/d046b5ae-2f0b-4816-d058-3e909b153a00/campaign",
+    "bytes": 619380,
+    "optimized": "assets/catalog-photos/guerlain-mon-guerlain.jpg"
+  },
+  "guerlain-la-petite-robe-noire": {
+    "path": "assets/catalog-photos/guerlain-la-petite-robe-noire.jpg",
+    "source": "https://www.scento.com/perfumes/la-petite-robe-noire-guerlain",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/58d6bfe7-0a4c-4ccc-61af-78408b8c1000/campaign",
+    "bytes": 571287,
+    "optimized": "assets/catalog-photos/guerlain-la-petite-robe-noire.jpg"
+  },
+  "rabanne-olympea": {
+    "path": "assets/catalog-photos/rabanne-olympea.jpg",
+    "source": "https://www.scento.com/perfumes/olympea-parfum-rabanne",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/f6ec4a07-95f6-4ab9-9db3-ca72d7f22300/campaign",
+    "bytes": 674277,
+    "optimized": "assets/catalog-photos/rabanne-olympea.jpg"
+  },
+  "rabanne-fame": {
+    "path": "assets/catalog-photos/rabanne-fame.jpg",
+    "source": "https://www.scento.com/perfumes/fame-rabanne",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/0d1b33d3-fbd4-40b0-1345-61fb54b37d00/campaign",
+    "bytes": 121918,
+    "optimized": "assets/catalog-photos/rabanne-fame.jpg"
+  },
+  "calvin-klein-euphoria": {
+    "path": "assets/catalog-photos/calvin-klein-euphoria.jpg",
+    "source": "https://www.scento.com/perfumes/euphoria-calvin-klein",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/f00f83f2-a4dc-4725-7334-f5afeeb66b00/campaign",
+    "bytes": 785088,
+    "optimized": "assets/catalog-photos/calvin-klein-euphoria.jpg"
+  },
+  "armani-acqua-di-gioia": {
+    "path": "assets/catalog-photos/armani-acqua-di-gioia.jpg",
+    "optimized": "assets/catalog-photos/armani-acqua-di-gioia.jpg",
+    "source": "https://vogue.globo.com/beleza/noticia/2024/07/12-perfumes-com-cheiro-de-banho-que-exalam-conforto-e-frescor.ghtml",
+    "image_url": "https://s2-vogue.glbimg.com/nsGet1Eo5Xum9Xg3KROblP833mU%3D/0x0%3A1200x1200/1000x0/smart/filters%3Astrip_icc%28%29/i.s3.glbimg.com/v1/AUTH_5dfbcf92c1a84b20a5da5024d398ff2f/internal_photos/bs/2024/s/v/X0I97mRKCSz5xvBAL8kA/acqua-di-gioia-by-giorgio-armani.jpg",
+    "bytes": 74485
+  },
+  "armani-si-passione": {
+    "path": "assets/catalog-photos/armani-si-passione.jpg",
+    "source": "https://www.scento.com/perfumes/si-passione-giorgio-armani",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/4a316574-248a-44ab-0a05-a769c5b17900/campaign",
+    "bytes": 703197,
+    "optimized": "assets/catalog-photos/armani-si-passione.jpg"
+  },
+  "armani-emporio-armani-because-its-you": {
+    "path": "assets/catalog-photos/armani-emporio-armani-because-its-you.jpg",
+    "source": "https://www.scento.com/perfumes/emporio-armani-because-its-you-giorgio-armani",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/34d1b1ec-fd21-4476-9c58-616b0a5c7e00/campaign",
+    "bytes": 632188,
+    "optimized": "assets/catalog-photos/armani-emporio-armani-because-its-you.jpg"
+  },
+  "chloe-nomade": {
+    "path": "assets/catalog-photos/chloe-nomade.jpg",
+    "source": "https://www.scento.com/perfumes/nomade-chloe",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/ff6f6c17-f65c-4e6e-d3b8-a8be7b608300/campaign",
+    "bytes": 846016,
+    "optimized": "assets/catalog-photos/chloe-nomade.jpg"
+  },
+  "chloe-chloe-eau-de-parfum": {
+    "path": "assets/catalog-photos/chloe-chloe-eau-de-parfum.jpg",
+    "source": "https://www.scento.com/perfumes/chloe-eau-de-parfum-chloe",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/ed3f2f9c-d59b-4ffd-9bca-973e3954cd00/campaign",
+    "bytes": 895746,
+    "optimized": "assets/catalog-photos/chloe-chloe-eau-de-parfum.jpg"
+  },
+  "marc-jacobs-perfect": {
+    "path": "assets/catalog-photos/marc-jacobs-perfect.jpg",
+    "source": "https://www.scento.com/perfumes/perfect-marc-jacobs",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/6ffa537b-3185-44ea-e6dc-c2a627025c00/campaign",
+    "bytes": 587929,
+    "optimized": "assets/catalog-photos/marc-jacobs-perfect.jpg"
+  },
+  "marc-jacobs-daisy-eau-so-fresh": {
+    "path": "assets/catalog-photos/marc-jacobs-daisy-eau-so-fresh.jpg",
+    "source": "https://www.scento.com/perfumes/daisy-eau-so-fresh-marc-jacobs",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/0be2293f-472e-4d85-756b-4c6ebc271a00/campaign",
+    "bytes": 662197,
+    "optimized": "assets/catalog-photos/marc-jacobs-daisy-eau-so-fresh.jpg"
+  },
+  "marc-jacobs-daisy-toilette": {
+    "path": "assets/catalog-photos/marc-jacobs-daisy-toilette.jpg",
+    "source": "https://www.scento.com/perfumes/daisy-marc-jacobs",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/46b57d2b-de4a-454a-5981-d2a7428d6b00/campaign",
+    "bytes": 716556,
+    "optimized": "assets/catalog-photos/marc-jacobs-daisy-toilette.jpg"
+  },
+  "mugler-angel": {
+    "path": "assets/catalog-photos/mugler-angel.jpg",
+    "source": "https://www.scento.com/perfumes/angel-mugler",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/c382e1a4-9a2b-4ed1-2750-59eb894b1300/campaign",
+    "bytes": 598079,
+    "optimized": "assets/catalog-photos/mugler-angel.jpg"
+  },
+  "mugler-alien": {
+    "path": "assets/catalog-photos/mugler-alien.jpg",
+    "source": "https://www.scento.com/perfumes/alien-mugler",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/5d41ecfd-487a-4a69-e1b7-9741dbf63200/campaign",
+    "bytes": 855998,
+    "optimized": "assets/catalog-photos/mugler-alien.jpg"
+  },
+  "gucci-bloom": {
+    "path": "assets/catalog-photos/gucci-bloom.jpg",
+    "source": "https://www.scento.com/perfumes/gucci-bloom-gucci",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/cfc9d447-269d-4051-768b-f12ea3579e00/campaign",
+    "bytes": 840081,
+    "optimized": "assets/catalog-photos/gucci-bloom.jpg"
+  },
+  "gucci-flora-gorgeous-gardenia": {
+    "path": "assets/catalog-photos/gucci-flora-gorgeous-gardenia.jpg",
+    "source": "https://www.scento.com/perfumes/flora-gorgeous-gardenia-gucci",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/c1ff6483-432c-4142-bbdd-9a299f584a00/campaign",
+    "bytes": 650038,
+    "optimized": "assets/catalog-photos/gucci-flora-gorgeous-gardenia.jpg"
+  },
+  "carolina-herrera-very-good-girl": {
+    "path": "assets/catalog-photos/carolina-herrera-very-good-girl.jpg",
+    "source": "https://www.scento.com/perfumes/very-good-girl-elixir-carolina-herrera",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/2f02b41e-64a4-45f0-8aa8-0674b87b1400/campaign",
+    "bytes": 607482,
+    "optimized": "assets/catalog-photos/carolina-herrera-very-good-girl.jpg"
+  },
+  "carolina-herrera-good-girl-blush": {
+    "path": "assets/catalog-photos/carolina-herrera-good-girl-blush.jpg",
+    "source": "https://www.scento.com/perfumes/good-girl-blush-carolina-herrera",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/74e8e4de-a453-4b29-96e9-89b34608fd00/campaign",
+    "bytes": 567738,
+    "optimized": "assets/catalog-photos/carolina-herrera-good-girl-blush.jpg"
+  },
+  "viktor-rolf-flowerbomb": {
+    "path": "assets/catalog-photos/viktor-rolf-flowerbomb.jpg",
+    "optimized": "assets/catalog-photos/viktor-rolf-flowerbomb.jpg",
+    "source": "https://www.parfumdreams.at/Viktor-Rolf/Damenduefte/Flowerbomb/Eau-de-Parfum-Spray-nachfuellbar/index_15436.aspx",
+    "image_url": "https://cdn2.parfumdreams.de/image/product/15436-8704-4-51.webp",
+    "bytes": 35529
+  },
+  "viktor-rolf-bonbon": {
+    "path": "assets/catalog-photos/viktor-rolf-bonbon.jpg",
+    "optimized": "assets/catalog-photos/viktor-rolf-bonbon.jpg",
+    "source": "https://aelia.pl/produkt/viktorrolf-bonbon-woda-perfumowana-dla-kobiet",
+    "image_url": "https://api.aelia.pl/storage/2024/02/29/640xpx/100323570-1-1.9yzb.jpg",
+    "bytes": 63922
+  },
+  "jean-paul-gaultier-la-belle": {
+    "path": "assets/catalog-photos/jean-paul-gaultier-la-belle.jpg",
+    "source": "https://www.scento.com/perfumes/la-belle-jean-paul-gaultier",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/904a4764-08e4-45da-64bc-6c3d36cbbb00/campaign",
+    "bytes": 534113,
+    "optimized": "assets/catalog-photos/jean-paul-gaultier-la-belle.jpg"
+  },
+  "jean-paul-gaultier-scandal": {
+    "path": "assets/catalog-photos/jean-paul-gaultier-scandal.jpg",
+    "source": "https://www.scento.com/perfumes/scandal-jean-paul-gaultier",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/03fbf177-bce8-45b9-9c8a-1374af4cb200/campaign",
+    "bytes": 587319,
+    "optimized": "assets/catalog-photos/jean-paul-gaultier-scandal.jpg"
+  },
+  "dior-miss-dior-blooming-bouquet-2": {
+    "path": "assets/catalog-photos/dior-miss-dior-blooming-bouquet-2.jpg",
+    "source": "https://www.scento.com/perfumes/miss-dior-blooming-bouquet-by-dior",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/6598e662-b742-4eeb-7861-1aeb3b073000/campaign",
+    "bytes": 678204,
+    "optimized": "assets/catalog-photos/dior-miss-dior-blooming-bouquet-2.jpg"
+  },
+  "dior-hypnotic-poison": {
+    "path": "assets/catalog-photos/dior-hypnotic-poison.jpg",
+    "source": "https://www.scento.com/perfumes/hypnotic-poison-dior",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/0c1ff003-8041-4ec5-8066-6975f606e500/campaign",
+    "bytes": 887754,
+    "optimized": "assets/catalog-photos/dior-hypnotic-poison.jpg"
+  },
+  "dior-pure-poison": {
+    "path": "assets/catalog-photos/dior-pure-poison.jpg",
+    "source": "https://www.scento.com/perfumes/pure-poison-dior",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/f57df171-c62a-4314-5790-442acf4ea100/campaign",
+    "bytes": 549059,
+    "optimized": "assets/catalog-photos/dior-pure-poison.jpg"
+  },
+  "versace-yellow-diamond": {
+    "path": "assets/catalog-photos/versace-yellow-diamond.jpg",
+    "source": "https://www.scento.com/perfumes/yellow-diamond-by-versace",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/b2063d92-bbf6-4d5d-3dd5-f26c8fc94900/campaign",
+    "bytes": 641283,
+    "optimized": "assets/catalog-photos/versace-yellow-diamond.jpg"
+  },
+  "versace-dylan-turquoise": {
+    "path": "assets/catalog-photos/versace-dylan-turquoise.jpg",
+    "optimized": "assets/catalog-photos/versace-dylan-turquoise.jpg",
+    "source": "https://abushakra.com/en/versace-pour-femme-dylan-turquoise-edt-for-women.html?srsltid=AfmBOopogaXI96WwI2IKKUAum1_Wu6Flyb8FSK3yMROjDGkoA-5xzHzY",
+    "image_url": "https://abushakra.com/media/catalog/product/mpiowebpcache/18c599600537a9a88e17d7fa5b5aa48c/8/0/8011003858545-main_1.webp",
+    "bytes": 48818
+  },
+  "armani-acqua-di-gio-eau-de-toilette": {
+    "path": "assets/catalog-photos/armani-acqua-di-gio-eau-de-toilette.jpg",
+    "optimized": "assets/catalog-photos/armani-acqua-di-gio-eau-de-toilette.jpg",
+    "source": "https://www.sephora.my/products/armani-beauty-acqua-di-gio-for-men-eau-de-toilette",
+    "image_url": "https://image-optimizer-reg.production.sephora-asia.net/images/product_images/1_Product_3614273955546-Giorgio-Armani-Acqua-Di-Gio-For-Men-_6f9aa84a35ec37ce221cd111b57c409e050d6460_1753095946.png",
+    "bytes": 13056
+  },
+  "armani-acqua-di-gio-profondo-parfum": {
+    "path": "assets/catalog-photos/armani-acqua-di-gio-profondo-parfum.jpg",
+    "source": "https://www.scento.com/perfumes/acqua-di-gio-profondo-giorgio-armani",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/d84eaca4-3a16-4426-8479-373e3186d500/campaign",
+    "bytes": 585276,
+    "optimized": "assets/catalog-photos/armani-acqua-di-gio-profondo-parfum.jpg"
+  },
+  "armani-armani-code-eau-de-toilette": {
+    "path": "assets/catalog-photos/armani-armani-code-eau-de-toilette.jpg",
+    "optimized": "assets/catalog-photos/armani-armani-code-eau-de-toilette.jpg",
+    "source": "https://magnaperfumes.com/Armani_Code_for_Men_125ml",
+    "image_url": "https://cdn11.bigcommerce.com/s-2vt02okold/images/stencil/1280x1280/products/2667/6731/HARMC_3__70309.1720717638.jpg?c=1",
+    "bytes": 50090
+  },
+  "armani-emporio-armani-stronger-with-you-intensely": {
+    "path": "assets/catalog-photos/armani-emporio-armani-stronger-with-you-intensely.jpg",
+    "source": "https://www.scento.com/perfumes/emporio-armani-stronger-with-you-intensely-giorgio-armani",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/6a8f92c2-551f-4022-5233-0bdaadf14800/campaign",
+    "bytes": 669415,
+    "optimized": "assets/catalog-photos/armani-emporio-armani-stronger-with-you-intensely.jpg"
+  },
+  "ysl-la-nuit-de-lhomme": {
+    "path": "assets/catalog-photos/ysl-la-nuit-de-lhomme.jpg",
+    "source": "https://www.scento.com/perfumes/la-nuit-de-lhomme-yves-saint-laurent",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/d8d78ac9-fbf5-4ba1-c59d-a8811864b400/campaign",
+    "bytes": 90573,
+    "optimized": "assets/catalog-photos/ysl-la-nuit-de-lhomme.jpg"
+  },
+  "prada-lhomme-prada": {
+    "path": "assets/catalog-photos/prada-lhomme-prada.jpg",
+    "source": "https://www.scento.com/perfumes/prada-lhomme-prada",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/6a26a30f-73ee-405d-389e-9f1322b7e200/campaign",
+    "bytes": 777091,
+    "optimized": "assets/catalog-photos/prada-lhomme-prada.jpg"
+  },
+  "prada-luna-rossa-carbon": {
+    "path": "assets/catalog-photos/prada-luna-rossa-carbon.jpg",
+    "source": "https://www.scento.com/perfumes/luna-rossa-carbon-prada",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/3e320484-18e5-45b6-863c-35f03563c500/campaign",
+    "bytes": 576864,
+    "optimized": "assets/catalog-photos/prada-luna-rossa-carbon.jpg"
+  },
+  "prada-luna-rossa-ocean": {
+    "path": "assets/catalog-photos/prada-luna-rossa-ocean.jpg",
+    "source": "https://www.scento.com/perfumes/luna-rossa-ocean-prada",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/8087263f-9776-40f0-a764-26ed7e813800/campaign",
+    "bytes": 645421,
+    "optimized": "assets/catalog-photos/prada-luna-rossa-ocean.jpg"
+  },
+  "versace-pour-homme": {
+    "path": "assets/catalog-photos/versace-pour-homme.jpg",
+    "optimized": "assets/catalog-photos/versace-pour-homme.jpg",
+    "source": "https://www.ceneo.pl/1985636?srsltid=AfmBOoqHvQxxfmYbZY2841cDvBCrKoQ64T4LwWm5cHHzOjmvZWlk4x96",
+    "image_url": "https://image.ceneostatic.pl/data/article_picture/48/f0/4d81-04c0-44fe-a3a3-953edad8971f_large.jpg",
+    "bytes": 32053
+  },
+  "versace-dylan-blue": {
+    "path": "assets/catalog-photos/versace-dylan-blue.jpg",
+    "optimized": "assets/catalog-photos/versace-dylan-blue.jpg",
+    "source": "https://hollywoodperfumeria.com/products/dylan-blue-hombre",
+    "image_url": "https://hollywoodperfumeria.com/cdn/shop/files/PORTADA_9d5fc4f4-ae6e-45d2-8d3d-14f8af535eea.jpg?v=1692159656&width=1445",
+    "bytes": 93352
+  },
+  "versace-eros-eau-de-toilette": {
+    "path": "assets/catalog-photos/versace-eros-eau-de-toilette.jpg",
+    "optimized": "assets/catalog-photos/versace-eros-eau-de-toilette.jpg",
+    "source": "https://priveperfumes.com/products/perfume-versace-eros-edt-m-100-ml",
+    "image_url": "https://priveperfumes.com/cdn/shop/files/perfume-versace-eros-edt-m-100-ml-1-prive-perfumes.webp?v=1776856081&width=2000",
+    "bytes": 3088508
+  },
+  "versace-man-eau-fraiche-toilette": {
+    "path": "assets/catalog-photos/versace-man-eau-fraiche-toilette.jpg",
+    "optimized": "assets/catalog-photos/versace-man-eau-fraiche-toilette.jpg",
+    "source": "https://www.perfumeriajulia.es/900095156-eau-fraiche-versace-man-edt-v.html",
+    "image_url": "https://www.perfumeriajulia.es/32167-large_default/eau-fraiche-versace-man-edt-v.jpg",
+    "bytes": 468783
+  },
+  "rabanne-1-million-toilette": {
+    "path": "assets/catalog-photos/rabanne-1-million-toilette.jpg",
+    "source": "https://www.scento.com/perfumes/1-million-rabanne",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/0a40de5f-45ac-46b7-dbb7-73b9facd5100/campaign",
+    "bytes": 776239,
+    "optimized": "assets/catalog-photos/rabanne-1-million-toilette.jpg"
+  },
+  "rabanne-invictus-toilette": {
+    "path": "assets/catalog-photos/rabanne-invictus-toilette.jpg",
+    "source": "https://www.scento.com/perfumes/invictus-eau-de-toilette-rabanne",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/36cbdb89-1bf7-4cd3-109b-8d8578d36f00/campaign",
+    "bytes": 99067,
+    "optimized": "assets/catalog-photos/rabanne-invictus-toilette.jpg"
+  },
+  "ralph-lauren-polo-blue": {
+    "path": "assets/catalog-photos/ralph-lauren-polo-blue.jpg",
+    "optimized": "assets/catalog-photos/ralph-lauren-polo-blue.jpg",
+    "source": "https://atacadoconnect.com/produto/perfumes/perfume-polo-blue-ralph-lauren-eau-de-toilette-masculino-125ml/1058314",
+    "image_url": "https://cdn.atacadoconnect.com/produtos/1058314/perfume-polo-blue-ralph-lauren-eau-de-toilette-masculino-125ml-1058314-64751.jpg",
+    "bytes": 82651
+  },
+  "ralph-lauren-polo-red": {
+    "path": "assets/catalog-photos/ralph-lauren-polo-red.jpg",
+    "source": "https://www.scento.com/perfumes/polo-red-ralph-lauren",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/24b8aa19-8628-49d8-8e52-ccc44413e200/campaign",
+    "bytes": 606741,
+    "optimized": "assets/catalog-photos/ralph-lauren-polo-red.jpg"
+  },
+  "calvin-klein-eternity-for-men-toilette": {
+    "path": "assets/catalog-photos/calvin-klein-eternity-for-men-toilette.jpg",
+    "optimized": "assets/catalog-photos/calvin-klein-eternity-for-men-toilette.jpg",
+    "source": "https://www.gq.com.mx/cuidado-personal/articulo/perfumes-fuertes-para-hombre-con-caracter",
+    "image_url": "https://media.gq.com.mx/photos/6114339e0a160134ff7d04a9/master/w_1600%2Cc_limit/perfumes-fuertes-para-hombre-con-caracter-calvin-klein.jpg",
+    "bytes": 85249
+  },
+  "issey-miyake-leau-dissey-pour-homme": {
+    "path": "assets/catalog-photos/issey-miyake-leau-dissey-pour-homme.jpg",
+    "source": "https://www.scento.com/perfumes/leau-dissey-pour-homme-issey-miyake",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/dc123aef-5f56-48df-1459-8bbcbf926300/campaign",
+    "bytes": 747610,
+    "optimized": "assets/catalog-photos/issey-miyake-leau-dissey-pour-homme.jpg"
+  },
+  "montblanc-explorer": {
+    "path": "assets/catalog-photos/montblanc-explorer.jpg",
+    "source": "https://www.scento.com/perfumes/explorer-montblanc",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/5e21f64d-cc26-4d7b-8483-d5b9bde3ea00/campaign",
+    "bytes": 735744,
+    "optimized": "assets/catalog-photos/montblanc-explorer.jpg"
+  },
+  "montblanc-legend-spirit": {
+    "path": "assets/catalog-photos/montblanc-legend-spirit.jpg",
+    "optimized": "assets/catalog-photos/montblanc-legend-spirit.jpg",
+    "source": "https://www.perfumesclub.com/es/montblanc/legend-spirit-edt-vaporizador/p_76696/",
+    "image_url": "https://i1.perfumesclub.com/grande/76696.jpg",
+    "bytes": 52436
+  },
+  "bvlgari-aqva-pour-homme": {
+    "path": "assets/catalog-photos/bvlgari-aqva-pour-homme.jpg",
+    "optimized": "assets/catalog-photos/bvlgari-aqva-pour-homme.jpg",
+    "source": "https://musiker-sucht.de/?i=25606347081230",
+    "image_url": "https://cdn11.bigcommerce.com/s-bfwlyu1ieh/images/stencil/500x500/products/2049/9262/bvlgari-bvlgari-aqva-pour-homme-eau-de-toilette-spray-30ml__39839.1600553523.jpg?c=2",
+    "bytes": 10428
+  },
+  "bvlgari-pour-homme": {
+    "path": "assets/catalog-photos/bvlgari-pour-homme.jpg",
+    "optimized": "assets/catalog-photos/bvlgari-pour-homme.jpg",
+    "source": "https://www.bulgari.com/pt-br/fragrancias/masculino/41895.html",
+    "image_url": "https://media.bulgari.com/image/upload/c_fill%2Ch_490%2Cw_490/q_auto/f_auto/1457723_mobile.png",
+    "bytes": 53988
+  },
+  "jean-paul-gaultier-le-male-toilette": {
+    "path": "assets/catalog-photos/jean-paul-gaultier-le-male-toilette.jpg",
+    "source": "https://www.scento.com/perfumes/le-male-jean-paul-gaultier",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/3d643aa4-a45b-40e2-6283-aeeafb126600/campaign",
+    "bytes": 608120,
+    "optimized": "assets/catalog-photos/jean-paul-gaultier-le-male-toilette.jpg"
+  },
+  "jean-paul-gaultier-le-male-le-parfum": {
+    "path": "assets/catalog-photos/jean-paul-gaultier-le-male-le-parfum.jpg",
+    "source": "https://www.scento.com/perfumes/le-male-le-parfum-jean-paul-gaultier",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/a24cd03d-8a38-4908-7767-235e32238000/campaign",
+    "bytes": 104100,
+    "optimized": "assets/catalog-photos/jean-paul-gaultier-le-male-le-parfum.jpg"
+  },
+  "dior-dior-homme-intense": {
+    "path": "assets/catalog-photos/dior-dior-homme-intense.jpg",
+    "source": "https://www.scento.com/perfumes/dior-homme-intense-dior",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/2c53706a-7e3f-4f0a-e01d-b80105264200/campaign",
+    "bytes": 588050,
+    "optimized": "assets/catalog-photos/dior-dior-homme-intense.jpg"
+  },
+  "dior-fahrenheit-toilette": {
+    "path": "assets/catalog-photos/dior-fahrenheit-toilette.jpg",
+    "source": "https://www.scento.com/perfumes/fahrenheit-dior",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/51d64efd-6056-4d94-b516-2a75831d5600/campaign",
+    "bytes": 73643,
+    "optimized": "assets/catalog-photos/dior-fahrenheit-toilette.jpg"
+  },
+  "dior-eau-sauvage": {
+    "path": "assets/catalog-photos/dior-eau-sauvage.jpg",
+    "source": "https://www.scento.com/perfumes/eau-sauvage-dior",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/2bd84ec4-e2c8-448a-0074-731c0cd7b700/campaign",
+    "bytes": 858007,
+    "optimized": "assets/catalog-photos/dior-eau-sauvage.jpg"
+  },
+  "dolce-gabbana-the-one-for-men-eau-de-parfum": {
+    "path": "assets/catalog-photos/dolce-gabbana-the-one-for-men-eau-de-parfum.jpg",
+    "optimized": "assets/catalog-photos/dolce-gabbana-the-one-for-men-eau-de-parfum.jpg",
+    "source": "https://www.elcorteingles.es/perfumeria/A16185580-eau-de-parfum-the-one-for-men-150-ml-dolce-and-gabanna/",
+    "image_url": "https://dam.elcorteingles.es/producto/www-001013513504376-00.jpg",
+    "bytes": 57868
+  },
+  "carolina-herrera-212-vip-men": {
+    "path": "assets/catalog-photos/carolina-herrera-212-vip-men.jpg",
+    "optimized": "assets/catalog-photos/carolina-herrera-212-vip-men.jpg",
+    "source": "https://theperfumewarehouse.com.au/products/212-vip-by-carolina-herrera-for-men-eau-de-toilette-bottle",
+    "image_url": "https://theperfumewarehouse.com.au/cdn/shop/files/B2543M.jpg?v=1768209611",
+    "bytes": 155202
+  },
+  "viktor-rolf-spicebomb-extreme": {
+    "path": "assets/catalog-photos/viktor-rolf-spicebomb-extreme.jpg",
+    "optimized": "assets/catalog-photos/viktor-rolf-spicebomb-extreme.jpg",
+    "source": "https://www.drogasil.com.br/viktor-rolf-spicebomb-extreme-eau-de-parfum-perfume-masculino-90ml-1487971.html",
+    "image_url": "https://www.drogasil.com.br/_next/image?q=40&url=https%3A%2F%2Fproduct-data.raiadrogasil.io%2Fimages%2F19781688.webp&w=3840",
+    "bytes": 32679
+  },
+  "tom-ford-oud-wood": {
+    "path": "assets/catalog-photos/tom-ford-oud-wood.jpg",
+    "source": "https://www.scento.com/perfumes/oud-wood-tom-ford",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/883fc9a4-b606-466b-1a6a-ad5c28ca1c00/campaign",
+    "bytes": 837934,
+    "optimized": "assets/catalog-photos/tom-ford-oud-wood.jpg"
+  },
+  "tom-ford-tobacco-vanille": {
+    "path": "assets/catalog-photos/tom-ford-tobacco-vanille.jpg",
+    "source": "https://www.scento.com/perfumes/tobacco-vanille-tom-ford",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/f07133eb-ffa0-4c61-8cf0-8639bb2e5c00/campaign",
+    "bytes": 611753,
+    "optimized": "assets/catalog-photos/tom-ford-tobacco-vanille.jpg"
+  },
+  "tom-ford-neroli-portofino": {
+    "path": "assets/catalog-photos/tom-ford-neroli-portofino.jpg",
+    "source": "https://www.scento.com/perfumes/neroli-portofino-tom-ford",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/67b20432-d689-458a-8cb8-8cb78b9ae400/campaign",
+    "bytes": 648704,
+    "optimized": "assets/catalog-photos/tom-ford-neroli-portofino.jpg"
+  },
+  "hermes-un-jardin-sur-le-nil": {
+    "path": "assets/catalog-photos/hermes-un-jardin-sur-le-nil.jpg",
+    "source": "https://www.scento.com/perfumes/un-jardin-sur-le-nil-hermes",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/a4dd736b-70cd-4527-00e2-4519e8fb2700/campaign",
+    "bytes": 590923,
+    "optimized": "assets/catalog-photos/hermes-un-jardin-sur-le-nil.jpg"
+  },
+  "guerlain-aqua-allegoria-herba-fresca": {
+    "path": "assets/catalog-photos/guerlain-aqua-allegoria-herba-fresca.jpg",
+    "optimized": "assets/catalog-photos/guerlain-aqua-allegoria-herba-fresca.jpg",
+    "source": "https://www.glamour.mx/articulos/perfumes-que-huelen-a-hojas-frescas-para-verano",
+    "image_url": "https://media.glamour.mx/photos/64855bb35b2a8674a35653b3/master/w_1600%2Cc_limit/perfumes_aqua_allegoria.jpg",
+    "bytes": 108165
+  },
+  "guerlain-aqua-allegoria-mandarine-basilic": {
+    "path": "assets/catalog-photos/guerlain-aqua-allegoria-mandarine-basilic.jpg",
+    "source": "https://www.scento.com/perfumes/aqua-allegoria-mandarine-basilic-guerlain",
+    "image_url": "https://imagedelivery.net/dTnWiVKich4PS2lEWud18g/88d88ad2-24e3-4425-0607-74de6c754600/campaign",
+    "bytes": 581739,
+    "optimized": "assets/catalog-photos/guerlain-aqua-allegoria-mandarine-basilic.jpg"
+  },
+  "exclusivo": {
+    "path": "assets/catalog-photos/exclusivo.jpg",
+    "source": "https://cisterli.com/products/essencial-exclusivo-deo-parfum-masculino",
+    "image_url": "https://cisterli.com/cdn/shop/files/Cirterli_essencial_esclusivo_deo_parfum_masculino.jpg?v=1727913159",
+    "bytes": 210491,
+    "optimized": "assets/catalog-photos/exclusivo.jpg"
+  }
+}

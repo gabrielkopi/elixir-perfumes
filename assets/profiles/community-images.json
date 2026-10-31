@@ -1,0 +1,22 @@
+{
+  "created": "2026-10-31",
+  "tool": "image_gen (built-in)",
+  "portraits": [
+    {
+      "id": "sofia",
+      "file": "assets/profiles/sofia.jpg",
+      "prompt": "Photorealistic editorial portrait of an entirely fictional Brazilian woman about 30, short dark brown bob, cream cotton blouse, quiet cafe, natural daylight, softly blurred ivory background, head and shoulders, no grain, no text or logos."
+    },
+    {
+      "id": "mateo",
+      "file": "assets/profiles/mateo.jpg",
+      "prompt": "Photorealistic editorial portrait of an entirely fictional mixed race man age 32, short dark curly hair, subtle moustache, olive linen overshirt, near a record store window, softly blurred vinyl shelves, no grain, no text or logos."
+    },
+    {
+      "id": "clara",
+      "file": "assets/profiles/clara.jpg",
+      "prompt": "Photorealistic editorial portrait of an entirely fictional Black Brazilian woman age 28 with natural curly hair, black minimalist sleeveless top, small silver earrings, soft daylight and warm stone wall, optically blurred background, no grain, no text or logos."
+    }
+  ],
+  "notice": "Portraits represent fictional community members. Vincenzo photo and note images were supplied by the user. Product photographs were downloaded from brand sources, listed in ../research/social-product-sources.json."
+}

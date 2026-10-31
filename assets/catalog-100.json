@@ -1,0 +1,3071 @@
+{
+  "source": "Scento — Perfume Database",
+  "sourceUrl": "https://github.com/Scento-com/perfume-dataset",
+  "license": "CC BY 4.0",
+  "accessed": "2026-10-30",
+  "modifications": "Seleção de 76 registros, tradução de notas, inferência editorial de descritores e pesos do modelo. Sem textos descritivos da fonte.",
+  "additions": [
+    {
+      "id": "ysl-libre",
+      "name": "Libre",
+      "house": "Yves Saint Laurent",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "",
+      "character": [
+        "floral",
+        "creamy",
+        "fresh",
+        "citrusy"
+      ],
+      "top_notes": [
+        "Mandarin",
+        "Neroli",
+        "Lavender"
+      ],
+      "heart_notes": [
+        "Orange Blossom",
+        "Jasmine Sambac"
+      ],
+      "base_notes": [
+        "Musk",
+        "Vanilla"
+      ],
+      "notes": [
+        "Mandarin",
+        "Neroli",
+        "Lavender",
+        "Orange Blossom",
+        "Jasmine Sambac",
+        "Musk",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfumes/libre-yves-saint-laurent",
+      "audience": "Feminino"
+    },
+    {
+      "id": "ysl-black-opium",
+      "name": "Black Opium",
+      "house": "Yves Saint Laurent",
+      "concentration": "eau-de-parfum",
+      "family": "Velvet Sweet",
+      "secondary_family": "",
+      "character": [
+        "sweet",
+        "warm",
+        "floral",
+        "creamy"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Coffee",
+        "White Flowers",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfumes/black-opium-yves-saint-laurent",
+      "audience": "Feminino"
+    },
+    {
+      "id": "ysl-mon-paris",
+      "name": "Mon Paris",
+      "house": "Yves Saint Laurent",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "Orchard Fruit",
+      "character": [
+        "floral",
+        "fruity",
+        "creamy",
+        "citrusy"
+      ],
+      "top_notes": [
+        "Strawberry",
+        "Raspberry",
+        "Pear",
+        "Bergamot",
+        "Orange"
+      ],
+      "heart_notes": [
+        "Datura flower",
+        "Peony",
+        "Orange Blossom",
+        "Jasmine Sambac"
+      ],
+      "base_notes": [
+        "Patchouli",
+        "Musk",
+        "Ambroxan",
+        "Cedarwood",
+        "Oakmoss",
+        "Vanilla"
+      ],
+      "notes": [
+        "Strawberry",
+        "Raspberry",
+        "Pear",
+        "Bergamot",
+        "Orange",
+        "Datura flower",
+        "Peony",
+        "Orange Blossom",
+        "Jasmine Sambac",
+        "Patchouli",
+        "Musk",
+        "Ambroxan",
+        "Cedarwood",
+        "Oakmoss",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfumes/mon-paris-yves-saint-laurent",
+      "audience": "Feminino"
+    },
+    {
+      "id": "ysl-manifesto",
+      "name": "Manifesto",
+      "house": "Yves Saint Laurent",
+      "concentration": "eau-de-parfum",
+      "family": "Wood & Root",
+      "secondary_family": "Velvet Sweet",
+      "character": [
+        "floral",
+        "sweet",
+        "woody",
+        "warm"
+      ],
+      "top_notes": [
+        "Bergamot",
+        "Blackcurrant"
+      ],
+      "heart_notes": [
+        "Jasmine Sambac",
+        "Lily of the Valley"
+      ],
+      "base_notes": [
+        "Cedarwood",
+        "Sandalwood",
+        "Vanilla",
+        "Tonka Bean"
+      ],
+      "notes": [
+        "Bergamot",
+        "Blackcurrant",
+        "Jasmine Sambac",
+        "Lily of the Valley",
+        "Cedarwood",
+        "Sandalwood",
+        "Vanilla",
+        "Tonka Bean"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/ysl-manifesto",
+      "audience": "Feminino"
+    },
+    {
+      "id": "prada-paradoxe",
+      "name": "Paradoxe",
+      "house": "Prada",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "Amber & Resin",
+      "character": [
+        "floral",
+        "amber",
+        "musky",
+        "creamy"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Neroli",
+        "Amber",
+        "Musk"
+      ],
+      "url": "https://www.scento.com/perfumes/prada-paradoxe-prada",
+      "audience": "Feminino"
+    },
+    {
+      "id": "prada-la-femme-prada",
+      "name": "La Femme Prada",
+      "house": "Prada",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "",
+      "character": [
+        "floral",
+        "creamy",
+        "sweet",
+        "warm"
+      ],
+      "top_notes": [
+        "Frangipani"
+      ],
+      "heart_notes": [
+        "Ylang-Ylang"
+      ],
+      "base_notes": [
+        "Vanilla"
+      ],
+      "notes": [
+        "Frangipani",
+        "Ylang-Ylang",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfumes/prada-la-femme-prada",
+      "audience": "Feminino"
+    },
+    {
+      "id": "prada-candy",
+      "name": "Candy",
+      "house": "Prada",
+      "concentration": "eau-de-parfum",
+      "family": "Amber & Resin",
+      "secondary_family": "Velvet Sweet",
+      "character": [
+        "warm",
+        "resinous",
+        "sweet",
+        "musky"
+      ],
+      "top_notes": [
+        "Musk"
+      ],
+      "heart_notes": [
+        "Benzoin"
+      ],
+      "base_notes": [
+        "Caramel"
+      ],
+      "notes": [
+        "Musk",
+        "Benzoin",
+        "Caramel"
+      ],
+      "url": "https://www.scento.com/perfumes/prada-candy-prada",
+      "audience": "Feminino"
+    },
+    {
+      "id": "lancome-idole",
+      "name": "Idôle",
+      "house": "Lancôme",
+      "concentration": "eau-de-parfum",
+      "family": "Wood & Root",
+      "secondary_family": "Petal Garden",
+      "character": [
+        "floral",
+        "warm",
+        "citrusy",
+        "fruity"
+      ],
+      "top_notes": [
+        "Bergamot",
+        "Pear",
+        "Pink Pepper"
+      ],
+      "heart_notes": [
+        "Rose",
+        "Jasmine"
+      ],
+      "base_notes": [
+        "Musk",
+        "Vanilla",
+        "Patchouli",
+        "Cedarwood"
+      ],
+      "notes": [
+        "Bergamot",
+        "Pear",
+        "Pink Pepper",
+        "Rose",
+        "Jasmine",
+        "Musk",
+        "Vanilla",
+        "Patchouli",
+        "Cedarwood"
+      ],
+      "url": "https://www.scento.com/perfumes/idole-lancome",
+      "audience": "Feminino"
+    },
+    {
+      "id": "lancome-miracle",
+      "name": "Miracle",
+      "house": "Lancôme",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "Spice Route",
+      "character": [
+        "floral",
+        "spicy",
+        "warm",
+        "creamy"
+      ],
+      "top_notes": [
+        "Lychee",
+        "Freesia"
+      ],
+      "heart_notes": [
+        "Magnolia",
+        "Jasmine",
+        "Ginger",
+        "Pepper",
+        "Mandarin"
+      ],
+      "base_notes": [
+        "Amber",
+        "Musk"
+      ],
+      "notes": [
+        "Lychee",
+        "Freesia",
+        "Magnolia",
+        "Jasmine",
+        "Ginger",
+        "Pepper",
+        "Mandarin",
+        "Amber",
+        "Musk"
+      ],
+      "url": "https://www.scento.com/perfumes/miracle-lancome",
+      "audience": "Feminino"
+    },
+    {
+      "id": "lancome-la-nuit-tresor",
+      "name": "La Nuit Trésor",
+      "house": "Lancôme",
+      "concentration": "eau-de-parfum",
+      "family": "Petal Garden",
+      "secondary_family": "Velvet Sweet",
+      "character": [
+        "floral",
+        "sweet",
+        "warm",
+        "fruity"
+      ],
+      "top_notes": [
+        "Rose"
+      ],
+      "heart_notes": [
+        "Vanilla",
+        "Orchid"
+      ],
+      "base_notes": [
+        "Incense",
+        "Papyrus",
+        "Lychee",
+        "Praline"
+      ],
+      "notes": [
+        "Rose",
+        "Vanilla",
+        "Orchid",
+        "Incense",
+        "Papyrus",
+        "Lychee",
+        "Praline"
+      ],
+      "url": "https://www.scento.com/perfumes/la-nuit-tresor-lancome",
+      "audience": "Feminino"
+    },
+    {
+      "id": "lancome-poeme",
+      "name": "Poême",
+      "house": "Lancôme",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "",
+      "character": [
+        "floral",
+        "creamy",
+        "powdery",
+        "fruity"
+      ],
+      "top_notes": [
+        "Lychee",
+        "Poppy"
+      ],
+      "heart_notes": [
+        "Orange Blossom",
+        "Mimosa",
+        "Jasmine"
+      ],
+      "base_notes": [
+        "Vanilla",
+        "Datura flower"
+      ],
+      "notes": [
+        "Lychee",
+        "Poppy",
+        "Orange Blossom",
+        "Mimosa",
+        "Jasmine",
+        "Vanilla",
+        "Datura flower"
+      ],
+      "url": "https://www.scento.com/perfumes/poeme-lancome",
+      "audience": "Feminino"
+    },
+    {
+      "id": "guerlain-shalimar",
+      "name": "Shalimar",
+      "house": "Guerlain",
+      "concentration": "eau-de-parfum",
+      "family": "Petal Garden",
+      "secondary_family": "Velvet Sweet",
+      "character": [
+        "floral",
+        "sweet",
+        "warm",
+        "powdery"
+      ],
+      "top_notes": [
+        "Floral notes",
+        "Bergamot"
+      ],
+      "heart_notes": [
+        "Iris",
+        "Jasmine",
+        "Rose"
+      ],
+      "base_notes": [
+        "Vanilla",
+        "Opoponax",
+        "Tonka Bean"
+      ],
+      "notes": [
+        "Floral notes",
+        "Bergamot",
+        "Iris",
+        "Jasmine",
+        "Rose",
+        "Vanilla",
+        "Opoponax",
+        "Tonka Bean"
+      ],
+      "url": "https://www.scento.com/perfumes/shalimar-eau-de-parfum-guerlain",
+      "audience": "Feminino"
+    },
+    {
+      "id": "guerlain-mon-guerlain",
+      "name": "Mon Guerlain",
+      "house": "Guerlain",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "Sunlit Citrus",
+      "character": [
+        "floral",
+        "fresh",
+        "citrusy",
+        "creamy"
+      ],
+      "top_notes": [
+        "Bergamot",
+        "Mandarin",
+        "Pear"
+      ],
+      "heart_notes": [
+        "Neroli",
+        "Jasmine Sambac",
+        "Lavender"
+      ],
+      "base_notes": [
+        "Iris",
+        "Vanilla",
+        "Sandalwood"
+      ],
+      "notes": [
+        "Bergamot",
+        "Mandarin",
+        "Pear",
+        "Neroli",
+        "Jasmine Sambac",
+        "Lavender",
+        "Iris",
+        "Vanilla",
+        "Sandalwood"
+      ],
+      "url": "https://www.scento.com/perfumes/mon-guerlain-guerlain",
+      "audience": "Feminino"
+    },
+    {
+      "id": "guerlain-la-petite-robe-noire",
+      "name": "La Petite Robe Noire",
+      "house": "Guerlain",
+      "concentration": "eau-de-parfum",
+      "family": "Velvet Sweet",
+      "secondary_family": "",
+      "character": [
+        "sweet",
+        "warm",
+        "floral",
+        "citrusy"
+      ],
+      "top_notes": [
+        "Bergamot",
+        "Cherry"
+      ],
+      "heart_notes": [
+        "Rose",
+        "Almond"
+      ],
+      "base_notes": [
+        "Patchouli",
+        "Smoked tea",
+        "Tonka Bean",
+        "Liquorice"
+      ],
+      "notes": [
+        "Bergamot",
+        "Cherry",
+        "Rose",
+        "Almond",
+        "Patchouli",
+        "Smoked tea",
+        "Tonka Bean",
+        "Liquorice"
+      ],
+      "url": "https://www.scento.com/perfumes/la-petite-robe-noire-guerlain",
+      "audience": "Feminino"
+    },
+    {
+      "id": "rabanne-olympea",
+      "name": "Olympéa",
+      "house": "Rabanne",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "Velvet Sweet",
+      "character": [
+        "floral",
+        "warm",
+        "sweet",
+        "creamy"
+      ],
+      "top_notes": [
+        "Mandarin",
+        "Ginger lily",
+        "Jasmine"
+      ],
+      "heart_notes": [
+        "Salty vanilla"
+      ],
+      "base_notes": [
+        "Cashmere Wood",
+        "Ambergris"
+      ],
+      "notes": [
+        "Mandarin",
+        "Ginger lily",
+        "Jasmine",
+        "Salty vanilla",
+        "Cashmere Wood",
+        "Ambergris"
+      ],
+      "url": "https://www.scento.com/perfumes/olympea-parfum-rabanne",
+      "audience": "Feminino"
+    },
+    {
+      "id": "rabanne-fame",
+      "name": "Fame",
+      "house": "Rabanne",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "Orchard Fruit",
+      "character": [
+        "floral",
+        "fruity",
+        "resinous",
+        "creamy"
+      ],
+      "top_notes": [
+        "Mango"
+      ],
+      "heart_notes": [
+        "Jasmine"
+      ],
+      "base_notes": [
+        "Incense"
+      ],
+      "notes": [
+        "Mango",
+        "Jasmine",
+        "Incense"
+      ],
+      "url": "https://www.scento.com/perfumes/fame-rabanne",
+      "audience": "Feminino"
+    },
+    {
+      "id": "calvin-klein-euphoria",
+      "name": "Euphoria",
+      "house": "Calvin Klein",
+      "concentration": "eau-de-parfum",
+      "family": "Petal Garden",
+      "secondary_family": "",
+      "character": [
+        "floral",
+        "fruity",
+        "powdery",
+        "woody"
+      ],
+      "top_notes": [
+        "Pomegranate"
+      ],
+      "heart_notes": [
+        "Lotus",
+        "Orchid"
+      ],
+      "base_notes": [
+        "Violet",
+        "Amber",
+        "Mahogany",
+        "Musk"
+      ],
+      "notes": [
+        "Pomegranate",
+        "Lotus",
+        "Orchid",
+        "Violet",
+        "Amber",
+        "Mahogany",
+        "Musk"
+      ],
+      "url": "https://www.scento.com/perfumes/euphoria-calvin-klein",
+      "audience": "Feminino"
+    },
+    {
+      "id": "armani-acqua-di-gioia",
+      "name": "Acqua di Gioia",
+      "house": "Giorgio Armani",
+      "concentration": "eau-de-parfum",
+      "family": "Petal Garden",
+      "secondary_family": "White Bloom",
+      "character": [
+        "floral",
+        "warm",
+        "fresh",
+        "spicy"
+      ],
+      "top_notes": [
+        "Mint",
+        "Lemon",
+        "Green Watery Accord"
+      ],
+      "heart_notes": [
+        "Pink Pepper",
+        "Jasmine Sambac",
+        "Peony"
+      ],
+      "base_notes": [
+        "Cedarwood",
+        "Labdanum",
+        "Brown Sugar"
+      ],
+      "notes": [
+        "Mint",
+        "Lemon",
+        "Green Watery Accord",
+        "Pink Pepper",
+        "Jasmine Sambac",
+        "Peony",
+        "Cedarwood",
+        "Labdanum",
+        "Brown Sugar"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/armani-acqua-di-gioia",
+      "audience": "Feminino"
+    },
+    {
+      "id": "armani-si-passione",
+      "name": "Sì Passione",
+      "house": "Giorgio Armani",
+      "concentration": "eau-de-parfum",
+      "family": "Petal Garden",
+      "secondary_family": "Wood & Root",
+      "character": [
+        "floral",
+        "citrusy",
+        "fruity",
+        "woody"
+      ],
+      "top_notes": [
+        "Blackcurrant",
+        "Bergamot",
+        "Rose"
+      ],
+      "heart_notes": [
+        "Rose",
+        "Jasmine"
+      ],
+      "base_notes": [
+        "Cedarwood",
+        "Patchouli"
+      ],
+      "notes": [
+        "Blackcurrant",
+        "Bergamot",
+        "Rose",
+        "Rose",
+        "Jasmine",
+        "Cedarwood",
+        "Patchouli"
+      ],
+      "url": "https://www.scento.com/perfumes/si-passione-giorgio-armani",
+      "audience": "Feminino"
+    },
+    {
+      "id": "armani-emporio-armani-because-its-you",
+      "name": "Emporio Armani Because It's You",
+      "house": "Giorgio Armani",
+      "concentration": "eau-de-parfum",
+      "family": "Petal Garden",
+      "secondary_family": "Sunlit Citrus",
+      "character": [
+        "floral",
+        "warm",
+        "citrusy",
+        "fruity"
+      ],
+      "top_notes": [
+        "Raspberry",
+        "Neroli",
+        "Lemon"
+      ],
+      "heart_notes": [
+        "Rose"
+      ],
+      "base_notes": [
+        "Vanilla",
+        "Musk",
+        "Amberwood"
+      ],
+      "notes": [
+        "Raspberry",
+        "Neroli",
+        "Lemon",
+        "Rose",
+        "Vanilla",
+        "Musk",
+        "Amberwood"
+      ],
+      "url": "https://www.scento.com/perfumes/emporio-armani-because-its-you-giorgio-armani",
+      "audience": "Feminino"
+    },
+    {
+      "id": "chloe-nomade",
+      "name": "Nomade",
+      "house": "Chloé",
+      "concentration": "eau-de-parfum",
+      "family": "Petal Garden",
+      "secondary_family": "Orchard Fruit",
+      "character": [
+        "floral",
+        "fruity",
+        "earthy"
+      ],
+      "top_notes": [
+        "Plum"
+      ],
+      "heart_notes": [
+        "Freesia"
+      ],
+      "base_notes": [
+        "Oakmoss"
+      ],
+      "notes": [
+        "Plum",
+        "Freesia",
+        "Oakmoss"
+      ],
+      "url": "https://www.scento.com/perfumes/nomade-chloe",
+      "audience": "Feminino"
+    },
+    {
+      "id": "chloe-chloe-eau-de-parfum",
+      "name": "Chloé Eau de Parfum",
+      "house": "Chloé",
+      "concentration": "eau-de-parfum",
+      "family": "Petal Garden",
+      "secondary_family": "",
+      "character": [
+        "floral",
+        "warm",
+        "fruity",
+        "sweet"
+      ],
+      "top_notes": [
+        "Peony",
+        "Freesia",
+        "Lychee"
+      ],
+      "heart_notes": [
+        "Magnolia",
+        "Lily of the Valley",
+        "Rose"
+      ],
+      "base_notes": [
+        "Cedarwood",
+        "Amber",
+        "Honey"
+      ],
+      "notes": [
+        "Peony",
+        "Freesia",
+        "Lychee",
+        "Magnolia",
+        "Lily of the Valley",
+        "Rose",
+        "Cedarwood",
+        "Amber",
+        "Honey"
+      ],
+      "url": "https://www.scento.com/perfumes/chloe-eau-de-parfum-chloe",
+      "audience": "Feminino"
+    },
+    {
+      "id": "marc-jacobs-perfect",
+      "name": "Perfect",
+      "house": "Marc Jacobs",
+      "concentration": "eau-de-parfum",
+      "family": "Velvet Sweet",
+      "secondary_family": "Green Leaf",
+      "character": [
+        "sweet",
+        "green",
+        "floral",
+        "woody"
+      ],
+      "top_notes": [
+        "Rhubarb",
+        "Daffodil"
+      ],
+      "heart_notes": [
+        "Almond milk"
+      ],
+      "base_notes": [
+        "Cashmeran"
+      ],
+      "notes": [
+        "Rhubarb",
+        "Daffodil",
+        "Almond milk",
+        "Cashmeran"
+      ],
+      "url": "https://www.scento.com/perfumes/perfect-marc-jacobs",
+      "audience": "Feminino"
+    },
+    {
+      "id": "marc-jacobs-daisy-eau-so-fresh",
+      "name": "Daisy Eau So Fresh",
+      "house": "Marc Jacobs",
+      "concentration": "eau-de-toilette",
+      "family": "Orchard Fruit",
+      "secondary_family": "Petal Garden",
+      "character": [
+        "fruity",
+        "floral",
+        "powdery",
+        "citrusy"
+      ],
+      "top_notes": [
+        "Raspberry",
+        "Grapefruit",
+        "Pear"
+      ],
+      "heart_notes": [
+        "Violet",
+        "Rose",
+        "Apple Blossom"
+      ],
+      "base_notes": [
+        "Musk",
+        "Cedarwood",
+        "Plum"
+      ],
+      "notes": [
+        "Raspberry",
+        "Grapefruit",
+        "Pear",
+        "Violet",
+        "Rose",
+        "Apple Blossom",
+        "Musk",
+        "Cedarwood",
+        "Plum"
+      ],
+      "url": "https://www.scento.com/perfumes/daisy-eau-so-fresh-marc-jacobs",
+      "audience": "Feminino"
+    },
+    {
+      "id": "marc-jacobs-daisy-toilette",
+      "name": "Daisy",
+      "house": "Marc Jacobs",
+      "concentration": "eau-de-toilette",
+      "family": "White Bloom",
+      "secondary_family": "Powder Veil",
+      "character": [
+        "floral",
+        "powdery",
+        "fruity",
+        "woody"
+      ],
+      "top_notes": [
+        "Wild berries"
+      ],
+      "heart_notes": [
+        "Violet",
+        "Jasmine"
+      ],
+      "base_notes": [
+        "Sandalwood"
+      ],
+      "notes": [
+        "Wild berries",
+        "Violet",
+        "Jasmine",
+        "Sandalwood"
+      ],
+      "url": "https://www.scento.com/perfumes/daisy-marc-jacobs",
+      "audience": "Feminino"
+    },
+    {
+      "id": "mugler-angel",
+      "name": "Angel",
+      "house": "Mugler",
+      "concentration": "eau-de-parfum",
+      "family": "Sunlit Citrus",
+      "secondary_family": "Wood & Root",
+      "character": [
+        "citrusy",
+        "sweet",
+        "earthy",
+        "fresh"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Bergamot",
+        "Praline",
+        "Patchouli"
+      ],
+      "url": "https://www.scento.com/perfumes/angel-mugler",
+      "audience": "Feminino"
+    },
+    {
+      "id": "mugler-alien",
+      "name": "Alien",
+      "house": "Mugler",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "Wood & Root",
+      "character": [
+        "floral",
+        "woody",
+        "amber",
+        "creamy"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Jasmine Sambac",
+        "Cashmeran",
+        "Amber"
+      ],
+      "url": "https://www.scento.com/perfumes/alien-mugler",
+      "audience": "Feminino"
+    },
+    {
+      "id": "gucci-bloom",
+      "name": "Bloom",
+      "house": "Gucci",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "",
+      "character": [
+        "floral",
+        "creamy"
+      ],
+      "top_notes": [
+        "Rangoon creeper"
+      ],
+      "heart_notes": [
+        "Tuberose"
+      ],
+      "base_notes": [
+        "Jasmine"
+      ],
+      "notes": [
+        "Rangoon creeper",
+        "Tuberose",
+        "Jasmine"
+      ],
+      "url": "https://www.scento.com/perfumes/gucci-bloom-gucci",
+      "audience": "Feminino"
+    },
+    {
+      "id": "gucci-flora-gorgeous-gardenia",
+      "name": "Flora Gorgeous Gardenia",
+      "house": "Gucci",
+      "concentration": "eau-de-parfum",
+      "family": "Orchard Fruit",
+      "secondary_family": "White Bloom",
+      "character": [
+        "fruity",
+        "floral",
+        "sweet",
+        "creamy"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Pear",
+        "Gardenia",
+        "Brown Sugar"
+      ],
+      "url": "https://www.scento.com/perfumes/flora-gorgeous-gardenia-gucci",
+      "audience": "Feminino"
+    },
+    {
+      "id": "carolina-herrera-very-good-girl",
+      "name": "Very Good Girl",
+      "house": "Carolina Herrera",
+      "concentration": "eau-de-parfum",
+      "family": "Orchard Fruit",
+      "secondary_family": "Petal Garden",
+      "character": [
+        "fruity",
+        "floral",
+        "sweet",
+        "earthy"
+      ],
+      "top_notes": [
+        "Red currant",
+        "Lychee"
+      ],
+      "heart_notes": [
+        "Rose"
+      ],
+      "base_notes": [
+        "Vetiver",
+        "Vanilla"
+      ],
+      "notes": [
+        "Red currant",
+        "Lychee",
+        "Rose",
+        "Vetiver",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfumes/very-good-girl-elixir-carolina-herrera",
+      "audience": "Feminino"
+    },
+    {
+      "id": "carolina-herrera-good-girl-blush",
+      "name": "Good Girl Blush",
+      "house": "Carolina Herrera",
+      "concentration": "eau-de-parfum",
+      "family": "Velvet Sweet",
+      "secondary_family": "",
+      "character": [
+        "floral",
+        "sweet",
+        "warm",
+        "citrusy"
+      ],
+      "top_notes": [
+        "Bergamot",
+        "Almond"
+      ],
+      "heart_notes": [
+        "Ylang-Ylang",
+        "Peony"
+      ],
+      "base_notes": [
+        "Vanilla",
+        "Tonka Bean"
+      ],
+      "notes": [
+        "Bergamot",
+        "Almond",
+        "Ylang-Ylang",
+        "Peony",
+        "Vanilla",
+        "Tonka Bean"
+      ],
+      "url": "https://www.scento.com/perfumes/good-girl-blush-carolina-herrera",
+      "audience": "Feminino"
+    },
+    {
+      "id": "viktor-rolf-flowerbomb",
+      "name": "Flowerbomb",
+      "house": "Viktor&Rolf",
+      "concentration": "eau-de-parfum",
+      "family": "Petal Garden",
+      "secondary_family": "",
+      "character": [
+        "floral",
+        "sweet",
+        "warm"
+      ],
+      "top_notes": [
+        "Peony"
+      ],
+      "heart_notes": [
+        "Rose"
+      ],
+      "base_notes": [
+        "Freesia",
+        "Vanilla"
+      ],
+      "notes": [
+        "Peony",
+        "Rose",
+        "Freesia",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/viktor-rolf-flowerbomb",
+      "audience": "Feminino"
+    },
+    {
+      "id": "viktor-rolf-bonbon",
+      "name": "Bonbon",
+      "house": "Viktor&Rolf",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "Sunlit Citrus",
+      "character": [
+        "floral",
+        "citrusy",
+        "sweet",
+        "creamy"
+      ],
+      "top_notes": [
+        "Mandarin"
+      ],
+      "heart_notes": [
+        "Orange Blossom"
+      ],
+      "base_notes": [
+        "Caramel"
+      ],
+      "notes": [
+        "Mandarin",
+        "Orange Blossom",
+        "Caramel"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/viktor-rolf-bonbon",
+      "audience": "Feminino"
+    },
+    {
+      "id": "jean-paul-gaultier-la-belle",
+      "name": "La Belle",
+      "house": "Jean Paul Gaultier",
+      "concentration": "eau-de-parfum",
+      "family": "Orchard Fruit",
+      "secondary_family": "Sunlit Citrus",
+      "character": [
+        "fruity",
+        "citrusy",
+        "sweet",
+        "fresh"
+      ],
+      "top_notes": [
+        "Bergamot"
+      ],
+      "heart_notes": [
+        "Green pear"
+      ],
+      "base_notes": [
+        "Vanilla"
+      ],
+      "notes": [
+        "Bergamot",
+        "Green pear",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfumes/la-belle-jean-paul-gaultier",
+      "audience": "Feminino"
+    },
+    {
+      "id": "jean-paul-gaultier-scandal",
+      "name": "Scandal",
+      "house": "Jean Paul Gaultier",
+      "concentration": "eau-de-parfum",
+      "family": "Sunlit Citrus",
+      "secondary_family": "White Bloom",
+      "character": [
+        "citrusy",
+        "floral",
+        "sweet",
+        "earthy"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Honey",
+        "Gardenia",
+        "Blood Orange",
+        "Patchouli"
+      ],
+      "url": "https://www.scento.com/perfumes/scandal-jean-paul-gaultier",
+      "audience": "Feminino"
+    },
+    {
+      "id": "dior-miss-dior-blooming-bouquet-2",
+      "name": "Miss Dior Blooming Bouquet",
+      "house": "Dior",
+      "concentration": "eau-de-toilette",
+      "family": "Petal Garden",
+      "secondary_family": "",
+      "character": [
+        "floral",
+        "citrusy",
+        "musky",
+        "fresh"
+      ],
+      "top_notes": [
+        "Bergamot"
+      ],
+      "heart_notes": [
+        "Rose",
+        "Peony"
+      ],
+      "base_notes": [
+        "Musk"
+      ],
+      "notes": [
+        "Bergamot",
+        "Rose",
+        "Peony",
+        "Musk"
+      ],
+      "url": "https://www.scento.com/perfumes/miss-dior-blooming-bouquet-by-dior",
+      "audience": "Feminino"
+    },
+    {
+      "id": "dior-hypnotic-poison",
+      "name": "Hypnotic Poison",
+      "house": "Dior",
+      "concentration": "eau-de-toilette",
+      "family": "Velvet Sweet",
+      "secondary_family": "",
+      "character": [
+        "sweet",
+        "warm",
+        "floral",
+        "creamy"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Almond",
+        "Jasmine Sambac",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfumes/hypnotic-poison-dior",
+      "audience": "Feminino"
+    },
+    {
+      "id": "dior-pure-poison",
+      "name": "Pure Poison",
+      "house": "Dior",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "Sunlit Citrus",
+      "character": [
+        "floral",
+        "citrusy",
+        "musky",
+        "creamy"
+      ],
+      "top_notes": [
+        "Bergamot"
+      ],
+      "heart_notes": [
+        "Orange Blossom"
+      ],
+      "base_notes": [
+        "Musk"
+      ],
+      "notes": [
+        "Bergamot",
+        "Orange Blossom",
+        "Musk"
+      ],
+      "url": "https://www.scento.com/perfumes/pure-poison-dior",
+      "audience": "Feminino"
+    },
+    {
+      "id": "versace-yellow-diamond",
+      "name": "Yellow Diamond",
+      "house": "Versace",
+      "concentration": "eau-de-toilette",
+      "family": "Sunlit Citrus",
+      "secondary_family": "White Bloom",
+      "character": [
+        "citrusy",
+        "floral",
+        "amber",
+        "fresh"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Lemon",
+        "Orange Blossom",
+        "Amberwood"
+      ],
+      "url": "https://www.scento.com/perfumes/yellow-diamond-by-versace",
+      "audience": "Feminino"
+    },
+    {
+      "id": "versace-dylan-turquoise",
+      "name": "Dylan Turquoise",
+      "house": "Versace",
+      "concentration": "eau-de-toilette",
+      "family": "Orchard Fruit",
+      "secondary_family": "Sunlit Citrus",
+      "character": [
+        "fruity",
+        "floral",
+        "citrusy",
+        "woody"
+      ],
+      "top_notes": [
+        "Mandarin",
+        "Lemon",
+        "Pink Pepper"
+      ],
+      "heart_notes": [
+        "Blackcurrant",
+        "Jasmine",
+        "Freesia",
+        "Guava"
+      ],
+      "base_notes": [
+        "Cedarwood",
+        "Musk",
+        "Clearwood"
+      ],
+      "notes": [
+        "Mandarin",
+        "Lemon",
+        "Pink Pepper",
+        "Blackcurrant",
+        "Jasmine",
+        "Freesia",
+        "Guava",
+        "Cedarwood",
+        "Musk",
+        "Clearwood"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/versace-dylan-turquoise",
+      "audience": "Feminino"
+    },
+    {
+      "id": "armani-acqua-di-gio-eau-de-toilette",
+      "name": "Acqua di Giò Eau de Toilette",
+      "house": "Giorgio Armani",
+      "concentration": "eau-de-toilette",
+      "family": "Petal Garden",
+      "secondary_family": "White Bloom",
+      "character": [
+        "floral",
+        "fresh",
+        "citrusy",
+        "spicy"
+      ],
+      "top_notes": [
+        "Orange",
+        "Jasmine",
+        "Lemon",
+        "Bergamot",
+        "Lime",
+        "Neroli",
+        "Orange Blossom"
+      ],
+      "heart_notes": [
+        "Sea Notes",
+        "Jasmine",
+        "Peach",
+        "Rosemary",
+        "Freesia",
+        "Hyacinth",
+        "Cyclamen",
+        "Violet",
+        "Coriander",
+        "Nutmeg",
+        "Rose",
+        "Mignonette"
+      ],
+      "base_notes": [
+        "Musk",
+        "Cedarwood",
+        "Oakmoss",
+        "Patchouli",
+        "Amber"
+      ],
+      "notes": [
+        "Orange",
+        "Jasmine",
+        "Lemon",
+        "Bergamot",
+        "Lime",
+        "Neroli",
+        "Orange Blossom",
+        "Sea Notes",
+        "Jasmine",
+        "Peach",
+        "Rosemary",
+        "Freesia",
+        "Hyacinth",
+        "Cyclamen",
+        "Violet",
+        "Coriander",
+        "Nutmeg",
+        "Rose",
+        "Mignonette",
+        "Musk",
+        "Cedarwood",
+        "Oakmoss",
+        "Patchouli",
+        "Amber"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/armani-acqua-di-gio-eau-de-toilette",
+      "audience": "Masculino"
+    },
+    {
+      "id": "armani-acqua-di-gio-profondo-parfum",
+      "name": "Acqua Di Giò Profondo",
+      "house": "Giorgio Armani",
+      "concentration": "eau-de-parfum",
+      "family": "Green Leaf",
+      "secondary_family": "Skin Musk",
+      "character": [
+        "fresh",
+        "green",
+        "musky",
+        "salty"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Sea Notes",
+        "Cypress",
+        "Musk"
+      ],
+      "url": "https://www.scento.com/perfumes/acqua-di-gio-profondo-giorgio-armani",
+      "audience": "Masculino"
+    },
+    {
+      "id": "armani-armani-code-eau-de-toilette",
+      "name": "Armani Code Eau de Toilette",
+      "house": "Giorgio Armani",
+      "concentration": "eau-de-toilette",
+      "family": "Green Leaf",
+      "secondary_family": "Sunlit Citrus",
+      "character": [
+        "fresh",
+        "herbal",
+        "citrusy",
+        "sweet"
+      ],
+      "top_notes": [
+        "Mandarin"
+      ],
+      "heart_notes": [
+        "Lavandin"
+      ],
+      "base_notes": [
+        "Tonka Bean",
+        "Cedarwood"
+      ],
+      "notes": [
+        "Mandarin",
+        "Lavandin",
+        "Tonka Bean",
+        "Cedarwood"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/armani-armani-code-eau-de-toilette",
+      "audience": "Masculino"
+    },
+    {
+      "id": "armani-emporio-armani-stronger-with-you-intensely",
+      "name": "Emporio Armani Stronger With You Intensely",
+      "house": "Giorgio Armani",
+      "concentration": "eau-de-parfum",
+      "family": "Green Leaf",
+      "secondary_family": "Velvet Sweet",
+      "character": [
+        "herbal",
+        "warm",
+        "sweet",
+        "spicy"
+      ],
+      "top_notes": [
+        "Pink Pepper",
+        "Juniper"
+      ],
+      "heart_notes": [
+        "Lavender",
+        "Cinnamon",
+        "Sage"
+      ],
+      "base_notes": [
+        "Vanilla",
+        "Tonka Bean",
+        "Chestnut"
+      ],
+      "notes": [
+        "Pink Pepper",
+        "Juniper",
+        "Lavender",
+        "Cinnamon",
+        "Sage",
+        "Vanilla",
+        "Tonka Bean",
+        "Chestnut"
+      ],
+      "url": "https://www.scento.com/perfumes/emporio-armani-stronger-with-you-intensely-giorgio-armani",
+      "audience": "Masculino"
+    },
+    {
+      "id": "ysl-la-nuit-de-lhomme",
+      "name": "La Nuit de L'Homme",
+      "house": "Yves Saint Laurent",
+      "concentration": "eau-de-parfum",
+      "family": "Spice Route",
+      "secondary_family": "Wood & Root",
+      "character": [
+        "warm",
+        "spicy",
+        "earthy",
+        "fresh"
+      ],
+      "top_notes": [
+        "Pepper",
+        "Anise",
+        "Bergamot"
+      ],
+      "heart_notes": [
+        "Lavender",
+        "Labdanum"
+      ],
+      "base_notes": [
+        "Vanilla",
+        "Patchouli",
+        "Vetiver"
+      ],
+      "notes": [
+        "Pepper",
+        "Anise",
+        "Bergamot",
+        "Lavender",
+        "Labdanum",
+        "Vanilla",
+        "Patchouli",
+        "Vetiver"
+      ],
+      "url": "https://www.scento.com/perfumes/la-nuit-de-lhomme-yves-saint-laurent",
+      "audience": "Masculino"
+    },
+    {
+      "id": "prada-lhomme-prada",
+      "name": "L'Homme Prada",
+      "house": "Prada",
+      "concentration": "eau-de-parfum",
+      "family": "Petal Garden",
+      "secondary_family": "White Bloom",
+      "character": [
+        "floral",
+        "powdery",
+        "creamy"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Iris",
+        "Neroli",
+        "Geranium"
+      ],
+      "url": "https://www.scento.com/perfumes/prada-lhomme-prada",
+      "audience": "Masculino"
+    },
+    {
+      "id": "prada-luna-rossa-carbon",
+      "name": "Luna Rossa Carbon",
+      "house": "Prada",
+      "concentration": "eau-de-parfum",
+      "family": "Green Leaf",
+      "secondary_family": "",
+      "character": [
+        "fresh",
+        "green",
+        "herbal",
+        "sweet"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Lavender",
+        "Liquorice",
+        "Cypress"
+      ],
+      "url": "https://www.scento.com/perfumes/luna-rossa-carbon-prada",
+      "audience": "Masculino"
+    },
+    {
+      "id": "prada-luna-rossa-ocean",
+      "name": "Luna Rossa Ocean",
+      "house": "Prada",
+      "concentration": "eau-de-parfum",
+      "family": "Amber & Resin",
+      "secondary_family": "Sunlit Citrus",
+      "character": [
+        "warm",
+        "resinous",
+        "citrusy",
+        "sweet"
+      ],
+      "top_notes": [
+        "Grapefruit"
+      ],
+      "heart_notes": [
+        "Incense"
+      ],
+      "base_notes": [
+        "Vanilla"
+      ],
+      "notes": [
+        "Grapefruit",
+        "Incense",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfumes/luna-rossa-ocean-prada",
+      "audience": "Masculino"
+    },
+    {
+      "id": "versace-pour-homme",
+      "name": "Pour Homme",
+      "house": "Versace",
+      "concentration": "eau-de-toilette",
+      "family": "Sunlit Citrus",
+      "secondary_family": "Petal Garden",
+      "character": [
+        "floral",
+        "citrusy",
+        "fresh",
+        "herbal"
+      ],
+      "top_notes": [
+        "Bergamot",
+        "Lemon",
+        "Petitgrain",
+        "Neroli"
+      ],
+      "heart_notes": [
+        "Geranium",
+        "Clary Sage",
+        "Hyacinth",
+        "Cedarwood"
+      ],
+      "base_notes": [
+        "Amber",
+        "Tonka Bean",
+        "Musk"
+      ],
+      "notes": [
+        "Bergamot",
+        "Lemon",
+        "Petitgrain",
+        "Neroli",
+        "Geranium",
+        "Clary Sage",
+        "Hyacinth",
+        "Cedarwood",
+        "Amber",
+        "Tonka Bean",
+        "Musk"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/versace-pour-homme",
+      "audience": "Masculino"
+    },
+    {
+      "id": "versace-dylan-blue",
+      "name": "Dylan Blue",
+      "house": "Versace",
+      "concentration": "eau-de-toilette",
+      "family": "Wood & Root",
+      "secondary_family": "Spice Route",
+      "character": [
+        "warm",
+        "fresh",
+        "spicy",
+        "citrusy"
+      ],
+      "top_notes": [
+        "Bergamot",
+        "Grapefruit",
+        "Fig",
+        "Aquatic Accord"
+      ],
+      "heart_notes": [
+        "Violet Leaf",
+        "Pepper",
+        "Papyrus",
+        "Ambroxan",
+        "Patchouli"
+      ],
+      "base_notes": [
+        "Musk",
+        "Tonka Bean",
+        "Saffron",
+        "Incense"
+      ],
+      "notes": [
+        "Bergamot",
+        "Grapefruit",
+        "Fig",
+        "Aquatic Accord",
+        "Violet Leaf",
+        "Pepper",
+        "Papyrus",
+        "Ambroxan",
+        "Patchouli",
+        "Musk",
+        "Tonka Bean",
+        "Saffron",
+        "Incense"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/versace-dylan-blue",
+      "audience": "Masculino"
+    },
+    {
+      "id": "versace-eros-eau-de-toilette",
+      "name": "Eros Eau de Toilette",
+      "house": "Versace",
+      "concentration": "eau-de-toilette",
+      "family": "Wood & Root",
+      "secondary_family": "Velvet Sweet",
+      "character": [
+        "sweet",
+        "warm",
+        "earthy",
+        "floral"
+      ],
+      "top_notes": [
+        "Mint",
+        "Lemon",
+        "Apple"
+      ],
+      "heart_notes": [
+        "Tonka Bean",
+        "Geranium",
+        "Ambroxan"
+      ],
+      "base_notes": [
+        "Vanilla",
+        "Vetiver",
+        "Cedarwood",
+        "Oakmoss"
+      ],
+      "notes": [
+        "Mint",
+        "Lemon",
+        "Apple",
+        "Tonka Bean",
+        "Geranium",
+        "Ambroxan",
+        "Vanilla",
+        "Vetiver",
+        "Cedarwood",
+        "Oakmoss"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/versace-eros-eau-de-toilette",
+      "audience": "Masculino"
+    },
+    {
+      "id": "versace-man-eau-fraiche-toilette",
+      "name": "Man Eau Fraiche",
+      "house": "Versace",
+      "concentration": "eau-de-toilette",
+      "family": "Green Leaf",
+      "secondary_family": "Wood & Root",
+      "character": [
+        "herbal",
+        "woody",
+        "fresh",
+        "citrusy"
+      ],
+      "top_notes": [
+        "Lemon",
+        "Rose",
+        "Carambola"
+      ],
+      "heart_notes": [
+        "Tarragon",
+        "Clary Sage",
+        "Cedarwood"
+      ],
+      "base_notes": [
+        "Sycamore wood",
+        "Amber",
+        "Musk"
+      ],
+      "notes": [
+        "Lemon",
+        "Rose",
+        "Carambola",
+        "Tarragon",
+        "Clary Sage",
+        "Cedarwood",
+        "Sycamore wood",
+        "Amber",
+        "Musk"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/versace-man-eau-fraiche-toilette",
+      "audience": "Masculino"
+    },
+    {
+      "id": "rabanne-1-million-toilette",
+      "name": "1 Million",
+      "house": "Rabanne",
+      "concentration": "eau-de-toilette",
+      "family": "Petal Garden",
+      "secondary_family": "Spice Route",
+      "character": [
+        "floral",
+        "spicy",
+        "warm",
+        "fresh"
+      ],
+      "top_notes": [
+        "Mint",
+        "Mandarin"
+      ],
+      "heart_notes": [
+        "Cinnamon",
+        "Rose"
+      ],
+      "base_notes": [
+        "Amberketal",
+        "Leather"
+      ],
+      "notes": [
+        "Mint",
+        "Mandarin",
+        "Cinnamon",
+        "Rose",
+        "Amberketal",
+        "Leather"
+      ],
+      "url": "https://www.scento.com/perfumes/1-million-rabanne",
+      "audience": "Masculino"
+    },
+    {
+      "id": "rabanne-invictus-toilette",
+      "name": "Invictus",
+      "house": "Rabanne",
+      "concentration": "eau-de-toilette",
+      "family": "Wood & Root",
+      "secondary_family": "Sunlit Citrus",
+      "character": [
+        "fresh",
+        "citrusy",
+        "earthy",
+        "herbal"
+      ],
+      "top_notes": [
+        "Grapefruit",
+        "Sea Notes",
+        "Mandarin"
+      ],
+      "heart_notes": [
+        "Bay",
+        "Jasmine"
+      ],
+      "base_notes": [
+        "Guaiac Wood",
+        "Oakmoss",
+        "Patchouli",
+        "Ambergris"
+      ],
+      "notes": [
+        "Grapefruit",
+        "Sea Notes",
+        "Mandarin",
+        "Bay",
+        "Jasmine",
+        "Guaiac Wood",
+        "Oakmoss",
+        "Patchouli",
+        "Ambergris"
+      ],
+      "url": "https://www.scento.com/perfumes/invictus-eau-de-toilette-rabanne",
+      "audience": "Masculino"
+    },
+    {
+      "id": "ralph-lauren-polo-blue",
+      "name": "Polo Blue",
+      "house": "Ralph Lauren",
+      "concentration": "eau-de-parfum",
+      "family": "Green Leaf",
+      "secondary_family": "Wood & Root",
+      "character": [
+        "herbal",
+        "fresh",
+        "earthy",
+        "powdery"
+      ],
+      "top_notes": [
+        "Bergamot",
+        "Sea Notes",
+        "Cardamom"
+      ],
+      "heart_notes": [
+        "Iris",
+        "Basil Verbena",
+        "Clary Sage"
+      ],
+      "base_notes": [
+        "Vetiver",
+        "Wood",
+        "Patchouli"
+      ],
+      "notes": [
+        "Bergamot",
+        "Sea Notes",
+        "Cardamom",
+        "Iris",
+        "Basil Verbena",
+        "Clary Sage",
+        "Vetiver",
+        "Wood",
+        "Patchouli"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/ralph-lauren-polo-blue",
+      "audience": "Masculino"
+    },
+    {
+      "id": "ralph-lauren-polo-red",
+      "name": "Polo Red",
+      "house": "Ralph Lauren",
+      "concentration": "eau-de-toilette",
+      "family": "Green Leaf",
+      "secondary_family": "",
+      "character": [
+        "herbal",
+        "fresh",
+        "citrusy",
+        "spicy"
+      ],
+      "top_notes": [
+        "Lemon",
+        "Bergamot",
+        "Juniper"
+      ],
+      "heart_notes": [
+        "Saffron",
+        "Clary Sage",
+        "Lavender"
+      ],
+      "base_notes": [
+        "Cedarwood",
+        "Vetiver",
+        "Vanilla"
+      ],
+      "notes": [
+        "Lemon",
+        "Bergamot",
+        "Juniper",
+        "Saffron",
+        "Clary Sage",
+        "Lavender",
+        "Cedarwood",
+        "Vetiver",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfumes/polo-red-ralph-lauren",
+      "audience": "Masculino"
+    },
+    {
+      "id": "calvin-klein-eternity-for-men-toilette",
+      "name": "Eternity for Men",
+      "house": "Calvin Klein",
+      "concentration": "eau-de-toilette",
+      "family": "Green Leaf",
+      "secondary_family": "",
+      "character": [
+        "herbal",
+        "fresh",
+        "woody",
+        "floral"
+      ],
+      "top_notes": [
+        "Mandarin",
+        "Lavender",
+        "Green leaves"
+      ],
+      "heart_notes": [
+        "Basil",
+        "Geranium",
+        "Sage"
+      ],
+      "base_notes": [
+        "Sandalwood",
+        "Rosewood",
+        "Amber"
+      ],
+      "notes": [
+        "Mandarin",
+        "Lavender",
+        "Green leaves",
+        "Basil",
+        "Geranium",
+        "Sage",
+        "Sandalwood",
+        "Rosewood",
+        "Amber"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/calvin-klein-eternity-for-men-toilette",
+      "audience": "Masculino"
+    },
+    {
+      "id": "issey-miyake-leau-dissey-pour-homme",
+      "name": "L'Eau d'Issey Pour Homme",
+      "house": "Issey Miyake",
+      "concentration": "eau-de-toilette",
+      "family": "Spice Route",
+      "secondary_family": "",
+      "character": [
+        "spicy",
+        "warm",
+        "citrusy",
+        "woody"
+      ],
+      "top_notes": [
+        "Yuzu"
+      ],
+      "heart_notes": [
+        "Cinnamon",
+        "Nutmeg"
+      ],
+      "base_notes": [
+        "Sandalwood"
+      ],
+      "notes": [
+        "Yuzu",
+        "Cinnamon",
+        "Nutmeg",
+        "Sandalwood"
+      ],
+      "url": "https://www.scento.com/perfumes/leau-dissey-pour-homme-issey-miyake",
+      "audience": "Masculino"
+    },
+    {
+      "id": "montblanc-explorer",
+      "name": "Explorer",
+      "house": "Montblanc",
+      "concentration": "eau-de-parfum",
+      "family": "Wood & Root",
+      "secondary_family": "",
+      "character": [
+        "woody",
+        "earthy",
+        "smoky",
+        "fresh"
+      ],
+      "top_notes": [
+        "Bergamot",
+        "Pomarose",
+        "Sage"
+      ],
+      "heart_notes": [
+        "Vetiver",
+        "Leather",
+        "Sandalwood"
+      ],
+      "base_notes": [
+        "Patchouli",
+        "Ambrofix",
+        "Akigalawood"
+      ],
+      "notes": [
+        "Bergamot",
+        "Pomarose",
+        "Sage",
+        "Vetiver",
+        "Leather",
+        "Sandalwood",
+        "Patchouli",
+        "Ambrofix",
+        "Akigalawood"
+      ],
+      "url": "https://www.scento.com/perfumes/explorer-montblanc",
+      "audience": "Masculino"
+    },
+    {
+      "id": "montblanc-legend-spirit",
+      "name": "Legend Spirit",
+      "house": "Montblanc",
+      "concentration": "eau-de-toilette",
+      "family": "Wood & Root",
+      "secondary_family": "Spice Route",
+      "character": [
+        "fresh",
+        "spicy",
+        "citrusy",
+        "woody"
+      ],
+      "top_notes": [
+        "Grapefruit",
+        "Bergamot",
+        "Pink Pepper"
+      ],
+      "heart_notes": [
+        "Aquatic Accord",
+        "Lavender",
+        "Cardamom"
+      ],
+      "base_notes": [
+        "Musk",
+        "White Woods",
+        "Cashmere Wood",
+        "Oakmoss"
+      ],
+      "notes": [
+        "Grapefruit",
+        "Bergamot",
+        "Pink Pepper",
+        "Aquatic Accord",
+        "Lavender",
+        "Cardamom",
+        "Musk",
+        "White Woods",
+        "Cashmere Wood",
+        "Oakmoss"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/montblanc-legend-spirit",
+      "audience": "Masculino"
+    },
+    {
+      "id": "bvlgari-aqva-pour-homme",
+      "name": "Aqva Pour Homme",
+      "house": "Bvlgari",
+      "concentration": "eau-de-toilette",
+      "family": "Green Leaf",
+      "secondary_family": "",
+      "character": [
+        "herbal",
+        "fresh",
+        "citrusy"
+      ],
+      "top_notes": [
+        "Mandarin"
+      ],
+      "heart_notes": [
+        "Santolina"
+      ],
+      "base_notes": [
+        "Clary Sage"
+      ],
+      "notes": [
+        "Mandarin",
+        "Santolina",
+        "Clary Sage"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/bvlgari-aqva-pour-homme",
+      "audience": "Masculino"
+    },
+    {
+      "id": "bvlgari-pour-homme",
+      "name": "Pour Homme",
+      "house": "Bvlgari",
+      "concentration": "eau-de-toilette",
+      "family": "Spice Route",
+      "secondary_family": "Wood & Root",
+      "character": [
+        "spicy",
+        "warm",
+        "woody",
+        "green"
+      ],
+      "top_notes": [
+        "Tea",
+        "Water Lily"
+      ],
+      "heart_notes": [
+        "Cardamom",
+        "Guaiac Wood"
+      ],
+      "base_notes": [
+        "Musk",
+        "Amber"
+      ],
+      "notes": [
+        "Tea",
+        "Water Lily",
+        "Cardamom",
+        "Guaiac Wood",
+        "Musk",
+        "Amber"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/bvlgari-pour-homme",
+      "audience": "Masculino"
+    },
+    {
+      "id": "jean-paul-gaultier-le-male-toilette",
+      "name": "Le Male",
+      "house": "Jean Paul Gaultier",
+      "concentration": "eau-de-toilette",
+      "family": "Green Leaf",
+      "secondary_family": "",
+      "character": [
+        "herbal",
+        "fresh",
+        "sweet",
+        "warm"
+      ],
+      "top_notes": [
+        "Mint"
+      ],
+      "heart_notes": [
+        "Lavender"
+      ],
+      "base_notes": [
+        "Vanilla"
+      ],
+      "notes": [
+        "Mint",
+        "Lavender",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfumes/le-male-jean-paul-gaultier",
+      "audience": "Masculino"
+    },
+    {
+      "id": "jean-paul-gaultier-le-male-le-parfum",
+      "name": "Le Male Le Parfum",
+      "house": "Jean Paul Gaultier",
+      "concentration": "eau-de-parfum",
+      "family": "Green Leaf",
+      "secondary_family": "Powder Veil",
+      "character": [
+        "herbal",
+        "powdery",
+        "warm",
+        "spicy"
+      ],
+      "top_notes": [
+        "Cardamom"
+      ],
+      "heart_notes": [
+        "Lavender",
+        "Iris"
+      ],
+      "base_notes": [
+        "Vanilla"
+      ],
+      "notes": [
+        "Cardamom",
+        "Lavender",
+        "Iris",
+        "Vanilla"
+      ],
+      "url": "https://www.scento.com/perfumes/le-male-le-parfum-jean-paul-gaultier",
+      "audience": "Masculino"
+    },
+    {
+      "id": "dior-dior-homme-intense",
+      "name": "Dior Homme Intense",
+      "house": "Dior",
+      "concentration": "eau-de-parfum",
+      "family": "Skin Musk",
+      "secondary_family": "Powder Veil",
+      "character": [
+        "musky",
+        "powdery",
+        "woody",
+        "clean"
+      ],
+      "top_notes": [
+        "Iris"
+      ],
+      "heart_notes": [
+        "Ambrette"
+      ],
+      "base_notes": [
+        "Cedarwood"
+      ],
+      "notes": [
+        "Iris",
+        "Ambrette",
+        "Cedarwood"
+      ],
+      "url": "https://www.scento.com/perfumes/dior-homme-intense-dior",
+      "audience": "Masculino"
+    },
+    {
+      "id": "dior-fahrenheit-toilette",
+      "name": "Fahrenheit",
+      "house": "Dior",
+      "concentration": "eau-de-toilette",
+      "family": "Wood & Root",
+      "secondary_family": "Petal Garden",
+      "character": [
+        "floral",
+        "woody",
+        "fresh",
+        "citrusy"
+      ],
+      "top_notes": [
+        "Lavender",
+        "Mandarin",
+        "Hawthorn",
+        "Nutmeg",
+        "Cedarwood",
+        "Bergamot",
+        "Chamomile",
+        "Lemon"
+      ],
+      "heart_notes": [
+        "Nutmeg",
+        "Honeysuckle",
+        "Carnation",
+        "Sandalwood",
+        "Violet Leaf",
+        "Jasmine",
+        "Lily of the Valley",
+        "Cedarwood"
+      ],
+      "base_notes": [
+        "Leather",
+        "Tonka Bean",
+        "Amber",
+        "Patchouli",
+        "Musk",
+        "Vetiver"
+      ],
+      "notes": [
+        "Lavender",
+        "Mandarin",
+        "Hawthorn",
+        "Nutmeg",
+        "Cedarwood",
+        "Bergamot",
+        "Chamomile",
+        "Lemon",
+        "Nutmeg",
+        "Honeysuckle",
+        "Carnation",
+        "Sandalwood",
+        "Violet Leaf",
+        "Jasmine",
+        "Lily of the Valley",
+        "Cedarwood",
+        "Leather",
+        "Tonka Bean",
+        "Amber",
+        "Patchouli",
+        "Musk",
+        "Vetiver"
+      ],
+      "url": "https://www.scento.com/perfumes/fahrenheit-dior",
+      "audience": "Masculino"
+    },
+    {
+      "id": "dior-eau-sauvage",
+      "name": "Eau Sauvage",
+      "house": "Dior",
+      "concentration": "eau-de-toilette",
+      "family": "Sunlit Citrus",
+      "secondary_family": "Green Leaf",
+      "character": [
+        "fresh",
+        "citrusy",
+        "herbal",
+        "earthy"
+      ],
+      "top_notes": [
+        "Lemon",
+        "Rosemary"
+      ],
+      "heart_notes": [
+        "Petitgrain",
+        "Basil"
+      ],
+      "base_notes": [
+        "Vetiver"
+      ],
+      "notes": [
+        "Lemon",
+        "Rosemary",
+        "Petitgrain",
+        "Basil",
+        "Vetiver"
+      ],
+      "url": "https://www.scento.com/perfumes/eau-sauvage-dior",
+      "audience": "Masculino"
+    },
+    {
+      "id": "dolce-gabbana-the-one-for-men-eau-de-parfum",
+      "name": "The One for Men Eau de Parfum",
+      "house": "Dolce&Gabbana",
+      "concentration": "eau-de-parfum",
+      "family": "Spice Route",
+      "secondary_family": "",
+      "character": [
+        "spicy",
+        "warm",
+        "floral",
+        "fresh"
+      ],
+      "top_notes": [
+        "Basil",
+        "Coriander",
+        "Grapefruit"
+      ],
+      "heart_notes": [
+        "Cardamom",
+        "Ginger",
+        "Orange Blossom"
+      ],
+      "base_notes": [
+        "Cedarwood",
+        "Tobacco",
+        "Amber"
+      ],
+      "notes": [
+        "Basil",
+        "Coriander",
+        "Grapefruit",
+        "Cardamom",
+        "Ginger",
+        "Orange Blossom",
+        "Cedarwood",
+        "Tobacco",
+        "Amber"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/dolce-gabbana-the-one-for-men-eau-de-parfum",
+      "audience": "Masculino"
+    },
+    {
+      "id": "carolina-herrera-212-vip-men",
+      "name": "212 VIP Men",
+      "house": "Carolina Herrera",
+      "concentration": "eau-de-toilette",
+      "family": "Spice Route",
+      "secondary_family": "Velvet Sweet",
+      "character": [
+        "warm",
+        "fresh",
+        "spicy",
+        "sweet"
+      ],
+      "top_notes": [
+        "Caviar",
+        "Lime",
+        "Mint"
+      ],
+      "heart_notes": [
+        "Vodka",
+        "Ginger"
+      ],
+      "base_notes": [
+        "Amber",
+        "Musk",
+        "Kingwood"
+      ],
+      "notes": [
+        "Caviar",
+        "Lime",
+        "Mint",
+        "Vodka",
+        "Ginger",
+        "Amber",
+        "Musk",
+        "Kingwood"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/carolina-herrera-212-vip-men",
+      "audience": "Masculino"
+    },
+    {
+      "id": "viktor-rolf-spicebomb-extreme",
+      "name": "Spicebomb Extreme",
+      "house": "Viktor&Rolf",
+      "concentration": "eau-de-parfum",
+      "family": "Spice Route",
+      "secondary_family": "",
+      "character": [
+        "spicy",
+        "warm",
+        "resinous"
+      ],
+      "top_notes": [
+        "Pepper"
+      ],
+      "heart_notes": [
+        "Saffron"
+      ],
+      "base_notes": [
+        "Labdanum"
+      ],
+      "notes": [
+        "Pepper",
+        "Saffron",
+        "Labdanum"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/viktor-rolf-spicebomb-extreme",
+      "audience": "Masculino"
+    },
+    {
+      "id": "tom-ford-oud-wood",
+      "name": "Oud Wood",
+      "house": "Tom Ford",
+      "concentration": "eau-de-parfum",
+      "family": "Spice Route",
+      "secondary_family": "",
+      "character": [
+        "warm",
+        "spicy",
+        "sweet",
+        "earthy"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Cardamom",
+        "Pink Pepper",
+        "Patchouli",
+        "Amber",
+        "Oud",
+        "Tonka Bean"
+      ],
+      "url": "https://www.scento.com/perfumes/oud-wood-tom-ford",
+      "audience": "Compartilhável"
+    },
+    {
+      "id": "tom-ford-tobacco-vanille",
+      "name": "Tobacco Vanille",
+      "house": "Tom Ford",
+      "concentration": "eau-de-parfum",
+      "family": "Spice Route",
+      "secondary_family": "Velvet Sweet",
+      "character": [
+        "warm",
+        "spicy",
+        "sweet",
+        "fruity"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Tobacco",
+        "Ginger",
+        "Spice",
+        "Tonka Bean",
+        "Chocolate",
+        "Fruit"
+      ],
+      "url": "https://www.scento.com/perfumes/tobacco-vanille-tom-ford",
+      "audience": "Compartilhável"
+    },
+    {
+      "id": "tom-ford-neroli-portofino",
+      "name": "Neroli Portofino",
+      "house": "Tom Ford",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "Sunlit Citrus",
+      "character": [
+        "floral",
+        "fresh",
+        "citrusy",
+        "creamy"
+      ],
+      "top_notes": [
+        "Bergamot",
+        "Mandarin",
+        "Lemon",
+        "Lavender",
+        "Myrtle",
+        "Rosemary",
+        "Bitter orange"
+      ],
+      "heart_notes": [
+        "Orange Blossom",
+        "Jasmine",
+        "Neroli",
+        "Pittosporum"
+      ],
+      "base_notes": [
+        "Amber",
+        "Ambrette",
+        "Angelica"
+      ],
+      "notes": [
+        "Bergamot",
+        "Mandarin",
+        "Lemon",
+        "Lavender",
+        "Myrtle",
+        "Rosemary",
+        "Bitter orange",
+        "Orange Blossom",
+        "Jasmine",
+        "Neroli",
+        "Pittosporum",
+        "Amber",
+        "Ambrette",
+        "Angelica"
+      ],
+      "url": "https://www.scento.com/perfumes/neroli-portofino-tom-ford",
+      "audience": "Compartilhável"
+    },
+    {
+      "id": "hermes-un-jardin-sur-le-nil",
+      "name": "Un Jardin sur le Nil",
+      "house": "Hermès",
+      "concentration": "eau-de-parfum",
+      "family": "Orchard Fruit",
+      "secondary_family": "Petal Garden",
+      "character": [
+        "fruity",
+        "floral",
+        "woody",
+        "resinous"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Mango",
+        "Lotus",
+        "Incense",
+        "Sycamore wood"
+      ],
+      "url": "https://www.scento.com/perfumes/un-jardin-sur-le-nil-hermes",
+      "audience": "Compartilhável"
+    },
+    {
+      "id": "guerlain-aqua-allegoria-herba-fresca",
+      "name": "Aqua Allegoria Herba Fresca",
+      "house": "Guerlain",
+      "concentration": "eau-de-toilette",
+      "family": "Green Leaf",
+      "secondary_family": "",
+      "character": [
+        "fresh",
+        "green",
+        "floral",
+        "herbal"
+      ],
+      "top_notes": [
+        "Lemon",
+        "Clover"
+      ],
+      "heart_notes": [
+        "Mint",
+        "Tea"
+      ],
+      "base_notes": [
+        "Lily of the Valley",
+        "Cyclamen"
+      ],
+      "notes": [
+        "Lemon",
+        "Clover",
+        "Mint",
+        "Tea",
+        "Lily of the Valley",
+        "Cyclamen"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/guerlain-aqua-allegoria-herba-fresca",
+      "audience": "Compartilhável"
+    },
+    {
+      "id": "guerlain-aqua-allegoria-mandarine-basilic",
+      "name": "Aqua Allegoria Mandarine Basilic",
+      "house": "Guerlain",
+      "concentration": "eau-de-toilette",
+      "family": "Green Leaf",
+      "secondary_family": "",
+      "character": [
+        "fresh",
+        "herbal",
+        "citrusy",
+        "floral"
+      ],
+      "top_notes": [
+        "Mandarin",
+        "Orange Blossom",
+        "Tea",
+        "Ivy"
+      ],
+      "heart_notes": [
+        "Mandarin",
+        "Basil",
+        "Chamomile",
+        "Peony"
+      ],
+      "base_notes": [
+        "Sandalwood",
+        "Amber"
+      ],
+      "notes": [
+        "Mandarin",
+        "Orange Blossom",
+        "Tea",
+        "Ivy",
+        "Mandarin",
+        "Basil",
+        "Chamomile",
+        "Peony",
+        "Sandalwood",
+        "Amber"
+      ],
+      "url": "https://www.scento.com/perfumes/aqua-allegoria-mandarine-basilic-guerlain",
+      "audience": "Compartilhável"
+    }
+  ],
+  "legacy": {
+    "vetiver": {
+      "id": "guerlain-vetiver",
+      "name": "Vétiver",
+      "house": "Guerlain",
+      "concentration": "eau-de-toilette",
+      "family": "Sunlit Citrus",
+      "secondary_family": "Spice Route",
+      "character": [
+        "citrusy",
+        "spicy",
+        "warm",
+        "fresh"
+      ],
+      "top_notes": [
+        "Orange",
+        "Bergamot",
+        "Lemon"
+      ],
+      "heart_notes": [
+        "Nutmeg",
+        "Pepper"
+      ],
+      "base_notes": [
+        "Vetiver",
+        "Tobacco",
+        "Tonka Bean"
+      ],
+      "notes": [
+        "Orange",
+        "Bergamot",
+        "Lemon",
+        "Nutmeg",
+        "Pepper",
+        "Vetiver",
+        "Tobacco",
+        "Tonka Bean"
+      ],
+      "url": "https://www.scento.com/perfumes/vetiver-guerlain",
+      "audience": ""
+    },
+    "sauvage": {
+      "id": "dior-sauvage-eau-de-toilette",
+      "name": "Sauvage",
+      "house": "Dior",
+      "concentration": "eau-de-toilette",
+      "family": "Sunlit Citrus",
+      "secondary_family": "Spice Route",
+      "character": [
+        "warm",
+        "citrusy",
+        "spicy",
+        "amber"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Bergamot",
+        "Pepper",
+        "Amberwood"
+      ],
+      "url": "https://www.scento.com/perfumes/sauvage-dior",
+      "audience": ""
+    },
+    "jadore": {
+      "id": "dior-jadore",
+      "name": "J'adore",
+      "house": "Dior",
+      "concentration": "eau-de-parfum",
+      "family": "White Bloom",
+      "secondary_family": "",
+      "character": [
+        "floral",
+        "creamy"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Ylang-Ylang",
+        "Rose",
+        "Jasmine"
+      ],
+      "url": "https://www.scento.com/perfumes/jadore-dior",
+      "audience": ""
+    },
+    "lemale": {
+      "id": "jean-paul-gaultier-le-male-elixir",
+      "name": "Le Male Elixir",
+      "house": "Jean Paul Gaultier",
+      "concentration": "elixir",
+      "family": "Velvet Sweet",
+      "secondary_family": "Green Leaf",
+      "character": [
+        "warm",
+        "sweet",
+        "herbal",
+        "resinous"
+      ],
+      "top_notes": [
+        "Lavender"
+      ],
+      "heart_notes": [
+        "Tonka Bean"
+      ],
+      "base_notes": [
+        "Benzoin"
+      ],
+      "notes": [
+        "Lavender",
+        "Tonka Bean",
+        "Benzoin"
+      ],
+      "url": "https://www.scento.com/perfumes/le-male-elixir-jean-paul-gaultier",
+      "audience": ""
+    },
+    "coolwater": {
+      "id": "davidoff-cool-water-toilette",
+      "name": "Cool Water",
+      "house": "Davidoff",
+      "concentration": "eau-de-toilette",
+      "family": "Green Leaf",
+      "secondary_family": "Wood & Root",
+      "character": [
+        "floral",
+        "fresh",
+        "herbal",
+        "woody"
+      ],
+      "top_notes": [
+        "Coriander",
+        "Lavender",
+        "Mint",
+        "Rosemary",
+        "Green leaves",
+        "Sea Notes",
+        "Calone"
+      ],
+      "heart_notes": [
+        "Jasmine",
+        "Neroli",
+        "Sandalwood",
+        "Geranium"
+      ],
+      "base_notes": [
+        "Amber",
+        "Musk",
+        "Tobacco",
+        "Cedarwood",
+        "Oakmoss"
+      ],
+      "notes": [
+        "Coriander",
+        "Lavender",
+        "Mint",
+        "Rosemary",
+        "Green leaves",
+        "Sea Notes",
+        "Calone",
+        "Jasmine",
+        "Neroli",
+        "Sandalwood",
+        "Geranium",
+        "Amber",
+        "Musk",
+        "Tobacco",
+        "Cedarwood",
+        "Oakmoss"
+      ],
+      "url": "https://www.scento.com/perfumes/cool-water-davidoff",
+      "audience": ""
+    },
+    "santal": {
+      "id": "le-labo-santal-33",
+      "name": "Santal 33",
+      "house": "Le Labo",
+      "concentration": "eau-de-parfum",
+      "family": "Wood & Root",
+      "secondary_family": "Powder Veil",
+      "character": [
+        "woody",
+        "powdery",
+        "warm",
+        "spicy"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Cardamom",
+        "Iris",
+        "Violet",
+        "Ambroxan",
+        "Sandalwood",
+        "Papyrus",
+        "Cedarwood"
+      ],
+      "url": "https://www.scento.com/perfumes/santal-33-le-labo",
+      "audience": ""
+    },
+    "blackorchid": {
+      "id": "tom-ford-black-orchid",
+      "name": "Black Orchid",
+      "house": "Tom Ford",
+      "concentration": "eau-de-parfum",
+      "family": "Wood & Root",
+      "secondary_family": "",
+      "character": [
+        "floral",
+        "earthy",
+        "fruity",
+        "sweet"
+      ],
+      "top_notes": [],
+      "heart_notes": [],
+      "base_notes": [],
+      "notes": [
+        "Mushroom",
+        "Ylang-Ylang",
+        "Orchid",
+        "Plum",
+        "Rum",
+        "Patchouli"
+      ],
+      "url": "https://www.scento.com/perfumes/black-orchid-tom-ford",
+      "audience": ""
+    },
+    "lightblue": {
+      "id": "dolce-gabbana-light-blue-toilette",
+      "name": "Light Blue",
+      "house": "Dolce&Gabbana",
+      "concentration": "eau-de-toilette",
+      "family": "Petal Garden",
+      "secondary_family": "Green Leaf",
+      "character": [
+        "floral",
+        "fresh",
+        "green",
+        "citrusy"
+      ],
+      "top_notes": [
+        "Campanula",
+        "Apple",
+        "Cedarwood"
+      ],
+      "heart_notes": [
+        "Bamboo",
+        "Jasmine",
+        "Rose"
+      ],
+      "base_notes": [
+        "Amber",
+        "Musk",
+        "Lemon"
+      ],
+      "notes": [
+        "Campanula",
+        "Apple",
+        "Cedarwood",
+        "Bamboo",
+        "Jasmine",
+        "Rose",
+        "Amber",
+        "Musk",
+        "Lemon"
+      ],
+      "url": "https://www.scento.com/perfume-database/perfumes/dolce-gabbana-light-blue-toilette",
+      "audience": ""
+    },
+    "ckone": {
+      "id": "calvin-klein-ck-one-toilette",
+      "name": "CK One",
+      "house": "Calvin Klein",
+      "concentration": "eau-de-toilette",
+      "family": "Sunlit Citrus",
+      "secondary_family": "Petal Garden",
+      "character": [
+        "floral",
+        "citrusy",
+        "powdery",
+        "spicy"
+      ],
+      "top_notes": [
+        "Pineapple",
+        "Green leaves",
+        "Mandarin",
+        "Papaya",
+        "Bergamot",
+        "Cardamom",
+        "Lemon"
+      ],
+      "heart_notes": [
+        "Nutmeg",
+        "Violet",
+        "Iris",
+        "Jasmine",
+        "Lily of the Valley",
+        "Rose"
+      ],
+      "base_notes": [
+        "Sandalwood",
+        "Amber",
+        "Musk",
+        "Cedarwood",
+        "Oakmoss"
+      ],
+      "notes": [
+        "Pineapple",
+        "Green leaves",
+        "Mandarin",
+        "Papaya",
+        "Bergamot",
+        "Cardamom",
+        "Lemon",
+        "Nutmeg",
+        "Violet",
+        "Iris",
+        "Jasmine",
+        "Lily of the Valley",
+        "Rose",
+        "Sandalwood",
+        "Amber",
+        "Musk",
+        "Cedarwood",
+        "Oakmoss"
+      ],
+      "url": "https://www.scento.com/perfumes/ck-one-calvin-klein",
+      "audience": ""
+    }
+  }
+}

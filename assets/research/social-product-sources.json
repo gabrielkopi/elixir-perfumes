@@ -1,0 +1,24 @@
+[
+  {
+    "id": "tobacco-vanille",
+    "image": "https://www.tomfordbeauty.com/cdn/shop/files/tf_sku_T01K01_2000x2000_0.png?v=1793064310&width=2000",
+    "path": "assets/products/tobacco-vanille.png",
+    "bytes": 1455297,
+    "source": "https://www.tomfordbeauty.com/products/tobacco-vanille-eau-de-parfum"
+  },
+  {
+    "id": "oud-wood",
+    "image": "https://www.tomfordbeauty.com/cdn/shop/files/tf_sku_T1XF01_2000x2000_0.png?v=1793064310&width=500",
+    "path": "assets/products/oud-wood.png",
+    "bytes": 96129,
+    "source": "https://www.tomfordbeauty.com/products/oud-wood-eau-de-parfum"
+  },
+  {
+    "id": "jazz-club",
+    "image": "https://prcdn.freetls.fastly.net/release_image/76967/79/76967-79-27fa5e0946c6dd29cf0705f7ec6437c0-2378x2700.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950",
+    "path": "assets/products/jazz-club.jpg",
+    "bytes": 86600,
+    "source": "https://prtimes.jp/main/html/rd/p/000000079.000076967.html",
+    "publisher": "L’Oréal Japan / Maison Margiela press release"
+  }
+]

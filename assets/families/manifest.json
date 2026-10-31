@@ -1,0 +1,50 @@
+{
+  "tool": "image_gen (built-in)",
+  "assets": [
+    {
+      "id": "aquatic",
+      "path": "assets/families/aquatic.png",
+      "prompt": "A single elegant photorealistic 3D olfactory world sphere containing ocean waves, sea spray, translucent seawater and a marine breeze. Olfactory family, a whole evocative atmosphere rather than a single ingredient. A round self-contained miniature globe, rich detailed natural materials arranged as a unified floating sphere. Sophisticated luxury fragrance app asset, natural lighting, soft dimensional shading, clean edges, centered full object with generous margins. No stand, no text, no logo, no grain, no extra decorative objects. Truly transparent background."
+    },
+    {
+      "id": "green",
+      "path": "assets/families/green.png",
+      "prompt": "A single elegant photorealistic 3D olfactory world sphere containing green grasses, damp soil, fresh green plants, moss and freshly cut tree wood. Olfactory family, a whole evocative atmosphere rather than a single ingredient. A round self-contained miniature globe, rich detailed natural materials arranged as a unified floating sphere. Sophisticated luxury fragrance app asset, natural lighting, soft dimensional shading, clean edges, centered full object with generous margins. No stand, no text, no logo, no grain, no extra decorative objects. Truly transparent background."
+    },
+    {
+      "id": "citrus",
+      "path": "assets/families/citrus.png",
+      "prompt": "A single elegant photorealistic 3D olfactory world sphere containing lemon and bergamot peel, orange flesh, citrus leaves and droplets. Olfactory family, a whole evocative atmosphere rather than a single ingredient. A round self-contained miniature globe, rich detailed natural materials arranged as a unified floating sphere. Sophisticated luxury fragrance app asset, natural lighting, soft dimensional shading, clean edges, centered full object with generous margins. No stand, no text, no logo, no grain, no extra decorative objects. Truly transparent background."
+    },
+    {
+      "id": "floral",
+      "path": "assets/families/floral.png",
+      "prompt": "A single elegant photorealistic 3D olfactory world sphere containing white jasmine, rose petals and delicate neroli blossoms. Olfactory family, a whole evocative atmosphere rather than a single ingredient. A round self-contained miniature globe, rich detailed natural materials arranged as a unified floating sphere. Sophisticated luxury fragrance app asset, natural lighting, soft dimensional shading, clean edges, centered full object with generous margins. No stand, no text, no logo, no grain, no extra decorative objects. Truly transparent background."
+    },
+    {
+      "id": "woody",
+      "path": "assets/families/woody.png",
+      "prompt": "A single elegant photorealistic 3D olfactory world sphere containing fresh cedar wood, sandalwood shavings, forest tree bark and roots. Olfactory family, a whole evocative atmosphere rather than a single ingredient. A round self-contained miniature globe, rich detailed natural materials arranged as a unified floating sphere. Sophisticated luxury fragrance app asset, natural lighting, soft dimensional shading, clean edges, centered full object with generous margins. No stand, no text, no logo, no grain, no extra decorative objects. Truly transparent background."
+    },
+    {
+      "id": "gourmand",
+      "path": "assets/families/gourmand.png",
+      "prompt": "A single elegant photorealistic 3D olfactory world sphere containing vanilla pods, caramel ribbons, cocoa and tonka beans. Olfactory family, a whole evocative atmosphere rather than a single ingredient. A round self-contained miniature globe, rich detailed natural materials arranged as a unified floating sphere. Sophisticated luxury fragrance app asset, natural lighting, soft dimensional shading, clean edges, centered full object with generous margins. No stand, no text, no logo, no grain, no extra decorative objects. Truly transparent background."
+    },
+    {
+      "id": "spicy",
+      "path": "assets/families/spicy.png",
+      "prompt": "A single elegant photorealistic 3D olfactory world sphere containing cardamom pods, cinnamon bark, nutmeg and pink peppercorns. Olfactory family, a whole evocative atmosphere rather than a single ingredient. A round self-contained miniature globe, rich detailed natural materials arranged as a unified floating sphere. Sophisticated luxury fragrance app asset, natural lighting, soft dimensional shading, clean edges, centered full object with generous margins. No stand, no text, no logo, no grain, no extra decorative objects. Truly transparent background."
+    },
+    {
+      "id": "ice",
+      "path": "assets/families/ice.png",
+      "prompt": "A single elegant photorealistic 3D olfactory world sphere containing clear sculptural melting ice cubes, cold frost and cool mist. Imaginative perfume accord. A round self-contained miniature globe, rich detailed natural materials arranged as a unified floating sphere. Sophisticated luxury fragrance app asset, natural lighting, soft dimensional shading, clean edges, centered full object with generous margins. No stand, no text, no logo, no grain, no extra decorative objects. Truly transparent background."
+    },
+    {
+      "id": "rain",
+      "path": "assets/families/rain.png",
+      "prompt": "A single elegant photorealistic 3D olfactory world sphere containing raindrops splashing onto dark wet stone, damp earth and soft rain mist. Imaginative perfume accord. A round self-contained miniature globe, rich detailed natural materials arranged as a unified floating sphere. Sophisticated luxury fragrance app asset, natural lighting, soft dimensional shading, clean edges, centered full object with generous margins. No stand, no text, no logo, no grain, no extra decorative objects. Truly transparent background."
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "vetiver": {
+    "source": "https://www.guerlain.com/us/en-us/p/vetiver-eau-de-toilette-G030486.html",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "polo": {
+    "source": "https://www.ralphlaurenfragrances.com/en_US/men/polo/polo-eau-de-toilette/RLFE016.html",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "arbo": {
+    "source": "https://www.boticario.com.br/arbo-desodorante-colonia-100ml-v4",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "clash": {
+    "source": "https://www.boticario.com.br/clash-desodorante-colonia-100ml",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "extreme": {
+    "source": "https://www.boticario.com.br/produto/clash-extreme-desodorante-colonia-100ml/",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "malbec": {
+    "source": "https://www.boticario.com.br/malbec-desodorante-colonia-100ml/",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "coffee": {
+    "source": "https://www.boticario.com.br/coffee-man-lucky-desodorante-colonia-100ml/",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "unico": {
+    "source": "https://www.natura.com.br/p/desodorante-perfume-essencial-unico-masculino-90-ml/NATBRA-103348",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "sonar": {
+    "source": "https://www.natura.com.br/p/kaiak-sonar-deo-col%C3%B4nia-masculino-100-ml/NATBRA-155607",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "terre": {
+    "source": "https://www.hermes.com/us/en/product/terre-d-hermes-eau-de-toilette-V107748V0/",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "lemale": {
+    "source": "https://www.jeanpaulgaultier.com/us/en/fragrances/range-le-male/le-male-elixir-parfum",
+    "image": "",
+    "status": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)>"
+  },
+  "coolwater": {
+    "source": "https://www.zinodavidoff.com/fragrances/cool-water-man-eau-de-toilette-125-ml",
+    "image": "assets/products/coolwater.jpg",
+    "status": "downloaded",
+    "originalImage": "https://cdn.prod.website-files.com/687defbb96d87d8b0b3754df/68caf8cb218cfe7f19652a23_3414202000572_davcwm19edt125mlcmyk-1280x1280.avif"
+  },
+  "homem": {
+    "source": "https://www.natura.com.br/p/natura-homem-desodorante-colonia-masculino-100-ml/NATBRA-69198",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "hwyl": {
+    "source": "https://www.aesop.com/us/p/fragrance/hwyl/hwyl-eau-de-parfum/",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "santal": {
+    "source": "https://www.lelabofragrances.com/santal-33-147.html",
+    "image": "assets/products/santal.jpg",
+    "status": "downloaded",
+    "originalImage": "https://lelabo.ips.photos/lelabo-java/images/skus/050PS33100__PRODUCT_01--IMG_1200--SANTAL33-200129705.jpg"
+  },
+  "philosykos": {
+    "source": "https://www.diptyqueparis.com/en_us/p/philosykos-eau-de-toilette-100ml-1.html",
+    "image": "assets/products/philosykos.jpg",
+    "status": "downloaded",
+    "originalImage": "http://us.diptyqueparis.com/cdn/shop/files/diptyque-philosykos-eau-de-toilette-100ml-philo100-1_0831aeef-f2a4-4617-a6a1-6ea9bb724a47.jpg?v=1781571387"
+  },
+  "sauvage": {
+    "source": "https://www.dior.com/en_us/beauty/products/sauvage-eau-de-toilette-Y0685240.html",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "chanel5": {
+    "source": "https://www.chanel.com/us/fragrance/p/125530/n5-eau-de-parfum-spray/",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "chance": {
+    "source": "https://www.chanel.com/us/fragrance/p/126260/chance-eau-tendre-eau-de-toilette-spray/",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "blackorchid": {
+    "source": "https://www.tomfordbeauty.com/product/black-orchid-eau-de-parfum",
+    "image": "assets/products/blackorchid.jpg",
+    "status": "downloaded",
+    "originalImage": "http://www.tomfordbeauty.com/cdn/shop/files/tfb_sku_T00501_2000x2000_0.png?v=1793049931"
+  },
+  "lightblue": {
+    "source": "https://www.dolcegabbana.com/en-us/beauty/perfumes-for-her/light-blue/",
+    "image": "",
+    "status": "no product image metadata"
+  },
+  "jadore": {
+    "source": "https://www.dior.com/en_us/beauty/products/jadore-eau-de-parfum-Y0715201.html",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "bleu": {
+    "source": "https://www.chanel.com/us/fragrance/p/107360/bleu-de-chanel-eau-de-parfum-spray/",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  },
+  "ckone": {
+    "source": "https://www.calvinklein.us/en/ck-one-eau-de-toilette/44010042-000.html",
+    "image": "",
+    "status": "HTTP Error 403: Forbidden"
+  }
+}

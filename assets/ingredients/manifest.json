@@ -1,0 +1,244 @@
+{
+  "tool": "image_gen built-in",
+  "created": "2026-10-31",
+  "images": [
+    {
+      "id": "bergamota",
+      "file": "bergamota.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "limao-siciliano",
+      "file": "limao-siciliano.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "laranja-doce",
+      "file": "laranja-doce.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "grapefruit",
+      "file": "grapefruit.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "mandarina",
+      "file": "mandarina.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "petitgrain",
+      "file": "petitgrain.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "rosa",
+      "file": "rosa.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "jasmim",
+      "file": "jasmim.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "ylang-ylang",
+      "file": "ylang-ylang.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "neroli",
+      "file": "neroli.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "lavanda",
+      "file": "lavanda.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "geranio",
+      "file": "geranio.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "sandalo",
+      "file": "sandalo.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "cedro",
+      "file": "cedro.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "vetiver",
+      "file": "vetiver.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "patchouli",
+      "file": "patchouli.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "oud",
+      "file": "oud.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "guaiaco",
+      "file": "guaiaco.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "baunilha",
+      "file": "baunilha.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "fava-tonka",
+      "file": "fava-tonka.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "benjoim",
+      "file": "benjoim.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "cacau",
+      "file": "cacau.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "caramelo",
+      "file": "caramelo.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "mel",
+      "file": "mel.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "canela",
+      "file": "canela.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "cardamomo",
+      "file": "cardamomo.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "pimenta-rosa",
+      "file": "pimenta-rosa.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "acafrao",
+      "file": "acafrao.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "olibano",
+      "file": "olibano.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "mirra",
+      "file": "mirra.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "whiskey",
+      "file": "whiskey.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "tabaco",
+      "file": "tabaco.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "noz-moscada",
+      "file": "noz-moscada.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    },
+    {
+      "id": "terroso",
+      "file": "terroso.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true
+    }
+  ]
+}

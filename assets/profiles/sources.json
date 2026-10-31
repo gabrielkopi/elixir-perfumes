@@ -1,0 +1,28 @@
+{
+  "profile": "Vincenzo Saggio",
+  "simulation": true,
+  "notice": "Perfil público visitado na simulação. Preferências, músicas, selo de verificação, números e relatos são criações editoriais, não declarações reais de Vincenzo Saggio.",
+  "images": "Foto de perfil e três imagens de notas fornecidas pelo usuário em 31/10/2026.",
+  "curation": [
+    {
+      "name": "Tobacco Vanille Eau de Parfum",
+      "brand": "Tom Ford",
+      "source": "https://www.tomfordbeauty.com/products/tobacco-vanille-eau-de-parfum?dwvar_T0-TOBACCO_color=OC",
+      "direction": "Tabaco, baunilha e madeiras doces"
+    },
+    {
+      "name": "Jazz Club",
+      "brand": "Maison Margiela",
+      "source": "https://www.maisonmargiela-fragrances.us/fragrances/replica/replica-jazz-club/MM008.html",
+      "direction": "Rum, tabaco e baunilha"
+    },
+    {
+      "name": "Oud Wood Eau de Parfum",
+      "brand": "Tom Ford",
+      "source": "https://www.tomfordbeauty.com/products/oud-wood-eau-de-parfum",
+      "direction": "Oud, sândalo e cardamomo"
+    }
+  ],
+  "productImages": "../research/social-product-sources.json",
+  "communityPortraits": "community-images.json"
+}

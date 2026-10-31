@@ -1,0 +1,8947 @@
+{
+  "title": "ELIXIR / ASSINATURA — 100 fragrâncias",
+  "count": 100,
+  "dimensions": [
+    "Cítrico",
+    "Verde",
+    "Aromático",
+    "Amadeirado",
+    "Terroso",
+    "Floral",
+    "Frutado",
+    "Doce",
+    "Aquático",
+    "Especiado fresco",
+    "Especiado quente",
+    "Couro",
+    "Tabaco",
+    "Resinoso",
+    "Âmbar",
+    "Musk",
+    "Atalcado",
+    "Gourmand",
+    "Balsâmico",
+    "Herbal",
+    "Defumado",
+    "Lactônico",
+    "Aldeídico",
+    "Animalizado"
+  ],
+  "attribution": "Scento — https://www.scento.com/perfume-database · CC BY 4.0, e fontes individuais das marcas.",
+  "weights": "Pesos editoriais do protótipo: saída 0.70, coração 0.85, fundo 1.00 e destaques 0.80. Não representam concentração nem percentuais de ingredientes.",
+  "perfumes": [
+    {
+      "id": "vetiver",
+      "name": "Vétiver",
+      "brand": "Guerlain",
+      "concentration": "Eau de Toilette",
+      "family": "Amadeirado fresco",
+      "scene": "forest",
+      "vector": [
+        0.7,
+        0.9,
+        0.8,
+        0.8,
+        0.8,
+        0,
+        0,
+        0.1,
+        0,
+        0,
+        0.4,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Laranja",
+          "Bergamota",
+          "Limão"
+        ],
+        "heart": [
+          "Noz-moscada",
+          "Pimenta"
+        ],
+        "base": [
+          "Vetiver",
+          "Tabaco",
+          "Fava tonka"
+        ],
+        "source": "https://www.guerlain.com/us/en-us/p/vetiver-eau-de-toilette-G030486.html",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Laranja",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Noz-moscada",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Pimenta",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Tabaco",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "polo",
+      "name": "Polo Green",
+      "brand": "Ralph Lauren",
+      "concentration": "Eau de Toilette",
+      "family": "Amadeirado especiado",
+      "scene": "forest",
+      "vector": [
+        0,
+        0.9,
+        0.8,
+        0.8,
+        0.5,
+        0,
+        0,
+        0.1,
+        0,
+        0,
+        0,
+        0.6,
+        0.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0.3,
+        0,
+        0,
+        0
+      ],
+      "image": "assets/products/polo.jpg",
+      "notes": {
+        "top": [
+          "Pinheiro",
+          "Tomilho",
+          "Manjericão"
+        ],
+        "heart": [
+          "Couro",
+          "Tabaco",
+          "Estragão"
+        ],
+        "base": [
+          "Patchouli",
+          "Musgo de carvalho",
+          "Incenso"
+        ],
+        "source": "https://www.ralphlaurenfragrances.com/en_US/men/polo/polo-eau-de-toilette/RLFE016.html",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Pinheiro",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Tomilho",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Manjericão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Couro",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Tabaco",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Estragão",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musgo de carvalho",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Incenso",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "arbo",
+      "name": "Arbo",
+      "brand": "O Boticário",
+      "concentration": "Desodorante Colônia",
+      "family": "Fougère fresco",
+      "scene": "forest",
+      "vector": [
+        0.7,
+        0.9,
+        0.8,
+        0.3,
+        0,
+        0,
+        0,
+        0,
+        0.3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.3,
+        0,
+        0,
+        0,
+        0.9,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "assets/products/arbo.jpg",
+      "notes": {
+        "highlights": [
+          "Menta",
+          "Notas verdes",
+          "Sândalo"
+        ],
+        "source": "https://static-cms.internacional.grupoboticario.digital/SEGREDINHO_Perfumaria_completa_2ff6b13fd2.pdf",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Menta",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Notas verdes",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "clash",
+      "name": "Clash",
+      "brand": "O Boticário",
+      "concentration": "Desodorante Colônia",
+      "family": "Fougère aquoso",
+      "scene": "sea",
+      "vector": [
+        0.4,
+        0.5,
+        0.9,
+        0.5,
+        0,
+        0,
+        0.3,
+        0,
+        0.8,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.7,
+        0,
+        0,
+        0.4,
+        0
+      ],
+      "image": "assets/products/clash.jpg",
+      "notes": {
+        "top": [
+          "Timur pepper",
+          "Aldeídos metálicos",
+          "Notas marinhas",
+          "Carambola"
+        ],
+        "heart": [
+          "Sálvia",
+          "Lavanda",
+          "Gerânio"
+        ],
+        "base": [
+          "Vetiver",
+          "Cedro",
+          "Musgo",
+          "Patchouli",
+          "Âmbar",
+          "Cipreste",
+          "Cumarina",
+          "Cashmeran"
+        ],
+        "source": "https://www.boticario.com.br/clash-desodorante-colonia-100ml",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Timur pepper",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Aldeídos metálicos",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Notas marinhas",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Carambola",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Sálvia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Gerânio",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musgo",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cipreste",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cumarina",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cashmeran",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "extreme",
+      "name": "Clash Extreme",
+      "brand": "O Boticário",
+      "concentration": "Desodorante Colônia",
+      "family": "Fougère amadeirado",
+      "scene": "sea",
+      "vector": [
+        0,
+        0.4,
+        0.8,
+        0.8,
+        0,
+        0,
+        0.6,
+        0.3,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.4,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "assets/products/extreme.jpg",
+      "notes": {
+        "top": [
+          "Timur pepper",
+          "Notas marinhas",
+          "Carambola"
+        ],
+        "heart": [
+          "Sálvia",
+          "Gerânio",
+          "Lavanda",
+          "Figo"
+        ],
+        "base": [
+          "Sândalo",
+          "Cashmeran",
+          "Cedro",
+          "Vetiver",
+          "Musgo",
+          "Patchouli",
+          "Âmbar"
+        ],
+        "source": "https://www.boticario.com.br/dicas-de-beleza/qual-a-diferenca-entre-as-fragrancias-de-clash-compare-e-escolha-a-sua/",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Timur pepper",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Notas marinhas",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Carambola",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Sálvia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Gerânio",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Figo",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cashmeran",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musgo",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "malbec",
+      "name": "Malbec",
+      "brand": "O Boticário",
+      "concentration": "Desodorante Colônia",
+      "family": "Amadeirado • estimativa",
+      "scene": "night",
+      "vector": [
+        0.2,
+        0,
+        0.3,
+        0.9,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0.7,
+        0.5,
+        0,
+        0,
+        0.7,
+        0,
+        0,
+        0,
+        0.4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "assets/products/malbec.jpg",
+      "notes": {
+        "highlights": [
+          "Cedro da Virgínia",
+          "Patchouli",
+          "Acorde Malbec Head Space"
+        ],
+        "source": "https://www.boticario.com.br/produto/malbec-desodorante-colonia-100ml-v2",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Cedro da Virgínia",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Acorde Malbec Head Space",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "coffee",
+      "name": "Coffee Man Lucky",
+      "brand": "O Boticário",
+      "concentration": "Desodorante Colônia",
+      "family": "Fougère amadeirado",
+      "scene": "night",
+      "vector": [
+        0.4,
+        0,
+        0.5,
+        0.7,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0.5,
+        0.5,
+        0,
+        0,
+        0,
+        0.7,
+        0,
+        0,
+        0.3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "assets/products/coffee.jpg",
+      "notes": {
+        "highlights": [
+          "Âmbar",
+          "Patchouli",
+          "Pimenta preta"
+        ],
+        "source": "https://www.boticario.com.br/coffee-man-lucky-desodorante-colonia-100ml/",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Âmbar",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Pimenta preta",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "unico",
+      "name": "Essencial Único Masculino",
+      "brand": "Natura",
+      "concentration": "Deo Parfum",
+      "family": "Amadeirado especiado",
+      "scene": "night",
+      "vector": [
+        0.3,
+        0,
+        0,
+        0.9,
+        0.4,
+        0,
+        0,
+        0.4,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0.7,
+        0.6,
+        0,
+        0,
+        0,
+        0.6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "assets/products/unico.jpg",
+      "notes": {
+        "top": [
+          "Pimenta rosa",
+          "Ishipink",
+          "Noz-moscada",
+          "Açafrão",
+          "Pomelo"
+        ],
+        "heart": [
+          "Frésia",
+          "Cedro",
+          "Vetiver",
+          "Copaíba"
+        ],
+        "base": [
+          "Mirra",
+          "Opoponax",
+          "Benjoim",
+          "Cumaru",
+          "Baunilha",
+          "Musk",
+          "Âmbar",
+          "Ládano"
+        ],
+        "source": "https://www.natura.com.br/p/desodorante-perfume-essencial-unico-masculino-90-ml/NATBRA-103348",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Pimenta rosa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Ishipink",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Noz-moscada",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Açafrão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Pomelo",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Frésia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Copaíba",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Mirra",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Opoponax",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Benjoim",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cumaru",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Ládano",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "sonar",
+      "name": "Kaiak Sonar Masculino",
+      "brand": "Natura",
+      "concentration": "Deo Colônia",
+      "family": "Aromático amadeirado",
+      "scene": "sea",
+      "vector": [
+        0.5,
+        0.3,
+        0.7,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0.9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "highlights": [
+          "Notas marinhas",
+          "Metálico",
+          "Amadeirado",
+          "Salgado"
+        ],
+        "source": "https://www.natura.com.br/c/kaiak-sonar",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Notas marinhas",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Metálico",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Amadeirado",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Salgado",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "terre",
+      "name": "Terre d’Hermès",
+      "brand": "Hermès",
+      "concentration": "Eau de Toilette",
+      "family": "Amadeirado • estimativa",
+      "scene": "forest",
+      "vector": [
+        0.9,
+        0.5,
+        0.5,
+        0.8,
+        0.8,
+        0,
+        0,
+        0.1,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "highlights": [
+          "Toranja",
+          "Laranja",
+          "Sílex",
+          "Madeiras"
+        ],
+        "source": "https://www.hermes.com/us/en/product/terre-d-hermes-eau-de-toilette-V107748V0/",
+        "sourceLabel": "Hermès · destaques de composição"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Toranja",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Laranja",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Sílex",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Madeiras",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "lemale",
+      "name": "Le Male Elixir",
+      "brand": "Jean Paul Gaultier",
+      "concentration": "Parfum",
+      "family": "Âmbar aromático • estimativa",
+      "scene": "night",
+      "vector": [
+        0,
+        0,
+        0.6,
+        0,
+        0,
+        0,
+        0,
+        0.95,
+        0,
+        0,
+        0.5,
+        0,
+        0.4,
+        0,
+        0.8,
+        0,
+        0,
+        0.8,
+        0.6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Lavanda"
+        ],
+        "heart": [
+          "Fava tonka"
+        ],
+        "base": [
+          "Benjoim"
+        ],
+        "source": "https://www.scento.com/perfumes/le-male-elixir-jean-paul-gaultier",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Lavanda",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Benjoim",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "coolwater",
+      "name": "Cool Water",
+      "brand": "Davidoff",
+      "concentration": "Eau de Toilette",
+      "family": "Aquático aromático • estimativa",
+      "scene": "sea",
+      "vector": [
+        0.5,
+        0.6,
+        0.8,
+        0.3,
+        0,
+        0,
+        0,
+        0,
+        0.9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0.6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "assets/products/coolwater.jpg",
+      "notes": {
+        "top": [
+          "Coriander",
+          "Lavanda",
+          "Menta",
+          "Alecrim",
+          "Green leaves",
+          "Notas marinhas",
+          "Calone"
+        ],
+        "heart": [
+          "Jasmim",
+          "Néroli",
+          "Sândalo",
+          "Gerânio"
+        ],
+        "base": [
+          "Âmbar",
+          "Musk",
+          "Tabaco",
+          "Cedro",
+          "Musgo de carvalho"
+        ],
+        "source": "https://www.scento.com/perfumes/cool-water-davidoff",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Coriander",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Menta",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Alecrim",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Green leaves",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Notas marinhas",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Calone",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Néroli",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Gerânio",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Tabaco",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musgo de carvalho",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "homem",
+      "name": "Natura Homem",
+      "brand": "Natura",
+      "concentration": "Desodorante Colônia",
+      "family": "Amadeirado • estimativa",
+      "scene": "city",
+      "vector": [
+        0.5,
+        0.4,
+        0.7,
+        0.7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "highlights": [
+          "Amadeirado",
+          "Aromático"
+        ],
+        "source": "https://static.rede.natura.net/html/br/site_cf/10_2023/FAQs/FAQ-homem2.html",
+        "sourceLabel": "Natura · linha Homem. Descritores editoriais; pirâmide ainda não confirmada.",
+        "reliability": "Em revisão"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Amadeirado",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Aromático",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "hwyl",
+      "name": "Hwyl",
+      "brand": "Aesop",
+      "concentration": "Eau de Parfum",
+      "family": "Amadeirado • estimativa",
+      "scene": "forest",
+      "vector": [
+        0,
+        0.8,
+        0.6,
+        0.9,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.6,
+        0.8,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "highlights": [
+          "Cipreste",
+          "Olíbano",
+          "Vetiver"
+        ],
+        "source": "https://sa.aesop.com/pages/all-fragrance",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Compartilhável",
+      "noteWeights": [
+        {
+          "name": "Cipreste",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Olíbano",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "santal",
+      "name": "Santal 33",
+      "brand": "Le Labo",
+      "concentration": "Eau de Parfum",
+      "family": "Amadeirado • estimativa",
+      "scene": "city",
+      "vector": [
+        0,
+        0.3,
+        0,
+        0.9,
+        0.3,
+        0.3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.6,
+        0,
+        0,
+        0,
+        0.6,
+        0.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "assets/products/santal.jpg",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Cardamomo",
+          "Íris",
+          "Violeta",
+          "Ambroxan",
+          "Sândalo",
+          "Papiro",
+          "Cedro"
+        ],
+        "source": "https://www.scento.com/perfumes/santal-33-le-labo",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "audience": "Compartilhável",
+      "noteWeights": [
+        {
+          "name": "Cardamomo",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Íris",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Violeta",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Ambroxan",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Papiro",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Cedro",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "philosykos",
+      "name": "Philosykos",
+      "brand": "Diptyque",
+      "concentration": "Eau de Toilette",
+      "family": "Verde • estimativa",
+      "scene": "forest",
+      "vector": [
+        0,
+        0.95,
+        0,
+        0.5,
+        0,
+        0,
+        0.6,
+        0.2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.7,
+        0,
+        0.5,
+        0,
+        0
+      ],
+      "image": "assets/products/philosykos.jpg",
+      "notes": {
+        "highlights": [
+          "Folhas de figueira",
+          "Seiva de figueira",
+          "Madeira de figueira",
+          "Pimenta preta"
+        ],
+        "source": "https://sa.diptyqueparis.com/en-sa/products/eau-de-toilette-philosykos-50ml-1",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Compartilhável",
+      "noteWeights": [
+        {
+          "name": "Folhas de figueira",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Seiva de figueira",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Madeira de figueira",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Pimenta preta",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "sauvage",
+      "name": "Sauvage",
+      "brand": "Dior",
+      "concentration": "Eau de Toilette",
+      "family": "Aromático • estimativa",
+      "scene": "city",
+      "vector": [
+        0.8,
+        0,
+        0.8,
+        0.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0.7,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Bergamota",
+          "Pimenta",
+          "Madeira ambarada"
+        ],
+        "source": "https://www.scento.com/perfumes/sauvage-dior",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Pimenta",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Madeira ambarada",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "chanel5",
+      "name": "N°5",
+      "brand": "Chanel",
+      "concentration": "Eau de Parfum",
+      "family": "Floral • estimativa",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.95,
+        0,
+        0.3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.6,
+        0.7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.9,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "highlights": [
+          "Aldeídos",
+          "Rosa de maio",
+          "Jasmim",
+          "Baunilha bourbon"
+        ],
+        "source": "https://www.chanel.com/us/fragrance/p/125530/n5-eau-de-parfum-spray/",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Feminino",
+      "noteWeights": [
+        {
+          "name": "Aldeídos",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Rosa de maio",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Baunilha bourbon",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "chance",
+      "name": "Chance Eau Tendre",
+      "brand": "Chanel",
+      "concentration": "Eau de Toilette",
+      "family": "Floral frutado • estimativa",
+      "scene": "flowers",
+      "vector": [
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0.8,
+        0.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "highlights": [
+          "Toranja",
+          "Marmelo",
+          "Jasmim",
+          "Musk branco"
+        ],
+        "source": "https://www.chanel.com/us/fragrance/p/126330/chance-eau-tendre-eau-de-toilette-spray/",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Feminino",
+      "noteWeights": [
+        {
+          "name": "Toranja",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Marmelo",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Musk branco",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "blackorchid",
+      "name": "Black Orchid",
+      "brand": "Tom Ford",
+      "concentration": "Eau de Parfum",
+      "family": "Âmbar floral • estimativa",
+      "scene": "night",
+      "vector": [
+        0,
+        0,
+        0,
+        0.5,
+        0.4,
+        0.8,
+        0,
+        0.7,
+        0,
+        0,
+        0.6,
+        0,
+        0,
+        0,
+        0.7,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "assets/products/blackorchid.jpg",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Mushroom",
+          "Ylang-ylang",
+          "Orchid",
+          "Ameixa",
+          "Rum",
+          "Patchouli"
+        ],
+        "source": "https://www.scento.com/perfumes/black-orchid-tom-ford",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "audience": "Compartilhável",
+      "noteWeights": [
+        {
+          "name": "Mushroom",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Ylang-ylang",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Orchid",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Ameixa",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Rum",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "lightblue",
+      "name": "Light Blue",
+      "brand": "Dolce & Gabbana",
+      "concentration": "Eau de Toilette",
+      "family": "Cítrico • estimativa",
+      "scene": "sea",
+      "vector": [
+        0.95,
+        0.4,
+        0,
+        0,
+        0,
+        0.3,
+        0.5,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Campanula",
+          "Maçã",
+          "Cedro"
+        ],
+        "heart": [
+          "Bambu",
+          "Jasmim",
+          "Rosa"
+        ],
+        "base": [
+          "Âmbar",
+          "Musk",
+          "Limão"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/dolce-gabbana-light-blue-toilette",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "audience": "Feminino",
+      "noteWeights": [
+        {
+          "name": "Campanula",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Maçã",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Cedro",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bambu",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Limão",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "jadore",
+      "name": "J’adore",
+      "brand": "Dior",
+      "concentration": "Eau de Parfum",
+      "family": "Floral • estimativa",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.95,
+        0.5,
+        0.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Ylang-ylang",
+          "Rosa",
+          "Jasmim"
+        ],
+        "source": "https://www.scento.com/perfumes/jadore-dior",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "audience": "Feminino",
+      "noteWeights": [
+        {
+          "name": "Ylang-ylang",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "bleu",
+      "name": "Bleu de Chanel",
+      "brand": "Chanel",
+      "concentration": "Eau de Parfum",
+      "family": "Amadeirado aromático • estimativa",
+      "scene": "city",
+      "vector": [
+        0.7,
+        0,
+        0.7,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0.4,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "highlights": [
+          "Cedro",
+          "Sândalo",
+          "Âmbar",
+          "Musk"
+        ],
+        "source": "https://www.chanel.com/us/fragrance/p/107360/bleu-de-chanel-eau-de-parfum-spray/",
+        "sourceLabel": "Marca · destaques de composição"
+      },
+      "audience": "Masculino",
+      "noteWeights": [
+        {
+          "name": "Cedro",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Musk",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "ckone",
+      "name": "CK One",
+      "brand": "Calvin Klein",
+      "concentration": "Eau de Toilette",
+      "family": "Cítrico • estimativa",
+      "scene": "sea",
+      "vector": [
+        0.9,
+        0.5,
+        0.5,
+        0,
+        0,
+        0.3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Abacaxi",
+          "Green leaves",
+          "Mandarina",
+          "Papaya",
+          "Bergamota",
+          "Cardamomo",
+          "Limão"
+        ],
+        "heart": [
+          "Noz-moscada",
+          "Violeta",
+          "Íris",
+          "Jasmim",
+          "Lily of the Valley",
+          "Rosa"
+        ],
+        "base": [
+          "Sândalo",
+          "Âmbar",
+          "Musk",
+          "Cedro",
+          "Musgo de carvalho"
+        ],
+        "source": "https://www.scento.com/perfumes/ck-one-calvin-klein",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "audience": "Compartilhável",
+      "noteWeights": [
+        {
+          "name": "Abacaxi",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Green leaves",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Papaya",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Cardamomo",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Noz-moscada",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Violeta",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Íris",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Lily of the Valley",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musgo de carvalho",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "ysl-libre",
+      "name": "Libre",
+      "brand": "Yves Saint Laurent",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.82,
+        0,
+        0.41,
+        0,
+        0,
+        1,
+        0,
+        0.59,
+        0,
+        0.21,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.59,
+        0,
+        0.47,
+        0,
+        0.33,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Mandarina",
+          "Néroli",
+          "Lavanda"
+        ],
+        "heart": [
+          "Flor de laranjeira",
+          "Jasmim sambac"
+        ],
+        "base": [
+          "Musk",
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfumes/libre-yves-saint-laurent",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Néroli",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Flor de laranjeira",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim sambac",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "ysl-black-opium",
+      "name": "Black Opium",
+      "brand": "Yves Saint Laurent",
+      "concentration": "Eau de Parfum",
+      "family": "Gourmand · perfil editorial",
+      "catalogFamily": "Velvet Sweet",
+      "audience": "Feminino",
+      "scene": "night",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.56,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Café",
+          "White Flowers",
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfumes/black-opium-yves-saint-laurent",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Café",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "White Flowers",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "ysl-mon-paris",
+      "name": "Mon Paris",
+      "brand": "Yves Saint Laurent",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.55,
+        0.2,
+        0,
+        0.78,
+        0.63,
+        1,
+        0.82,
+        0.6,
+        0,
+        0.14,
+        0,
+        0,
+        0,
+        0,
+        0.39,
+        0.39,
+        0,
+        0.31,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Morango",
+          "Framboesa",
+          "Pera",
+          "Bergamota",
+          "Laranja"
+        ],
+        "heart": [
+          "Datura flower",
+          "Peônia",
+          "Flor de laranjeira",
+          "Jasmim sambac"
+        ],
+        "base": [
+          "Patchouli",
+          "Musk",
+          "Ambroxan",
+          "Cedro",
+          "Musgo de carvalho",
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfumes/mon-paris-yves-saint-laurent",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Morango",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Framboesa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Pera",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Laranja",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Datura flower",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Peônia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Flor de laranjeira",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim sambac",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Ambroxan",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musgo de carvalho",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "ysl-manifesto",
+      "name": "Manifesto",
+      "brand": "Yves Saint Laurent",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Wood & Root",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.32,
+        0,
+        0,
+        0.92,
+        0,
+        0.78,
+        0.32,
+        1,
+        0,
+        0.08,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.74,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota",
+          "Cassis"
+        ],
+        "heart": [
+          "Jasmim sambac",
+          "Lily of the Valley"
+        ],
+        "base": [
+          "Cedro",
+          "Sândalo",
+          "Baunilha",
+          "Fava tonka"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/ysl-manifesto",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Cassis",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Jasmim sambac",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Lily of the Valley",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "prada-paradoxe",
+      "name": "Paradoxe",
+      "brand": "Prada",
+      "concentration": "Eau de Parfum",
+      "family": "Cítrico · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "night",
+      "vector": [
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.2,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Néroli",
+          "Âmbar",
+          "Musk"
+        ],
+        "source": "https://www.scento.com/perfumes/prada-paradoxe-prada",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Néroli",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Musk",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "prada-la-femme-prada",
+      "name": "La Femme Prada",
+      "brand": "Prada",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.85,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Frangipani"
+        ],
+        "heart": [
+          "Ylang-ylang"
+        ],
+        "base": [
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfumes/prada-la-femme-prada",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Frangipani",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Ylang-ylang",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "prada-candy",
+      "name": "Candy",
+      "brand": "Prada",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Amber & Resin",
+      "audience": "Feminino",
+      "scene": "night",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.85,
+        0,
+        0.7,
+        0,
+        1,
+        0.6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Musk"
+        ],
+        "heart": [
+          "Benjoim"
+        ],
+        "base": [
+          "Caramelo"
+        ],
+        "source": "https://www.scento.com/perfumes/prada-candy-prada",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Musk",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Benjoim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Caramelo",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "lancome-idole",
+      "name": "Idôle",
+      "brand": "Lancôme",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Wood & Root",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.29,
+        0.4,
+        0,
+        0.83,
+        0.33,
+        1,
+        0.29,
+        0.49,
+        0,
+        0.31,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.42,
+        0,
+        0.33,
+        0,
+        0.15,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota",
+          "Pera",
+          "Pimenta rosa"
+        ],
+        "heart": [
+          "Rosa",
+          "Jasmim"
+        ],
+        "base": [
+          "Musk",
+          "Baunilha",
+          "Patchouli",
+          "Cedro"
+        ],
+        "source": "https://www.scento.com/perfumes/idole-lancome",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Pera",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Pimenta rosa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "lancome-miracle",
+      "name": "Miracle",
+      "brand": "Lancôme",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.35,
+        0.35,
+        0,
+        0,
+        0,
+        1,
+        0.29,
+        0.07,
+        0,
+        0.66,
+        0,
+        0,
+        0,
+        0,
+        0.42,
+        0.42,
+        0,
+        0,
+        0,
+        0.18,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Lichia",
+          "Frésia"
+        ],
+        "heart": [
+          "Magnólia",
+          "Jasmim",
+          "Gengibre",
+          "Pimenta",
+          "Mandarina"
+        ],
+        "base": [
+          "Âmbar",
+          "Musk"
+        ],
+        "source": "https://www.scento.com/perfumes/miracle-lancome",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Lichia",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Frésia",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Magnólia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Gengibre",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Pimenta",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Mandarina",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "lancome-la-nuit-tresor",
+      "name": "La Nuit Trésor",
+      "brand": "Lancôme",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Feminino",
+      "scene": "night",
+      "vector": [
+        0,
+        0,
+        0,
+        0.48,
+        0,
+        0.33,
+        0.48,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.48,
+        0,
+        0,
+        0,
+        0.8,
+        0.33,
+        0,
+        0.33,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Rosa"
+        ],
+        "heart": [
+          "Baunilha",
+          "Orchid"
+        ],
+        "base": [
+          "Incenso",
+          "Papiro",
+          "Lichia",
+          "Pralinê"
+        ],
+        "source": "https://www.scento.com/perfumes/la-nuit-tresor-lancome",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Rosa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Orchid",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Incenso",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Papiro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Lichia",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Pralinê",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "lancome-poeme",
+      "name": "Poême",
+      "brand": "Lancôme",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0.41,
+        0.69,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.47,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Lichia",
+          "Poppy"
+        ],
+        "heart": [
+          "Flor de laranjeira",
+          "Mimosa",
+          "Jasmim"
+        ],
+        "base": [
+          "Baunilha",
+          "Datura flower"
+        ],
+        "source": "https://www.scento.com/perfumes/poeme-lancome",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Lichia",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Poppy",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Flor de laranjeira",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Mimosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Datura flower",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "guerlain-shalimar",
+      "name": "Shalimar",
+      "brand": "Guerlain",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.27,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.78,
+        0,
+        0.07,
+        0,
+        0,
+        0,
+        0.39,
+        0,
+        0,
+        0.27,
+        0.63,
+        0.27,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Notas florais",
+          "Bergamota"
+        ],
+        "heart": [
+          "Íris",
+          "Jasmim",
+          "Rosa"
+        ],
+        "base": [
+          "Baunilha",
+          "Opoponax",
+          "Fava tonka"
+        ],
+        "source": "https://www.scento.com/perfumes/shalimar-eau-de-parfum-guerlain",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Notas florais",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Íris",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Opoponax",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "guerlain-mon-guerlain",
+      "name": "Mon Guerlain",
+      "brand": "Guerlain",
+      "concentration": "Eau de Parfum",
+      "family": "Cítrico · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        1,
+        0,
+        0.38,
+        0.44,
+        0,
+        0.82,
+        0.31,
+        0.52,
+        0,
+        0.25,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.36,
+        0.36,
+        0,
+        0.3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota",
+          "Mandarina",
+          "Pera"
+        ],
+        "heart": [
+          "Néroli",
+          "Jasmim sambac",
+          "Lavanda"
+        ],
+        "base": [
+          "Íris",
+          "Baunilha",
+          "Sândalo"
+        ],
+        "source": "https://www.scento.com/perfumes/mon-guerlain-guerlain",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Pera",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Néroli",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim sambac",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Íris",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "guerlain-la-petite-robe-noire",
+      "name": "La Petite Robe Noire",
+      "brand": "Guerlain",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Velvet Sweet",
+      "audience": "Feminino",
+      "scene": "night",
+      "vector": [
+        0.35,
+        0.12,
+        0,
+        0.49,
+        0.4,
+        0.42,
+        0.35,
+        1,
+        0,
+        0.09,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.73,
+        0,
+        0,
+        0.35,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota",
+          "Cereja"
+        ],
+        "heart": [
+          "Rosa",
+          "Amêndoa"
+        ],
+        "base": [
+          "Patchouli",
+          "Smoked tea",
+          "Fava tonka",
+          "Liquorice"
+        ],
+        "source": "https://www.scento.com/perfumes/la-petite-robe-noire-guerlain",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Cereja",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Amêndoa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Smoked tea",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Liquorice",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "rabanne-olympea",
+      "name": "Olympéa",
+      "brand": "Rabanne",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.59,
+        0,
+        0,
+        0.71,
+        0,
+        1,
+        0,
+        0.61,
+        0.61,
+        0.52,
+        0,
+        0,
+        0,
+        0,
+        0.71,
+        0,
+        0,
+        0.49,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Mandarina",
+          "Ginger lily",
+          "Jasmim"
+        ],
+        "heart": [
+          "Salty vanilla"
+        ],
+        "base": [
+          "Cashmeran",
+          "Âmbar cinzento"
+        ],
+        "source": "https://www.scento.com/perfumes/olympea-parfum-rabanne",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Ginger lily",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Salty vanilla",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cashmeran",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar cinzento",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "rabanne-fame",
+      "name": "Fame",
+      "brand": "Rabanne",
+      "concentration": "Eau de Parfum",
+      "family": "Resinoso · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.85,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0.7,
+        0,
+        0.7,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Mango"
+        ],
+        "heart": [
+          "Jasmim"
+        ],
+        "base": [
+          "Incenso"
+        ],
+        "source": "https://www.scento.com/perfumes/fame-rabanne",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Mango",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Incenso",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "calvin-klein-euphoria",
+      "name": "Euphoria",
+      "brand": "Calvin Klein",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Feminino",
+      "scene": "sea",
+      "vector": [
+        0.13,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.85,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Pomegranate"
+        ],
+        "heart": [
+          "Lotus",
+          "Orchid"
+        ],
+        "base": [
+          "Violeta",
+          "Âmbar",
+          "Mahogany",
+          "Musk"
+        ],
+        "source": "https://www.scento.com/perfumes/euphoria-calvin-klein",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Pomegranate",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lotus",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Orchid",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Violeta",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Mahogany",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "armani-acqua-di-gioia",
+      "name": "Acqua di Gioia",
+      "brand": "Giorgio Armani",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.27,
+        0.88,
+        0,
+        0.39,
+        0,
+        1,
+        0,
+        0.39,
+        0,
+        0.34,
+        0,
+        0,
+        0,
+        0.39,
+        0,
+        0,
+        0,
+        0.31,
+        0.27,
+        0.44,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Menta",
+          "Limão",
+          "Green Watery Accord"
+        ],
+        "heart": [
+          "Pimenta rosa",
+          "Jasmim sambac",
+          "Peônia"
+        ],
+        "base": [
+          "Cedro",
+          "Ládano",
+          "Brown Sugar"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/armani-acqua-di-gioia",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Menta",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Green Watery Accord",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Pimenta rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim sambac",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Peônia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Ládano",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Brown Sugar",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "armani-si-passione",
+      "name": "Sì Passione",
+      "brand": "Giorgio Armani",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.29,
+        0.1,
+        0,
+        0.83,
+        0.33,
+        1,
+        0.29,
+        0.07,
+        0,
+        0.07,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Cassis",
+          "Bergamota",
+          "Rosa"
+        ],
+        "heart": [
+          "Rosa",
+          "Jasmim"
+        ],
+        "base": [
+          "Cedro",
+          "Patchouli"
+        ],
+        "source": "https://www.scento.com/perfumes/si-passione-giorgio-armani",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Cassis",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "armani-emporio-armani-because-its-you",
+      "name": "Emporio Armani Because It's You",
+      "brand": "Giorgio Armani",
+      "concentration": "Eau de Parfum",
+      "family": "Cítrico · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Feminino",
+      "scene": "night",
+      "vector": [
+        1,
+        0,
+        0,
+        0.71,
+        0,
+        0.61,
+        0.5,
+        0.84,
+        0,
+        0.25,
+        0,
+        0,
+        0,
+        0,
+        0.71,
+        0.71,
+        0,
+        0.57,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Framboesa",
+          "Néroli",
+          "Limão"
+        ],
+        "heart": [
+          "Rosa"
+        ],
+        "base": [
+          "Baunilha",
+          "Musk",
+          "Madeira ambarada"
+        ],
+        "source": "https://www.scento.com/perfumes/emporio-armani-because-its-you-giorgio-armani",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Framboesa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Néroli",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Madeira ambarada",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "chloe-nomade",
+      "name": "Nomade",
+      "brand": "Chloé",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0.25,
+        0,
+        0,
+        0.8,
+        0.85,
+        0.7,
+        0.18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Ameixa"
+        ],
+        "heart": [
+          "Frésia"
+        ],
+        "base": [
+          "Musgo de carvalho"
+        ],
+        "source": "https://www.scento.com/perfumes/nomade-chloe",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Ameixa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Frésia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Musgo de carvalho",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "chloe-chloe-eau-de-parfum",
+      "name": "Chloé Eau de Parfum",
+      "brand": "Chloé",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0.25,
+        0,
+        1,
+        0.18,
+        0.3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.25,
+        0,
+        0,
+        0.2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Peônia",
+          "Frésia",
+          "Lichia"
+        ],
+        "heart": [
+          "Magnólia",
+          "Lily of the Valley",
+          "Rosa"
+        ],
+        "base": [
+          "Cedro",
+          "Âmbar",
+          "Mel"
+        ],
+        "source": "https://www.scento.com/perfumes/chloe-eau-de-parfum-chloe",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Peônia",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Frésia",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lichia",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Magnólia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Lily of the Valley",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Mel",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "marc-jacobs-perfect",
+      "name": "Perfect",
+      "brand": "Marc Jacobs",
+      "concentration": "Eau de Parfum",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Velvet Sweet",
+      "audience": "Feminino",
+      "scene": "night",
+      "vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.85,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.68,
+        0,
+        0,
+        0,
+        0.85,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Rhubarb",
+          "Daffodil"
+        ],
+        "heart": [
+          "Almond milk"
+        ],
+        "base": [
+          "Cashmeran"
+        ],
+        "source": "https://www.scento.com/perfumes/perfect-marc-jacobs",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Rhubarb",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Daffodil",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Almond milk",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cashmeran",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "marc-jacobs-daisy-eau-so-fresh",
+      "name": "Daisy Eau So Fresh",
+      "brand": "Marc Jacobs",
+      "concentration": "Eau de Toilette",
+      "family": "Frutado · perfil editorial",
+      "catalogFamily": "Orchard Fruit",
+      "audience": "Feminino",
+      "scene": "night",
+      "vector": [
+        0.22,
+        0,
+        0,
+        0.31,
+        0,
+        0.52,
+        1,
+        0.25,
+        0,
+        0.05,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.31,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Framboesa",
+          "Toranja",
+          "Pera"
+        ],
+        "heart": [
+          "Violeta",
+          "Rosa",
+          "Apple Blossom"
+        ],
+        "base": [
+          "Musk",
+          "Cedro",
+          "Ameixa"
+        ],
+        "source": "https://www.scento.com/perfumes/daisy-eau-so-fresh-marc-jacobs",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Framboesa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Toranja",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Pera",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Violeta",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Apple Blossom",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Ameixa",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "marc-jacobs-daisy-toilette",
+      "name": "Daisy",
+      "brand": "Marc Jacobs",
+      "concentration": "Eau de Toilette",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0.59,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Wild berries"
+        ],
+        "heart": [
+          "Violeta",
+          "Jasmim"
+        ],
+        "base": [
+          "Sândalo"
+        ],
+        "source": "https://www.scento.com/perfumes/daisy-marc-jacobs",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Wild berries",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Violeta",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "mugler-angel",
+      "name": "Angel",
+      "brand": "Mugler",
+      "concentration": "Eau de Parfum",
+      "family": "Cítrico · perfil editorial",
+      "catalogFamily": "Sunlit Citrus",
+      "audience": "Feminino",
+      "scene": "night",
+      "vector": [
+        0.8,
+        0.2,
+        0,
+        0.8,
+        0.64,
+        0,
+        0,
+        0.8,
+        0,
+        0.2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Bergamota",
+          "Pralinê",
+          "Patchouli"
+        ],
+        "source": "https://www.scento.com/perfumes/angel-mugler",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Pralinê",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "mugler-alien",
+      "name": "Alien",
+      "brand": "Mugler",
+      "concentration": "Eau de Parfum",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Jasmim sambac",
+          "Cashmeran",
+          "Âmbar"
+        ],
+        "source": "https://www.scento.com/perfumes/alien-mugler",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Jasmim sambac",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Cashmeran",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "gucci-bloom",
+      "name": "Bloom",
+      "brand": "Gucci",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Rangoon creeper"
+        ],
+        "heart": [
+          "Tuberosa"
+        ],
+        "base": [
+          "Jasmim"
+        ],
+        "source": "https://www.scento.com/perfumes/gucci-bloom-gucci",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Rangoon creeper",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Tuberosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "gucci-flora-gorgeous-gardenia",
+      "name": "Flora Gorgeous Gardenia",
+      "brand": "Gucci",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Orchard Fruit",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0.8,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.64,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Pera",
+          "Gardênia",
+          "Brown Sugar"
+        ],
+        "source": "https://www.scento.com/perfumes/flora-gorgeous-gardenia-gucci",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Pera",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Gardênia",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Brown Sugar",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "carolina-herrera-very-good-girl",
+      "name": "Very Good Girl",
+      "brand": "Carolina Herrera",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Orchard Fruit",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0.21,
+        0,
+        0.85,
+        0.68,
+        0.72,
+        0.6,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.68,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Red currant",
+          "Lichia"
+        ],
+        "heart": [
+          "Rosa"
+        ],
+        "base": [
+          "Vetiver",
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfumes/very-good-girl-elixir-carolina-herrera",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Red currant",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lichia",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "carolina-herrera-good-girl-blush",
+      "name": "Good Girl Blush",
+      "brand": "Carolina Herrera",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Velvet Sweet",
+      "audience": "Feminino",
+      "scene": "night",
+      "vector": [
+        0.26,
+        0,
+        0,
+        0,
+        0,
+        0.63,
+        0,
+        1,
+        0,
+        0.06,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota",
+          "Amêndoa"
+        ],
+        "heart": [
+          "Ylang-ylang",
+          "Peônia"
+        ],
+        "base": [
+          "Baunilha",
+          "Fava tonka"
+        ],
+        "source": "https://www.scento.com/perfumes/good-girl-blush-carolina-herrera",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Amêndoa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Ylang-ylang",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Peônia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "viktor-rolf-flowerbomb",
+      "name": "Flowerbomb",
+      "brand": "Viktor&Rolf",
+      "concentration": "Eau de Parfum",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.39,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.31,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Peônia"
+        ],
+        "heart": [
+          "Rosa"
+        ],
+        "base": [
+          "Frésia",
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/viktor-rolf-flowerbomb",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Peônia",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Frésia",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "viktor-rolf-bonbon",
+      "name": "Bonbon",
+      "brand": "Viktor&Rolf",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.7,
+        0,
+        0,
+        0,
+        0,
+        0.85,
+        0,
+        1,
+        0,
+        0.18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Mandarina"
+        ],
+        "heart": [
+          "Flor de laranjeira"
+        ],
+        "base": [
+          "Caramelo"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/viktor-rolf-bonbon",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Flor de laranjeira",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Caramelo",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "jean-paul-gaultier-la-belle",
+      "name": "La Belle",
+      "brand": "Jean Paul Gaultier",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Orchard Fruit",
+      "audience": "Feminino",
+      "scene": "forest",
+      "vector": [
+        0.58,
+        0.7,
+        0,
+        0,
+        0,
+        0,
+        0.7,
+        1,
+        0,
+        0.14,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.66,
+        0,
+        0.35,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota"
+        ],
+        "heart": [
+          "Green pear"
+        ],
+        "base": [
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfumes/la-belle-jean-paul-gaultier",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Green pear",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "jean-paul-gaultier-scandal",
+      "name": "Scandal",
+      "brand": "Jean Paul Gaultier",
+      "concentration": "Eau de Parfum",
+      "family": "Cítrico · perfil editorial",
+      "catalogFamily": "Sunlit Citrus",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.8,
+        0.2,
+        0,
+        0.8,
+        0.64,
+        0.8,
+        0,
+        0.8,
+        0,
+        0.2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.64,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Mel",
+          "Gardênia",
+          "Blood Orange",
+          "Patchouli"
+        ],
+        "source": "https://www.scento.com/perfumes/scandal-jean-paul-gaultier",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Mel",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Gardênia",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Blood Orange",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "dior-miss-dior-blooming-bouquet-2",
+      "name": "Miss Dior Blooming Bouquet",
+      "brand": "Dior",
+      "concentration": "Eau de Toilette",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.41,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.59,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota"
+        ],
+        "heart": [
+          "Rosa",
+          "Peônia"
+        ],
+        "base": [
+          "Musk"
+        ],
+        "source": "https://www.scento.com/perfumes/miss-dior-blooming-bouquet-by-dior",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Peônia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "dior-hypnotic-poison",
+      "name": "Hypnotic Poison",
+      "brand": "Dior",
+      "concentration": "Eau de Toilette",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Velvet Sweet",
+      "audience": "Feminino",
+      "scene": "night",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Amêndoa",
+          "Jasmim sambac",
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfumes/hypnotic-poison-dior",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Amêndoa",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Jasmim sambac",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "dior-pure-poison",
+      "name": "Pure Poison",
+      "brand": "Dior",
+      "concentration": "Eau de Parfum",
+      "family": "Musk · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.7,
+        0,
+        0,
+        0,
+        0,
+        0.85,
+        0,
+        0,
+        0,
+        0.18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota"
+        ],
+        "heart": [
+          "Flor de laranjeira"
+        ],
+        "base": [
+          "Musk"
+        ],
+        "source": "https://www.scento.com/perfumes/pure-poison-dior",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Flor de laranjeira",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "versace-yellow-diamond",
+      "name": "Yellow Diamond",
+      "brand": "Versace",
+      "concentration": "Eau de Toilette",
+      "family": "Cítrico · perfil editorial",
+      "catalogFamily": "Sunlit Citrus",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.8,
+        0,
+        0,
+        0.8,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0.2,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Limão",
+          "Flor de laranjeira",
+          "Madeira ambarada"
+        ],
+        "source": "https://www.scento.com/perfumes/yellow-diamond-by-versace",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Limão",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Flor de laranjeira",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Madeira ambarada",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "versace-dylan-turquoise",
+      "name": "Dylan Turquoise",
+      "brand": "Versace",
+      "concentration": "Eau de Toilette",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Orchard Fruit",
+      "audience": "Feminino",
+      "scene": "flowers",
+      "vector": [
+        0.58,
+        0.29,
+        0,
+        0.83,
+        0,
+        1,
+        0.35,
+        0.09,
+        0,
+        0.38,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.42,
+        0,
+        0,
+        0,
+        0.15,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Mandarina",
+          "Limão",
+          "Pimenta rosa"
+        ],
+        "heart": [
+          "Cassis",
+          "Jasmim",
+          "Frésia",
+          "Guava"
+        ],
+        "base": [
+          "Cedro",
+          "Musk",
+          "Clearwood"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/versace-dylan-turquoise",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Pimenta rosa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Cassis",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Frésia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Guava",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Clearwood",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "armani-acqua-di-gio-eau-de-toilette",
+      "name": "Acqua di Giò Eau de Toilette",
+      "brand": "Giorgio Armani",
+      "concentration": "Eau de Toilette",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Masculino",
+      "scene": "flowers",
+      "vector": [
+        0.61,
+        0.1,
+        0.18,
+        0.42,
+        0.33,
+        1,
+        0.18,
+        0.04,
+        0.18,
+        0.29,
+        0.14,
+        0,
+        0,
+        0,
+        0.21,
+        0.21,
+        0,
+        0,
+        0,
+        0.14,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Laranja",
+          "Jasmim",
+          "Limão",
+          "Bergamota",
+          "Lime",
+          "Néroli",
+          "Flor de laranjeira"
+        ],
+        "heart": [
+          "Notas marinhas",
+          "Jasmim",
+          "Pêssego",
+          "Alecrim",
+          "Frésia",
+          "Hyacinth",
+          "Cyclamen",
+          "Violeta",
+          "Coriander",
+          "Noz-moscada",
+          "Rosa",
+          "Mignonette"
+        ],
+        "base": [
+          "Musk",
+          "Cedro",
+          "Musgo de carvalho",
+          "Patchouli",
+          "Âmbar"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/armani-acqua-di-gio-eau-de-toilette",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Laranja",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lime",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Néroli",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Flor de laranjeira",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Notas marinhas",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Pêssego",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Alecrim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Frésia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Hyacinth",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cyclamen",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Violeta",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Coriander",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Noz-moscada",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Mignonette",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musgo de carvalho",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "armani-acqua-di-gio-profondo-parfum",
+      "name": "Acqua Di Giò Profondo",
+      "brand": "Giorgio Armani",
+      "concentration": "Eau de Parfum",
+      "family": "Verde · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Masculino",
+      "scene": "sea",
+      "vector": [
+        0.12,
+        0.8,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0.4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Notas marinhas",
+          "Cipreste",
+          "Musk"
+        ],
+        "source": "https://www.scento.com/perfumes/acqua-di-gio-profondo-giorgio-armani",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Notas marinhas",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Cipreste",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Musk",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "armani-armani-code-eau-de-toilette",
+      "name": "Armani Code Eau de Toilette",
+      "brand": "Giorgio Armani",
+      "concentration": "Eau de Toilette",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.7,
+        0,
+        0.85,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0.68,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Mandarina"
+        ],
+        "heart": [
+          "Lavandin"
+        ],
+        "base": [
+          "Fava tonka",
+          "Cedro"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/armani-armani-code-eau-de-toilette",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lavandin",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "armani-emporio-armani-stronger-with-you-intensely",
+      "name": "Emporio Armani Stronger With You Intensely",
+      "brand": "Giorgio Armani",
+      "concentration": "Eau de Parfum",
+      "family": "Aromático · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0,
+        0.29,
+        1,
+        0,
+        0,
+        0.29,
+        0,
+        0.83,
+        0,
+        0.23,
+        0.28,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.67,
+        0,
+        0.95,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Pimenta rosa",
+          "Zimbro"
+        ],
+        "heart": [
+          "Lavanda",
+          "Canela",
+          "Sálvia"
+        ],
+        "base": [
+          "Baunilha",
+          "Fava tonka",
+          "Chestnut"
+        ],
+        "source": "https://www.scento.com/perfumes/emporio-armani-stronger-with-you-intensely-giorgio-armani",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Pimenta rosa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Zimbro",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Canela",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sálvia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Chestnut",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "ysl-la-nuit-de-lhomme",
+      "name": "La Nuit de L'Homme",
+      "brand": "Yves Saint Laurent",
+      "concentration": "Eau de Parfum",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Spice Route",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.35,
+        0.6,
+        0.43,
+        1,
+        0.8,
+        0,
+        0,
+        0.5,
+        0,
+        0.37,
+        0,
+        0,
+        0,
+        0.43,
+        0,
+        0,
+        0,
+        0.4,
+        0.3,
+        0.52,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Pimenta",
+          "Anise",
+          "Bergamota"
+        ],
+        "heart": [
+          "Lavanda",
+          "Ládano"
+        ],
+        "base": [
+          "Baunilha",
+          "Patchouli",
+          "Vetiver"
+        ],
+        "source": "https://www.scento.com/perfumes/la-nuit-de-lhomme-yves-saint-laurent",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Pimenta",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Anise",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Ládano",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "prada-lhomme-prada",
+      "name": "L'Homme Prada",
+      "brand": "Prada",
+      "concentration": "Eau de Parfum",
+      "family": "Cítrico · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Masculino",
+      "scene": "flowers",
+      "vector": [
+        0.8,
+        0,
+        0.8,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0.2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.64,
+        0,
+        0,
+        0.64,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Íris",
+          "Néroli",
+          "Gerânio"
+        ],
+        "source": "https://www.scento.com/perfumes/prada-lhomme-prada",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Íris",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Néroli",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Gerânio",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "prada-luna-rossa-carbon",
+      "name": "Luna Rossa Carbon",
+      "brand": "Prada",
+      "concentration": "Eau de Parfum",
+      "family": "Herbal · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Masculino",
+      "scene": "forest",
+      "vector": [
+        0,
+        0.77,
+        0.77,
+        0.77,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Lavanda",
+          "Liquorice",
+          "Cipreste"
+        ],
+        "source": "https://www.scento.com/perfumes/luna-rossa-carbon-prada",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Lavanda",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Liquorice",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Cipreste",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "prada-luna-rossa-ocean",
+      "name": "Luna Rossa Ocean",
+      "brand": "Prada",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Amber & Resin",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.18,
+        0,
+        0,
+        0,
+        0.85,
+        0,
+        0,
+        0,
+        0.8,
+        0.6,
+        0,
+        0.6,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Toranja"
+        ],
+        "heart": [
+          "Incenso"
+        ],
+        "base": [
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfumes/luna-rossa-ocean-prada",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Toranja",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Incenso",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "versace-pour-homme",
+      "name": "Pour Homme",
+      "brand": "Versace",
+      "concentration": "Eau de Toilette",
+      "family": "Cítrico · perfil editorial",
+      "catalogFamily": "Sunlit Citrus",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        1,
+        0,
+        0.61,
+        0.3,
+        0,
+        0,
+        0,
+        0.36,
+        0,
+        0.25,
+        0,
+        0,
+        0,
+        0,
+        0.36,
+        0.36,
+        0,
+        0.29,
+        0,
+        0.49,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota",
+          "Limão",
+          "Petitgrain",
+          "Néroli"
+        ],
+        "heart": [
+          "Gerânio",
+          "Sálvia esclaréia",
+          "Hyacinth",
+          "Cedro"
+        ],
+        "base": [
+          "Âmbar",
+          "Fava tonka",
+          "Musk"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/versace-pour-homme",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Petitgrain",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Néroli",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Gerânio",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sálvia esclaréia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Hyacinth",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "versace-dylan-blue",
+      "name": "Dylan Blue",
+      "brand": "Versace",
+      "concentration": "Eau de Toilette",
+      "family": "Verde · perfil editorial",
+      "catalogFamily": "Wood & Root",
+      "audience": "Masculino",
+      "scene": "forest",
+      "vector": [
+        0.79,
+        1,
+        0,
+        0.89,
+        0.36,
+        0.44,
+        0.37,
+        0.61,
+        0.37,
+        0.54,
+        0.42,
+        0,
+        0,
+        0.52,
+        0.44,
+        0.52,
+        0,
+        0.42,
+        0.37,
+        0.44,
+        0.37,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota",
+          "Toranja",
+          "Figo",
+          "Aquatic Accord"
+        ],
+        "heart": [
+          "Folha de violeta",
+          "Pimenta",
+          "Papiro",
+          "Ambroxan",
+          "Patchouli"
+        ],
+        "base": [
+          "Musk",
+          "Fava tonka",
+          "Açafrão",
+          "Incenso"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/versace-dylan-blue",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Toranja",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Figo",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Aquatic Accord",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Folha de violeta",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Pimenta",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Papiro",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Ambroxan",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Açafrão",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Incenso",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "versace-eros-eau-de-toilette",
+      "name": "Eros Eau de Toilette",
+      "brand": "Versace",
+      "concentration": "Eau de Toilette",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Wood & Root",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.35,
+        0.59,
+        0.42,
+        0.99,
+        0.79,
+        0,
+        0.35,
+        1,
+        0,
+        0.09,
+        0,
+        0,
+        0,
+        0,
+        0.42,
+        0,
+        0,
+        0.73,
+        0,
+        0.51,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Menta",
+          "Limão",
+          "Maçã"
+        ],
+        "heart": [
+          "Fava tonka",
+          "Gerânio",
+          "Ambroxan"
+        ],
+        "base": [
+          "Baunilha",
+          "Vetiver",
+          "Cedro",
+          "Musgo de carvalho"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/versace-eros-eau-de-toilette",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Menta",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Maçã",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Gerânio",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Ambroxan",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musgo de carvalho",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "versace-man-eau-fraiche-toilette",
+      "name": "Man Eau Fraiche",
+      "brand": "Versace",
+      "concentration": "Eau de Toilette",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.38,
+        0,
+        0.46,
+        1,
+        0,
+        0.38,
+        0,
+        0,
+        0,
+        0.09,
+        0,
+        0,
+        0,
+        0,
+        0.54,
+        0.54,
+        0,
+        0,
+        0,
+        0.37,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Limão",
+          "Rosa",
+          "Carambola"
+        ],
+        "heart": [
+          "Tarragon",
+          "Sálvia esclaréia",
+          "Cedro"
+        ],
+        "base": [
+          "Sycamore wood",
+          "Âmbar",
+          "Musk"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/versace-man-eau-fraiche-toilette",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Carambola",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Tarragon",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sálvia esclaréia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sycamore wood",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "rabanne-1-million-toilette",
+      "name": "1 Million",
+      "brand": "Rabanne",
+      "concentration": "Eau de Toilette",
+      "family": "Couro · perfil editorial",
+      "catalogFamily": "Petal Garden",
+      "audience": "Masculino",
+      "scene": "flowers",
+      "vector": [
+        0.7,
+        0.7,
+        0,
+        0,
+        0,
+        0.85,
+        0,
+        0,
+        0,
+        0.18,
+        0.68,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0.35,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Menta",
+          "Mandarina"
+        ],
+        "heart": [
+          "Canela",
+          "Rosa"
+        ],
+        "base": [
+          "Amberketal",
+          "Couro"
+        ],
+        "source": "https://www.scento.com/perfumes/1-million-rabanne",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Menta",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Canela",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Rosa",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Amberketal",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Couro",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "rabanne-invictus-toilette",
+      "name": "Invictus",
+      "brand": "Rabanne",
+      "concentration": "Eau de Toilette",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Wood & Root",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.75,
+        0.25,
+        0,
+        1,
+        0.8,
+        0.43,
+        0,
+        0,
+        0.35,
+        0.18,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Toranja",
+          "Notas marinhas",
+          "Mandarina"
+        ],
+        "heart": [
+          "Bay",
+          "Jasmim"
+        ],
+        "base": [
+          "Madeira guáiaco",
+          "Musgo de carvalho",
+          "Patchouli",
+          "Âmbar cinzento"
+        ],
+        "source": "https://www.scento.com/perfumes/invictus-eau-de-toilette-rabanne",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Toranja",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Notas marinhas",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bay",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Madeira guáiaco",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musgo de carvalho",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar cinzento",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "ralph-lauren-polo-blue",
+      "name": "Polo Blue",
+      "brand": "Ralph Lauren",
+      "concentration": "Eau de Parfum",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.27,
+        0.17,
+        0.57,
+        1,
+        0.53,
+        0.28,
+        0,
+        0,
+        0.23,
+        0.24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.23,
+        0,
+        0,
+        0.45,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota",
+          "Notas marinhas",
+          "Cardamomo"
+        ],
+        "heart": [
+          "Íris",
+          "Basil Verbena",
+          "Sálvia esclaréia"
+        ],
+        "base": [
+          "Vetiver",
+          "Wood",
+          "Patchouli"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/ralph-lauren-polo-blue",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Notas marinhas",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Cardamomo",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Íris",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Basil Verbena",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sálvia esclaréia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Wood",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "ralph-lauren-polo-red",
+      "name": "Polo Red",
+      "brand": "Ralph Lauren",
+      "concentration": "Eau de Toilette",
+      "family": "Aromático · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.58,
+        0.1,
+        1,
+        0.83,
+        0.33,
+        0,
+        0,
+        0.42,
+        0,
+        0.15,
+        0.28,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.33,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Limão",
+          "Bergamota",
+          "Zimbro"
+        ],
+        "heart": [
+          "Açafrão",
+          "Sálvia esclaréia",
+          "Lavanda"
+        ],
+        "base": [
+          "Cedro",
+          "Vetiver",
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfumes/polo-red-ralph-lauren",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Zimbro",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Açafrão",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sálvia esclaréia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "calvin-klein-eternity-for-men-toilette",
+      "name": "Eternity for Men",
+      "brand": "Calvin Klein",
+      "concentration": "Eau de Toilette",
+      "family": "Aromático · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.22,
+        0.22,
+        1,
+        0.62,
+        0,
+        0.31,
+        0,
+        0,
+        0,
+        0.05,
+        0,
+        0,
+        0,
+        0,
+        0.31,
+        0,
+        0,
+        0,
+        0,
+        0.91,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Mandarina",
+          "Lavanda",
+          "Green leaves"
+        ],
+        "heart": [
+          "Manjericão",
+          "Gerânio",
+          "Sálvia"
+        ],
+        "base": [
+          "Sândalo",
+          "Rosewood",
+          "Âmbar"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/calvin-klein-eternity-for-men-toilette",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Green leaves",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Manjericão",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Gerânio",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sálvia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Rosewood",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "issey-miyake-leau-dissey-pour-homme",
+      "name": "L'Eau d'Issey Pour Homme",
+      "brand": "Issey Miyake",
+      "concentration": "Eau de Toilette",
+      "family": "Especiado quente · perfil editorial",
+      "catalogFamily": "Spice Route",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.51,
+        0,
+        0,
+        0.74,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.13,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Yuzu"
+        ],
+        "heart": [
+          "Canela",
+          "Noz-moscada"
+        ],
+        "base": [
+          "Sândalo"
+        ],
+        "source": "https://www.scento.com/perfumes/leau-dissey-pour-homme-issey-miyake",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Yuzu",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Canela",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Noz-moscada",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "montblanc-explorer",
+      "name": "Explorer",
+      "brand": "Montblanc",
+      "concentration": "Eau de Parfum",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Wood & Root",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.19,
+        0.13,
+        0.19,
+        1,
+        0.4,
+        0.19,
+        0,
+        0,
+        0,
+        0.05,
+        0,
+        0.23,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.15,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota",
+          "Pomarose",
+          "Sálvia"
+        ],
+        "heart": [
+          "Vetiver",
+          "Couro",
+          "Sândalo"
+        ],
+        "base": [
+          "Patchouli",
+          "Ambrofix",
+          "Akigalawood"
+        ],
+        "source": "https://www.scento.com/perfumes/explorer-montblanc",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Pomarose",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Sálvia",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Couro",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Ambrofix",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Akigalawood",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "montblanc-legend-spirit",
+      "name": "Legend Spirit",
+      "brand": "Montblanc",
+      "concentration": "Eau de Toilette",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Wood & Root",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.76,
+        0.48,
+        0.43,
+        1,
+        0.4,
+        0.35,
+        0,
+        0,
+        0.43,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0.52,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Toranja",
+          "Bergamota",
+          "Pimenta rosa"
+        ],
+        "heart": [
+          "Aquatic Accord",
+          "Lavanda",
+          "Cardamomo"
+        ],
+        "base": [
+          "Musk",
+          "White Woods",
+          "Cashmeran",
+          "Musgo de carvalho"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/montblanc-legend-spirit",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Toranja",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Pimenta rosa",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Aquatic Accord",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cardamomo",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "White Woods",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cashmeran",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musgo de carvalho",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "bvlgari-aqva-pour-homme",
+      "name": "Aqva Pour Homme",
+      "brand": "Bvlgari",
+      "concentration": "Eau de Toilette",
+      "family": "Aromático · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.7,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Mandarina"
+        ],
+        "heart": [
+          "Santolina"
+        ],
+        "base": [
+          "Sálvia esclaréia"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/bvlgari-aqva-pour-homme",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Santolina",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sálvia esclaréia",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "bvlgari-pour-homme",
+      "name": "Pour Homme",
+      "brand": "Bvlgari",
+      "concentration": "Eau de Toilette",
+      "family": "Âmbar · perfil editorial",
+      "catalogFamily": "Spice Route",
+      "audience": "Masculino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        0.85,
+        0,
+        0.7,
+        0,
+        0,
+        0,
+        0.68,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Tea",
+          "Water Lily"
+        ],
+        "heart": [
+          "Cardamomo",
+          "Madeira guáiaco"
+        ],
+        "base": [
+          "Musk",
+          "Âmbar"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/bvlgari-pour-homme",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Tea",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Water Lily",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Cardamomo",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Madeira guáiaco",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "jean-paul-gaultier-le-male-toilette",
+      "name": "Le Male",
+      "brand": "Jean Paul Gaultier",
+      "concentration": "Eau de Toilette",
+      "family": "Herbal · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Masculino",
+      "scene": "forest",
+      "vector": [
+        0,
+        0.68,
+        0.83,
+        0,
+        0,
+        0,
+        0,
+        0.97,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.78,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Menta"
+        ],
+        "heart": [
+          "Lavanda"
+        ],
+        "base": [
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfumes/le-male-jean-paul-gaultier",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Menta",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "jean-paul-gaultier-le-male-le-parfum",
+      "name": "Le Male Le Parfum",
+      "brand": "Jean Paul Gaultier",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Masculino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0.85,
+        0,
+        0,
+        0.85,
+        0,
+        1,
+        0,
+        0.56,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.68,
+        0.8,
+        0,
+        0.68,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Cardamomo"
+        ],
+        "heart": [
+          "Lavanda",
+          "Íris"
+        ],
+        "base": [
+          "Baunilha"
+        ],
+        "source": "https://www.scento.com/perfumes/le-male-le-parfum-jean-paul-gaultier",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Cardamomo",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Íris",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Baunilha",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "dior-dior-homme-intense",
+      "name": "Dior Homme Intense",
+      "brand": "Dior",
+      "concentration": "Eau de Parfum",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Skin Musk",
+      "audience": "Masculino",
+      "scene": "flowers",
+      "vector": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.56,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Íris"
+        ],
+        "heart": [
+          "Ambrette"
+        ],
+        "base": [
+          "Cedro"
+        ],
+        "source": "https://www.scento.com/perfumes/dior-homme-intense-dior",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Íris",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Ambrette",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "dior-fahrenheit-toilette",
+      "name": "Fahrenheit",
+      "brand": "Dior",
+      "concentration": "Eau de Toilette",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Wood & Root",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.48,
+        0.31,
+        0.16,
+        1,
+        0.36,
+        0.58,
+        0,
+        0.42,
+        0,
+        0.12,
+        0.28,
+        0.23,
+        0,
+        0,
+        0.23,
+        0.23,
+        0,
+        0.34,
+        0,
+        0.22,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Lavanda",
+          "Mandarina",
+          "Hawthorn",
+          "Noz-moscada",
+          "Cedro",
+          "Bergamota",
+          "Chamomile",
+          "Limão"
+        ],
+        "heart": [
+          "Noz-moscada",
+          "Honeysuckle",
+          "Carnation",
+          "Sândalo",
+          "Folha de violeta",
+          "Jasmim",
+          "Lily of the Valley",
+          "Cedro"
+        ],
+        "base": [
+          "Couro",
+          "Fava tonka",
+          "Âmbar",
+          "Patchouli",
+          "Musk",
+          "Vetiver"
+        ],
+        "source": "https://www.scento.com/perfumes/fahrenheit-dior",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Lavanda",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Hawthorn",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Noz-moscada",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Cedro",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Chamomile",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Noz-moscada",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Honeysuckle",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Carnation",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Folha de violeta",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Lily of the Valley",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Couro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "dior-eau-sauvage",
+      "name": "Eau Sauvage",
+      "brand": "Dior",
+      "concentration": "Eau de Toilette",
+      "family": "Cítrico · perfil editorial",
+      "catalogFamily": "Sunlit Citrus",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        1,
+        0.16,
+        1,
+        0.65,
+        0.52,
+        0,
+        0,
+        0,
+        0,
+        0.25,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Limão",
+          "Alecrim"
+        ],
+        "heart": [
+          "Petitgrain",
+          "Manjericão"
+        ],
+        "base": [
+          "Vetiver"
+        ],
+        "source": "https://www.scento.com/perfumes/eau-sauvage-dior",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Alecrim",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Petitgrain",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Manjericão",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Vetiver",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "dolce-gabbana-the-one-for-men-eau-de-parfum",
+      "name": "The One for Men Eau de Parfum",
+      "brand": "Dolce&Gabbana",
+      "concentration": "Eau de Parfum",
+      "family": "Especiado fresco · perfil editorial",
+      "catalogFamily": "Spice Route",
+      "audience": "Masculino",
+      "scene": "night",
+      "vector": [
+        0.33,
+        0,
+        0.33,
+        0.48,
+        0,
+        0.41,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.48,
+        0,
+        0.48,
+        0,
+        0,
+        0,
+        0,
+        0.27,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Manjericão",
+          "Coriander",
+          "Toranja"
+        ],
+        "heart": [
+          "Cardamomo",
+          "Gengibre",
+          "Flor de laranjeira"
+        ],
+        "base": [
+          "Cedro",
+          "Tabaco",
+          "Âmbar"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/dolce-gabbana-the-one-for-men-eau-de-parfum",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Manjericão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Coriander",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Toranja",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Cardamomo",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Gengibre",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Flor de laranjeira",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Cedro",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Tabaco",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "carolina-herrera-212-vip-men",
+      "name": "212 VIP Men",
+      "brand": "Carolina Herrera",
+      "concentration": "Eau de Toilette",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Spice Route",
+      "audience": "Masculino",
+      "scene": "forest",
+      "vector": [
+        0,
+        0.7,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.68,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0.35,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Caviar",
+          "Lime",
+          "Menta"
+        ],
+        "heart": [
+          "Vodka",
+          "Gengibre"
+        ],
+        "base": [
+          "Âmbar",
+          "Musk",
+          "Kingwood"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/carolina-herrera-212-vip-men",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Caviar",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lime",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Menta",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Vodka",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Gengibre",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Musk",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Kingwood",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "viktor-rolf-spicebomb-extreme",
+      "name": "Spicebomb Extreme",
+      "brand": "Viktor&Rolf",
+      "concentration": "Eau de Parfum",
+      "family": "Resinoso · perfil editorial",
+      "catalogFamily": "Spice Route",
+      "audience": "Masculino",
+      "scene": "forest",
+      "vector": [
+        0,
+        0.7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.56,
+        0.68,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0.7,
+        0.35,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Pimenta"
+        ],
+        "heart": [
+          "Açafrão"
+        ],
+        "base": [
+          "Ládano"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/viktor-rolf-spicebomb-extreme",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Pimenta",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Açafrão",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Ládano",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "tom-ford-oud-wood",
+      "name": "Oud Wood",
+      "brand": "Tom Ford",
+      "concentration": "Eau de Parfum",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Spice Route",
+      "audience": "Compartilhável",
+      "scene": "night",
+      "vector": [
+        0,
+        0.63,
+        0,
+        1,
+        0.4,
+        0.5,
+        0,
+        0.5,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0.4,
+        0,
+        0.25,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Cardamomo",
+          "Pimenta rosa",
+          "Patchouli",
+          "Âmbar",
+          "Oud",
+          "Fava tonka"
+        ],
+        "source": "https://www.scento.com/perfumes/oud-wood-tom-ford",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Cardamomo",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Pimenta rosa",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Patchouli",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Oud",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "tom-ford-tobacco-vanille",
+      "name": "Tobacco Vanille",
+      "brand": "Tom Ford",
+      "concentration": "Eau de Parfum",
+      "family": "Doce · perfil editorial",
+      "catalogFamily": "Spice Route",
+      "audience": "Compartilhável",
+      "scene": "night",
+      "vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0.4,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0,
+        0.9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Tabaco",
+          "Gengibre",
+          "Spice",
+          "Fava tonka",
+          "Chocolate",
+          "Fruit"
+        ],
+        "source": "https://www.scento.com/perfumes/tobacco-vanille-tom-ford",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Tabaco",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Gengibre",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Spice",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Fava tonka",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Chocolate",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Fruit",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "tom-ford-neroli-portofino",
+      "name": "Neroli Portofino",
+      "brand": "Tom Ford",
+      "concentration": "Eau de Parfum",
+      "family": "Cítrico · perfil editorial",
+      "catalogFamily": "White Bloom",
+      "audience": "Compartilhável",
+      "scene": "night",
+      "vector": [
+        1,
+        0,
+        0.38,
+        0,
+        0,
+        0.47,
+        0,
+        0,
+        0,
+        0.25,
+        0,
+        0,
+        0,
+        0,
+        0.27,
+        0,
+        0,
+        0,
+        0,
+        0.31,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Bergamota",
+          "Mandarina",
+          "Limão",
+          "Lavanda",
+          "Myrtle",
+          "Alecrim",
+          "Bitter orange"
+        ],
+        "heart": [
+          "Flor de laranjeira",
+          "Jasmim",
+          "Néroli",
+          "Pittosporum"
+        ],
+        "base": [
+          "Âmbar",
+          "Ambrette",
+          "Angelica"
+        ],
+        "source": "https://www.scento.com/perfumes/neroli-portofino-tom-ford",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Bergamota",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Lavanda",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Myrtle",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Alecrim",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Bitter orange",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Flor de laranjeira",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Jasmim",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Néroli",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Pittosporum",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Ambrette",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Angelica",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "hermes-un-jardin-sur-le-nil",
+      "name": "Un Jardin sur le Nil",
+      "brand": "Hermès",
+      "concentration": "Eau de Parfum",
+      "family": "Amadeirado · perfil editorial",
+      "catalogFamily": "Orchard Fruit",
+      "audience": "Compartilhável",
+      "scene": "sea",
+      "vector": [
+        0.12,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0.8,
+        0,
+        0,
+        0,
+        0,
+        0.56,
+        0,
+        0.56,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [],
+        "heart": [],
+        "base": [],
+        "highlights": [
+          "Mango",
+          "Lotus",
+          "Incenso",
+          "Sycamore wood"
+        ],
+        "source": "https://www.scento.com/perfumes/un-jardin-sur-le-nil-hermes",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Mango",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Lotus",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Incenso",
+          "weight": 0.8,
+          "tier": "Destaque"
+        },
+        {
+          "name": "Sycamore wood",
+          "weight": 0.8,
+          "tier": "Destaque"
+        }
+      ]
+    },
+    {
+      "id": "guerlain-aqua-allegoria-herba-fresca",
+      "name": "Aqua Allegoria Herba Fresca",
+      "brand": "Guerlain",
+      "concentration": "Eau de Toilette",
+      "family": "Floral · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Compartilhável",
+      "scene": "flowers",
+      "vector": [
+        0.7,
+        0.85,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.18,
+        0.56,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.43,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Limão",
+          "Clover"
+        ],
+        "heart": [
+          "Menta",
+          "Tea"
+        ],
+        "base": [
+          "Lily of the Valley",
+          "Cyclamen"
+        ],
+        "source": "https://www.scento.com/perfume-database/perfumes/guerlain-aqua-allegoria-herba-fresca",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Limão",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Clover",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Menta",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Tea",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Lily of the Valley",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Cyclamen",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    },
+    {
+      "id": "guerlain-aqua-allegoria-mandarine-basilic",
+      "name": "Aqua Allegoria Mandarine Basilic",
+      "brand": "Guerlain",
+      "concentration": "Eau de Toilette",
+      "family": "Cítrico · perfil editorial",
+      "catalogFamily": "Green Leaf",
+      "audience": "Compartilhável",
+      "scene": "flowers",
+      "vector": [
+        1,
+        0,
+        0.55,
+        0.65,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0.25,
+        0,
+        0,
+        0,
+        0,
+        0.65,
+        0,
+        0,
+        0,
+        0,
+        0.44,
+        0,
+        0,
+        0,
+        0
+      ],
+      "image": "",
+      "notes": {
+        "top": [
+          "Mandarina",
+          "Flor de laranjeira",
+          "Tea",
+          "Ivy"
+        ],
+        "heart": [
+          "Mandarina",
+          "Manjericão",
+          "Chamomile",
+          "Peônia"
+        ],
+        "base": [
+          "Sândalo",
+          "Âmbar"
+        ],
+        "source": "https://www.scento.com/perfumes/aqua-allegoria-mandarine-basilic-guerlain",
+        "sourceLabel": "Scento · catálogo aberto, CC BY 4.0",
+        "reliability": "Catálogo de referência"
+      },
+      "noteWeights": [
+        {
+          "name": "Mandarina",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Flor de laranjeira",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Tea",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Ivy",
+          "weight": 0.7,
+          "tier": "Saída"
+        },
+        {
+          "name": "Mandarina",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Manjericão",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Chamomile",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Peônia",
+          "weight": 0.85,
+          "tier": "Coração"
+        },
+        {
+          "name": "Sândalo",
+          "weight": 1,
+          "tier": "Fundo"
+        },
+        {
+          "name": "Âmbar",
+          "weight": 1,
+          "tier": "Fundo"
+        }
+      ]
+    }
+  ]
+}
