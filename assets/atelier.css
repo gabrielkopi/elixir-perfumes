@@ -16,3 +16,15 @@ html[data-theme=dark] .dock-backdrop{background:linear-gradient(0deg,#111815fa,t
 html[data-theme=dark] #main :is(p,small,label){color:#b9c5b3}html[data-theme=dark] :is(.studio-hub-hero,.studio-feature,.studio-scenarios,.studio-scenario,.studio-empty,.studio-metric){background:#1d2922!important;border-color:#3b4b40!important;color:#edf0e8!important}
 
 .searchbox{border-radius:18px!important}.scent-note-art img[src*="notes-hd"],img[src*="cutouts"]{mix-blend-mode:normal!important;filter:none!important}
+
+/* Pílulas de ação e seleção, com alvos confortáveis ao toque. */
+#main :is(.btn,.studio-button,.text-button,.chip,.iconbtn,.scent-segment button,.scent-brand-shortcuts button,.community-filter button,.minimal-profile-tabs button,.studio-shelf-filters button,.studio-status-choices button,.score-options button,.v5-mode button),#modal :is(.btn,.studio-button,.score-options button,.studio-status-choices button){border-radius:999px!important;min-height:44px}
+#main .text-button{padding:10px 16px;text-decoration:none}#main :is(.searchbox,.scent-select-row select,.v5-exclude select){border-radius:999px!important}#main .searchbox{padding-inline:20px}
+.v5-note-picker{grid-template-columns:repeat(3,minmax(0,1fr))}.v5-note-pick{border-radius:999px;flex-direction:row;min-height:76px;padding:10px 16px;gap:12px;text-align:left}.v5-note-pick .scent-note-art{width:48px;height:48px;flex-shrink:0}.v5-note-pick>span:not(.scent-note-art){flex:1;min-width:0}.v5-note-pick>.icon{flex-shrink:0}.v5-note-pick.selected{padding:9px 15px}
+#modal :is(.studio-status-grid button,.score-options button){border-radius:999px!important;min-height:44px}#main :is(.community-filter nav,.v5-mode){gap:8px;flex-wrap:wrap}button[aria-pressed=true]{font-weight:600}button:focus-visible,a:focus-visible{outline-offset:4px}
+@media(max-width:700px){.v5-note-picker{grid-template-columns:repeat(2,minmax(0,1fr))}.v5-note-pick .scent-note-art{width:40px;height:40px}.v5-note-pick{gap:8px;padding:10px 12px}.v5-note-pick.selected{padding:9px 11px}}
+@media(max-width:420px){.v5-note-picker{grid-template-columns:1fr}.v5-note-pick{min-height:66px}}
+#main nav button,#modal .studio-taste-grid button,#modal .studio-note-checks label,#modal .studio-status-grid button{border-radius:999px!important;min-height:44px}#modal .studio-note-checks label{padding:9px 13px}#main :is(.studio-button,.text-button,.btn):focus-visible,#modal button:focus-visible{outline:2px solid #829a7a;outline-offset:4px}
+
+.discovery-flow :is(.note-choice,.btn,.text-button),.discovery-flow .searchbox{border-radius:999px!important;min-height:44px}
+html[data-theme=dark] .discovery-flow :is(.note-choice,.discovery-perfume,.style-choice){background:#1d2922!important;color:#edf0e8!important;border-color:#53624f!important}html[data-theme=dark] .discovery-flow .note-choice.selected{background:#38513a!important;color:#f3f7ed!important}html[data-theme=dark] .flow-footer{background:#111815e8!important;color:#d9e3d2!important;border-color:#3b4b40!important}

@@ -163,6 +163,30 @@ async function check(name, test) { await test(); results.push(name); }
   await check('Alchemy matches declared notes, supports exclusions and any/all modes',async()=>{ const V=win.ElixirAtelier;V.selected=new Set(['Gengibre','Alecrim']);V.mode='all';assert(V.results().some(p=>p.id==='sospiro-vibrato'));V.excluded.add('Bergamota');assert(!V.results().some(p=>p.id==='sospiro-vibrato'));V.excluded.clear();V.mode='any';assert(V.results().length>=1);run("route={page:'alchemy'};render();");assert(query('#v5-note-picker'));V.selected.clear();});
   await check('Notes open referenced perfumes and add choices to alchemy',async()=>{run("route={page:'perfume',id:'sospiro-vibrato'};render();");assert(doc.querySelector('[data-v5=note]'));win.ElixirAtelier.note('Gengibre');assert(query('.v5-note-perfumes').textContent.includes('Vibrato'));await click('[data-v5=note-to-mix]');assert(win.ElixirAtelier.selected.has('Gengibre'));});
   await check('Theme toggles and fictitious posts remain navigable',async()=>{win.ElixirAtelier.theme='system';page('home');await click('[data-v5=theme]');assert.equal(doc.documentElement.dataset.theme,'dark');assert.equal(win.localStorage.getItem('elixir-theme-v5'),'dark');assert.equal(run("Social.posts.filter(p=>p.id.startsWith('v5-post-')).length"),24);assert(query('.community-post'));assert.equal(errors.length,0,errors.join('\n'));});
+  await check('Alchemy exposes all matches through pagination, including exclusions alone',async()=>{
+    const V=win.ElixirAtelier;V.selected.clear();V.excluded=new Set(['Tabaco']);V.resultLimit=24;page('alchemy');assert(query('.v5-result-count'));assert.equal(doc.querySelectorAll('#v5-mix-results .product-card').length,24);await click('[data-v5=more-results]');assert.equal(doc.querySelectorAll('#v5-mix-results .product-card').length,48);
+    while(doc.querySelector('[data-v5=more-results]'))await click('[data-v5=more-results]');assert.equal(doc.querySelectorAll('#v5-mix-results .product-card').length,V.results().length);
+  });
+  await check('Choosing an excluded note removes the contradictory exclusion',async()=>{
+    const V=win.ElixirAtelier;V.selected.clear();V.excluded=new Set(['Alecrim']);V.search='Alecrim';page('alchemy');await click('[data-v5=mix][data-note=Alecrim]');assert(V.selected.has('Alecrim'));assert(!V.excluded.has('Alecrim'));assert(V.results().some(p=>p.id==='sospiro-vibrato'));
+    V.excluded.add('Bergamota');V.note('Bergamota');await click('[data-v5=note-to-mix]');assert(!V.excluded.has('Bergamota'));V.search='';
+  });
+  await check('Note modal can reveal every referenced perfume, not just the initial 24',async()=>{
+    const V=win.ElixirAtelier;V.note('Bergamota');assert.equal(doc.querySelectorAll('.v5-note-perfumes>button').length,24);await click('[data-v5=more-note-results]');assert.equal(doc.querySelectorAll('.v5-note-perfumes>button').length,48);while(doc.querySelector('[data-v5=more-note-results]'))await click('[data-v5=more-note-results]');const expected=run("PERFUMES.filter(p=>p.noteWeights.some(n=>ElixirAtelier.key(n.name).startsWith('bergamota'))).length");assert.equal(doc.querySelectorAll('.v5-note-perfumes>button').length,expected);run('closeModal();');
+  });
+  await check('Every available product has both detail and thumbnail cutouts; ingredient images exist',async()=>{
+    const cutouts=JSON.parse(fs.readFileSync(path.join(root,'assets/cutouts.json'),'utf8'));assert.equal(Object.keys(cutouts).length,267);for(const file of Object.values(cutouts)){assert(fs.existsSync(path.join(root,file)),file);assert(fs.existsSync(path.join(root,file.replace('/cutouts/','/cutouts-small/'))),file);}
+    for(const n of run('INGREDIENTS'))assert(fs.existsSync(path.join(root,n.image)),n.image);
+  });
+  await check('Every local route renders with one toolbar and labelled form controls',async()=>{
+    for(const name of ['home','explore','collection','people','circle','discovery','today','diary','connect','alchemy','ingredients','profile']){page(name);assert.equal(doc.querySelectorAll('.v5-action-bar[aria-label]').length,1,name);assert(doc.querySelector('#main'));}
+    assert.equal(errors.length,0,errors.join('\n'));
+  });
+  await check('Fresh discovery blocks continuation until three experiences, then saves taste independently of ownership',async()=>{
+    run('state=defaults();Minimal.begin();');await click('[data-action=discovery-style][data-id=citrus]');await click('[data-action=discovery-next]');await click('[data-action=discovery-note][data-value=Bergamota]');await click('[data-action=discovery-next]');assert(query('[data-action=discovery-next]').disabled);
+    for(const [id,rating] of [['vetiver',10],['polo',8],['arbo',2]]){await click('[data-action=discovery-perfume][data-id='+id+']');await click('[data-action=discovery-rating][data-value="'+rating+'"]');}
+    assert(!query('[data-action=discovery-next]').disabled);await click('[data-action=discovery-next]');await click('[data-action=discovery-intensity][data-value=Discreta]');await click('[data-action=discovery-next]');await click('[data-action=discovery-done]');assert.equal(state().preferences.intensity,'Discreta');assert(state().preferences.likedNotes.includes('Bergamota'));assert.equal(state().ratings.arbo,2);assert(state().lists['Não compraria novamente'].includes('arbo'));assert.equal(state().lists['Minha coleção'].length,0);assert.equal(errors.length,0,errors.join('\n'));
+  });
   process.stdout.write(JSON.stringify({ passed: results.length, checks: results, runtimeErrors: errors }, null, 2) + '\n');
   dom.window.close();
 })().catch(error => { process.stderr.write(error.stack + '\n'); dom.window.close(); process.exitCode = 1; });
