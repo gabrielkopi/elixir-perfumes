@@ -187,6 +187,13 @@ async function check(name, test) { await test(); results.push(name); }
     for(const [id,rating] of [['vetiver',10],['polo',8],['arbo',2]]){await click('[data-action=discovery-perfume][data-id='+id+']');await click('[data-action=discovery-rating][data-value="'+rating+'"]');}
     assert(!query('[data-action=discovery-next]').disabled);await click('[data-action=discovery-next]');await click('[data-action=discovery-intensity][data-value=Discreta]');await click('[data-action=discovery-next]');await click('[data-action=discovery-done]');assert.equal(state().preferences.intensity,'Discreta');assert(state().preferences.likedNotes.includes('Bergamota'));assert.equal(state().ratings.arbo,2);assert(state().lists['Não compraria novamente'].includes('arbo'));assert.equal(state().lists['Minha coleção'].length,0);assert.equal(errors.length,0,errors.join('\n'));
   });
+  await check('WePink fig fragrance is found by brand/note words in either order',async()=>{
+    for(const text of ['fig da wepink','wepink figo','santal fig','figo wepink']){run('query='+JSON.stringify(text)+';ElixirCatalog.brand="Todas";filter="Todos";');assert(run('Minimal.catalogItems().some(x=>x.p.id==="wepink-2000052400")'),text);}
+    run('query="";');
+  });
+  await check('Figo also finds the declared Figo Cremoso and Figo Leitoso variants',async()=>{
+    const V=win.ElixirAtelier;V.selected=new Set(['Figo']);V.excluded.clear();assert(V.results().some(p=>p.id==='wepink-2000052400'));assert(V.results().some(p=>p.id==='wepink-2000052176'));V.note('Figo');assert(query('.v5-note-perfumes').textContent.includes('Heaven Santal & Fig'));run('closeModal();');
+  });
   process.stdout.write(JSON.stringify({ passed: results.length, checks: results, runtimeErrors: errors }, null, 2) + '\n');
   dom.window.close();
 })().catch(error => { process.stderr.write(error.stack + '\n'); dom.window.close(); process.exitCode = 1; });
