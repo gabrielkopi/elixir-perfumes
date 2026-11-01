@@ -7,7 +7,7 @@
  V.key=n=>{const v=norm(n);return aliases[v]||norm(extraAliases[v]||v);};
  V.names=[...new Map(PERFUMES.flatMap(p=>p.noteWeights.map(n=>n.name)).map(n=>[V.key(n),n])).values()].sort((a,b)=>a.localeCompare(b,'pt-BR'));
  V.art={};
- V.image=n=>{const key=V.key(n),custom=Object.entries(V.art).find(([k])=>key===V.key(k)||(key.startsWith(V.key(k))||key.endsWith(V.key(k)))&&V.key(k).length>=4);if(custom)return custom[1];const i=INGREDIENTS.find(i=>V.key(i.name)===key||V.key(i.id)===key||V.key(i.name).length>=4&&(key.startsWith(V.key(i.name))||key.endsWith(V.key(i.name))));return i?.image;};
+ V.image=n=>{const key=V.key(n),entries=Object.entries(V.art),exact=entries.find(([k])=>key===V.key(k));if(exact)return exact[1];const ingredient=INGREDIENTS.find(i=>V.key(i.name)===key||V.key(i.id)===key);if(ingredient)return ingredient.image;if(['jasmimmanga','ambarcinzento'].includes(key))return undefined;const candidates=[...entries,...INGREDIENTS.map(i=>[i.name,i.image])].filter(([k])=>V.key(k).length>=4&&(key.startsWith(V.key(k))||key.endsWith(V.key(k)))).sort((a,b)=>V.key(b[0]).length-V.key(a[0]).length);return candidates[0]?.[1];};
  const originalIcon=ElixirCatalog.noteIcon.bind(ElixirCatalog);
  ElixirCatalog.noteIcon=n=>V.image(n)?`<span class="scent-note-art"><img src="${esc(V.image(n))}" alt="" loading="lazy" decoding="async"></span>`:originalIcon(n);
  const oldNotes=ElixirCatalog.notes.bind(ElixirCatalog);

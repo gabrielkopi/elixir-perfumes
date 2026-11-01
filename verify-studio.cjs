@@ -194,6 +194,14 @@ async function check(name, test) { await test(); results.push(name); }
   await check('Figo also finds the declared Figo Cremoso and Figo Leitoso variants',async()=>{
     const V=win.ElixirAtelier;V.selected=new Set(['Figo']);V.excluded.clear();assert(V.results().some(p=>p.id==='wepink-2000052400'));assert(V.results().some(p=>p.id==='wepink-2000052176'));V.note('Figo');assert(query('.v5-note-perfumes').textContent.includes('Heaven Santal & Fig'));run('closeModal();');
   });
+  await check('Specific note artwork wins over generic prefixes and unrelated botanical names',async()=>{
+    const V=win.ElixirAtelier;
+    assert.equal(V.image('Absoluto de Jasmim Sambac'),'assets/notes-hd/v7-absoluto-de-jasmim-sambac.webp');
+    assert.equal(V.image('Acorde âmbar amadeirado'),'assets/notes-hd/v7-acorde-ambar-amadeirado.webp');
+    assert.equal(V.image('Jasmim-manga'),undefined);assert.equal(V.image('Âmbar cinzento'),undefined);
+    const manifest=JSON.parse(fs.readFileSync(path.join(root,'assets/notes-hd/manifest.json'),'utf8'));
+    for(const [name,file] of Object.entries(manifest)){assert.equal(V.image(name),file,name);assert(fs.existsSync(path.join(root,file)),file);}
+  });
   process.stdout.write(JSON.stringify({ passed: results.length, checks: results, runtimeErrors: errors }, null, 2) + '\n');
   dom.window.close();
 })().catch(error => { process.stderr.write(error.stack + '\n'); dom.window.close(); process.exitCode = 1; });
