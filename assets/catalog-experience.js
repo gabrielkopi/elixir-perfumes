@@ -51,8 +51,8 @@
   };
   perfumePage = id => C.detail(id);
   Minimal.catalogItems = function() {
-    const q=NoteModel.normalize(query), brand=C.brand;
-    const items=ranked().filter(({p})=>NoteModel.normalize([p.name,p.brand,p.brand==='Rabanne'?'Paco Rabanne':'',p.family,...p.noteWeights.map(n=>n.name)].join(' ')).includes(q)&&(brand==='Todas'||p.brand===brand)&&(this.audience==='Todos'||p.audience===this.audience)&&(filter==='Todos'||filter==='Nacionais'&&['O Boticário','Natura','WePink'].includes(p.brand)||filter==='Favoritos'&&state.favorites.includes(p.id)||DIMENSIONS.includes(filter)&&p.vector[DIMENSIONS.indexOf(filter)]>=.65));
+    const terms=String(query).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().split(/[^a-z0-9]+/).filter(t=>t&&!['a','o','as','os','da','de','do','das','dos','e','com'].includes(t)), brand=C.brand;
+    const items=ranked().filter(({p})=>terms.every(term=>NoteModel.normalize([p.name,p.brand,p.brand==='Rabanne'?'Paco Rabanne':'',p.family,...p.noteWeights.map(n=>n.name)].join(' ')).includes(term))&&(brand==='Todas'||p.brand===brand)&&(this.audience==='Todos'||p.audience===this.audience)&&(filter==='Todos'||filter==='Nacionais'&&['O Boticário','Natura','WePink'].includes(p.brand)||filter==='Favoritos'&&state.favorites.includes(p.id)||DIMENSIONS.includes(filter)&&p.vector[DIMENSIONS.indexOf(filter)]>=.65));
     if(C.order==='name')items.sort((a,b)=>a.p.name.localeCompare(b.p.name,'pt-BR'));
     if(C.order==='brand')items.sort((a,b)=>a.p.brand.localeCompare(b.p.brand,'pt-BR')||a.p.name.localeCompare(b.p.name,'pt-BR'));
     return items;
