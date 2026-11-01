@@ -5,7 +5,7 @@ window.ElixirStudio = (() => {
   const uid = prefix => prefix + '-' + crypto.randomUUID();
   const clean = (v, length = 600) => String(v ?? '').trim().slice(0, length);
   const ids = values => [...new Set(Array.isArray(values) ? values.filter(id => typeof id === 'string' && byId(id)) : [])];
-  const avatarImage = (name, color = '#dfe6d7') => 'data:image/svg+xml,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240"><rect width="240" height="240" rx="120" fill="${/^#[a-f0-9]{6}$/i.test(color) ? color : '#dfe6d7'}"/><text x="120" y="143" text-anchor="middle" font-family="Georgia,serif" font-size="64" fill="#384238">${h(name.split(/\s+/).map(s => s[0]).slice(0, 2).join('').toUpperCase())}</text></svg>`);
+  const avatarImage = (name, color = '#dfe6d7') => 'data:image/svg+xml,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240"><rect width="240" height="240" rx="120" fill="${/^#[a-f0-9]{6}$/i.test(color) ? color : '#dfe6d7'}"/><text x="120" y="143" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-size="64" fill="#384238">${h(name.split(/\s+/).map(s => s[0]).slice(0, 2).join('').toUpperCase())}</text></svg>`);
   const extras = [
     ['iris', 'Íris', 'Floral, atalcada e com nuances terrosas. A referência da perfumaria está ligada ao rizoma, não apenas à flor.', 1],
     ['figo', 'Figo', 'Uma referência frutada e verde, que pode ganhar facetas leitosas na composição.', 8],

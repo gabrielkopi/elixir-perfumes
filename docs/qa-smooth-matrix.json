@@ -1,0 +1,1814 @@
+[
+  {
+    "route": "home",
+    "checked": 345,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "explore",
+    "checked": 193,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "collection",
+    "checked": 84,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "people",
+    "checked": 174,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "circle",
+    "checked": 29,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "today",
+    "checked": 41,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "diary",
+    "checked": 26,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "connect",
+    "checked": 26,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 301,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "alchemy",
+    "checked": 81,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredients",
+    "checked": 569,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "profile",
+    "checked": 50,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "lab",
+    "checked": 74,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "discovery",
+    "checked": 116,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "perfume/wepink-2000052400",
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredient/hd-yuzu",
+    "checked": 37,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "family/floral",
+    "checked": 94,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "person/vincenzo",
+    "checked": 143,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "home",
+    "checked": 345,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "explore",
+    "checked": 195,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "collection",
+    "checked": 84,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "people",
+    "checked": 174,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "circle",
+    "checked": 29,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "today",
+    "checked": 41,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "diary",
+    "checked": 26,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "connect",
+    "checked": 26,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 301,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "alchemy",
+    "checked": 81,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredients",
+    "checked": 569,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "profile",
+    "checked": 50,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "lab",
+    "checked": 74,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "discovery",
+    "checked": 116,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "perfume/wepink-2000052400",
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredient/hd-yuzu",
+    "checked": 37,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "family/floral",
+    "checked": 94,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "person/vincenzo",
+    "checked": 143,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 312,
+    "clientWidth": 300,
+    "scrollWidth": 300,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "home",
+    "checked": 345,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "explore",
+    "checked": 193,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "collection",
+    "checked": 84,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "people",
+    "checked": 174,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "circle",
+    "checked": 29,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "today",
+    "checked": 41,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "diary",
+    "checked": 26,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "connect",
+    "checked": 26,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "alchemy",
+    "checked": 81,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredients",
+    "checked": 569,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "profile",
+    "checked": 50,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "lab",
+    "checked": 74,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "discovery",
+    "checked": 116,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "perfume/wepink-2000052400",
+    "checked": 105,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredient/hd-yuzu",
+    "checked": 37,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "family/floral",
+    "checked": 94,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "person/vincenzo",
+    "checked": 143,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "home",
+    "checked": 345,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "explore",
+    "checked": 195,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "collection",
+    "checked": 84,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "people",
+    "checked": 174,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "circle",
+    "checked": 29,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "today",
+    "checked": 41,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "diary",
+    "checked": 26,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "connect",
+    "checked": 26,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "alchemy",
+    "checked": 81,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredients",
+    "checked": 569,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "profile",
+    "checked": 50,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "lab",
+    "checked": 74,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "discovery",
+    "checked": 116,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "perfume/wepink-2000052400",
+    "checked": 106,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredient/hd-yuzu",
+    "checked": 37,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "family/floral",
+    "checked": 94,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "person/vincenzo",
+    "checked": 143,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 390,
+    "clientWidth": 378,
+    "scrollWidth": 378,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "home",
+    "checked": 350,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "explore",
+    "checked": 197,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "collection",
+    "checked": 88,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "people",
+    "checked": 178,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "circle",
+    "checked": 33,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "today",
+    "checked": 45,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "diary",
+    "checked": 30,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "connect",
+    "checked": 30,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "alchemy",
+    "checked": 85,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredients",
+    "checked": 574,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "profile",
+    "checked": 54,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "lab",
+    "checked": 78,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "discovery",
+    "checked": 120,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "perfume/wepink-2000052400",
+    "checked": 109,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredient/hd-yuzu",
+    "checked": 41,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "family/floral",
+    "checked": 98,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "person/vincenzo",
+    "checked": 150,
+    "issues": [],
+    "overflow": false,
+    "theme": "light",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "home",
+    "checked": 350,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "explore",
+    "checked": 199,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "collection",
+    "checked": 88,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "people",
+    "checked": 178,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "circle",
+    "checked": 33,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "today",
+    "checked": 45,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "diary",
+    "checked": 30,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "connect",
+    "checked": 30,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "alchemy",
+    "checked": 85,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredients",
+    "checked": 574,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "profile",
+    "checked": 54,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "lab",
+    "checked": 78,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "discovery",
+    "checked": 120,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "\"DM Sans\", Arial, sans-serif",
+        "\"DM Sans\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "perfume/wepink-2000052400",
+    "checked": 110,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "ingredient/hd-yuzu",
+    "checked": 41,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "family/floral",
+    "checked": 98,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  },
+  {
+    "route": "person/vincenzo",
+    "checked": 150,
+    "issues": [],
+    "overflow": false,
+    "theme": "dark",
+    "total": 0,
+    "width": 1280,
+    "clientWidth": 1268,
+    "scrollWidth": 1268,
+    "typography": {
+      "families": [
+        "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+      ],
+      "unexpected": []
+    }
+  }
+]
