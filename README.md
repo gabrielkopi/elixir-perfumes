@@ -11,7 +11,7 @@ Tipografia unificada em DM Sans local (WOFF2), transições curtas e cancelávei
 
 ## Catálogo e referências
 
-[Abrir catálogo publicado](https://gabrielkopi.github.io/elixir-perfumes/elixir.html?v=smooth2#explore)
+[Abrir catálogo publicado](https://gabrielkopi.github.io/elixir-perfumes/elixir.html?v=smooth3#explore)
 
 280 registros no aplicativo: 106 WePink, 37 O Boticário, 26 Guerlain, 22 Rabanne, 6 Natura, Vibrato da Sospiro e outras marcas. A edição adiciona 179 registros aos 101 existentes (catálogo anterior e Exclusivo da comunidade).
 
