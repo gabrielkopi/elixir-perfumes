@@ -7,6 +7,7 @@
 .floating-content{padding-bottom:calc(128px + env(safe-area-inset-bottom,0px))!important}
 .ingredient-detail>img{background:var(--v5-surface);border-radius:28px;padding:20px;mix-blend-mode:normal}
 .ingredient-image,.profile-perfume-photo{border-radius:24px;overflow:hidden}
+:is(.product-image img,.profile-perfume-photo img,.discovery-product-image img,.scent-hero-photo>img,.scent-note-art img,.scent-related img,.scent-product-image img,.community-photo.product>img,.community-product>img,.sheet-product-image img,.studio-bottle-image img,.studio-suggestion-image img,.studio-today-image img,.studio-diary-list article>img,.studio-store-card>img,.studio-shelf-modal>img,.studio-picker-item img,.studio-gift-grid img,.mini-card img,.walk-perfume>div>img,.walk-rating-image>img){mix-blend-mode:normal!important}
 .ingredient-grid>.empty,.v5-note-picker>.empty{grid-column:1/-1}
 .empty h2,.empty h3{margin-bottom:12px}
 .empty .btn{margin-top:18px}
