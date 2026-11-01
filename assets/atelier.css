@@ -28,3 +28,5 @@ html[data-theme=dark] #main :is(p,small,label){color:#b9c5b3}html[data-theme=dar
 
 .discovery-flow :is(.note-choice,.btn,.text-button),.discovery-flow .searchbox{border-radius:999px!important;min-height:44px}
 html[data-theme=dark] .discovery-flow :is(.note-choice,.discovery-perfume,.style-choice){background:#1d2922!important;color:#edf0e8!important;border-color:#53624f!important}html[data-theme=dark] .discovery-flow .note-choice.selected{background:#38513a!important;color:#f3f7ed!important}html[data-theme=dark] .flow-footer{background:#111815e8!important;color:#d9e3d2!important;border-color:#3b4b40!important}
+
+[data-v5="more-notes"][hidden]{display:none!important}

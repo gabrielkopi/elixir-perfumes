@@ -1,0 +1,91 @@
+/* Shared finishing: readable surfaces, reliable focus and comfortable controls. */
+:root{--polish-focus:#426142}
+:focus-visible{outline:3px solid var(--polish-focus)!important;outline-offset:4px}
+.searchbox:focus-within{outline:2px solid var(--polish-focus);outline-offset:3px}
+.searchbox input:focus-visible{outline:none!important}
+.scent-section{scroll-margin-top:120px}
+.floating-content{padding-bottom:calc(128px + env(safe-area-inset-bottom,0px))!important}
+.ingredient-detail>img{background:var(--v5-surface);border-radius:28px;padding:20px;mix-blend-mode:normal}
+.ingredient-image,.profile-perfume-photo{border-radius:24px;overflow:hidden}
+:is(.product-image img,.profile-perfume-photo img,.discovery-product-image img,.scent-hero-photo>img,.scent-note-art img,.scent-related img,.scent-product-image img,.community-photo.product>img,.community-product>img,.sheet-product-image img,.studio-bottle-image img,.studio-suggestion-image img,.studio-today-image img,.studio-diary-list article>img,.studio-store-card>img,.studio-shelf-modal>img,.studio-picker-item img,.studio-gift-grid img,.mini-card img,.walk-perfume>div>img,.walk-rating-image>img){mix-blend-mode:normal!important}
+.ingredient-grid>.empty,.v5-note-picker>.empty{grid-column:1/-1}
+.empty h2,.empty h3{margin-bottom:12px}
+.empty .btn{margin-top:18px}
+.text-button{min-height:44px!important}
+.v5-note-status{margin:14px 0 0;color:var(--v5-muted);font-size:12px;line-height:1.6}
+.v5-note-actions{flex-wrap:wrap;border-radius:24px}
+.v5-note-actions button{flex:1 1 220px;justify-content:center;min-height:48px;border-radius:999px;background:var(--v5-glass);padding:10px 16px}
+.v5-note-perfumes>button,.v5-note-perfumes>button>span{min-width:0}
+.v5-note-perfumes strong{overflow-wrap:anywhere}
+.studio-select{width:44px;height:44px}
+.product-card [data-action=favorite]{min-width:44px;min-height:44px;border-radius:999px}
+.community-post-actions>button,.radar-switch button,.minimal-profile-tabs button,.ingredient-filters button{min-height:44px}
+.minimal-profile-tabs,.radar-switch{gap:8px;flex-wrap:wrap;border-bottom:0}
+.minimal-profile-tabs button,.radar-switch button{border:1px solid var(--v5-border);border-radius:999px;background:var(--v5-glass);padding:10px 16px;font-size:12px;color:var(--v5-muted)}
+.minimal-profile-tabs button.active,.radar-switch button.active{background:#34493e;color:#fff;border-color:#34493e}
+.public-tabs{gap:8px;flex-wrap:wrap}
+.public-tabs>button{min-height:44px;padding:10px 16px;border:1px solid var(--v5-border);border-radius:999px;background:var(--v5-glass);font-size:12px;color:var(--v5-muted)}
+.public-tabs>button.active{background:#34493e;color:#fff;border-color:#34493e}
+.subtle-tag,.tiny-minus,.section-caption>span,.scent-product-image>span,.public-breadcrumb>span,.lifestyle-strip>div>span{color:var(--v5-muted)!important}
+.micro-label,.public-numbers span,.scent-personal-summary>span{color:var(--v5-muted)!important}
+.scent-section-nav a{color:var(--v5-text)!important;min-height:44px;display:flex;align-items:center}
+.studio-ingredient-preferences button:not([aria-pressed=true]){color:var(--v5-muted)!important;min-height:44px}
+.section-caption>button{min-height:44px;padding:10px 16px;border-radius:999px;color:var(--v5-muted)}
+.subtle-tag{font-size:11px}
+.scent-caption,.scent-icon-caption,.studio-footnote,.catalog-attribution,.simulation-caption,.curation-caption,.radar-footnote{font-size:12px;line-height:1.7}
+.post-glass-caption{background:rgba(250,252,247,.94)!important;color:#344936!important}
+.floating-dock button span{color:inherit!important;font-size:10px;line-height:1.3}
+.floating-footer>span{color:var(--v5-muted)!important;font-size:11px}
+.topbar-editorial,.presentation-link,.community-filter>span,.public-tabs>span{color:var(--v5-muted)!important}
+.viewer-avatar>span:not(.avatar){color:var(--v5-text)!important}
+.profile-perfume-group>header>span{color:var(--v5-muted)!important;font-size:11px}
+.community-post-actions>button span{color:inherit!important}
+html[data-theme=light]{--muted:#5f6b5c!important;--studio-muted:#5f6b5c!important;--v5-muted:#5f6b5c}
+html[data-theme=light] #main :is(p,small,label,legend,.text-button,.community-more,.community-filter button,.ingredient-filters button,.profile-group-link,.clean-lifestyle>button,.profile-page-label>span,.profile-stat-row span,.clean-lifestyle span,.minimal-collection-link span,#studio-selected-count){color:#56654f!important}
+html[data-theme=light] :is(.fallback span,.fallback small,.floating-dock button){color:#56654f!important}
+html[data-theme=light] .community-post-actions>button{color:#56654f!important}
+html[data-theme=light] :is(.public-breadcrumb>a,.public-tabs>button:not(.active),.lifestyle-strip>a,.section-caption>button,.scent-product-link){color:#56654f!important}
+html[data-theme=light] dialog :is(p,small,label,legend,.sheet-source,.sheet-notes>span){color:#56654f!important}
+html[data-theme=light] :is(.community-filter button.active,.ingredient-filters button.active){background:#e2ead8!important;color:#25352c!important;border-color:#8eaa7c!important}
+html[data-theme=light] .back{color:#56654f!important}
+html[data-theme=light] .studio-ingredient-preferences button[aria-pressed=true]{background:#e2ead8!important;color:#25352c!important;border-color:#8eaa7c!important}
+.family-world-grid small,.studio-bottle-copy>small,.studio-bottle-tags span{font-size:11px;line-height:1.6}
+.recurring-notes>button{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-height:52px;padding:10px 16px;border:1px solid var(--v5-border);border-radius:999px;background:var(--v5-glass);color:var(--v5-text)}
+.recurring-notes>button strong{font-size:12px;color:inherit}
+.recurring-notes>button small{font-size:11px;color:var(--v5-muted)}
+.family-explorer{margin:22px 0 28px;border:1px solid var(--v5-border);border-radius:999px;background:var(--v5-surface)}
+.family-explorer>summary{display:flex;align-items:center;gap:14px;list-style:none;cursor:pointer;min-height:54px;padding:13px 18px;font-size:13px;color:var(--v5-text);border-radius:inherit}
+.family-explorer>summary::-webkit-details-marker{display:none}
+.family-explorer>summary>span{margin-left:auto;font-size:12px;color:var(--v5-muted)}
+.family-explorer>summary::after{content:'⌄';font-size:20px;line-height:1;margin-left:auto;transition:transform .2s}
+.family-explorer[open]{border-radius:24px}
+.family-explorer[open]>summary{border-bottom:1px solid var(--v5-border);border-radius:24px 24px 0 0}
+.family-explorer[open]>summary::after{transform:rotate(180deg)}
+.family-explorer .family-library{padding:24px 18px;margin:0}
+.family-explorer .family-library h2{font-size:28px}
+.family-explorer .family-world-grid{gap:24px 14px}
+.family-explorer .family-world-grid img{max-width:100%;width:120px;height:120px}
+html[data-theme=dark]{--studio-ink:#edf0e8!important;--studio-muted:#b2bdaf!important;--studio-line:#3b4b40!important;--polish-focus:#c0d1b1}
+html[data-theme=dark] :is(.empty,.glass-card,.sheet-product-image,.scent-product-image,.studio-select,.studio-person,.studio-notice,.studio-context-form,.studio-connect-start,.studio-scenarios,.studio-scenario-grid button,.studio-today-image,.studio-bottle-image,.profile-perfume-photo,.ingredient-image,.ingredient-detail>img,.community-photo,.fallback){background:var(--v5-surface)!important;color:var(--v5-text)!important;border-color:var(--v5-border)!important}
+html[data-theme=dark] dialog :is(p,small,label,legend,.sheet-source){color:var(--v5-muted)!important}
+html[data-theme=dark] .sheet-notes>span{background:#25362b!important;color:var(--v5-text)!important}
+html[data-theme=dark] :is(.studio-pills button,.studio-bottle-tags span){background:#25362b!important;color:var(--v5-text)!important;border-color:var(--v5-border)!important}
+html[data-theme=dark] :is(.text-button,.studio-selected-count,.clean-note-grid span,.clean-lifestyle>button,.profile-short-bio,.family-hero p,.family-world-grid small,.family-world-grid strong,.community-post-actions>button,.community-filter button,.ingredient-filters button,.minimal-profile-tabs button,.radar-switch button,summary){color:var(--v5-muted)!important}
+html[data-theme=dark] :is(.empty p,.studio-notice p,.studio-person p,.studio-person small,.studio-affinity,.studio-connect-start p,.studio-scenario-grid small,.studio-collection-tools>span,#studio-selected-count,.fallback span,.fallback small,.scent-results>span,.scent-load>span){color:var(--v5-muted)!important}
+html[data-theme=dark] .minimal-collection-link span{color:var(--v5-muted)!important}
+html[data-theme=dark] :is(.public-breadcrumb>a,.public-tabs>button,.lifestyle-strip>a,.section-caption>button,.scent-product-link){color:var(--v5-muted)!important}
+html[data-theme=dark] .studio-shortcuts a[aria-current=page]{background:#344c35!important;color:#e4efda!important}
+html[data-theme=dark] :is(.public-tabs>button.active,.community-filter button.active,.ingredient-filters button.active,.minimal-profile-tabs button.active,.radar-switch button.active,#main button[aria-pressed=true]){background:#c0d1b1!important;color:#17251c!important;border-color:#c0d1b1!important}
+html[data-theme=dark] #main button[aria-pressed=true] :is(span,strong){color:inherit!important}
+html[data-theme=dark] :is(.ingredient-image img,.profile-perfume-photo img,.studio-bottle-image img,.studio-today-image img){mix-blend-mode:normal!important}
+html[data-theme=dark] .post-glass-caption{background:rgba(17,24,21,.92)!important;color:#edf0e8!important;border-color:#53624f!important}
+html[data-theme=dark] .taste-radar text{fill:#c2cfbb}
+html[data-theme=dark] .taste-radar line,html[data-theme=dark] .taste-radar circle[fill=none]{stroke:#53624f}
+@media(max-width:700px){
+  input:not([type=checkbox]):not([type=radio]):not([type=range]),textarea,select{font-size:16px!important}
+  .ingredient-detail>img{padding:18px;border-radius:24px}
+  .studio-notice{align-items:flex-start}
+}
+@media(max-width:420px){.family-explorer>summary>span{display:none}}
+@media(hover:none){.v5-note-pick:hover,.scent-note:hover .scent-note-art{transform:none}}
+@media(prefers-reduced-motion:reduce){.family-explorer>summary::after{transition:none}}

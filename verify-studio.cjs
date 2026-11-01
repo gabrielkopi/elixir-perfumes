@@ -194,6 +194,61 @@ async function check(name, test) { await test(); results.push(name); }
   await check('Figo also finds the declared Figo Cremoso and Figo Leitoso variants',async()=>{
     const V=win.ElixirAtelier;V.selected=new Set(['Figo']);V.excluded.clear();assert(V.results().some(p=>p.id==='wepink-2000052400'));assert(V.results().some(p=>p.id==='wepink-2000052176'));V.note('Figo');assert(query('.v5-note-perfumes').textContent.includes('Heaven Santal & Fig'));run('closeModal();');
   });
+  await check('Specific note artwork wins over generic prefixes and unrelated botanical names',async()=>{
+    const V=win.ElixirAtelier;
+    assert.equal(V.image('Absoluto de Jasmim Sambac'),'assets/notes-hd/v7-absoluto-de-jasmim-sambac.webp');
+    assert.equal(V.image('Acorde âmbar amadeirado'),'assets/notes-hd/v7-acorde-ambar-amadeirado.webp');
+    assert.equal(V.image('Jasmim-manga'),'assets/notes-hd/v7-flor-de-plumeria.webp');assert.equal(V.image('Âmbar cinzento'),'assets/notes-hd/v7-ambergris.webp');
+    const manifest=JSON.parse(fs.readFileSync(path.join(root,'assets/notes-hd/manifest.json'),'utf8'));
+    for(const [name,file] of Object.entries(manifest)){assert.equal(V.image(name),file,name);assert(fs.existsSync(path.join(root,file)),file);}
+  });
+  await check('Every declared catalogue note has a real local image in its clickable illustration',async()=>{
+    const V=win.ElixirAtelier;
+    assert.equal(V.image('Flor de Maçã'),'assets/notes-hd/v7-apple-blossom.webp');assert.equal(V.image('Folhas de Violeta'),'assets/notes-hd/v7-folha-de-violeta.webp');
+    const names=[...new Set(run('PERFUMES').flatMap(p=>p.noteWeights.map(n=>n.name)))];
+    for(const name of names){const file=V.image(name);assert(file,'Missing note image: '+name);assert(fs.existsSync(path.join(root,file)),name);assert(win.ElixirCatalog.noteIcon(name).includes('<img'),name);}
+    assert.equal(V.names.filter(name=>!V.image(name)).length,0);
+    for(const name of V.names){V.note(name);assert(doc.querySelector('.v5-note-perfumes>button'),'No referenced perfumes for '+name);assert.equal(query('.v5-note-detail>.scent-note-art img').getAttribute('src'),V.image(name),name);}
+    run('closeModal();');
+    V.search='';page('alchemy');V.limit=1000;query('#v5-note-picker').innerHTML=V.picker();assert.equal(doc.querySelectorAll('#v5-note-picker .scent-note-art img').length,V.names.length);
+  });
+  await check('Responsive note illustrations keep real dimensions and all variant paths available',async()=>{
+    const manifest=JSON.parse(fs.readFileSync(path.join(root,'assets/notes-hd/manifest.json'),'utf8'));
+    const responsive=JSON.parse(fs.readFileSync(path.join(root,'assets/notes-hd/responsive.json'),'utf8'));
+    for(const file of Object.values(manifest)){
+      const variants=responsive[file];assert(variants,file);assert.equal(variants.length,3);assert(variants[0].width<variants[1].width&&variants[1].width<variants[2].width,file);
+      for(const variant of variants)assert(fs.existsSync(path.join(root,variant.src)),variant.src);
+    }
+    assert(win.ElixirCatalog.noteIcon('Gengibre').includes('srcset='));
+    assert(run('IngredientLibrary.cards()').includes('srcset='));
+    assert(run("IngredientLibrary.detail('hd-gengibre')").includes('srcset='));
+  });
+  await check('Note picker offers more only while hidden matching notes remain',async()=>{
+    const V=win.ElixirAtelier;V.search='';V.limit=48;page('alchemy');
+    const search=query('#v5-note-search');search.value='Gengibre';search.dispatchEvent(new win.Event('input',{bubbles:true}));assert(query('[data-v5=more-notes]').hidden);assert.equal(doc.querySelectorAll('#v5-note-picker>button').length,1);
+    search.value='';search.dispatchEvent(new win.Event('input',{bubbles:true}));assert(!query('[data-v5=more-notes]').hidden);
+    while(!query('[data-v5=more-notes]').hidden)await click('[data-v5=more-notes]');
+    assert.equal(doc.querySelectorAll('#v5-note-picker>button').length,V.names.length);assert.equal(errors.length,0,errors.join('\n'));
+  });
+  await check('Notes library starts with search and exposes families in a native disclosure',async()=>{
+    run("IngredientLibrary.query='';IngredientLibrary.family='Todas';");page('ingredients');
+    const html=query('#main').innerHTML;assert(html.indexOf('id="ingredient-search"')<html.indexOf('class="family-explorer"'));assert(!query('.family-explorer').open);assert.equal(doc.querySelectorAll('.family-explorer a[href^="#family/"]').length,7);
+  });
+  await check('Empty note searches explain the state and clear only search or filters',async()=>{
+    const V=win.ElixirAtelier;V.search='not-a-real-note-qa';V.selected=new Set(['Gengibre']);page('alchemy');assert(query('.v5-note-empty'));assert(query('#v5-note-count').textContent.includes('0 notas'));await click('[data-v5=reset-search]');assert.equal(V.search,'');assert(V.selected.has('Gengibre'));assert.equal(doc.activeElement.id,'v5-note-search');
+    run("IngredientLibrary.query='not-a-real-note-qa';IngredientLibrary.family='1';");page('ingredients');await click('[data-ingredient-clear]');assert.equal(run('IngredientLibrary.query'),'');assert.equal(run('IngredientLibrary.family'),'Todas');assert.equal(doc.activeElement.id,'ingredient-search');
+  });
+  await check('Notes radar uses actual asset paths and communicates its selected mode',async()=>{
+    const html=run("Families.radar({ratings:{'sospiro-vibrato':9}},true)");const images=[...html.matchAll(/<image href="([^"]+)"/g)].map(m=>m[1]);assert(images.length>=3);assert(html.includes('data-v5="note"'));for(const file of images)assert(fs.existsSync(path.join(root,file)),file);assert(images.some(file=>file.includes('notes-hd/')));assert(!html.includes('/hd-gengibre.png'));
+    run("Families.mode='notes';");assert(run("Families.profileCard({ratings:{'sospiro-vibrato':9}})").includes('data-radar="notes" aria-pressed="true"'));run("Families.mode='families';");
+  });
+  await check('Alchemy clears stale shortcut selection and route changes focus the heading',async()=>{
+    page('connect');assert(query('.studio-shortcuts [aria-current=page]'));page('alchemy');assert.equal(doc.querySelector('.studio-shortcuts [aria-current=page]'),null);assert.equal(doc.activeElement,query('#main h1'));
+  });
+  await check('Keyboard focus survives same-page theme and favorite updates',async()=>{
+    const theme=query('[data-v5=theme]');theme.focus();await click('[data-v5=theme]');assert.equal(doc.activeElement.dataset.v5,'theme');
+    page('explore');const button=query('#catalog-grid [data-action=favorite]');const id=button.dataset.id;button.focus();await click('#catalog-grid [data-action=favorite]');assert.equal(doc.activeElement.dataset.action,'favorite');assert.equal(doc.activeElement.dataset.id,id);
+  });
   process.stdout.write(JSON.stringify({ passed: results.length, checks: results, runtimeErrors: errors }, null, 2) + '\n');
   dom.window.close();
 })().catch(error => { process.stderr.write(error.stack + '\n'); dom.window.close(); process.exitCode = 1; });

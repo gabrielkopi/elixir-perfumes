@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-01",
+  "routes": 17,
+  "viewports": [
+    312,
+    390,
+    1280
+  ],
+  "themes": [
+    "dark",
+    "light"
+  ],
+  "checks": 102,
+  "contrast_findings": 0,
+  "horizontal_overflows": 0,
+  "method": "Read-only DOM inspection of rendered opaque/translucent CSS backgrounds and visible text. Reduced-motion emulation avoids measuring intermediate animation opacity. Image/gradient backgrounds and assistive-technology speech are outside this automated calculation."
+}
