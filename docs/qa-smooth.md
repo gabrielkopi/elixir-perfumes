@@ -57,7 +57,7 @@ Animações usam opacidade e transformações. O vidro é estático: 16 px no de
 
 - `npm run check`: sintaxe dos módulos e do novo teste aprovada.
 - Suíte existente: 38 cenários aprovados, incluindo os 280 detalhes de perfumes, notas, importação/exportação, prateleira, pessoas, círculo, diário, descoberta e consentimento do Connect.
-- `npm run test:motion`: 10 cenários aprovados; uma atualização por busca, identidade dos nós, cursor/foco, filtros, seleção, concorrência de animações, reabertura de janela, movimento reduzido e fluxo inicial.
+- `npm run test:motion`: 11 cenários aprovados; uma atualização por busca, identidade dos nós, cursor/foco, filtros, seleção, concorrência de animações, reabertura de janela, movimento reduzido e fluxo inicial, incluindo retorno à fragrância após avaliar em uma janela.
 - [Matriz principal](qa-smooth-matrix.json): 102 verificações, 17 telas × 2 temas × larguras CSS de 312, 390 e 1280 px. Zero transbordamentos na comparação de `scrollWidth` com `clientWidth`, zero fontes antigas nos controles/títulos examinados e zero ocorrências de baixo contraste nos textos elegíveis da última rodada.
 - [Apresentação](qa-smooth-presentation.json): 16 verificações, oito cenas × 390/1280 px, sem os problemas verificados acima. Página inicial adicionalmente conferida em 390 px.
 - Chrome renderizado: cliques no catálogo/Alquimia e troca de tema, busca de gengibre, combinação com resultados, filtros por Enter, janela de Yuzu, Escape com devolução de foco e movimento reduzido com transições em `0s`.

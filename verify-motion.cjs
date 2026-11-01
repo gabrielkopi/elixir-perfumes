@@ -111,6 +111,12 @@ async function check(name, test) { await test(); results.push(name); }
     assert.equal(doc.activeElement.dataset.id, 'citrus'); assert.equal(doc.activeElement.getAttribute('aria-pressed'), 'true');
     await click('[data-action=discovery-next]'); assert.equal(doc.activeElement, query('.flow-content h1')); assert.equal(errors.length, 0, errors.join('\n'));
   });
+  await check('A discovery rating returns focus to its fragrance after updating the flow', async () => {
+    await click('[data-action=discovery-next]');
+    const trigger=query('[data-action=discovery-perfume]'), id=trigger.dataset.id;trigger.focus();trigger.click();await wait();
+    await click('[data-action=discovery-rating][data-value="8"]');
+    assert(!query('#modal').open);assert.equal(doc.activeElement.dataset.action,'discovery-perfume');assert.equal(doc.activeElement.dataset.id,id);
+  });
   process.stdout.write(JSON.stringify({ passed: results.length, checks: results, runtimeErrors: errors }, null, 2) + '\n');
   dom.window.close();
 })().catch(error => { process.stderr.write(error.stack + '\n'); dom.window.close(); process.exitCode = 1; });

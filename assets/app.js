@@ -48,9 +48,10 @@ function editorial(id){const e=EDITORIALS.find(x=>x.id===id)||EDITORIALS[0];retu
 function render(){Premium.palette();document.documentElement.dataset.density=state.preferences.density||'Amplo';if(Minimal.flow.active){Minimal.discovery();return;}document.documentElement.dataset.flow='false';if(!state.onboarded){renderOnboarding();return;}const pages={family:()=>Families.detail(route.id),ingredients:()=>IngredientLibrary.page(),ingredient:()=>IngredientLibrary.detail(route.id),home,explore,collection,profile,rate:()=>ratePage(route.id),perfume:()=>perfumePage(route.id),person:()=>personPage(route.id),twins,editorial:()=>editorial(route.id),list:()=>listPage(route.name)};Motion.paint(shell((pages[route.page]||home)()));document.title=BRAND.name+' · '+({home:'Início',explore:'Explorar',ingredients:'Matérias-primas',ingredient:'Matéria-prima',perfume:byId(route.id)?.name,person:Social.person(route.id)?.name||'Perfil',profile:'Seu perfil',collection:'Coleção',rate:'Avaliar'}[route.page]||'Afinidades');}
 function go(page,params={}){Motion.dismissNow();route={page,...params};query='';filter='Todos';const hash='#'+page+(params.id?'/'+encodeURIComponent(params.id):params.name?'/'+encodeURIComponent(params.name):'');if(location.hash===hash)render();else location.hash=hash;scrollTo({top:0,behavior:'instant'});}
 function readRoute(){const [page,id]=(location.hash.slice(1)||'home').split('/');let value='';try{value=decodeURIComponent(id||'');}catch{}route={page:page||'home',id:value,name:value};render();}
+let modalReturnFocus=null;
 function openModal(title,html){
  const dialog=$('#modal'),sameContent=dialog.open&&dialog.dataset.contentTitle===title;
- if(!dialog.open)lastFocus=document.activeElement;
+ if(!dialog.open){lastFocus=document.activeElement;modalReturnFocus=Motion.captureFocus(document);}
  dialog.dataset.contentTitle=title;
  $('#modal-content').innerHTML='<div class="modal-inner"><div class="modal-title"><h2 id="modal-title">'+title+'</h2><button class="iconbtn" data-action="close" aria-label="Fechar janela">'+icon('close')+'</button></div>'+html+'</div>';
  dialog.setAttribute('aria-labelledby','modal-title');
@@ -60,7 +61,7 @@ function openModal(title,html){
 }
 function closeModal(){Motion.close();}
 $('#modal').addEventListener('cancel',event=>{event.preventDefault();Motion.close();});
-$('#modal').addEventListener('close',()=>{if(lastFocus?.isConnected)lastFocus.focus({preventScroll:true});});
+$('#modal').addEventListener('close',()=>{if(lastFocus?.isConnected)lastFocus.focus({preventScroll:true});else Motion.restoreFocus(document,modalReturnFocus);});
 function preferenceName(n){return n>=9?'Amo':n>=7?'Gosto':n>=5?'Indiferente':'Não gosto';}
 function renderOnboarding(){Minimal.welcome();}
 function toggle(arr,id){return arr.includes(id)?arr.filter(x=>x!==id):[...arr,id];}
