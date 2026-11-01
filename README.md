@@ -1,6 +1,13 @@
-## Catálogo v4
+# ELIXIR Studio
 
-[Abrir catálogo publicado](https://gabrielkopi.github.io/elixir-perfumes/elixir.html?v=catalog4#explore)
+## Biblioteca e polimento — novembro de 2026
+
+280 perfumes, 405 nomes/variações de notas com imagem, 261 ilustrações e 783 versões WebP transparentes. Busca de notas priorizada, imagens responsivas, temas claro/escuro consistentes e foco de teclado preservado. Validação: 38 cenários automatizados, 102 verificações de layout/contraste em 17 telas e três larguras. [Relatório completo](docs/qa-final.md).
+
+
+## Catálogo e referências
+
+[Abrir catálogo publicado](https://gabrielkopi.github.io/elixir-perfumes/elixir.html?v=polish10#explore)
 
 280 registros no aplicativo: 106 WePink, 37 O Boticário, 26 Guerlain, 22 Rabanne, 6 Natura, Vibrato da Sospiro e outras marcas. A edição adiciona 179 registros aos 101 existentes (catálogo anterior e Exclusivo da comunidade).
 

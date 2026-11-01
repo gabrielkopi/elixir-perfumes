@@ -5,7 +5,8 @@
   "description": "ELIXIR: descoberta e simulaÃ§Ãµes locais de experiÃªncias olfativas",
   "scripts": {
     "test": "node verify-studio.cjs",
-    "check": "node --check assets/studio.js && node --check assets/studio-actions.js && node --check assets/catalog-expanded.js && node --check assets/catalog-experience.js && node --check assets/atelier.js && node --check assets/atelier-art.js && node --check assets/cutouts.js"
+    "check": "node --check assets/studio.js && node --check assets/studio-actions.js && node --check assets/catalog-expanded.js && node --check assets/catalog-experience.js && node --check assets/atelier.js && node --check assets/atelier-art.js && node --check assets/cutouts.js && node --check assets/ingredients.js && node --check scripts/build-note-art.cjs && node --check assets/families.js && node --check assets/motion.js && node --check assets/app.js",
+    "build:notes": "node scripts/build-note-art.cjs"
   },
   "devDependencies": {
     "jsdom": "30.1.3"
