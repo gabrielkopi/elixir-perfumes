@@ -43,6 +43,9 @@ async function check(name, test) { await test(); results.push(name); }
     input.dispatchEvent(new win.Event('input', { bubbles: true }));
     assert.equal(run('globalThis.catalogCalls'), 1); assert.equal(doc.activeElement, input); assert.equal(input.selectionStart, 6);
     assert(query('#catalog-grid').textContent.includes('Heaven Santal & Fig'));
+    input.value='Vibrato';input.dispatchEvent(new win.Event('input',{bubbles:true}));
+    assert.equal(run('globalThis.catalogCalls'),2);assert.equal(query('.scent-results').textContent,'1 perfume encontrado');
+    input.value='wepink figo';input.dispatchEvent(new win.Event('input',{bubbles:true}));
     run('catalog=globalThis.savedCatalog;');
   });
   await check('Theme changes preserve the page, input, result nodes and focused control', async () => {
