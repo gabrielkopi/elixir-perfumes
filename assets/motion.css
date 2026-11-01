@@ -1,3 +1,46 @@
-:root{--motion-ease:cubic-bezier(.22,1,.36,1)}html{scroll-behavior:smooth;scroll-padding-top:30px}.floating-dock{transition:box-shadow .4s var(--motion-ease),background .4s var(--motion-ease)}.floating-dock>button{transition:background .3s var(--motion-ease),color .25s,transform .3s var(--motion-ease),box-shadow .3s}.floating-dock>button:active{transform:scale(.92)}.floating-dock>button.active{box-shadow:0 3px 12px #2635200b}.floating-dock button .icon{transition:transform .4s var(--motion-ease)}.floating-dock button:hover .icon{transform:translateY(-2px)}.follow-button,.round-glass,.btn,.community-post-actions button,.scent-product-meta button{transition:transform .25s var(--motion-ease),box-shadow .35s var(--motion-ease),background .3s,border-color .3s,color .25s}.follow-button:hover,.round-glass:hover{transform:translateY(-2px);box-shadow:0 7px 18px #30382c15}.follow-button:active,.round-glass:active,.btn:active{transform:scale(.96)}.family-world-grid img,.note-object img,.scent-product-image img,.community-photo>img{transition:transform .65s var(--motion-ease),filter .65s var(--motion-ease)}.family-world-grid>a:hover img{transform:translateY(-5px) scale(1.035);filter:drop-shadow(0 18px 22px #59684626)}.glass-card,.community-post,.scent-product-image{transition:box-shadow .5s var(--motion-ease),border-color .4s}.glass-card:hover{box-shadow:0 20px 50px -26px #5b634b35,0 0 0 1px #e9ece1a0}.public-tabs button,.radar-switch button,.community-filter button,.minimal-profile-tabs button{transition:color .25s,border-color .35s,opacity .25s}.taste-radar path{transform-origin:210px 190px}.community-photo img{backface-visibility:hidden}.floating-topbar,.floating-dock{backdrop-filter:blur(28px) saturate(130%);-webkit-backdrop-filter:blur(28px) saturate(130%)}dialog::backdrop{animation:veil-in .3s var(--motion-ease)}#toast{transition:opacity .3s var(--motion-ease),transform .4s var(--motion-ease)}.style-choice,.note-choice{transition:background .3s,border-color .3s,transform .3s var(--motion-ease)}.style-choice:active,.note-choice:active{transform:scale(.98)}.flow-content{animation:content-in .4s var(--motion-ease)}@keyframes veil-in{from{background:#a4aa9d00;backdrop-filter:blur(0)}to{background:#a4aa9d2e;backdrop-filter:blur(12px)}}@keyframes content-in{from{opacity:.2;transform:translateY(9px)}to{opacity:1;transform:none}}
-@media(hover:none){.family-world-grid>a:hover img,.floating-dock button:hover .icon,.follow-button:hover,.round-glass:hover{transform:none}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* Motion tokens match Motion.duration. Animate composite properties, never blur or size. */
+:root {
+  --motion-ease: cubic-bezier(.2,.8,.2,1);
+  --motion-fast: 120ms;
+  --motion-feedback: 160ms;
+  --motion-update: 180ms;
+  --motion-enter: 240ms;
+  --motion-exit: 140ms;
+}
+/* Section links opt into smooth scrolling; focus and browser history remain immediate. */
+html { scroll-behavior: auto; scrollbar-gutter: stable; scroll-padding-top: 28px; }
+html:has(#modal[open]) { overflow: hidden; }
+#main, .flow-content { animation: none; }
+.deck-copy,.deck-visual { animation-duration: var(--motion-enter); animation-delay: 0s; animation-timing-function: var(--motion-ease); }
+dialog { overscroll-behavior: contain; }
+dialog::backdrop { animation: veil-in var(--motion-update) var(--motion-ease); }
+@keyframes veil-in { from { opacity: 0; } to { opacity: 1; } }
+
+:is(.btn,.iconbtn,.round-glass,.follow-button,.text-button,.floating-dock>button,.community-post-actions>button,.v5-action-bar>button,.v5-note-pick,.note-choice,.style-choice,.chip,.public-tabs>button,.radar-switch>button,.ingredient-filters>button,.scent-brand-shortcuts>button,.v5-mode>button) {
+  transition: color var(--motion-fast) ease, background-color var(--motion-fast) ease, border-color var(--motion-fast) ease, transform var(--motion-feedback) var(--motion-ease);
+}
+:is(button,a):active:not(:disabled):not([aria-disabled=true]) { transition-duration: 80ms; }
+:is(.btn,.iconbtn,.round-glass,.follow-button,.floating-dock>button,.note-choice,.style-choice,.v5-note-pick):active:not(:disabled) { transform: scale(.98); }
+.floating-dock button .icon { transition: transform var(--motion-update) var(--motion-ease); }
+.family-world-grid img,.scent-product-image img,.scent-note-art { transition: transform var(--motion-enter) var(--motion-ease); }
+.family-explorer>summary::after { transition: transform var(--motion-update) var(--motion-ease); }
+.scent-filter-panel>summary::after { transition: transform var(--motion-update) var(--motion-ease); }
+.taste-radar path { transform-origin: 210px 190px; }
+#toast { transition: opacity var(--motion-feedback) ease, transform var(--motion-update) var(--motion-ease); }
+.searchbox { transition: border-color var(--motion-fast) ease, background-color var(--motion-fast) ease; }
+
+@media (hover:hover) and (pointer:fine) {
+  .family-world-grid>a:hover img { transform: translateY(-3px); }
+  .scent-product:hover .scent-product-image img { transform: translateY(-3px); }
+  .scent-note:hover .scent-note-art { transform: translateY(-2px); }
+  .floating-dock button:hover .icon { transform: translateY(-1px); }
+  .follow-button:hover,.round-glass:hover { background-color: var(--v5-surface); }
+  .v5-note-pick:hover { transform: translateY(-1px); }
+}
+@media (hover:none) {
+  .family-world-grid>a:hover img,.scent-product:hover .scent-product-image img,.scent-note:hover .scent-note-art,.floating-dock button:hover .icon,.follow-button:hover,.round-glass:hover,.v5-note-pick:hover { transform: none; }
+}
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior: auto; }
+  *,*::before,*::after { animation: none!important; transition: none!important; scroll-behavior: auto!important; }
+}

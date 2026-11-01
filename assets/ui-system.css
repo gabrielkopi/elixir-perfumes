@@ -1,0 +1,116 @@
+/* One type family and shared scales, layered over retained component layouts. */
+:root {
+  --font-ui: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --sans: var(--font-ui);
+  --serif: var(--font-ui); /* Legacy heading token retained for existing components. */
+  --type-caption: 12px;
+  --type-label: 13px;
+  --type-body: 15px;
+  --type-title: clamp(28px,3.5vw,44px);
+  --type-display: clamp(34px,4.5vw,58px);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --radius-pill: 999px;
+  --radius-card: 24px;
+  --radius-dialog: 28px;
+  --control-height: 48px;
+  --glass-blur: 16px;
+  --note-padding: 10px 16px;
+}
+body { font-family: var(--font-ui); font-size: var(--type-body); line-height: 1.65; }
+button,input,textarea,select { font-family: inherit; }
+h1,h2,h3,h4,h5,h6,.wordmark,.deck-logo,.serif { font-family: var(--font-ui); }
+h1,h2 { font-weight: 500; letter-spacing: -.035em; }
+h3,h4 { font-weight: 600; letter-spacing: -.015em; }
+:is(h1,h2,h3) em { font-family: inherit; font-style: normal; font-weight: inherit; }
+#main :is(.studio-heading h1,.scent-catalog-hero h1,.v5-alchemy>h1,.ingredient-detail h1,.community-heading h1,.social-heading h1,.page-head h1) {
+  font-family: var(--font-ui); font-weight: 500; font-size: var(--type-display); line-height: 1.12; letter-spacing: -.04em;
+}
+.studio-scenarios h2,.studio-data-tools h2,.studio-history h2 { font-family: var(--font-ui); font-size: var(--type-title); font-weight: 500; }
+.studio-heading>p,.scent-catalog-hero>p,.v5-alchemy>p,.flow-description { max-width: 64ch; line-height: 1.75; }
+.eyebrow,.micro-label { font-size: 11px; line-height: 1.6; letter-spacing: .13em; }
+.floating-dock button span { font-size: 11px; }
+.studio-shortcuts a,.topbar-editorial,.presentation-link { font-size: var(--type-caption); }
+.scent-results,.v5-note-status,.scent-caption,.flow-hint { font-size: var(--type-caption); line-height: 1.7; }
+.searchbox { min-height: 52px; gap: var(--space-3); border-radius: var(--radius-pill)!important; }
+.searchbox input { min-width: 0; min-height: var(--control-height); font-size: 16px; line-height: 1.5; }
+.searchbox .icon { width: 19px; height: 19px; flex-shrink: 0; }
+.btn { min-height: var(--control-height); padding: 12px 20px; font-size: var(--type-label); line-height: 1.5; gap: var(--space-3); border-radius: var(--radius-pill); }
+.iconbtn,.round-glass { min-width: 44px; min-height: 44px; border-radius: var(--radius-pill); }
+:is(input,textarea,select):disabled,:is(button,a)[aria-disabled=true] { cursor: not-allowed; opacity: .5; }
+button:disabled { cursor: not-allowed; }
+button:disabled:hover { transform: none; }
+.field { font-size: var(--type-label); line-height: 1.6; }
+.field :is(input:not([type=checkbox]):not([type=radio]):not([type=range]),textarea,select) { min-height: var(--control-height); padding: 12px 14px; border-radius: 16px; line-height: 1.5; }
+.field textarea { min-height: 112px; resize: vertical; }
+.v5-action-bar :is(button,a) { min-height: 44px; font-size: var(--type-label); }
+.v5-note-pick,.v5-note-pick.selected { padding: var(--note-padding); border-width: 1px; }
+.v5-note-pick.selected { box-shadow: inset 0 0 0 1px #829a7a; }
+.v5-mix-panel { padding: var(--space-6); border-radius: var(--radius-card); }
+.v5-mix-panel header { gap: var(--space-4); }
+.v5-mix-chips,.v5-excluded,.v5-mode { gap: var(--space-2); }
+.v5-mode button,.v5-mix-chips button,.v5-excluded button { min-height: 44px; }
+:is(.searchbox,.floating-dock,.v5-action-bar,.scent-section-nav,.post-glass-caption) { backdrop-filter: blur(var(--glass-blur)) saturate(1.2); -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(1.2); }
+dialog { border-radius: var(--radius-dialog); backdrop-filter: none; -webkit-backdrop-filter: none; }
+dialog::backdrop { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.modal-title { gap: var(--space-4); align-items: flex-start; }
+.modal-title h2 { font-size: clamp(22px,3vw,28px); line-height: 1.25; overflow-wrap: anywhere; }
+.modal-title .iconbtn { flex-shrink: 0; }
+.modal-inner p { line-height: 1.7; }
+.welcome-centered h1,.flow-content>h1 { font-family: var(--font-ui); font-weight: 500; line-height: 1.12; letter-spacing: -.04em; }
+.flow-content>h1 em { font-size: 1em; }
+.flow-description,.flow-hint { font-size: 14px; }
+.flow-progress small { font-size: 12px; }
+.note-choice,.flow-footer .text-button { min-height: 44px; font-size: var(--type-label); }
+.deck-logo { font-weight: 500; }
+.deck-copy h1 { font-family: var(--font-ui); font-weight: 500; line-height: 1.12; letter-spacing: -.04em; }
+.deck-copy h1 em { font-style: normal; font-weight: inherit; }
+.deck-description { font-size: var(--type-body); line-height: 1.75; }
+.deck-header>span,.deck-eyebrow,.deck-footnote { font-size: 11px; line-height: 1.7; }
+.deck-description,.deck-eyebrow,.deck-footnote,.deck-header>span,.deck-header>a:last-child { color: #56654f; }
+.button,.deck-cta { border-radius: var(--radius-pill); }
+.deck-control-wrap button { min-width: 44px; min-height: 44px; border-radius: var(--radius-pill); }
+.deck-control-wrap>button,.deck-control-wrap>span,.deck-profile-row :is(p,small),.object-kicker,.deck-follow,.deck-small-note,.deck-products :is(small,p),.deck-orbit>small,.deck-signature p:not(.deck-eyebrow),.deck-note-trio>div,.demo-window-bar>span { color: #56654f; font-size: 12px; }
+.deck-control-wrap #deck-play { font-size: 12px; }
+.deck-copy h1 em,.deck-orbit span,.deck-signature h3 { color: #56654f; font-family: var(--font-ui); }
+.deck-products h3 { color: #34493e; font-size: 15px; font-weight: 500; }
+.deck-profile-row h3>span { background: #35617a; color: #fff; }
+.deck-products>a>div>span { color: #34493e; font-size: 11px; background: #fffffff2; padding: 4px 8px; border-radius: var(--radius-pill); }
+.deck-signature svg text { fill: #56654f; }
+.floating-topbar { height: 88px; min-height: 88px; }
+.dock-backdrop { left: 0; right: 0; width: 100%; max-width: 100%; }
+.people-ribbon { margin-inline-end: 0; max-width: 100%; }
+.studio-shortcuts { margin-top: 0; }
+.floating-content { padding-top: 18px; }
+.v5-action-bar { padding-block: 4px; margin-bottom: var(--space-6); }
+.scent-catalog-hero { padding-block: 20px 24px; margin-bottom: var(--space-6); }
+.scent-catalog-hero h1 { margin-block: 16px; }
+.scent-catalog-hero>p:not(.eyebrow) { margin-block: 12px 20px; }
+.scent-filter-panel>summary { min-height: 48px; display: flex; align-items: center; gap: 12px; cursor: pointer; list-style: none; font-size: 13px; color: var(--v5-text); border-radius: var(--radius-pill); padding: 10px 4px; }
+.scent-filter-panel>summary::-webkit-details-marker { display: none; }
+.scent-filter-panel>summary>span { margin-left: auto; color: var(--v5-muted); font-size: 12px; }
+.scent-filter-panel>summary::after { content: '⌄'; font-size: 20px; line-height: 1; }
+.scent-filter-panel[open]>summary::after { transform: rotate(180deg); }
+.scent-filter-body { padding-top: var(--space-3); }
+.scent-catalog-controls>.searchbox { margin-top: 0; margin-bottom: var(--space-2); }
+html[data-theme=light] #main button[data-action=follow][aria-pressed=true] { background: #e2ead8; color: #34493e; border-color: #8eaa7c; }
+@media(max-width:700px) {
+  :root { --type-body: 14px; --glass-blur: 12px; --note-padding: 10px 12px; }
+  #main :is(.studio-heading h1,.scent-catalog-hero h1,.v5-alchemy>h1,.ingredient-detail h1,.community-heading h1,.social-heading h1,.page-head h1) { font-size: clamp(32px,8vw,40px); }
+  .v5-mix-panel { padding: var(--space-4); }
+  .v5-action-bar { gap: var(--space-2); }
+  .floating-topbar { height: 74px; min-height: 74px; }
+  .floating-content { padding-top: 14px; }
+  [data-studio=true] .floating-content { padding-top: 14px!important; padding-bottom: calc(128px + env(safe-area-inset-bottom,0px))!important; }
+  .v5-action-bar { margin-bottom: 20px; }
+  .scent-catalog-hero { padding-block: 12px 20px; }
+  .scent-catalog-controls { padding: var(--space-4); }
+  .scent-filter-panel>summary { flex-wrap: wrap; column-gap: var(--space-2); }
+  .scent-filter-panel>summary>span { max-width: 46%; text-align: right; font-size: 11px; }
+  .flow-content>h1,.welcome-centered h1 { font-size: clamp(32px,8.5vw,44px); }
+  .deck-copy h1 { font-size: clamp(32px,8.5vw,44px); }
+}
