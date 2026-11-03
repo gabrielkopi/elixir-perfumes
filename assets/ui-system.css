@@ -83,6 +83,9 @@ dialog::backdrop { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px
 .deck-signature svg text { fill: #56654f; }
 .floating-topbar { height: 88px; min-height: 88px; }
 .dock-backdrop { left: 0; right: 0; width: 100%; max-width: 100%; }
+.skip:not(:focus) { clip-path: inset(50%); }
+.floating-app .compare-tray { left: 50%; z-index: 41; max-width: calc(100% - 24px); }
+.compare-tray [data-action=compare-clear] { min-width: 44px; min-height: 44px; }
 .people-ribbon { margin-inline-end: 0; max-width: 100%; }
 .studio-shortcuts { margin-top: 0; }
 .floating-content { padding-top: 18px; }
@@ -99,6 +102,7 @@ dialog::backdrop { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px
 .scent-catalog-controls>.searchbox { margin-top: 0; margin-bottom: var(--space-2); }
 html[data-theme=light] #main button[data-action=follow][aria-pressed=true] { background: #e2ead8; color: #34493e; border-color: #8eaa7c; }
 @media(max-width:700px) {
+  .floating-app .compare-tray { bottom: calc(98px + env(safe-area-inset-bottom, 0px)); gap: 6px; padding: 6px 10px; flex-wrap: wrap; justify-content: center; }
   :root { --type-body: 14px; --glass-blur: 12px; --note-padding: 10px 12px; }
   #main :is(.studio-heading h1,.scent-catalog-hero h1,.v5-alchemy>h1,.ingredient-detail h1,.community-heading h1,.social-heading h1,.page-head h1) { font-size: clamp(32px,8vw,40px); }
   .v5-mix-panel { padding: var(--space-4); }

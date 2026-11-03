@@ -25,6 +25,17 @@ dialog::backdrop { animation: veil-in var(--motion-update) var(--motion-ease); }
 .family-world-grid img,.scent-product-image img,.scent-note-art { transition: transform var(--motion-enter) var(--motion-ease); }
 .family-explorer>summary::after { transition: transform var(--motion-update) var(--motion-ease); }
 .scent-filter-panel>summary::after { transition: transform var(--motion-update) var(--motion-ease); }
+.scent-filter-panel[open]>.scent-filter-body,
+.family-explorer[open]>.family-library,
+.compare-tray {
+  animation: panel-arrive var(--motion-enter) var(--motion-ease) both;
+}
+@keyframes panel-arrive {
+  from { opacity: .45; translate: 0 5px; }
+  to { opacity: 1; translate: 0 0; }
+}
+.floating-dock>button.active>i { animation: dock-indicator var(--motion-feedback) var(--motion-ease) both; }
+@keyframes dock-indicator { from { scale: .5; opacity: .5; } to { scale: 1; opacity: 1; } }
 .taste-radar path { transform-origin: 210px 190px; }
 #toast { transition: opacity var(--motion-feedback) ease, transform var(--motion-update) var(--motion-ease); }
 .searchbox { transition: border-color var(--motion-fast) ease, background-color var(--motion-fast) ease; }

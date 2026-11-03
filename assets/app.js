@@ -46,8 +46,41 @@ function twins(){return `${back()}<header class="page-head"><p class="eyebrow">G
 function personPage(id){const publicPerson=Social.person(id);if(publicPerson)return Social.profile(publicPerson);const u=PEOPLE.find(x=>x.id===id);if(!u)return twins();const shared=Object.keys(state.ratings).filter(id=>u.ratings[id]!==undefined),c=Engine.compatibility(state.ratings,u);return `${back()}<section class="profile-cover"><img src="assets/products/${u.id==='marina'?'night':'forest'}.jpg" alt="Atmosfera editorial"></section><section class="profile-info">${btn(state.following.includes(id)?'Seguindo':'Seguir','follow',`data-id="${id}"`,'outline')}${avatar(u,'big')}<h1>${u.name}.</h1><small class="muted">@${id} · Perfil e relatos fictícios</small><p>${u.bio}</p><div class="statline"><div><strong>${c.score}</strong><small>Afinidade geral /100</small></div><div><strong>${shared.length}</strong><small>Perfumes em comum</small></div><div><strong>${Object.keys(u.ratings).length}</strong><small>Avaliações fictícias</small></div></div></section><section class="panel"><p class="eyebrow">Você + ${u.name.split(' ')[0]}</p><h2 style="margin:15px 0">Parecidos, de jeitos diferentes.</h2>${[1,2,7,3,8].map(d=>{const x=Engine.compatibility(state.ratings,u,null,d);return `<div class="bar-row"><div class="bar-label"><span>${DIMENSIONS[d]}</span><span>${x.count?x.score+'/100 · '+x.count+' em comum':'Dados insuficientes'}</span></div><div class="track"><i style="--value:${x.count?x.score:0}%"></i></div></div>`;}).join('')}<p class="small muted">A referência muda conforme o perfume: gostar de Vétiver juntos não apaga uma divergência sobre Malbec.</p></section><div class="section-title"><h2>Pontos de encontro. E diferenças.</h2></div><section class="panel">${shared.map(id=>`<div class="note-tier row between"><button data-action="perfume" data-id="${id}">${byId(id).name}</button><span class="small">Você <strong>${state.ratings[id]}</strong> · ${u.name.split(' ')[0]} <strong>${u.ratings[id]}</strong></span></div>`).join('')}</section><div class="section-title"><h2>Recomendados por ${u.name.split(' ')[0]}.</h2></div><div class="product-grid">${Object.entries(u.ratings).filter(([,r])=>r>=8).slice(0,6).map(([id])=>card(byId(id))).join('')}</div><div class="section-title"><h2>Histórias de ${u.name.split(' ')[0]}.</h2></div>${POSTS.filter(p=>p.user===u.id).map(postCard).join('')}`;}
 function editorial(id){const e=EDITORIALS.find(x=>x.id===id)||EDITORIALS[0];return `${back()}<div class="hero"><img src="assets/products/${e.photo}.jpg" alt="${e.name}"><div class="hero-copy"><p class="eyebrow">Curadoria ELIXIR</p><h2>${e.name}.</h2><p>${e.sub} Uma seleção editorial para explorar sem regras.</p></div></div><div class="section-title"><h2>Siga essa sensação.</h2><small class="muted">Seleção por acordes estimados</small></div><div class="product-grid">${PERFUMES.filter(p=>p.vector[e.dimension]>=.45).map(card).join('')}</div>`;}
 function render(){Premium.palette();document.documentElement.dataset.density=state.preferences.density||'Amplo';if(Minimal.flow.active){Minimal.discovery();return;}document.documentElement.dataset.flow='false';if(!state.onboarded){renderOnboarding();return;}const pages={family:()=>Families.detail(route.id),ingredients:()=>IngredientLibrary.page(),ingredient:()=>IngredientLibrary.detail(route.id),home,explore,collection,profile,rate:()=>ratePage(route.id),perfume:()=>perfumePage(route.id),person:()=>personPage(route.id),twins,editorial:()=>editorial(route.id),list:()=>listPage(route.name)};Motion.paint(shell((pages[route.page]||home)()));document.title=BRAND.name+' · '+({home:'Início',explore:'Explorar',ingredients:'Matérias-primas',ingredient:'Matéria-prima',perfume:byId(route.id)?.name,person:Social.person(route.id)?.name||'Perfil',profile:'Seu perfil',collection:'Coleção',rate:'Avaliar'}[route.page]||'Afinidades');}
-function go(page,params={}){Motion.dismissNow();route={page,...params};query='';filter='Todos';const hash='#'+page+(params.id?'/'+encodeURIComponent(params.id):params.name?'/'+encodeURIComponent(params.name):'');if(location.hash===hash)render();else location.hash=hash;scrollTo({top:0,behavior:'instant'});}
-function readRoute(){const [page,id]=(location.hash.slice(1)||'home').split('/');let value='';try{value=decodeURIComponent(id||'');}catch{}route={page:page||'home',id:value,name:value};render();}
+const routePositions = new Map();
+let activeEntry = null;
+history.scrollRestoration = 'manual';
+
+function go(page, params = {}) {
+  const detail = params.id || params.name;
+  const hash = '#' + page + (detail ? '/' + encodeURIComponent(detail) : '');
+  if (location.hash !== hash) history.pushState(null, '', hash);
+  else Motion.dismissNow();
+  readRoute();
+}
+
+function readRoute() {
+  let entry = history.state?.elixirEntry;
+  if (!entry) {
+    entry = crypto.randomUUID?.() ?? `${Date.now()}-${Math.random()}`;
+    history.replaceState({ ...history.state, elixirEntry: entry, elixirBack: activeEntry !== null }, '');
+  }
+  const changed = entry !== activeEntry;
+  if (changed && activeEntry) {
+    routePositions.set(activeEntry, { scroll: window.scrollY, focus: Motion.captureFocus(document.querySelector('#main')) });
+    Motion.dismissNow();
+  }
+  activeEntry = entry;
+  const [page, id] = (location.hash.slice(1) || 'home').split('/');
+  let value = '';
+  try { value = decodeURIComponent(id || ''); } catch {}
+  route = { page: page || 'home', id: value, name: value };
+  render();
+  if (changed) {
+    const previous = routePositions.get(entry);
+    scrollTo({ top: previous?.scroll ?? 0, behavior: 'instant' });
+    if (previous) Motion.restoreFocus(document.querySelector('#main'), previous.focus);
+  }
+}
 let modalReturnFocus=null;
 function openModal(title,html){
  const dialog=$('#modal'),sameContent=dialog.open&&dialog.dataset.contentTitle===title;
@@ -72,7 +105,7 @@ function showCompare(){if(compare.length<2){toast('Selecione dois perfumes usand
 function publish(){uploadedPhoto='assets/products/forest.jpg';openModal('Compartilhe um momento.',`<form id="publish-form"><p class="small muted">Uma lembrança, um lugar, um perfume. Publicação local de demonstração.</p><label class="field">Fotografia · câmera ou galeria<input id="photo-upload" type="file" accept="image/jpeg,image/png,image/webp"></label><img class="publish-photo" id="publish-preview" src="${uploadedPhoto}" alt="Prévia da publicação"><label class="field">Ou escolha uma atmosfera<select id="atmosphere">${['forest','sea','night','flowers','city','arbo-editorial','clash-editorial'].map((x,i)=>`<option value="${x}">${['Floresta','Mar','Jantar','Flores','Cidade','Arbo editorial','Clash editorial'][i]}</option>`).join('')}</select></label><label class="field">Perfume<select name="perfume">${PERFUMES.map(p=>`<option value="${p.id}">${p.name} · ${p.brand}</option>`).join('')}</select></label>${selectField('occasion','Ocasião',['Cotidiano','Trabalho','Jantar','Praia','Piscina','Encontro','Festa','Viagem'])}<label class="field">Sua história<textarea name="text" required maxlength="1200" placeholder="Que memória você quer guardar?"></textarea></label>${numberField('rating','Sua nota para o perfume',8,0,10)}<button type="submit" class="btn">Publicar neste navegador ${icon('arrow')}</button></form>`);}
 document.addEventListener('click',async e=>{if(e.target.closest('.skip')){e.preventDefault();$('#main')?.focus();return;}const el=e.target.closest('[data-action]');if(!el)return;const {action,id,value,page,name}=el.dataset;
 switch(action){
-case'nav':go(page,id?{id}:{});break;case'back':if(location.hash&&history.length>1)history.back();else go('home');break;
+case'nav':go(page,id?{id}:{});break;case'back':if(history.state?.elixirBack)history.back();else go(route.page==='perfume'?'explore':'home');break;
 case'perfume':activePerformance='Geral';go('perfume',{id});break;case'person':go('person',{id});break;case'twins':go('twins');break;case'editorial':go('editorial',{id});break;case'list':go('list',{name});break;case'rate-perfume':go('rate',{id});break;
 case'favorite':favorite(id);break;
 case'follow':state.following=toggle(state.following,id);persist();render();toast(state.following.includes(id)?'Vocês agora compartilham o caminho.':'Você deixou de seguir este perfil.');break;
@@ -111,7 +144,7 @@ if(form.id==='publish-form'){if(!obj.text.trim())return;state.posts.unshift({id:
 });
 document.addEventListener('error',e=>{if(e.target.tagName==='IMG'){const img=e.target;const div=document.createElement('div');div.className='fallback';const label=document.createElement('span');label.textContent=(img.dataset.product&&byId(img.dataset.product)?.name)||img.alt||'Imagem indisponível';const small=document.createElement('small');small.textContent='Fotografia não disponível';div.append(label,small);img.replaceWith(div);}},true);
 addEventListener('hashchange',readRoute);readRoute();
-if(new URLSearchParams(location.search).get('discover')==='1'){Minimal.begin();const entryUrl=new URL(location.href);entryUrl.searchParams.delete('discover');history.replaceState(null,'',entryUrl.href);}
+if(new URLSearchParams(location.search).get('discover')==='1'){Minimal.begin();const entryUrl=new URL(location.href);entryUrl.searchParams.delete('discover');history.replaceState(history.state,'',entryUrl.href);}
 
 function perfumePage(id){const p=byId(id);if(!p)return legacyPerfumePage(id);let html=legacyPerfumePage(id);if(!OBSERVATIONS.some(o=>o.id===id))html=html.replace('<strong>0.0</strong>','<strong>—</strong>').replace('de 10 · 0 relatos fictícios','Sem avaliações de demonstração');return html+'<details class="note-weight-details"><summary>Notas e pesos do modelo</summary>'+Minimal.noteWeights(p)+'</details>';}
 

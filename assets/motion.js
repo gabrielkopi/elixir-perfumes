@@ -86,8 +86,10 @@ const Motion = {
         button.className = nextButton.className;
         if (nextButton.hasAttribute('aria-current')) button.setAttribute('aria-current', 'page');
         else button.removeAttribute('aria-current');
-        button.querySelector('i')?.remove();
-        if (nextButton.querySelector('i')) button.append(nextButton.querySelector('i').cloneNode(true));
+        const indicator = button.querySelector('i');
+        const nextIndicator = nextButton.querySelector('i');
+        if (indicator && !nextIndicator) indicator.remove();
+        if (!indicator && nextIndicator) button.append(nextIndicator.cloneNode(true));
       });
       const tray = document.querySelector('.compare-tray'), nextTray = template.content.querySelector('.compare-tray');
       if (tray?.outerHTML !== nextTray?.outerHTML) { tray?.remove(); if (nextTray) mounted.append(nextTray); }
@@ -97,7 +99,6 @@ const Motion = {
       else a.removeAttribute('aria-current');
     });
     const main = document.querySelector('#main');
-    if (navigated) scrollTo({ top: 0, behavior: 'instant' });
     if (!first && changed) this.reveal(main);
     if (navigated) this.focusHeading(main);
     else this.restoreFocus(main, focused);

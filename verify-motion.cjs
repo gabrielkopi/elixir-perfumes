@@ -43,6 +43,9 @@ async function check(name, test) { await test(); results.push(name); }
     input.dispatchEvent(new win.Event('input', { bubbles: true }));
     assert.equal(run('globalThis.catalogCalls'), 1); assert.equal(doc.activeElement, input); assert.equal(input.selectionStart, 6);
     assert(query('#catalog-grid').textContent.includes('Heaven Santal & Fig'));
+    input.value='Vibrato';input.dispatchEvent(new win.Event('input',{bubbles:true}));
+    assert.equal(run('globalThis.catalogCalls'),2);assert.equal(query('.scent-results').textContent,'1 perfume encontrado');
+    input.value='wepink figo';input.dispatchEvent(new win.Event('input',{bubbles:true}));
     run('catalog=globalThis.savedCatalog;');
   });
   await check('Theme changes preserve the page, input, result nodes and focused control', async () => {
@@ -58,6 +61,17 @@ async function check(name, test) { await test(); results.push(name); }
     const panel = query('.scent-filter-panel'); panel.open = true; panel.dispatchEvent(new win.Event('toggle'));
     await click('[data-scent=brand][data-value=WePink]');
     assert(query('.scent-filter-panel').open); assert(query('.scent-filter-panel>summary').textContent.includes('WePink'));
+  });
+  await check('Returning from a perfume restores the catalogue query and the opening control', async () => {
+    run("ElixirCatalog.brand='Todas';query='Vibrato';render();");
+    const trigger = query('#catalog-grid [data-action=perfume][aria-label]');
+    trigger.focus(); trigger.click(); await wait();
+    assert.equal(query('#main h1').textContent, 'Vibrato');
+    const back = new Promise(resolve => win.addEventListener('hashchange', resolve, { once: true }));
+    query('[data-action=back]').click(); await back;
+    assert.equal(query('#catalog-search').value, 'Vibrato');
+    assert.equal(doc.activeElement.getAttribute('aria-label'), 'Abrir Vibrato');
+    run("query='';");
   });
   await check('Alchemy updates selections and results without remounting notes or search', async () => {
     const V = win.ElixirAtelier; V.search = 'Gengibre'; V.selected.clear(); V.excluded.clear(); V.mode = 'all'; page('alchemy');
