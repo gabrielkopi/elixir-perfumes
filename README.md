@@ -1,68 +1,59 @@
-# ELIXIR Studio
-
-## Fluidez e padronização visual
-
-Tipografia unificada em DM Sans local (WOFF2), transições curtas e canceláveis, tema sem reconstrução da página, Alquimia com atualização parcial e filtros recolhíveis no celular. Sem novas dependências de execução. [Decisões, auditoria e validação](docs/qa-smooth.md).
-
-## Biblioteca e polimento — novembro de 2026
-
-280 perfumes, 405 nomes/variações de notas com imagem, 261 ilustrações e 783 versões WebP transparentes. Busca de notas priorizada, imagens responsivas, temas claro/escuro consistentes e foco de teclado preservado. Validação: 38 cenários automatizados, 102 verificações de layout/contraste em 17 telas e três larguras. [Relatório completo](docs/qa-final.md).
-
-
-## Catálogo e referências
-
-[Abrir catálogo publicado](https://gabrielkopi.github.io/elixir-perfumes/elixir.html?v=smooth4#explore)
-
-280 registros no aplicativo: 106 WePink, 37 O Boticário, 26 Guerlain, 22 Rabanne, 6 Natura, Vibrato da Sospiro e outras marcas. A edição adiciona 179 registros aos 101 existentes (catálogo anterior e Exclusivo da comunidade).
-
-As notas possuem referências individuais. Foram recuperadas 94 pirâmides da aba oficial WePink; os outros 12 registros usam apenas destaques efetivamente citados na descrição oficial. A cobertura de 106 corresponde à categoria de perfumes individuais consultada em 31/10/2026, sem kits, roll-ons e body splashes; não afirma cobrir todos os lançamentos históricos. As fotos WePink são oficiais. Material O Boticário sem data não confirma disponibilidade atual. Classificações Scento são identificadas como classificação de catálogo, e famílias ausentes não são deduzidas como fatos.
-
-A nova página oferece notas ilustradas, filtros por camada, gráfico de barras/radar editorial, comparação, favoritos, prateleira e percepção pessoal de 0 a 5. O gráfico não mede intensidade na pele nem percentuais de ingredientes. Símbolos são ilustrativos e fotos indisponíveis permanecem identificadas. Percepções ficam no navegador e são preservadas na exportação/importação.
-
-Fontes: [WePink](https://www.wepink.com.br/), [O Boticário](https://static-cms.internacional.grupoboticario.digital/SEGREDINHO_Perfumaria_completa_2ff6b13fd2.pdf), [Natura](https://static.rede.natura.net/html/br/site_cf/10_2023/FAQs/FAQ-homem2.html), [Sospiro](https://sospirointernational.com/products/vibrato), [Scento CC BY 4.0](https://github.com/Scento-com/perfume-dataset). Dados por produto em `assets/catalog-expanded.json`.
-
-Validação: `npm run check` e `npm test`, incluindo filtros, paginação, fontes, arquivos de imagem, camadas, radar, percepção, importação e renderização de todos os perfumes.
-
----
-
 # ELIXIR
+
+Uma rede social minimalista sobre perfumes: feed, stories, perfis, catálogo de 101 fragrâncias, notas olfativas e uma assinatura pessoal calculada a partir do seu gosto.
 
 **Site:** https://gabrielkopi.github.io/elixir-perfumes/
 
-**Laboratório da edição Studio v3:** https://gabrielkopi.github.io/elixir-perfumes/elixir.html#lab
+## O que tem
 
-Um espaço de descoberta olfativa, com catálogo de fragrâncias, 263 notas e acordes ilustrados, assinatura pessoal e comunidade demonstrativa.
+- **Feed** em coluna única com stories, duplo toque para curtir, comentários, salvos e compartilhamento.
+- **Stories** em tela cheia com barra de progresso, toque para avançar, segurar para pausar e arrastar para fechar.
+- **Busca rápida** (tecla `/` ou `Ctrl+K`) por perfumes, pessoas e notas, com recentes.
+- **Atividade** com notificações do que acontece no seu perfil.
+- **Explorar** com busca instantânea, filtros e rolagem contínua.
+- **Perfume**: afinidade, notas, acordes, desempenho, quem também usa e parecidos.
+- **Perfil** com publicações, favoritos, assinatura olfativa (radar) e avaliações.
+- **Descoberta guiada** em cinco passos para montar a assinatura.
+- **Tema claro e escuro** que segue o sistema, com troca animada.
+- Transições entre telas (View Transitions), revelação ao rolar, imagens com carregamento suave. Tudo respeita *reduzir movimento*.
 
-A edição ampliada acrescenta prateleiras com seleção múltipla, 24 perfis de exemplo e criação de pessoas fictícias, círculo privado, ideias de presentes, diário de uso, sugestões para hoje, descobertas fora da bolha e simulação local do ELIXIR Connect. Os cenários de teste são opcionais e guardam uma cópia anterior antes da troca.
+Os dados ficam no navegador (`localStorage`). Não há servidor nem sincronização entre aparelhos.
 
-Consulte [o roteiro de testes e os limites da simulação](STUDIO-V3.md). Para testar com exemplos, abra o laboratório e escolha um cenário.
+## Apresentação
 
-## Executar
+`elixir-apresentacao.html`: apresentação em movimento, 14 cenas que tocam sozinhas (cerca de 3 min 40 s). Setas avançam e voltam, espaço pausa, F abre em tela cheia. Os números e imagens vêm do catálogo real do app.
 
-O site é estático: sirva esta pasta por HTTP ou use o GitHub Pages. O aplicativo está em `elixir.html`; a página inicial está em `index.html`. As identidades e apresentações anteriores continuam incluídas.
+## Estrutura
 
-O container e a implantação futura no servidor da Prakyer estão documentados em [deploy/PRAKYER.md](deploy/PRAKYER.md).
+```
+index.html, elixir.html, assinatura.html   Entradas (ELIXIR e a variante ASSINATURA)
+assets/css/app.css                          Folha de estilo única, com tokens de tema
+assets/js/
+  data/      Catálogo, notas, comunidade demonstrativa (sem lógica de tela)
+  engine/    Motor de afinidade e identidade olfativa
+  core/      dom (utilitários), store (estado + migração), router, motion (tema, animações, modal), components
+  views/     Uma tela por arquivo: feed, stories, profile, explore, perfume, notes, collection, discovery, search, activity, compose, shell
+  actions.js Todas as interações: data-action="nome" chama Actions.nome
+  main.js    Ponto de entrada
+tests/       Verificações do motor e da descoberta
+```
 
-## Verificar
+Fluxo: uma ação altera o estado com `Store.update()`, que salva e avisa o `App.render()`. As telas são funções puras que devolvem HTML. Curtir, salvar e favoritar atualizam só os botões afetados, sem redesenhar a página.
 
-Com Node 24.15 ou superior:
+## Rodar
 
-```sh
-npm ci
-npm run check
+Abra `index.html` no navegador, ou sirva a pasta:
+
+```bash
+python -m http.server 5178
+```
+
+Testes:
+
+```bash
 npm test
 ```
 
-A dependência JSDOM serve apenas aos testes locais; o site e o container não dependem de Node em execução.
+## Créditos
 
-## Dados e simulações
-
-Preferências, coleções, pessoas criadas, círculo e diário ficam somente neste navegador. Não há conta real nem sincronização entre aparelhos. O Connect é uma simulação no mesmo dispositivo, sem segurança de autorização no servidor ou integração de estoque. Perfis, relatos e métricas sociais de exemplo são fictícios.
-
-As imagens novas são ilustrações geradas com IA; prompts, dimensões e exportações estão em [assets/studio/generation.json](assets/studio/generation.json). As oito imagens WebP preservam transparência e somam aproximadamente 580 KB.
-
-## Fontes e atribuição
-
-Fotografias de produtos: `assets/products/catalog-images.json` e `assets/research/social-product-sources.json`. Produtos e marcas pertencem aos respectivos titulares. Retratos anteriores, famílias e notas ilustradas têm proveniência nos manifests das pastas correspondentes.
-
-Catálogo Scento adaptado sob CC BY 4.0, com tradução, normalização e pesos editoriais, preservando atribuição nas páginas e em `assets/catalog-source/LICENSE`. Notas são referências de catálogo, não comprovação de percepção ou proporção de ingredientes. As novas descrições educativas remetem ao [guia de ingredientes da The Perfume Society](https://perfumesociety.org/discover-perfume/an-introduction/ingredients/).
+Perfis, métricas, selo de verificação e gostos são demonstrações. Retratos da comunidade e ilustrações de famílias foram gerados com IA; prompts nos manifests. Fotos de produtos e marcas pertencem aos seus titulares (fontes em `assets/products/catalog-images.json` e `assets/research/social-product-sources.json`). Base Scento adaptada sob CC BY 4.0, com atribuição nas páginas e em `assets/catalog-source/LICENSE`. Fontes DM Sans e Italiana sob OFL (`assets/LICENSE-*.txt`).

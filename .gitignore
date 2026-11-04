@@ -1,6 +1,8 @@
+versoes/
+.qa/
+.deploy/
+.publish/
+.claude/
+ELIXIR-quatro-novas-notas/
+*.zip
 node_modules/
-*.log
-.env
-.env.*
-!.env.example
-.DS_Store
