@@ -55,3 +55,14 @@
   .v-home .layout-split{gap:var(--s8)}
 }
 @media (max-width:1023px){.v-home .home-people .person-card{width:132px}}
+
+/* Clima de agora (Open-Meteo): arte animada, temperatura grande e detalhes à direita */
+.v-home .wx-card{display:flex;align-items:center;gap:var(--s4);width:100%;padding:var(--s4) var(--s5);border-radius:var(--r-lg);text-align:left;color:inherit;
+  background:var(--card);box-shadow:inset 0 0 0 .5px var(--hair);animation:unblur var(--d-5) var(--ease-out) both}
+.v-home .wx-main{display:grid;gap:2px;min-width:0}
+.v-home .wx-temp{font-size:44px;font-weight:400;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.v-home .wx-label{font-size:var(--t-sm);color:var(--ink-2)}
+.v-home .wx-side{display:grid;gap:2px;justify-items:end;margin-left:auto;text-align:right;min-width:0}
+.v-home .wx-place{font-size:14px;font-weight:500}
+.v-home .wx-meta{font-size:12px;color:var(--muted);white-space:nowrap}
+.v-home .wx-src{font-size:10px;color:var(--faint);letter-spacing:.04em}

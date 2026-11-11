@@ -135,16 +135,23 @@ ${UI.btn('Mais opções para hoje',{href:'#today',variant:'tertiary',icon:'arrow
   return `<div class="posts">${list.map(r=>Post.card(r)).join('')}</div><p class="feed-end">${icon('check','icon--20')}<span>Você está em dia</span></p>`;},
  feed(){return `<section class="feed" aria-label="Publicações">${UI.seg([{id:'foryou',label:'Para você'},{id:'following',label:'Seguindo'}],this.tab,'feed-seg',{variant:'ink',name:'feed',label:'Publicações'})}<div id="panel-feed" role="tabpanel" aria-labelledby="tab-feed-${this.tab}" data-swap="feed">${this.panel()}</div></section>`;},
  view(){
-  const head=UI.pageHead({eyebrow:UI.date(new Date(),'eyebrow'),title:'Hoje',actions:this.chip()});
+  const wx=this.weather(),head=UI.pageHead({eyebrow:UI.date(new Date(),'eyebrow'),title:'Hoje',actions:wx?'':this.chip()});
   const stories=typeof Stories!=='undefined'&&Stories.rail?Stories.rail():'';
   const today=this.today(),day=this.day(),eds=this.eds(),people=this.people(),feed=this.feed();
-  if(this.desk())return `<section class="v-home" data-view="home">${head}<div class="layout-split"><div class="main">${stories}${day}${feed}</div><aside class="aside" aria-label="Para hoje e sugestões">${today}${people}${eds}</aside></div></section>`;
-  return `<section class="v-home" data-view="home">${head}<div class="main">${stories}${today}${day}${eds}${people}${feed}</div></section>`;},
+  if(this.desk())return `<section class="v-home" data-view="home">${head}<div class="layout-split"><div class="main">${wx}${stories}${day}${feed}</div><aside class="aside" aria-label="Para hoje e sugestões">${today}${people}${eds}</aside></div></section>`;
+  return `<section class="v-home" data-view="home">${head}<div class="main">${wx}${stories}${today}${day}${eds}${people}${feed}</div></section>`;},
+ /* Clima de agora (Open-Meteo, São Paulo por padrão) com a arte animada; toque abre o Contexto do dia. */
+ weather(){if(typeof Weather==='undefined')return '';let r=null;try{r=Weather.cached();}catch(e){}if(!r)return '';
+  const L=state.location||{},place=L.name||'São Paulo',n=v=>Number.isFinite(v)?Math.round(v)+'°':'—';
+  const meta=[Number.isFinite(r.max)&&Number.isFinite(r.min)?`Máx ${n(r.max)} · Mín ${n(r.min)}`:'',Number.isFinite(r.rain)?`Chuva ${Math.round(r.rain)}%`:''].filter(Boolean);
+  return `<button type="button" class="wx-card pressable" data-action="context" aria-label="Clima em ${esc(place)}: ${Math.round(r.temp)} graus, ${esc(r.label)}. Ajustar o dia">
+   ${Weather.art(r.code,r.isDay)}<span class="wx-main"><b class="wx-temp">${Math.round(r.temp)}°</b><span class="wx-label">${esc(r.label)}</span></span>
+   <span class="wx-side"><span class="wx-place">${esc(place)}</span>${meta.map(m=>`<span class="wx-meta">${esc(m)}</span>`).join('')}<span class="wx-src">Open-Meteo</span></span></button>`;},
  /* Barra lateral fixa que rola até o fim antes de grudar (desktop). */
  stick(){const a=document.querySelector('.v-home .aside');if(!a)return;if(!this.desk()){a.style.top='';return;}
   const tb=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--topbar-h'))||64,gap=24;
   a.style.top=Math.min(tb+gap,innerHeight-a.offsetHeight-gap)+'px';},
- after(){Post.measure();this.stick();}
+ after(){Post.measure();this.stick();try{if(typeof Weather!=='undefined')Weather.get({render:false}).then(r=>{if(r&&route.page==='home'&&!document.querySelector('.v-home .wx-card'))App.render();}).catch(()=>{});}catch(e){}}
 };
 
 Router.add('home',{view:()=>Feed.view(),title:'Início',layout:'tab',nav:'home',after:()=>Feed.after()});

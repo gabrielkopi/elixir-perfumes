@@ -69,7 +69,7 @@ t('tipos errados em todas as chaves',()=>{const bad={version:3,onboarded:'sim',r
  assert.equal(s.profile.link,'');assert.deepEqual([...s.profile.pinned],['vetiver','polo','arbo','clash','terre']);assert.deepEqual([...s.profile.styleTags],['Essencial']);
  ok(s.compare.length<=3&&s.compare.every(id=>L.ctx.byId(id)),'compare ≤3 válidos');assert.equal(s.recentSearches.length,8);assert.equal(s.onboarded,false);
  ok(!('a/b' in s.lists)&&'a b' in s.lists&&!('Tenho' in s.lists),'nomes de lista saneados');assert.deepEqual([...s.lists['a b']],['vetiver']);
- assert.deepEqual([...s.circle],['sofia']);assert.equal(s.location.mode,'none');assert.equal(s.connect.minutes,30);assert.equal(s.connect.scopes.map,true);
+ assert.deepEqual([...s.circle],['sofia']);assert.equal(s.location.mode,'city');assert.equal(s.location.name,'São Paulo');assert.equal(s.connect.minutes,30);assert.equal(s.connect.scopes.map,true);
  assert.equal(s.bubble.mode,'equilibrio');assert.equal(s.context.temp,45);assert.equal(s.context.environment,'Fechado');assert.equal(s.settings.theme,'system');assert.equal(s.settings.privacy.profile,'public');
  ok(Object.keys(s.feedback).length===0,'feedback inválido descartado');});
 
@@ -87,7 +87,7 @@ t('demonstração cobre o intel',()=>{const L=load();const {Store}=L.api();Store
  ok(ids.length>=12,'≥12 avaliações');const span=Math.max(...ids.map(i=>s.ratedAt[i]))-Math.min(...ids.map(i=>s.ratedAt[i]));ok(span>150*864e5,'ratedAt espalhado (≥5 meses)');
  assert.equal(Object.values(s.shelf).filter(x=>x==='have').length,4);assert.equal(Object.values(s.shelf).filter(x=>x==='want').length,3);assert.equal(s.profile.pinned.length,5);
  assert.equal(s.sotd.length,3);ok(new Set(s.sotd.map(x=>x.ctx.occasion)).size>=2,'2 ocasiões');assert.equal(s.circle.length,3);ok(s.circle.includes('tiago'),'tiago no círculo');
- assert.equal(L.api().People.get('tiago').shareMap,false);assert.equal(Object.keys(s.feedback).length,2);assert.equal(s.location.mode,'none');assert.equal(s.onboarded,true);});
+ assert.equal(L.api().People.get('tiago').shareMap,false);assert.equal(Object.keys(s.feedback).length,2);assert.equal(s.location.mode,'city');assert.equal(s.onboarded,true);});
 
 t('exportar JSON',()=>{const L=load();const {Store}=L.api();Store.load();Store.demo();const j=JSON.parse(Store.exportJSON());assert.equal(j.app,'ELIXIR');assert.equal(j.version,3);ok(j.ratings&&j.exportedAt,'campos');});
 

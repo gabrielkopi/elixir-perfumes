@@ -21,7 +21,8 @@ const Shell={
   ].join('');
   return `<header class="topbar glass"><div class="tb-side">${left}${mark}</div><div class="title" aria-hidden="true">${esc(home?'Hoje':title)}</div><div class="tb-nav">${UI.segNav(navItems,['home','explore','guide','collection'].includes(nav)?nav:'',{label:'Principal'})}</div><div class="tb-side tb-end">${right}</div></header>`;},
  tabbar(){const nav=Router.navOf();
-  return `<nav class="tabbar glass" aria-label="Principal">${this.TABS.map(t=>{const on=nav===t.id,cur=on?' aria-current="page"':'';
+  const ti=this.TABS.findIndex(t=>t.id===nav),lens=ti<0||nav==='guide'?'off':'on';
+  return `<nav class="tabbar glass" aria-label="Principal" style="--ti:${Math.max(0,ti)}" data-lens="${lens}">${this.TABS.map(t=>{const on=nav===t.id,cur=on?' aria-current="page"':'';
    if(t.id==='guide')return `<a class="center pressable" href="#guide" aria-label="${esc(this.GUIDE_LABEL)}"${cur}>${icon('sparkle')}</a>`;
    if(t.id==='profile')return `<a class="pressable" href="#profile"${cur}>${UI.avatar(null,'xs')}<span>${t.label}</span></a>`;
    return `<a class="pressable" href="#${t.id}"${cur}>${icon(on&&t.fill?t.fill:t.icon)}<span>${t.label}</span></a>`;}).join('')}</nav>`;},

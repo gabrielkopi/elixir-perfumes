@@ -26,7 +26,13 @@ const App={
   if(Sheet.isOpen()){const b=document.querySelector('#sheet .sheet-body');if(b)Motion.after(b);}
   const a=Router.def(route.page).after;if(typeof a==='function')try{a(route.id);}catch(e){console.warn(e);}},
  boot(){
-  Store.load();Theme.apply();Motion.syncMotion();Sheet.init();Actions.init();
+  Store.load();
+  if(!state.location||state.location.mode==='none')Store.update(s=>{s.location={mode:'city',name:'São Paulo',lat:-23.55,lon:-46.63,consentAt:0};},{silent:true});
+  /* iOS só aplica :active com um ouvinte de toque; e o perfume começa a ser calculado no toque, antes do clique. */
+  document.addEventListener('touchstart',()=>{},{passive:true});
+  document.addEventListener('pointerdown',e=>{const a=e.target.closest&&e.target.closest('[data-action=perfume][data-id],a[href^="#perfume/"]');if(!a)return;
+   const id=a.dataset.id||decodeURIComponent(a.getAttribute('href').slice(9));try{const d=Router.def('perfume');if(d&&d.view)d.view(id);}catch(err){}},{passive:true});
+  Theme.apply();Motion.syncMotion();Sheet.init();Actions.init();
   Actions.key('Escape',()=>{});
   Router.start();
   Store.on(()=>{Motion.syncMotion();this.render();});

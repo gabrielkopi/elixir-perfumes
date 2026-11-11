@@ -6,6 +6,22 @@ const Weather={
  state:'idle',inflight:null,
  LABELS:[[[0],'Céu limpo'],[[1],'Poucas nuvens'],[[2],'Parcialmente nublado'],[[3],'Nublado'],[[45,48],'Neblina'],[[51,53,55,56,57],'Garoa'],
   [[61,63,65,66,67],'Chuva'],[[71,73,75,77,85,86],'Neve'],[[80,81,82],'Pancadas de chuva'],[[95,96,99],'Trovoadas']],
+ /* Arte animada do tempo (SVG, 64×64). Sol, nuvens, chuva, tempestade, neblina, neve; lua e estrelas à noite. */
+ kind(code){const c=Number(code);if(c===0)return 'clear';if(c===1||c===2)return 'partly';if(c===3)return 'cloudy';if(c===45||c===48)return 'fog';
+  if([71,73,75,77,85,86].includes(c))return 'snow';if([95,96,99].includes(c))return 'storm';if(c>=51&&c<=82)return 'rain';return 'cloudy';},
+ art(code,isDay=true){const k=this.kind(code);
+  const cloud=(x,y,s,cls='')=>`<path class="cloud ${cls}" transform="translate(${x} ${y}) scale(${s})" d="M10 26h24a8 8 0 0 0 0-16 11 11 0 0 0-21-3A8.5 8.5 0 0 0 10 26z"/>`;
+  const sun=`<circle class="sun-glow" cx="32" cy="32" r="17"/><g class="rays">${[0,45,90,135,180,225,270,315].map(a=>{const r=a*Math.PI/180,x1=32+Math.cos(r)*17,y1=32+Math.sin(r)*17,x2=32+Math.cos(r)*22,y2=32+Math.sin(r)*22;return `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}"/>`;}).join('')}</g><circle class="sun-core" cx="32" cy="32" r="11"/>`;
+  const moon=`<path class="moon" d="M38 14a16 16 0 1 0 12 26A13 13 0 0 1 38 14z"/><circle class="star" cx="14" cy="16" r="1.4"/><circle class="star" cx="22" cy="8" r="1" style="animation-delay:1s"/><circle class="star" cx="10" cy="30" r="1" style="animation-delay:2s"/>`;
+  const sky=isDay?sun:moon;
+  let body='';
+  if(k==='clear')body=sky;
+  else if(k==='partly')body=`<g transform="translate(-6 -6) scale(.8)">${sky}</g><g class="drift">${cloud(14,24,1)}</g>`;
+  else if(k==='cloudy')body=`<g class="drift slow">${cloud(2,12,.85,'back')}</g><g class="drift">${cloud(12,22,1)}</g>`;
+  else if(k==='rain'||k==='storm')body=`<g class="drift">${cloud(6,6,1.05)}</g>${[18,28,38,48].map((x,i)=>`<line class="drop" x1="${x}" y1="42" x2="${x-2}" y2="49" style="animation-delay:${i*.27}s"/>`).join('')}${k==='storm'?'<path class="bolt" d="M33 36l-6 10h5l-3 9 9-12h-5l3-7z"/>':''}`;
+  else if(k==='snow')body=`<g class="drift">${cloud(6,6,1.05)}</g>${[18,30,42,24,36].map((x,i)=>`<circle class="flake" cx="${x}" cy="${44+(i%2)*4}" r="1.8" style="animation-delay:${i*.6}s"/>`).join('')}`;
+  else if(k==='fog')body=`<g class="drift slow">${cloud(8,4,.9,'back')}</g>${[38,45,52].map((y,i)=>`<line class="fog" x1="${12+i*3}" y1="${y}" x2="${50-i*2}" y2="${y}" style="animation-delay:${i*.8}s"/>`).join('')}`;
+  return `<svg class="wx-art" viewBox="0 0 64 64" aria-hidden="true" focusable="false">${body}</svg>`;},
  label(code){const c=Number(code);for(const [list,l] of this.LABELS)if(list.includes(c))return l;return 'Tempo variável';},
  key(){return typeof Store!=='undefined'&&Store.weatherKey?Store.weatherKey:'elixir-weather-v1';},
  loc(){return typeof state!=='undefined'&&state&&state.location?state.location:{mode:'none'};},

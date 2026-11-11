@@ -39,7 +39,7 @@ const Store={
   map:{corrections:{},priors:{},snapshots:[]},
   bubble:{mode:'equilibrio',seen:{}},
   circle:[],
-  location:{mode:'none',name:'',lat:null,lon:null,consentAt:0},
+  location:{mode:'city',name:'São Paulo',lat:-23.55,lon:-46.63,consentAt:0},
   connect:{scopes:{map:true,have:true,avoid:true,ratings:false,budget:false},minutes:30,sessions:[]},
   shelf:{},shelfAt:{},lists:{},
   following:[],likes:[],saved:[],comments:{},posts:[],socialShelf:[],seenStories:[],

@@ -57,6 +57,19 @@ def demo(pg, url):
       Store.flush&&Store.flush();})()""")
 
 
+def weather_home(browser, url):
+    print('0. Clima de hoje no Início (São Paulo, Open-Meteo simulado)')
+    pg = new_page(browser)
+    demo(pg, url)
+    go(pg, url, 'home', 2200)
+    check('cartão de clima aparece', pg.query_selector('.v-home .wx-card') is not None)
+    check('mostra São Paulo e a temperatura', 'São Paulo' in pg.inner_text('.v-home') and '31°' in pg.inner_text('.v-home'))
+    check('arte animada do tempo', pg.evaluate("(()=>{const s=document.querySelector('.wx-card .wx-art');return !!s&&document.getAnimations().some(a=>s.contains(a.effect&&a.effect.target))})()"))
+    check('barra de abas com lente na aba ativa', pg.evaluate("getComputedStyle(document.querySelector('.tabbar')).getPropertyValue('--ti').trim()==='0'"))
+    check('sem erros no console', not pg.errors, '; '.join(pg.errors[:3]))
+    pg.context.close()
+
+
 def first_run(browser, url):
     print('1. Primeiro acesso')
     pg = new_page(browser)
@@ -283,7 +296,7 @@ def main():
     print('ELIXIR · testes de experiência ·', 'http' if use_http else 'file://')
     with sync_playwright() as p:
         b = p.chromium.launch()
-        for fn in [first_run, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
+        for fn in [weather_home, first_run, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
             try:
                 fn(b, url)
             except Exception as e:

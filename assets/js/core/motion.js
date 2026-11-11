@@ -39,7 +39,8 @@ const Motion={
     const tpl=document.createElement('template');tpl.innerHTML=html;
     const kids=root=>[...root.children],pick=(root,sel)=>kids(root).find(e=>e.matches(sel))||null;
     for(const sel of ['.topbar','.tabbar','.tray']){const a=pick(app,sel),b=pick(tpl.content,sel);
-     if(a&&b){if(a.outerHTML!==b.outerHTML)a.replaceWith(b);}else if(a&&!b)a.remove();else if(!a&&b)app.insertBefore(b,pick(app,'#route-live')||pick(app,'.fade-b'));}
+     if(a&&b&&sel==='.tabbar'){if(a.outerHTML!==b.outerHTML){for(const at of ['style','data-lens','class'])a.setAttribute(at,b.getAttribute(at)||'');if(a.innerHTML!==b.innerHTML)a.innerHTML=b.innerHTML;}}
+     else if(a&&b){if(a.outerHTML!==b.outerHTML)a.replaceWith(b);}else if(a&&!b)a.remove();else if(!a&&b)app.insertBefore(b,pick(app,'#route-live')||pick(app,'.fade-b'));}
     const m=pick(app,'#main'),nm=pick(tpl.content,'#main');if(m&&nm){m.className=nm.className;m.innerHTML=nm.innerHTML;}
    }else{app.innerHTML=html;app.dataset.shell=key;}
    if(after)after();};
