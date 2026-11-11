@@ -1,0 +1,31 @@
+/* Meu círculo (.v-circle) e a folha Adicionar ao círculo (.sh-circle-add). Só tokens de base.css. */
+.v-circle{display:block;max-width:880px;margin-inline:auto}
+.v-circle .ci-body{display:block}
+
+/* Pessoas */
+.v-circle .ci-people{margin-top:var(--s2)}
+.v-circle .ci-person{display:flex;align-items:center;gap:var(--s3);min-height:72px;padding:var(--s2) 0;color:inherit;text-decoration:none;
+  transition:opacity var(--d-2) var(--ease-out)}
+.v-circle .ci-person:active{opacity:.6}
+.v-circle .ci-person .grow{display:grid;gap:2px;flex:1;min-width:0}
+.v-circle .ci-person b{font-weight:500;letter-spacing:-.01em}
+.v-circle .ci-person .grow>span{font-size:var(--t-sm);color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.v-circle .ci-person>.icon{color:var(--faint);flex:none}
+.v-circle .ci-add{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s3);margin-top:var(--s4)}
+
+/* Pessoa: comparar mapas */
+.v-circle .ci-pair{display:flex;margin-bottom:var(--s4)}
+.v-circle .ci-pair>*+*{margin-left:calc(var(--s4)*-1);box-shadow:0 0 0 3px var(--bg)}
+.v-circle .ci-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin-top:var(--s5)}
+.v-circle .ci-compat{margin-top:var(--s5)}
+
+.v-circle .ci-privacy{display:flex;align-items:center;gap:var(--s2);margin:var(--s7) 0 0;font-size:var(--t-sm);color:var(--muted)}
+.v-circle .ci-privacy .icon{width:16px;height:16px;flex:none}
+
+/* Folha: adicionar */
+.sh-circle-add .ca-search{margin-bottom:var(--s3)}
+.sh-circle-add .ca-row{display:flex;align-items:center;gap:var(--s3);min-height:64px;padding:var(--s2) 0}
+.sh-circle-add .ca-row .grow{display:grid;gap:2px;flex:1;min-width:0}
+.sh-circle-add .ca-row b{font-weight:500}
+.sh-circle-add .ca-row .grow>span{font-size:var(--t-sm);color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sh-circle-add .ca-empty{padding:var(--s5) 0;text-align:center}

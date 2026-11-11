@@ -1,0 +1,32 @@
+/* Notas: famílias, biblioteca de notas ilustradas, página da nota e da família. Só tokens. */
+.v-notes .nt-sec{margin-top:var(--s7)}
+.v-notes .nt-fam{display:grid;gap:var(--s2);width:clamp(150px,40vw,220px);color:inherit;align-content:start}
+.v-notes .nt-sphere{display:grid;place-items:center;aspect-ratio:1;border-radius:var(--r-md);background:var(--card);overflow:hidden}
+.v-notes .nt-sphere img{width:76%;height:76%;object-fit:contain;transition:transform var(--d-5) var(--ease-out),filter .6s var(--ease-out)}
+.v-notes .nt-fam b{font:500 var(--t-body)/1.25 var(--sans)}
+.v-notes .nt-fam>span:last-child{font-size:var(--t-sm);line-height:1.35;color:var(--muted);display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+@media (hover:hover){.v-notes .nt-fam:hover .nt-sphere img,.v-notes .nt-card:hover .nt-ill img{transform:scale(1.05)}}
+.v-notes .nt-groups{margin-bottom:var(--s3)}
+.v-notes .nt-count{margin:var(--s2) 0 var(--s4)}
+.v-notes .nt-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5) var(--s3)}
+@media (min-width:768px){.v-notes .nt-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media (min-width:1024px){.v-notes .nt-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--s6) var(--s5)}}
+.v-notes .nt-card{display:grid;gap:6px;color:inherit;align-content:start;min-width:0}
+.v-notes .nt-ill{display:grid;place-items:center;aspect-ratio:1;border-radius:var(--r-sm);background:var(--card);overflow:hidden}
+.v-notes .nt-ill img{width:80%;height:80%;object-fit:contain;transition:transform var(--d-5) var(--ease-out),opacity var(--d-3)}
+.v-notes .nt-ill img.loading{opacity:0}
+.v-notes .nt-ini{font:600 18px/1 var(--sans);color:var(--ink-2)}
+.v-notes .nt-card b{font:500 13px/1.3 var(--sans);overflow-wrap:anywhere}
+.v-notes .nt-sub{font-size:12px;line-height:1.2;color:var(--muted)}
+.v-notes .rail-x .nt-card{width:clamp(104px,28vw,148px)}
+.v-notes .nt-foot{margin-top:var(--s8);text-align:center}
+
+/* Herói da nota e da família */
+.v-notes .nt-hero{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s5);padding-top:var(--s2)}
+.v-notes .nt-hero-ill{display:grid;place-items:center;width:100%;max-width:440px;aspect-ratio:1;border-radius:var(--r-lg);background:var(--card);overflow:hidden}
+.v-notes .nt-hero-ill img{width:78%;height:78%;object-fit:contain}
+.v-notes .nt-hero-text{display:grid;gap:var(--s3);align-content:end;min-width:0}
+.v-notes .nt-lead{font-size:var(--t-h3);line-height:1.45;color:var(--ink-2);max-width:40ch}
+@media (min-width:768px){.v-notes .nt-hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:end;gap:var(--s7)} .v-notes .nt-hero-ill{max-width:none}}
+.v-notes .nt-bars{max-width:560px}
+.v-notes .nt-all{display:flex;justify-content:center;margin-top:var(--s6)}

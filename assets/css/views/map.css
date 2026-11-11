@@ -1,0 +1,75 @@
+/* Mapa olfativo (.v-map) e os blocos .mapv usados no perfil e na página de pessoa; folha Corrigir mapa (.sh-map-fix). Só tokens de base.css. */
+.v-map{display:block;max-width:960px;margin-inline:auto}
+.mapv{display:grid;gap:var(--s4)}
+.mapv-page{display:block}
+
+/* Radial */
+.mapv-chart{display:grid;place-items:center}
+.mapv-radial,.mapv-chart svg.chart.mapv-radial{width:100%;max-width:400px;height:auto;overflow:visible}
+.mapv-ring{fill:none;stroke:var(--hair);stroke-width:1}
+.mapv-spoke{stroke:var(--hair);stroke-width:1}
+.mapv-spoke.hyp{stroke-dasharray:2 4}
+.mapv-area{fill:var(--signal);fill-opacity:.12;stroke:none}
+.mapv-radial .line{stroke:var(--signal);stroke-width:1.5;stroke-linejoin:round}
+.mapv-dot{fill:var(--bg-elev);stroke:var(--signal);stroke-width:1.5}
+.mapv-dot.hyp{fill:var(--bg-elev);stroke:var(--muted);stroke-dasharray:2 2}
+.mapv-lbl{fill:var(--muted);font:400 11px var(--sans)}
+
+/* Cartão retrato */
+.mapv-card{display:grid;gap:var(--s4)}
+.mapv-text{display:grid;gap:var(--s2)}
+.mapv-text p{margin:0}
+.mapv-primary{font-size:clamp(36px,9vw,64px);margin:0}
+.mapv-conf{display:grid;gap:var(--s1);margin-top:var(--s3);padding-top:var(--s4);border-top:.5px solid var(--hair)}
+@media (min-width:860px){
+  .mapv-card{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:var(--s7)}
+  .mapv-card .mapv-chart{order:2}
+}
+.mapv-bars{display:grid;gap:var(--s3)}
+.mapv-bars .t-eyebrow{margin:0}
+.mapv-more{margin-left:calc(var(--s2)*-1)}
+.mapv-combos{display:grid;gap:var(--s4);margin-top:var(--s2)}
+.mapv-cgroup{display:grid;gap:var(--s2)}
+.mapv-cgroup p{margin:0}
+.mapv-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s3);margin-top:var(--s4);padding:var(--s4);border-radius:var(--r-md);background:var(--fill)}
+.mapv-cta .em{margin:0}
+.mapv-note{margin:0 0 var(--s3)}
+
+/* Mini (onboarding / perfil vazio) */
+.mapv-mini{justify-items:start}
+.mapv-mini .mapv-radial{max-width:280px}
+.mapv-mini .mapv-chart{justify-self:center;margin-bottom:var(--s3)}
+.mapv-mini p{margin:0}
+
+/* Compatibilidade com outra pessoa */
+.mapv-compat{gap:var(--s3)}
+.mapv-compat .t-h2,.mapv-compat .em{margin:0}
+.mapv-compat .t-h2{max-width:22ch}
+.mapv-legend{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin:var(--s2) 0 0}
+.mapv-key{display:inline-block;width:14px;height:3px;border-radius:var(--r-pill);background:var(--signal)}
+.mapv-key--them{background:var(--muted);margin-left:var(--s3)}
+
+/* Tendência */
+.mapv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--s3)}
+.mapv-trend,.mapv-spark{display:grid;gap:var(--s2);align-content:start}
+.mapv-trend .t-eyebrow,.mapv-spark .t-eyebrow,.mapv-trend p{margin:0}
+.mapv-trend-nums{display:flex;align-items:center;gap:var(--s3)}
+.mapv-arrow{display:grid;place-items:center;color:var(--muted)}
+
+/* Evidências */
+.mapv-evidence{margin:0;padding:0;list-style:none}
+.mapv-evidence li{display:flex;justify-content:space-between;align-items:center;min-height:48px;font-size:15px}
+.mapv-evidence b{font-weight:500;font-variant-numeric:tabular-nums}
+.mapv-quality{margin:var(--s3) 0}
+
+/* Folha: Corrigir mapa */
+.sh-map-fix .mf-now{margin:0 0 var(--s4);color:var(--muted)}
+.sh-map-fix .mf-now b{color:var(--ink);font-weight:500}
+.sh-map-fix .mf-src{margin-bottom:var(--s4)}
+.sh-map-fix .mf-src .t-eyebrow{margin:0 0 var(--s1)}
+.sh-map-fix .mf-opts{display:grid;gap:var(--s2)}
+.sh-map-fix .mf-opt{display:grid;gap:2px;text-align:left;padding:var(--s3) var(--s4);border-radius:var(--r-md);background:var(--card);box-shadow:inset 0 0 0 .5px var(--hair);transition:box-shadow var(--d-2) var(--ease-out)}
+.sh-map-fix .mf-opt[aria-checked=true]{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.sh-map-fix .mf-opt b{font-weight:500}
+.sh-map-fix .mf-opt span{font-size:var(--t-sm);color:var(--muted)}
+.sh-map-fix .mf-foot{margin-top:var(--s4)}

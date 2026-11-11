@@ -1,0 +1,55 @@
+/* Boas-vindas e Refinar (.v-welcome, também .v-guide para herdar o cromo das perguntas). Só tokens de base.css. */
+.v-welcome[data-step="1"]{padding-top:0;max-width:none}
+.v-welcome .w-hero{position:relative}
+.v-welcome .w-hero .cover{border-radius:0;min-height:62dvh}
+.v-welcome .w-start{display:grid;gap:var(--s2);padding:var(--s6) 0 calc(var(--s5) + var(--safe-b));max-width:560px;width:100%;margin-inline:auto;animation:unblur var(--d-5) var(--ease-out) .25s both}
+.v-welcome .w-start .t-h2{margin:0;max-width:18ch}
+.v-welcome .w-start .muted{margin:0}
+.v-welcome .w-actions{display:grid;gap:var(--s2);margin-top:var(--s5)}
+.v-welcome .w-actions .btn--tertiary{justify-self:center}
+@media (min-width:900px){
+  .v-welcome[data-step="1"]{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);align-items:center;gap:var(--s8);min-height:100dvh;padding:0}
+  .v-welcome[data-step="1"] .w-hero{height:100dvh}
+  .v-welcome .w-hero .cover{height:100%;min-height:0}
+  .v-welcome .w-start{padding:var(--s6) var(--s7) var(--s6) 0;margin:0}
+}
+
+/* Passo 2: escolher perfumes conhecidos */
+.v-welcome .w-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s3) var(--s2);margin-top:var(--s5)}
+.v-welcome .w-pick{position:relative;display:grid;gap:2px;text-align:left;min-width:0;color:inherit}
+.v-welcome .w-pick .plate{border-radius:var(--r-sm);transition:transform var(--d-3) var(--ease-spring),box-shadow var(--d-2) var(--ease-out)}
+.v-welcome .w-pick[aria-pressed=true] .plate{box-shadow:inset 0 0 0 2px var(--ink);transform:scale(.96)}
+.v-welcome .w-pick .name{font-size:13px;font-weight:500;line-height:1.25;margin-top:var(--s1);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.v-welcome .w-pick .brand{font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.v-welcome .w-check{position:absolute;top:var(--s2);right:var(--s2);display:grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--glass-bg);color:transparent;box-shadow:var(--sh-1);transition:background var(--d-2) var(--ease-out),color var(--d-2) var(--ease-out),transform var(--d-3) var(--ease-spring);transform:scale(.8)}
+.v-welcome .w-check .icon{width:15px;height:15px}
+.v-welcome .w-pick[aria-pressed=true] .w-check{background:var(--ink);color:var(--on-ink);transform:scale(1)}
+.v-welcome .w-find{display:flex;align-items:center;gap:var(--s2);width:100%;margin-top:var(--s4);color:var(--muted);text-align:left}
+.v-welcome .w-foot{grid-template-columns:1fr auto;align-items:center}
+.v-welcome .w-count{margin:0;font-size:var(--t-sm);color:var(--muted)}
+@media (min-width:640px){.v-welcome .w-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Passos 3 e Refinar: avaliar */
+.v-welcome .w-rate{margin:var(--s5) 0 0;padding:0;list-style:none}
+.v-welcome .w-row{display:grid;gap:var(--s3);padding:var(--s4) 0}
+.v-welcome .w-info{display:flex;align-items:center;gap:var(--s3);min-width:0}
+.v-welcome .w-info .thumb{width:56px;height:56px;flex:none;border-radius:var(--r-xs);aspect-ratio:1}
+.v-welcome .w-info .thumb img{width:100%;height:100%;object-fit:contain;padding:6px}
+.v-welcome .w-info .grow{display:grid;gap:2px;min-width:0}
+.v-welcome .w-info b{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.v-welcome .w-scale button,.v-welcome .w-seg button{font-size:13px}
+
+/* Passo 4: mais sobre você */
+.v-welcome .w-groups{display:grid;gap:var(--s6);margin-top:var(--s6)}
+.v-welcome .w-group{display:grid;gap:var(--s2)}
+.v-welcome .w-group .t-eyebrow,.v-welcome .w-group .t-sm{margin:0}
+.v-welcome .w-group .chips,.v-welcome .w-group .seg{margin-top:var(--s1)}
+.v-welcome .w-foot2 .btn--tertiary{justify-self:center}
+
+/* Primeiro mapa */
+.v-welcome .w-done{display:grid;gap:var(--s3);margin-top:var(--s7)}
+.v-welcome .w-done .t-eyebrow{margin:0}
+.v-welcome .w-axis{max-width:none;animation:unblur var(--d-5) var(--ease-out) both}
+.v-welcome .w-bars{margin-top:var(--s5)}
+.v-welcome .w-conf{margin:var(--s4) 0 0;color:var(--muted);font-size:var(--t-sm);max-width:44ch}

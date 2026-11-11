@@ -1,0 +1,37 @@
+/* Descobrir: cabeçalho comum (Perfumes, Notas, Marcas, Edições), catálogo e folha de filtros. Só tokens. */
+.v-explore .xp-head{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);margin-bottom:var(--s2)}
+.v-explore .xp-head .seg{view-transition-name:explore-seg}
+.v-explore .xp-field{cursor:text;font-size:16px}
+.v-explore .xp-field .icon{color:var(--ink)}
+.v-explore .xp-ph{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.v-explore .xp-kbd{display:none;flex:none;font:500 12px/1 var(--sans);padding:6px var(--s2);border-radius:var(--r-xs);box-shadow:inset 0 0 0 1px var(--hair-strong);color:var(--muted)}
+@media (hover:hover) and (pointer:fine){.v-explore .xp-kbd{display:inline-block} .v-explore .xp-field:hover{background:var(--fill-press)}}
+@media (min-width:1024px){.v-explore .xp-head{grid-template-columns:minmax(0,520px) minmax(260px,400px);justify-content:space-between;align-items:center}}
+
+/* Em alta e barra de ferramentas */
+.v-explore .xp-trend{margin-top:var(--s6)}
+.v-explore .xp-bar{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);margin-top:var(--s7)}
+.v-explore .xp-tools{display:flex;align-items:center;gap:var(--s2);min-width:0}
+.v-explore .xp-chips{flex:1;min-width:0;margin-left:0;padding-left:0;scroll-padding-inline:0;
+  -webkit-mask:linear-gradient(90deg,var(--ink) calc(100% - 32px),transparent);mask:linear-gradient(90deg,var(--ink) calc(100% - 32px),transparent)}
+.v-explore .xp-xi{width:18px;height:18px}
+.v-explore .xp-fbtn{flex:none}
+.v-explore .xp-badge{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;border-radius:var(--r-pill);background:var(--on-ink);color:var(--ink);font:600 11px/1 var(--sans)}
+.v-explore .xp-x{padding-right:var(--s3)}
+.v-explore .xp-x .xp-xi{width:16px;height:16px;opacity:.6}
+.v-explore .xp-sort .seg{width:100%}
+@media (min-width:768px){.v-explore .xp-bar{grid-template-columns:minmax(0,1fr) auto;align-items:center} .v-explore .xp-sort .seg{width:max-content}}
+.v-explore .xp-count{margin:var(--s4) 0}
+.v-explore .xp-panel{min-height:240px}
+.v-explore .xp-more{display:flex;justify-content:center;padding-top:var(--s6)}
+.v-explore .xp-credit{margin-top:var(--s8);text-align:center}
+.v-explore .xp-credit a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* Folha de filtros */
+.sh-filter .fl-groups{display:grid;gap:var(--s6);padding-top:var(--s2)}
+.sh-filter .fl-group{display:grid;gap:var(--s3);justify-items:start}
+.sh-filter .fl-group>*{max-width:100%}
+.sh-filter .fl-group .seg,.sh-filter .fl-group .toggle-row{width:100%}
+.sh-filter .fl-hint{margin-top:calc(var(--s1)*-1)}
+.sh-filter .fl-foot{display:flex;align-items:center;gap:var(--s3);margin:var(--s6) calc(var(--s5)*-1) calc(var(--s6)*-1)}
+.sh-filter .fl-foot .btn:last-child{flex:1}

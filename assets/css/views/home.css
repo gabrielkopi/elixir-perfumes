@@ -1,0 +1,57 @@
+/* Início (feed): uma coluna editorial; no desktop, a coluna + uma lateral fixa. Só tokens de base.css. */
+.v-home{display:block}
+.v-home .page-head{padding-bottom:var(--s4)}
+.v-home .main{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s7);width:100%;max-width:600px}
+.v-home .main>.sec,.v-home .aside>.sec{margin-top:0}
+@media (max-width:1023px){.v-home{max-width:600px;margin-inline:auto}}
+
+/* chip de contexto (abre o Contexto) */
+.v-home .home-ctx{gap:var(--s2);padding:0 var(--s3) 0 var(--s4)}
+.v-home .home-ctx>.icon:last-child{width:16px;height:16px;color:var(--muted)}
+
+/* Para hoje: plate com luz no alto e o único vidro da tela no terço de baixo */
+.v-home .today{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s2);justify-items:start}
+.v-home .today-card{position:relative;width:100%;border-radius:var(--r-lg);overflow:hidden;background:var(--card);isolation:isolate}
+.v-home .today-plate{display:block}
+.v-home .today-plate .plate{aspect-ratio:4/5;border-radius:0;background:linear-gradient(180deg,var(--plate) 0,var(--plate) 40%,var(--card) 62%)}
+.v-home .today-plate .plate img{padding:6% 20% 47%}
+.v-home .today-plate .plate .fallback{align-self:start;margin-top:22%}
+.v-home .today-glass{position:absolute;left:var(--s2);right:var(--s2);bottom:var(--s2);display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);padding:var(--s5);border-radius:calc(var(--r-lg) - var(--s2))}
+.v-home .today-title{display:grid;gap:6px}
+.v-home .today-brand{font:500 11px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.v-home .today-glass .why .em{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.v-home .today-acts{display:flex;align-items:center;gap:var(--s2);margin-top:var(--s1)}
+.v-home .today>.btn--tertiary{margin-left:calc(var(--s2)*-1)}
+@media (hover:hover){.v-home .today-card:hover .plate img{transform:scale(1.03)}}
+
+/* Seu dia */
+.v-home .day{padding:0 var(--s4);border-radius:var(--r-md);background:var(--card)}
+.v-home .day .row-trail{gap:0;margin-right:calc(var(--s2)*-1)}
+
+/* Edições: capas 4:5 em P&B com uma palavra */
+.v-home .ed{display:block;aspect-ratio:4/5;width:clamp(148px,42vw,200px);border-radius:var(--r-md);color:inherit}
+.v-home .ed .caption{display:grid;gap:var(--s2);left:var(--s4);right:var(--s4);bottom:var(--s4)}
+.v-home .ed .caption b{font:500 var(--t-h2)/1.05 var(--sans);letter-spacing:-.02em;text-wrap:balance}
+.v-home .ed-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3)}
+.v-home .ed-grid .ed{width:auto}
+
+/* Pessoas com o seu nariz */
+.v-home .home-people .rail-x--2{gap:var(--s5) var(--s3)}
+.v-home .people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5) var(--s3)}
+.v-home .people-grid .person-card{width:auto;min-width:0}
+
+/* Feed */
+.v-home .feed{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s5)}
+.v-home .posts{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s7)}
+.v-home .follow{margin-top:calc(var(--s6)*-1)}
+.v-home #panel-feed>.empty{padding-block:var(--s7)}
+.v-home .feed-end{display:flex;align-items:center;gap:var(--s3);padding:var(--s7) 0 var(--s2);color:var(--muted);font-size:var(--t-sm)}
+.v-home .feed-end::before,.v-home .feed-end::after{content:"";flex:1;height:.5px;background:var(--hair-strong)}
+
+/* Desktop: coluna à esquerda, lateral fixa (o topo é ajustado por Feed.stick) */
+.v-home .aside{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s7)}
+@media (min-width:1024px){
+  .v-home .page-head{padding-top:var(--s5)}
+  .v-home .layout-split{gap:var(--s8)}
+}
+@media (max-width:1023px){.v-home .home-people .person-card{width:132px}}

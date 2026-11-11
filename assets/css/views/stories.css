@@ -1,0 +1,50 @@
+/* Stories (feed): trilho de avatares com anel e visualizador em tela cheia. Só tokens de base.css; sobre a foto o texto herda o claro de .glass-dark. */
+.story-rail .rail-x{gap:var(--s2);padding-block:var(--s1)}
+.story-bubble{display:grid;justify-items:center;gap:var(--s2);width:72px;padding:var(--s1) 0;border-radius:var(--r-sm);color:var(--ink-2)}
+.story-bubble .avatar{width:56px;height:56px;font-size:18px}
+.story-bubble>span{max-width:68px;font:500 11px/1.2 var(--sans);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.story-bubble:focus-visible{outline-offset:-2px}
+
+/* visualizador */
+.story-view{position:fixed;inset:0;z-index:var(--z-stories);display:grid;place-items:center;border-radius:0;overscroll-behavior:contain;touch-action:pan-y;outline:none}
+.story-stage{position:relative;width:100%;height:100%;margin:0;overflow:hidden;background:var(--card);-webkit-user-select:none;user-select:none}
+.story-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.story-stage .story-scrim{inset:0 0 auto 0;height:30%;transform:rotate(180deg)}
+.story-zones{position:absolute;inset:0;display:grid;grid-template-columns:3fr 7fr}
+.story-zones span{cursor:pointer}
+
+.story-top{position:absolute;inset:0 0 auto 0;z-index:1;display:grid;gap:var(--s2);padding:calc(var(--s3) + env(safe-area-inset-top,0px)) var(--s3) 0}
+.story-bars{display:flex;gap:4px;padding:0 var(--s1)}
+.story-bars i{flex:1;height:2px;border-radius:2px;overflow:hidden;background:color-mix(in srgb,currentColor 32%,transparent)}
+.story-bars b{display:block;height:100%;background:currentColor;transform-origin:left;transform:scaleX(var(--p,0))}
+.story-head{display:flex;align-items:center;gap:var(--s2)}
+.story-who{display:flex;align-items:center;gap:var(--s3);flex:1;min-width:0;min-height:44px;padding-left:var(--s1);border-radius:var(--r-pill);color:inherit}
+.story-who>span:last-child{display:grid;gap:2px;min-width:0}
+.story-who b{font:500 14px/1.2 var(--sans);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.story-who .muted{font-size:12px;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.story-ctrl{display:flex;flex:none}
+.story-ctrl .icon-btn{color:inherit}
+
+.story-nav{position:absolute;top:50%;z-index:1;transform:translateY(-50%)}
+.story-nav--prev{left:var(--s3)} .story-nav--next{right:var(--s3)}
+@media (max-width:767px){.story-nav{width:40px;height:40px;opacity:.86}}
+
+.story-foot{position:absolute;inset:auto 0 0 0;z-index:1;display:grid;gap:var(--s4);padding:var(--s5) var(--s4) calc(var(--s5) + var(--safe-b))}
+.story-foot p{max-width:46ch;font-size:var(--t-body);line-height:1.45;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden}
+.story-acts{display:flex;align-items:center;gap:var(--s2)}
+.story-tag{display:inline-flex;align-items:center;gap:var(--s3);min-width:0;min-height:52px;padding:4px var(--s4) 4px 4px;border-radius:var(--r-pill);background:color-mix(in srgb,currentColor 16%,transparent);color:inherit}
+.story-tag>span:last-child{display:grid;gap:3px;min-width:0}
+.story-tag b{font:500 14px/1.2 var(--sans);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.story-tag small{font:500 10px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;opacity:.78;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.story-tag-img{width:44px;height:44px;flex:none;border-radius:50%;overflow:hidden}
+.story-tag-img .plate{width:100%;height:100%;aspect-ratio:1;border-radius:50%}
+.story-tag-img .plate img{padding:12%}
+.story-tag-img .fallback{display:none}
+.story-like{flex:none;display:grid;place-items:center;width:52px;height:52px;margin-left:auto;border-radius:50%;background:color-mix(in srgb,currentColor 16%,transparent);color:inherit}
+.story-like.on{color:var(--like)}
+.story-like.on .icon{fill:currentColor}
+
+@media (min-width:768px){
+  .story-stage{width:auto;height:min(92dvh,880px);aspect-ratio:9/16;border-radius:var(--r-lg);box-shadow:var(--sh-float)}
+  .story-nav--prev{left:var(--s2)} .story-nav--next{right:var(--s2)}
+}

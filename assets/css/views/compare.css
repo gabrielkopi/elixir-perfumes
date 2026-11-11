@@ -1,0 +1,61 @@
+/* Comparar (.v-compare). No celular cada linha vira um rótulo sobre as colunas; no desktop o rótulo fica à esquerda. Só tokens de base.css. */
+.v-compare{display:block;max-width:1080px;margin-inline:auto}
+.v-compare .c-scroll{margin-top:var(--s5);outline:none}
+.v-compare .c-table{display:block;width:100%;border-collapse:collapse}
+.v-compare .c-table :is(thead,tbody){display:block}
+.v-compare .c-table tr{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));gap:0 var(--s3);padding:var(--s4) 0;border-top:.5px solid var(--hair)}
+.v-compare .c-table thead tr{border-top:0;padding-top:0;position:sticky;top:var(--topbar-h);z-index:2;background:var(--bg);padding-bottom:var(--s3);
+  box-shadow:0 .5px 0 var(--hair)}
+.v-compare .c-corner{display:none}
+.v-compare .c-table th[scope=row]{grid-column:1/-1;text-align:left;font-size:var(--t-eyebrow);font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-bottom:var(--s2)}
+.v-compare .c-table td{min-width:0;font-size:14px;line-height:1.45;vertical-align:top}
+.v-compare .c-add-cell{visibility:hidden}
+
+/* Cabeçalho das colunas */
+.v-compare .c-col{min-width:0;text-align:left;font-weight:400}
+.v-compare .c-head{position:relative;display:grid;gap:var(--s2)}
+.v-compare .c-plate{display:block;border-radius:var(--r-sm);overflow:hidden}
+.v-compare .c-plate .plate{border-radius:var(--r-sm)}
+.v-compare .c-name{display:grid;gap:2px;min-width:0}
+.v-compare .c-name a{font-weight:500;color:inherit;text-decoration:none;letter-spacing:-.01em;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.v-compare .c-name .brand{font-size:12px;color:var(--muted)}
+.v-compare .c-x{position:absolute;top:var(--s1);right:var(--s1);background:var(--glass-bg);box-shadow:var(--sh-1)}
+.v-compare .c-add{display:grid;place-items:center;align-content:center;gap:var(--s2);width:100%;aspect-ratio:3/4;border-radius:var(--r-sm);
+  box-shadow:inset 0 0 0 1px var(--hair-strong);color:var(--muted);font-size:13px;transition:background var(--d-2) var(--ease-out)}
+.v-compare .c-add:hover{background:var(--fill)}
+
+/* Células */
+.v-compare .c-big{display:block;font-size:var(--t-h2);font-weight:500;letter-spacing:-.03em;line-height:1}
+.v-compare .c-best{color:var(--ink)}
+.v-compare .c-big:not(.c-best){color:var(--muted)}
+.v-compare .c-note{display:block;margin-top:var(--s1);font-size:12px;color:var(--muted)}
+.v-compare .c-pill{display:inline-flex;align-items:center;min-height:26px;padding:0 var(--s3);border-radius:var(--r-pill);background:var(--fill);font-size:12px;font-weight:500}
+.v-compare .c-season{display:grid;gap:var(--s1)}
+.v-compare .c-track{position:relative;height:3px;border-radius:var(--r-pill);background:var(--hair)}
+.v-compare .c-track i{position:absolute;top:50%;left:calc(var(--v)*100%);width:11px;height:11px;margin:-5.5px 0 0 -5.5px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 3px var(--bg)}
+.v-compare .c-ends{display:flex;justify-content:space-between;font-size:11px;color:var(--faint)}
+.v-compare .c-occ{margin:0;padding:0;list-style:none;display:grid;gap:var(--s1)}
+.v-compare .c-occ li{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);font-size:13px}
+.v-compare .c-dots{display:inline-flex;gap:3px;flex:none}
+.v-compare .c-dots i{width:6px;height:6px;border-radius:50%;background:var(--hair-strong)}
+.v-compare .c-dots i.on{background:var(--ink)}
+.v-compare .c-span td{grid-column:1/-1}
+.v-compare .c-avoid{color:var(--danger)}
+
+/* Veredito */
+.v-compare .c-verdict{margin-top:var(--s6);padding:var(--s5);border-radius:var(--r-lg);background:var(--card);box-shadow:inset 0 0 0 .5px var(--hair)}
+.v-compare .c-verdict .t-eyebrow{margin:0}
+.v-compare .c-verdict-t{margin:var(--s2) 0 0;font-size:var(--t-h3);line-height:1.3;letter-spacing:-.015em;max-width:40ch}
+.v-compare .c-verdict-t b{font-weight:600}
+.v-compare .c-verdict-act{margin-top:var(--s4)}
+
+/* Vazio / uma coluna */
+.v-compare .c-find{display:flex;align-items:center;gap:var(--s2);width:100%;margin-top:var(--s4);color:var(--muted);text-align:left}
+.v-compare .c-one{margin-top:var(--s4)}
+
+@media (min-width:900px){
+  .v-compare .c-table tr{grid-template-columns:180px repeat(var(--cols),minmax(0,1fr));gap:0 var(--s5)}
+  .v-compare .c-corner{display:block}
+  .v-compare .c-table th[scope=row]{grid-column:auto;padding:var(--s1) 0 0}
+  .v-compare .c-span td{grid-column:2/-1}
+}

@@ -1,0 +1,126 @@
+/* Coleção e Lista (.v-collection) e as folhas da coleção (.sh-lists). Só tokens de base.css. */
+.v-collection{display:block;max-width:1080px;margin-inline:auto}
+.v-collection>.seg small{font-size:12px;font-weight:500;margin-left:5px;color:inherit}
+@media (min-width:768px){.v-collection>.seg{max-width:560px}}
+.v-collection .cl-panel{margin-top:var(--s5);min-height:280px}
+.v-collection .cl-hint{font-size:var(--t-sm);margin-bottom:var(--s3);max-width:56ch}
+.v-collection .cl-tools{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);margin:0 calc(var(--s2)*-1) var(--s3)}
+.v-collection .cl-sort .icon{width:16px;height:16px;color:var(--muted)}
+.v-collection .cl-edit[aria-pressed=true]{font-weight:600}
+.v-collection .cl-group{padding-top:var(--s3);margin-bottom:calc(var(--s3)*-1)}
+.v-collection .cl-item{position:relative;min-width:0}
+.v-collection .cl-more{position:absolute;top:var(--s2);right:var(--s2);z-index:1;animation:fade var(--d-3) var(--ease-out) both}
+.v-collection .cl-grid.is-editing .plate{transform:scale(.96);transition:transform var(--d-3) var(--ease-spring)}
+.v-collection .tile .sub{font-size:12px}
+
+/* Sua coleção e Seu mês */
+.v-collection :is(.cl-stats,.cl-month-card){margin-bottom:var(--s6)}
+.v-collection :is(.cl-stats-main,.cl-stats-side){display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s4);align-content:start;min-width:0}
+.v-collection .cl-stats-side{padding-top:var(--s4);border-top:.5px solid var(--hair)}
+.v-collection .cl-count{display:flex;align-items:baseline;gap:var(--s2)}
+.v-collection .cl-count>span{color:var(--muted)}
+.v-collection .cl-insight{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s1);min-width:0}
+.v-collection .cl-insight .row{padding:0}
+.v-collection .cl-insight .em b{font-weight:600;color:var(--ink)}
+@media (min-width:768px){
+  .v-collection :is(.cl-stats,.cl-month-card){grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:var(--s7)}
+  .v-collection .cl-stats-side{padding-top:0;border-top:0;padding-left:var(--s7);border-left:.5px solid var(--hair);margin-left:calc(var(--s7)*-1)}
+}
+
+/* Diário */
+.v-collection .cl-diary{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s6);align-items:start}
+.v-collection .cl-cal-head{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);margin-bottom:var(--s3)}
+.v-collection .cl-month::first-letter{text-transform:uppercase}
+.v-collection .cl-cal-nav{display:flex;gap:var(--s2)}
+.v-collection .cl-cal{display:grid;gap:4px}
+.v-collection .cl-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.v-collection .cl-wd-h{display:grid;place-items:center;height:28px;font:500 11px/1 var(--sans);color:var(--muted)}
+.v-collection .cl-wd-h abbr{text-decoration:none;cursor:default}
+.v-collection .cl-day{position:relative;display:grid;place-items:center;min-height:44px;aspect-ratio:1;border-radius:var(--r-xs);font-size:var(--t-sm);color:var(--ink-2)}
+.v-collection .cl-day.is-today{box-shadow:inset 0 0 0 1.5px var(--ink);color:var(--ink);font-weight:600}
+.v-collection .cl-day-btn{position:absolute;inset:0;display:block;border-radius:inherit;overflow:hidden;background:var(--plate)}
+.v-collection .cl-day-btn:focus-visible{outline-offset:2px}
+.v-collection .cl-day.is-today .cl-day-btn{box-shadow:0 0 0 2px var(--bg),0 0 0 3.5px var(--ink)}
+.v-collection .cl-thumb{position:absolute;inset:0}
+.v-collection .cl-thumb .plate{width:100%;height:100%;aspect-ratio:auto;border-radius:0;background:transparent}
+.v-collection .cl-thumb .plate img{padding:14%}
+.v-collection .cl-thumb .fallback{display:none}
+.v-collection .cl-day-btn .cl-n{position:absolute;top:3px;left:3px;min-width:18px;padding:3px 4px;border-radius:var(--r-pill);background:var(--bg-elev);color:var(--ink);font:500 10px/1 var(--sans);text-align:center}
+.v-collection .cl-dot{display:none}
+@media (hover:hover){.v-collection .cl-day-btn:hover .plate img{transform:scale(1.06)}}
+@media (max-width:359px){
+  .v-collection .cl-day-btn{background:none}
+  .v-collection .cl-thumb{display:none}
+  .v-collection .cl-day-btn .cl-n{position:static;display:grid;place-items:center;height:100%;padding:0;background:none;font:500 var(--t-sm)/1 var(--sans)}
+  .v-collection .cl-dot{display:block;position:absolute;left:50%;bottom:5px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--ink)}
+}
+.v-collection .cl-month-empty{padding:var(--s4) 0}
+@media (min-width:768px){
+  .v-collection .cl-diary{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--s7)}
+  .v-collection .cl-diary .cl-month-card{grid-template-columns:minmax(0,1fr);margin-bottom:0}
+  .v-collection .cl-diary .cl-stats-side{padding-left:0;border-left:0;margin-left:0;padding-top:var(--s4);border-top:.5px solid var(--hair)}
+}
+
+/* Listas: capas empilhadas */
+.v-collection .cl-lists-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s5) var(--s3)}
+@media (min-width:768px){.v-collection .cl-lists-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6) var(--s5)}}
+@media (min-width:1024px){.v-collection .cl-lists-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.v-collection .cl-list{display:grid;gap:var(--s1);align-content:start;min-width:0;color:inherit;text-align:left}
+.v-collection .cl-list-name{font:500 var(--t-body)/1.3 var(--sans);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.v-collection .cl-list-count{font-size:var(--t-sm);color:var(--muted)}
+.v-collection .cl-list:focus-visible{outline-offset:4px;border-radius:var(--r-md)}
+.v-collection .cl-stack,.sh-lists .cl-stack{position:relative;display:block;aspect-ratio:1;border-radius:var(--r-md);background:var(--card);overflow:hidden}
+.v-collection .cl-stack{margin-bottom:var(--s2)}
+.v-collection .cl-stack .plate,.sh-lists .cl-stack .plate{position:absolute;top:50%;left:50%;width:42%;border-radius:var(--r-xs);box-shadow:var(--sh-2);
+  transform:translate(-50%,-50%) translateX(var(--x,0%)) rotate(var(--r,0deg));transition:transform var(--d-4) var(--ease-spring)}
+.v-collection .cl-stack[data-n="2"] .plate:nth-child(1),.sh-lists .cl-stack[data-n="2"] .plate:nth-child(1){--x:-22%;--r:-4deg}
+.v-collection .cl-stack[data-n="2"] .plate:nth-child(2),.sh-lists .cl-stack[data-n="2"] .plate:nth-child(2){--x:22%;--r:4deg}
+.v-collection .cl-stack[data-n="3"] .plate:nth-child(1),.sh-lists .cl-stack[data-n="3"] .plate:nth-child(1){--x:-38%;--r:-4deg}
+.v-collection .cl-stack[data-n="3"] .plate:nth-child(2),.sh-lists .cl-stack[data-n="3"] .plate:nth-child(2){z-index:1}
+.v-collection .cl-stack[data-n="3"] .plate:nth-child(3),.sh-lists .cl-stack[data-n="3"] .plate:nth-child(3){--x:38%;--r:4deg}
+.v-collection .cl-stack[data-n="0"] .plate{box-shadow:none;background:var(--card-2)}
+@media (hover:hover){
+  .v-collection .cl-list:hover .cl-stack[data-n="3"] .plate:nth-child(1){--x:-48%;--r:-7deg}
+  .v-collection .cl-list:hover .cl-stack[data-n="3"] .plate:nth-child(3){--x:48%;--r:7deg}
+  .v-collection .cl-list:hover .cl-stack[data-n="2"] .plate:nth-child(1){--x:-30%;--r:-6deg}
+  .v-collection .cl-list:hover .cl-stack[data-n="2"] .plate:nth-child(2){--x:30%;--r:6deg}
+  .v-collection .cl-list:hover .cl-stack[data-n="1"] .plate{--r:-3deg}
+}
+.v-collection .cl-stack--new{display:grid;place-items:center;background:none;border:1px dashed var(--hair-strong);color:var(--muted);transition:border-color var(--d-2),color var(--d-2)}
+@media (hover:hover){.v-collection .cl-list--new:hover .cl-stack--new{border-color:var(--ink);color:var(--ink)}}
+
+/* Publicações salvas (alternativa quando Post.grid não existe) */
+.v-collection .cl-saved{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin-inline:calc(var(--gutter)*-1)}
+.v-collection .cl-saved-cell{display:block;aspect-ratio:1;overflow:hidden;background:var(--plate)}
+.v-collection .cl-saved-cell img{width:100%;height:100%;object-fit:cover}
+.v-collection .cl-saved-cell .plate{height:100%;aspect-ratio:auto;border-radius:0}
+.v-collection .cl-saved-cell:focus-visible{outline-offset:-3px}
+@media (min-width:768px){.v-collection .cl-saved{margin-inline:0;gap:var(--s2);grid-template-columns:repeat(4,minmax(0,1fr))} .v-collection .cl-saved-cell{border-radius:var(--r-xs)}}
+
+/* ---------- folhas: salvar em lista, nova lista, menu do item, dia do diário, seletor ---------- */
+.sh-lists .ls-pick-body,.sh-lists .ls-form,.sh-lists .cl-day-sheet{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);padding-top:var(--s2)}
+.sh-lists .ls-pick-body>.t-eyebrow{padding-top:var(--s3)}
+.sh-lists .ls-form{gap:var(--s5)}
+.sh-lists .ls-row{display:flex;align-items:center;gap:var(--s3);width:100%;min-height:64px;padding:var(--s2) 0;text-align:left;color:var(--ink)}
+.sh-lists .ls-row .grow{flex:1;min-width:0;display:grid;gap:2px}
+.sh-lists .ls-row .grow>*{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sh-lists .ls-row .grow b{font:500 var(--t-body)/1.3 var(--sans)}
+.sh-lists .ls-row .grow>span{font-size:var(--t-sm);color:var(--muted)}
+.sh-lists .ls-menu .ls-row .grow{font:500 var(--t-body)/1.3 var(--sans)}
+.sh-lists .ls-ico{width:44px;height:44px;border-radius:50%;background:var(--fill);display:grid;place-items:center;flex:none}
+.sh-lists .ls-ico .icon{width:20px;height:20px}
+.sh-lists .ls-row--danger{color:var(--danger)}
+.sh-lists .ls-row .cl-stack{width:52px;height:52px;flex:none;border-radius:var(--r-xs)}
+.sh-lists .ls-row .cl-stack .plate{width:56%;box-shadow:var(--sh-1)}
+.sh-lists .ls-row .thumb{width:52px;height:52px;flex:none;border-radius:var(--r-xs);aspect-ratio:1}
+.sh-lists .ls-row .thumb img{padding:6px}
+.sh-lists .ls-check{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex:none;box-shadow:inset 0 0 0 1.5px var(--hair-strong);color:transparent;transition:background var(--d-2),color var(--d-2),box-shadow var(--d-2)}
+.sh-lists .ls-check .icon{width:16px;height:16px;stroke-width:2}
+.sh-lists [aria-pressed=true] .ls-check{background:var(--ink);color:var(--on-ink);box-shadow:none}
+.sh-lists [aria-pressed=true] .ls-check .icon{animation:heart-pop 360ms var(--ease-spring)}
+.sh-lists .ls-find{position:sticky;top:68px;z-index:1;background:var(--bg-elev);padding-bottom:var(--s3)}
+.sh-lists .ls-none{padding:var(--s6) 0;text-align:center}
+.sh-lists .cl-day-photo{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-md)}
+.sh-lists .cl-day-plate{width:min(240px,64%);justify-self:center;margin-bottom:var(--s3)}
+.sh-lists .cl-day-text{color:var(--ink-2);white-space:pre-wrap;overflow-wrap:anywhere}
+.sh-lists .cl-day-sheet .btn{margin-top:var(--s3)}

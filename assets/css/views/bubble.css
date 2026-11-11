@@ -1,0 +1,16 @@
+/* Fora da Bolha (.v-bubble). Cartões compactos: frasco à esquerda, ponte e surpresa à direita. Só tokens de base.css. */
+.v-bubble{display:block;max-width:880px;margin-inline:auto}
+.v-bubble .bb-seg{margin-top:var(--s4)}
+.v-bubble .bb-panel{margin-top:var(--s5)}
+.v-bubble .bb-list{display:block}
+.v-bubble .bb-card{display:grid;grid-template-columns:112px minmax(0,1fr);gap:var(--s4);padding:var(--s5) 0;align-items:start}
+.v-bubble .bb-plate{display:block;border-radius:var(--r-sm);overflow:hidden}
+.v-bubble .bb-plate .plate{border-radius:var(--r-sm)}
+.v-bubble .bb-body{display:grid;gap:var(--s2);min-width:0}
+.v-bubble .bb-body p,.v-bubble .bb-body h3{margin:0}
+.v-bubble .bb-brand{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.v-bubble .bb-body h3 a{color:inherit;text-decoration:none}
+.v-bubble .bb-family{margin-top:calc(var(--s1)*-1)}
+.v-bubble .bb-actions{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s2)}
+.v-bubble .bb-foot{margin-top:var(--s5)}
+@media (min-width:768px){.v-bubble .bb-card{grid-template-columns:180px minmax(0,1fr);gap:var(--s6)}}

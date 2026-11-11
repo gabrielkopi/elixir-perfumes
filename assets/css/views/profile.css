@@ -1,0 +1,114 @@
+/* Perfil e Pessoa (.v-profile). Só tokens de base.css. O tom (data-tone) muda apenas --card, --card-2 e --signal. */
+.v-profile{display:block;max-width:1080px;margin-inline:auto}
+
+/* ---------- cabeçalho ---------- */
+.v-profile .pf-head{position:relative;display:grid;grid-template-columns:minmax(0,1fr)}
+.v-profile .pf-cover{display:block;margin:0 calc(var(--gutter)*-1);aspect-ratio:4/3;background:var(--card);overflow:hidden}
+.v-profile .pf-cover img{width:100%;height:100%;object-fit:cover}
+.v-profile .pf-cover--none{aspect-ratio:auto;height:96px}
+.v-profile .pf-cover--sig{display:grid;place-items:center}
+.v-profile .pf-cover--sig .plate{height:70%;width:auto;aspect-ratio:3/4;border-radius:var(--r-sm);box-shadow:var(--sh-2)}
+@media (min-width:768px){
+  .v-profile .pf-cover{margin-inline:0;border-radius:var(--r-lg);aspect-ratio:3/1}
+  .v-profile .pf-cover--none{aspect-ratio:auto;height:120px}
+}
+.v-profile .pf-id{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s2);min-width:0}
+.v-profile .pf-top{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s3);margin-top:-45px;position:relative}
+.v-profile .pf-top .avatar{box-shadow:0 0 0 4px var(--bg)}
+.v-profile .pf-actions{display:flex;align-items:center;gap:var(--s2);flex:none}
+@media (min-width:768px){.v-profile .pf-top{padding-left:var(--s5)} .v-profile .pf-id>:not(.pf-top){margin-left:var(--s5)}}
+.v-profile .pf-name{margin-top:var(--s3);display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:anywhere}
+.v-profile .pf-name .badge{display:inline-grid;vertical-align:.18em;margin-left:var(--s2)}
+.v-profile .pf-handle{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s1) var(--s3);color:var(--muted);min-width:0}
+.v-profile .pf-handle>span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.v-profile .pf-priv{display:inline-flex;align-items:center;gap:6px;font-size:var(--t-sm)}
+.v-profile .pf-priv .icon{width:16px;height:16px}
+.v-profile .pf-bio{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink-2);max-width:56ch;margin-top:var(--s1)}
+.v-profile .pf-link{display:inline-flex;align-items:center;gap:6px;justify-self:start;max-width:100%;min-height:44px;font-weight:500;color:var(--ink)}
+.v-profile .pf-link>span:not(.sr-only){min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.v-profile .pf-link .icon{width:16px;height:16px;color:var(--muted)}
+@media (hover:hover){.v-profile .pf-link:hover>span:not(.sr-only){text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}}
+.v-profile .pf-tags{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.v-profile .pf-id>.pf-tags{margin-top:var(--s1)}
+.v-profile .pf-stats{display:flex;gap:var(--s6);margin:var(--s4) 0 0}
+.v-profile .pf-stat{display:flex;flex-direction:column-reverse;gap:6px;min-width:0}
+.v-profile .pf-stat dd{margin:0;font:500 22px/1 var(--sans);letter-spacing:-.02em;color:var(--ink)}
+.v-profile .pf-stat dt{font:500 11px/1.2 var(--sans);color:var(--muted)}
+.v-profile .pf-gift{margin-top:var(--s5);border-block:.5px solid var(--hair)}
+@media (min-width:768px){.v-profile .pf-gift{margin-left:var(--s5);max-width:560px}}
+
+/* ---------- corpo ---------- */
+.v-profile .pf-body{display:grid;grid-template-columns:minmax(0,1fr)}
+.v-profile .pf-body>.sec:first-child{margin-top:var(--s6)}
+
+/* Assinatura */
+.v-profile .pf-sig{display:grid;grid-template-columns:104px minmax(0,1fr);gap:var(--s5);align-items:center;margin-top:var(--s6);padding:var(--s4);border-radius:var(--r-lg);background:var(--card);color:inherit}
+.v-profile .pf-sig-plate .plate{border-radius:var(--r-sm)}
+.v-profile .pf-sig--empty .pf-sig-plate .plate{background:var(--card-2)}
+.v-profile .pf-sig-txt{display:grid;gap:var(--s2);justify-items:start;min-width:0}
+.v-profile .pf-sig-txt .t-h2{overflow-wrap:anywhere}
+.v-profile .pf-sig-txt .btn--tertiary{margin-left:calc(var(--s2)*-1)}
+.v-profile .pf-sig-brand{font:500 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.v-profile .pf-sig-notes{font-size:var(--t-sm);color:var(--ink-2)}
+.v-profile .pf-sig:focus-visible{outline-offset:4px}
+@media (hover:hover){.v-profile a.pf-sig:hover .plate img{transform:scale(1.03)}}
+@media (min-width:768px){.v-profile .pf-sig{grid-template-columns:148px minmax(0,1fr);gap:var(--s6);padding:var(--s5);max-width:720px}}
+
+/* Esse sou eu */
+.v-profile .pf-pin-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5) var(--s3)}
+.v-profile .pf-pin-grid--wide{display:none}
+.v-profile .pf-pin-rail [role=listitem]{width:clamp(128px,40vw,180px)}
+@media (min-width:768px){
+  .v-profile .pf-pin-rail{display:none}
+  .v-profile .pf-pin-grid,.v-profile .pf-pin-grid--wide{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s6) var(--s5)}
+}
+.v-profile .pf-portrait{display:grid;gap:var(--s3);margin-top:var(--s2);max-width:64ch}
+.v-profile .pf-prompt{display:grid;gap:var(--s2);justify-items:start}
+.v-profile .pf-prompt .btn--tertiary{margin-left:calc(var(--s2)*-1)}
+.v-profile .pf-rail-tile{width:clamp(128px,38vw,184px)}
+
+/* As três notas que ficam */
+.v-profile .pf-three .chips{margin-bottom:var(--s2)}
+.v-profile .pf-notes{display:grid;gap:var(--s3)}
+.v-profile .pf-notes-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s3)}
+.v-profile .pf-note{margin:0;display:grid;gap:var(--s2);justify-items:center;text-align:center;min-width:0}
+.v-profile .pf-note-img{display:grid;place-items:center;width:100%;aspect-ratio:1;border-radius:var(--r-md);color:inherit}
+.v-profile .pf-note-img img{width:88%;height:88%;object-fit:contain;transition:transform var(--d-5) var(--ease-out),opacity var(--d-3)}
+.v-profile .pf-note-img img.loading{opacity:0}
+@media (hover:hover){.v-profile a.pf-note-img:hover img{transform:scale(1.04) rotate(-1deg)}}
+.v-profile .pf-note-ph{display:grid;place-items:center;width:100%;height:100%;padding:var(--s3);border-radius:var(--r-md);background:var(--card);font:500 18px/1.1 var(--sans);letter-spacing:-.02em;overflow-wrap:anywhere}
+.v-profile .pf-note figcaption{display:grid;gap:2px}
+.v-profile .pf-note-name{font-size:15px;color:var(--ink);letter-spacing:-.01em}
+.v-profile .pf-note figcaption small{font-size:11px;color:var(--muted)}
+.v-profile .pf-notes-cap{margin:var(--s2) 0 0;text-align:center;font-size:var(--t-sm)}
+.v-profile .pf-three .t-eyebrow{text-align:center}
+@media (min-width:768px){.v-profile .pf-notes-row{max-width:720px;gap:var(--s6)} .v-profile .pf-notes>p{max-width:720px}}
+
+/* Abas */
+.v-profile .pf-panel{min-height:160px}
+@media (min-width:768px){.v-profile .pf-tabs>.seg{max-width:440px}}
+.v-profile .pf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;margin-inline:calc(var(--gutter)*-1)}
+.v-profile .pf-cell{position:relative;display:block;aspect-ratio:1;overflow:hidden;background:var(--plate)}
+.v-profile .pf-cell .plate{height:100%;aspect-ratio:auto;border-radius:0}
+.v-profile .pf-cell-img{width:100%;height:100%;object-fit:cover}
+.v-profile .pf-cell-date{position:absolute;left:var(--s2);bottom:var(--s2);padding:4px var(--s2);border-radius:var(--r-pill);background:var(--bg-elev);color:var(--ink);font:500 11px/1 var(--sans);box-shadow:var(--sh-1)}
+.v-profile .pf-cell:focus-visible{outline-offset:-3px}
+@media (min-width:768px){.v-profile .pf-grid{margin-inline:0;gap:var(--s2)} .v-profile .pf-cell{border-radius:var(--r-xs)}}
+@media (min-width:1024px){.v-profile .pf-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.v-profile .pf-reviews .row-trail .btn{min-width:72px}
+.v-profile .pf-map{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s4)}
+.v-profile .pf-map-axis{font-size:clamp(40px,8vw,64px)}
+.v-profile .pf-map-conf{display:grid;gap:var(--s1);margin-top:var(--s3)}
+.v-profile .pf-map-more{display:flex}
+.v-profile .pf-map-more .btn--tertiary{margin-left:calc(var(--s2)*-1)}
+.v-profile .pf-radar svg{display:block;width:100%;max-width:360px;height:auto;margin-inline:auto}
+.v-profile .pf-radar .r-grid{fill:none;stroke:var(--hair-strong);stroke-width:1}
+.v-profile .pf-radar .r-area{fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.5}
+.v-profile .pf-radar .r-dot{fill:var(--bg-elev);stroke:var(--signal);stroke-width:1.5}
+.v-profile .pf-radar .r-label{fill:var(--muted);font:500 11px var(--sans)}
+@media (min-width:768px){.v-profile .pf-map{grid-template-columns:repeat(2,minmax(0,1fr))} .v-profile .pf-map-more{grid-column:1/-1}}
+
+/* Pessoa */
+.v-profile .pf-compat{margin-top:var(--s5);max-width:64ch}
+.v-profile .pf-person-acts{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin-top:var(--s4)}
+@media (min-width:768px){.v-profile .pf-body>.pf-compat,.v-profile .pf-body>.pf-person-acts{margin-left:var(--s5)}}

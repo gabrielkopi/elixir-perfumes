@@ -1,11 +1,12 @@
 {
   "name": "elixir",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "description": "ELIXIR: rede social minimalista sobre perfumes",
   "scripts": {
     "start": "python -m http.server 5178",
     "check": "node -e \"const fs=require('fs'),path=require('path'),cp=require('child_process');const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(d,e.name)):e.name.endsWith('.js')?[path.join(d,e.name)]:[]);for(const f of walk('assets/js'))cp.execFileSync(process.execPath,['--check',f]);console.log('Sintaxe ok')\"",
-    "test": "npm run check && node tests/verify-engine.cjs && node tests/verify-discovery.cjs"
+    "test": "npm run check && node tests/run-all.cjs",
+    "test:ux": "python tests/ux/run_ux.py"
   }
 }

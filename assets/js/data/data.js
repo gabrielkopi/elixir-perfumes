@@ -39,7 +39,8 @@ sonar:{highlights:['Notas marinhas','Metálico','Amadeirado','Salgado'],source:'
 };
 const PRODUCT_PHOTOS=['polo','arbo','clash','extreme','coffee','unico','coolwater','santal','philosykos','blackorchid'];
 const PERFUMES=RAW.map(([id,name,brand,concentration,family,values,scene])=>({id,name,brand,concentration,family,scene,vector:DIMENSIONS.map((_,i)=>values[i]||0),image:PRODUCT_PHOTOS.includes(id)?`assets/products/${id}.jpg`:'',notes:VERIFIED[id]||null}));
-const byId=id=>PERFUMES.find(p=>p.id===id);
+const PERFUME_ALIASES={};
+const byId=(()=>{let index=null,size=-1;return id=>{if(size!==PERFUMES.length){index=new Map(PERFUMES.map(p=>[p.id,p]));size=PERFUMES.length;}return index.get(PERFUME_ALIASES[id]||id)||index.get(id);};})();
 const PEOPLE=[
 {id:'lucas',name:'Lucas Martins',initials:'LM',color:'#65755b',bio:'Entre folhas, raízes e clássicos. O verde sempre me encontra.',ratings:{vetiver:10,polo:9,arbo:9,terre:9,malbec:9,clash:8,philosykos:9,hwyl:8,coffee:7,lemale:5}},
 {id:'marina',name:'Marina Costa',initials:'MC',color:'#986956',bio:'Gosto de noites longas e perfumes que ficam na memória.',ratings:{lemale:10,malbec:8,coffee:9,unico:9,blackorchid:10,santal:8,vetiver:4,arbo:5,clash:6}},

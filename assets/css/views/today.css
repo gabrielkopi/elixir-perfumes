@@ -1,0 +1,55 @@
+/* Hoje (.v-today): clima real + escolha do dia; folhas Contexto (.sh-context) e Cidade (.sh-city). Só tokens de base.css. */
+.v-today{display:block;max-width:1080px;margin-inline:auto}
+.v-today .td-split{margin-top:var(--s4)}
+.v-today .td-main{display:grid;gap:var(--s5);min-width:0}
+
+/* Clima */
+.v-today .td-weather{gap:var(--s3)}
+.v-today .td-w-head{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);margin:calc(var(--s2)*-1) calc(var(--s2)*-1) 0 0}
+.v-today .td-w-head .t-eyebrow{margin:0}
+.v-today .td-w-main{display:flex;align-items:flex-end;gap:var(--s4)}
+.v-today .td-w-label{display:grid;gap:2px;padding-bottom:var(--s2);min-width:0}
+.v-today .td-w-label p{margin:0}
+.v-today .td-w-meta{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);margin:var(--s2) 0 0;padding-top:var(--s3);border-top:.5px solid var(--hair);font-size:var(--t-sm);color:var(--muted)}
+.v-today .td-w-meta span{white-space:nowrap}
+.v-today .td-w-actions{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s2)}
+.v-today .td-ask h2{margin:0}
+.v-today .td-ask-text{margin:0;color:var(--muted);max-width:44ch}
+.v-today .td-credit{font-size:11px;color:var(--faint)}
+.v-today .td-manual{margin:var(--s2) 0 0;font-size:var(--t-sm);color:var(--muted)}
+.v-today .td-stepper{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);margin-top:var(--s2)}
+.v-today .td-temp{font-weight:500;font-variant-numeric:tabular-nums}
+.v-today .td-step-btns{display:flex;gap:var(--s2)}
+
+/* Escolha do dia */
+.v-today .td-pick{display:grid;gap:var(--s4)}
+.v-today .td-plate{display:block;border-radius:var(--r-lg);overflow:hidden}
+.v-today .td-plate .plate{aspect-ratio:4/5;border-radius:var(--r-lg)}
+.v-today .td-pick-body{display:grid;gap:var(--s2);align-content:start}
+.v-today .td-pick-body .t-eyebrow,.v-today .td-pick-body h2,.v-today .td-pick-body p{margin:0}
+.v-today .td-brand{font-size:var(--t-sm);color:var(--muted)}
+.v-today .td-reasons{margin:var(--s2) 0 0;padding:0;list-style:none;display:grid;gap:var(--s2)}
+.v-today .td-reasons li{display:flex;align-items:flex-start;gap:var(--s2);font-size:15px;line-height:1.4}
+.v-today .td-reasons .icon{width:16px;height:16px;flex:none;margin-top:3px;color:var(--signal)}
+.v-today .td-chance{font-size:var(--t-sm);color:var(--muted)}
+.v-today .td-chance b{color:var(--ink);font-weight:600}
+.v-today .td-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin-top:var(--s3)}
+.v-today .td-note{padding:var(--s3) var(--s4);border-radius:var(--r-md);background:var(--fill);font-size:var(--t-sm)}
+@media (min-width:640px){.v-today .td-pick{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:var(--s6)}}
+
+/* Ajustar o dia */
+.v-today .td-aside{display:grid;gap:var(--s5);align-content:start}
+.v-today .td-aside>h2{margin:0}
+.v-today .td-group{display:grid;gap:var(--s2)}
+.v-today .td-label{margin:0;font-size:var(--t-eyebrow);font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.v-today .td-hint{margin:0;font-size:var(--t-sm);color:var(--muted)}
+
+/* Folha: cidade */
+.sh-city .cy-search{margin-bottom:var(--s3)}
+.sh-city .cy-locate{margin-bottom:var(--s3)}
+.sh-city .cy-quick{display:flex;flex-wrap:wrap;gap:var(--s2);margin-bottom:var(--s4)}
+.sh-city .cy-opt{display:flex;align-items:center;gap:var(--s3);width:100%;min-height:56px;text-align:left}
+.sh-city .cy-msg{font-size:var(--t-sm);color:var(--muted);padding:var(--s3) 0}
+.sh-city .cy-foot{margin-top:var(--s4);font-size:11px;color:var(--faint)}
+.v-today .td-controls{display:grid;gap:var(--s5)}
+.v-today .td-controls--compact{gap:var(--s4)}

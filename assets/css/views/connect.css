@@ -1,0 +1,53 @@
+/* ELIXIR Connect (.v-connect: consentimento, QR, histórico) e o modo loja de demonstração (.v-store). Só tokens de base.css. */
+.v-connect{display:block;max-width:640px;margin-inline:auto}
+.v-connect .cn-panel{margin-top:var(--s5)}
+.v-connect .cn-consent{display:grid;gap:var(--s5)}
+.v-connect .cn-label{margin:0 0 var(--s1);font-size:var(--t-eyebrow);font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.v-connect .cn-scopes{display:block}
+.v-connect .cn-dur,.v-connect .cn-budget{display:grid;gap:var(--s2)}
+.v-connect .cn-promise{display:flex;align-items:flex-start;gap:var(--s2);margin:0;font-size:var(--t-sm);color:var(--muted)}
+.v-connect .cn-promise .icon{width:16px;height:16px;flex:none;margin-top:2px}
+.v-connect .cn-go{display:grid;gap:var(--s2)}
+.v-connect .cn-foot{display:grid;gap:var(--s2);margin-top:var(--s6);padding-top:var(--s4);border-top:.5px solid var(--hair);font-size:12px;color:var(--muted)}
+.v-connect .cn-foot p{margin:0}
+
+/* Sessão ativa */
+.v-connect .cn-active{display:grid;gap:var(--s5);justify-items:center;text-align:center}
+.v-connect .cn-qr{margin:0;display:grid;gap:var(--s3);justify-items:center}
+.v-connect .cn-qr svg{width:min(240px,64vw);height:auto;padding:var(--s4);border-radius:var(--r-lg);background:var(--bg-elev);box-shadow:var(--sh-2);animation:unblur var(--d-5) var(--ease-out) both}
+.v-connect .cn-qr figcaption{max-width:32ch}
+.v-connect .cn-timer{display:grid;gap:var(--s1)}
+.v-connect .cn-timer .countdown{margin:0;font-size:var(--t-num);font-weight:400;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.v-connect .cn-timer p{margin:0}
+.v-connect .cn-shared{display:grid;gap:var(--s2);justify-items:center;width:100%}
+.v-connect .cn-shared .chips{justify-content:center}
+.v-connect .cn-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s2)}
+.v-connect .cn-status{display:inline-flex;align-items:center;min-height:24px;padding:0 var(--s2);border-radius:var(--r-pill);background:var(--fill);font-size:11px;font-weight:500}
+.v-connect .cn-status.on{background:var(--ink);color:var(--on-ink)}
+.v-connect .cn-hist{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);min-height:56px;font-size:var(--t-sm)}
+.v-connect .cn-trim{font-size:var(--t-sm);color:var(--muted)}
+
+/* Modo loja (demonstração) */
+.v-store{display:block;max-width:1180px;margin-inline:auto;padding-top:var(--s4)}
+.v-store .st-close{display:flex;justify-content:flex-end}
+.v-store .st-head{display:grid;gap:var(--s2);margin-bottom:var(--s5)}
+.v-store .st-head p{margin:0}
+.v-store .st-grid{display:grid;gap:var(--s6)}
+.v-store .st-side{display:grid;gap:var(--s5);align-content:start}
+.v-store .st-filters{display:grid;gap:var(--s4)}
+.v-store .st-filter{display:grid;gap:var(--s2)}
+.v-store .st-label{margin:0;font-size:var(--t-eyebrow);font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.v-store .st-panel{min-width:0}
+.v-store .st-list{margin:0;padding:0;list-style:none}
+.v-store .st-row{padding:var(--s3) 0}
+.v-store .st-row.owned{opacity:.55}
+.v-store .st-main{display:flex;align-items:center;gap:var(--s3);color:inherit;text-decoration:none}
+.v-store .st-thumb{width:64px;height:64px;flex:none;aspect-ratio:1;border-radius:var(--r-xs)}
+.v-store .st-thumb img{width:100%;height:100%;object-fit:contain;padding:6px}
+.v-store .st-meta{display:grid;gap:2px;flex:1;min-width:0}
+.v-store .st-brand{font-size:12px;color:var(--muted)}
+.v-store .st-pct{font-size:var(--t-h3);font-weight:500;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.v-store .st-why{margin:var(--s2) 0 0 calc(64px + var(--s3));font-size:var(--t-sm);color:var(--muted)}
+.v-store .st-basis{margin-top:var(--s3)}
+.v-store .st-foot{margin-top:var(--s6);font-size:12px;color:var(--muted)}
+@media (min-width:960px){.v-store .st-grid{grid-template-columns:320px minmax(0,1fr);gap:var(--s8)}}

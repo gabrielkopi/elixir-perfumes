@@ -1,0 +1,31 @@
+/* Marcas (A–Z, página da marca) e Edições. Só tokens. */
+.v-brand .br-count{margin:var(--s5) 0 0}
+.v-brand .br-az{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s5);margin-top:var(--s2)}
+.v-brand .br-lh{position:sticky;top:var(--topbar-h);z-index:1;padding:var(--s3) 0;background:var(--bg);color:var(--muted)}
+.v-brand .br-list{list-style:none;margin:0;padding:0}
+.v-brand .br-row{display:flex;align-items:center;gap:var(--s3);min-height:68px;padding:var(--s2) 0;color:inherit}
+.v-brand .br-row .grow{flex:1;min-width:0;display:grid;gap:2px}
+.v-brand .br-row b{font:600 var(--t-h3)/1.25 var(--sans);letter-spacing:-.01em;overflow-wrap:anywhere}
+.v-brand .br-row .grow span{font-size:var(--t-sm);color:var(--muted)}
+.v-brand .br-row>.icon{color:var(--muted);transition:transform var(--d-3) var(--ease-out)}
+@media (hover:hover){.v-brand .br-row:hover>.icon{transform:translateX(3px);color:var(--ink)}}
+@media (min-width:1024px){.v-brand .br-az{grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s6) var(--s7);align-items:start} .v-brand .br-lh{position:static}}
+
+/* Página da marca */
+.v-brand .br-hero{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);padding:var(--s4) 0 var(--s2)}
+.v-brand .br-name{line-height:.9}
+.v-brand .br-name--long{white-space:normal}
+.v-brand .br-bars{max-width:560px}
+.v-brand .br-all{display:flex;justify-content:center;margin-top:var(--s6)}
+
+/* Edições */
+.v-brand .eds-list{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s2);margin-top:var(--s5)}
+.v-brand .eds-cover,.v-brand .eds-hero{aspect-ratio:4/5}
+.v-brand .eds-cover:focus-visible{outline:2px solid var(--ink);outline-offset:-2px;box-shadow:inset 0 0 0 4px var(--bg)}
+.v-brand .eds-cover .caption{gap:var(--s3)}
+.v-brand .eds-cover img{transition:transform var(--d-5) var(--ease-out),filter .6s var(--ease-out)}
+@media (hover:hover){.v-brand .eds-cover:hover img{transform:scale(1.02)}}
+@media (min-width:768px){.v-brand .eds-cover,.v-brand .eds-hero{aspect-ratio:16/9}}
+@media (min-width:1024px){.v-brand .eds-cover,.v-brand .eds-hero{aspect-ratio:21/9}}
+.v-brand .eds-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s4);padding-top:var(--s5)}
+.v-brand .eds-thesis{font-size:var(--t-h3);line-height:1.45;color:var(--ink-2);max-width:44ch}

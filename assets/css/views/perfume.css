@@ -1,0 +1,101 @@
+/* Página do perfume, folha "Mais ações" e folha de avaliação. Só tokens. */
+.v-perfume .pf-split{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s5)}
+.v-perfume .pf-hero{margin-inline:calc(var(--gutter)*-1);background:var(--plate)}
+.v-perfume .pf-plate{width:100%;max-width:560px;margin:0 auto;aspect-ratio:1;border-radius:0}
+.v-perfume .pf-plate img{padding:12%}
+.v-perfume .pf-main{display:grid;grid-template-columns:minmax(0,1fr);align-content:start;min-width:0}
+.v-perfume .pf-head{display:grid;gap:var(--s2)}
+.v-perfume .pf-brand{display:inline-flex;align-items:center;min-height:44px;width:max-content;max-width:100%;margin-bottom:calc(var(--s2)*-1);color:var(--muted);transition:color var(--d-2)}
+@media (hover:hover){.v-perfume .pf-brand:hover{color:var(--ink)}}
+.v-perfume .pf-name{font-size:min(var(--t-display),64px)}
+.v-perfume .pf-meta{font-size:var(--t-body)}
+.v-perfume .pf-mine{color:var(--ink-2)}
+.v-perfume .pf-mine b{font-weight:500;color:var(--ink)}
+.v-perfume .pf-actions{display:grid;gap:var(--s3);margin-top:var(--s5)}
+.v-perfume .pf-row{display:flex;align-items:center;gap:var(--s2)}
+.v-perfume .pf-row .btn{flex:1;min-width:0}
+@media (min-width:1024px){
+  .v-perfume .pf-split{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s7);align-items:start;padding-top:var(--s4)}
+  .v-perfume .pf-hero{margin-inline:0;position:sticky;top:calc(var(--topbar-h) + var(--s5));background:none}
+  .v-perfume .pf-plate{max-width:none;aspect-ratio:4/5;max-height:calc(100dvh - var(--topbar-h) - var(--s8));border-radius:var(--r-md)}
+  .v-perfume .pf-head{padding-top:var(--s5)}
+}
+
+/* Cartões de dados */
+.v-perfume .pf-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);margin-top:var(--s6)}
+@media (min-width:640px){.v-perfume .pf-cards{grid-template-columns:repeat(2,minmax(0,1fr))} .v-perfume .pf-you,.v-perfume .pf-season{grid-column:1/-1}}
+.v-perfume .data-card{align-content:start}
+.v-perfume .pf-you-top{display:flex;align-items:center;justify-content:space-between;gap:var(--s4)}
+.v-perfume .pf-you-top .gauge{flex:none}
+.v-perfume .pf-num{margin-bottom:var(--s1)}
+.v-perfume .pf-you .why{margin-top:var(--s2)}
+.v-perfume .pf-quote{color:var(--ink-2)}
+.v-perfume .pf-factors{display:grid;gap:var(--s2);margin:0;padding:0;list-style:none}
+.v-perfume .pf-factors li{display:flex;gap:var(--s3);line-height:1.4}
+.v-perfume .pf-factors li::before{content:"";flex:none;width:6px;height:6px;margin-top:.5em;border-radius:50%;background:var(--signal)}
+.v-perfume .pf-blind .dc-foot{padding-top:0;margin-left:calc(var(--s2)*-1)}
+.v-perfume .pf-temp{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:var(--s3);margin-top:var(--s1)}
+.v-perfume .pf-track{position:relative;height:2px;border-radius:2px;background:var(--hair-strong)}
+.v-perfume .pf-track i{position:absolute;top:50%;left:calc(var(--x,.5)*100%);width:12px;height:12px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 3px var(--card);transform:translate(-50%,-50%)}
+.v-perfume .pf-occ{display:grid;gap:0 var(--s6);margin:var(--s2) 0 0;padding:0;list-style:none}
+.v-perfume .pf-occ li{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);min-height:36px;font-size:14px;border-top:.5px solid var(--hair)}
+@media (min-width:640px){.v-perfume .pf-occ{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.v-perfume .pf-dots{display:inline-flex;gap:5px;flex:none}
+.v-perfume .pf-dots i{width:7px;height:7px;border-radius:50%;background:var(--hair-strong)}
+.v-perfume .pf-dots i.on{background:var(--ink)}
+.v-perfume .pf-perfcard .seg{margin:var(--s1) 0 var(--s2)}
+.v-perfume #panel-perf{display:grid;gap:var(--s2);align-content:start}
+.v-perfume .pf-perf{display:flex;align-items:flex-end;flex-wrap:wrap;gap:var(--s2) var(--s6)}
+.v-perfume .pf-proj{display:flex;align-items:center;min-height:56px}
+.v-perfume .pf-proj .pf-dots{gap:6px}
+.v-perfume .pf-proj .pf-dots i{width:10px;height:10px}
+
+/* Notas oficiais × percepções */
+.v-perfume .pf-sec{margin-top:var(--s7)}
+.v-perfume .pf-pyr{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s5)}
+@media (min-width:640px){.v-perfume .pf-pyr{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}}
+.v-perfume .pf-tier{display:grid;gap:var(--s3);align-content:start}
+.v-perfume .pf-note{padding-left:6px;gap:var(--s2);max-width:100%}
+.v-perfume .pf-note span{overflow:hidden;text-overflow:ellipsis}
+.v-perfume .pf-note img{width:32px;height:32px;border-radius:50%;object-fit:contain;background:var(--card);flex:none}
+.v-perfume .pf-note--plain{padding-left:var(--s4)}
+.v-perfume .pf-src{line-height:1.7}
+.v-perfume .pf-src a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.v-perfume .pf-ext{width:12px;height:12px;margin-left:2px;vertical-align:-1px}
+.v-perfume .pf-demo{margin-top:calc(var(--s2)*-1)}
+.v-perfume .pf-bars{max-width:560px}
+.v-perfume .pf-agree b,.v-perfume .pf-mine-notes b{font-weight:500}
+.v-perfume .pf-div{display:grid;gap:var(--s2);margin:0;padding:0;list-style:none;font-size:14px}
+.v-perfume .pf-div b{font-weight:500}
+.v-perfume .pf-mine-notes{color:var(--ink-2)}
+.v-perfume .pf-shop{margin-top:calc(var(--s2)*-1)}
+.v-perfume .pf-tip{max-width:56ch;color:var(--ink-2)}
+.v-perfume .pf-rails{min-width:0}
+.v-perfume .pf-layer{display:grid;gap:var(--s2);max-width:560px}
+
+/* Folha "Mais ações" */
+.sh-more .link-row{width:100%;text-align:left}
+
+/* Folha de avaliação */
+.sh-rate{display:grid;gap:var(--s4)}
+.sh-rate .rt-top{display:flex;align-items:center;gap:var(--s3);padding-top:var(--s1)}
+.sh-rate .rt-thumb{width:52px;flex:none}
+.sh-rate .rt-thumb img{padding:8%}
+.sh-rate .rt-thumb .fallback{padding:2px}
+.sh-rate .rt-thumb .fallback span{font-size:9px}
+.sh-rate .rt-id{display:grid;gap:2px;min-width:0}
+.sh-rate .rt-id b{font:500 var(--t-body)/1.3 var(--sans)}
+.sh-rate .rt-q{margin-top:var(--s2)}
+.sh-rate .rt-meta{margin-top:calc(var(--s2)*-1)}
+.sh-rate .rt-more{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);width:100%;min-height:56px;padding:0 var(--s1);border-top:.5px solid var(--hair);font:500 var(--t-body)/1.2 var(--sans);text-align:left}
+.sh-rate .rt-more .icon{transition:transform var(--d-3) var(--ease-out)}
+.sh-rate .rt-more[aria-expanded=true] .icon{transform:rotate(180deg)}
+.sh-rate .rt-details{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows var(--d-4) var(--ease-out),opacity var(--d-3) var(--ease-out)}
+.sh-rate .rt-details[data-open=true]{grid-template-rows:1fr;opacity:1}
+.sh-rate .rt-inner{display:grid;gap:var(--s6);min-height:0;overflow:hidden;padding:4px;margin:-4px}
+.sh-rate .rt-group{display:grid;gap:var(--s3)}
+.sh-rate .rt-hint{text-transform:none;letter-spacing:0;font-weight:400}
+.sh-rate .rt-other{display:grid;gap:var(--s3);margin-top:var(--s2)}
+.sh-rate .rt-sug:empty{display:none}
+.sh-rate .rt-plus{width:16px;height:16px}
+.sh-rate .rt-foot{display:grid;gap:var(--s1);justify-items:center;margin:var(--s2) calc(var(--s5)*-1) calc(var(--s6)*-1)}

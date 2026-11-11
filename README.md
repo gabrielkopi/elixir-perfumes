@@ -1,6 +1,6 @@
 # ELIXIR
 
-Uma rede social minimalista sobre perfumes: feed, stories, perfis, catálogo de 101 fragrâncias, notas olfativas e uma assinatura pessoal calculada a partir do seu gosto.
+Uma rede social minimalista sobre perfumes: feed, stories, perfis, um catálogo com perfumes nacionais e importados, notas olfativas, o Guia para saber qual perfume comprar e um mapa olfativo pessoal que explica cada recomendação.
 
 **Site:** https://gabrielkopi.github.io/elixir-perfumes/
 
@@ -23,22 +23,26 @@ Os dados ficam no navegador (`localStorage`). Não há servidor nem sincronizaç
 
 `elixir-apresentacao.html`: apresentação em movimento, 14 cenas que tocam sozinhas (cerca de 3 min 40 s). Setas avançam e voltam, espaço pausa, F abre em tela cheia. Os números e imagens vêm do catálogo real do app.
 
-## Estrutura
+## Estrutura (v3 "Ink & Paper")
 
 ```
-index.html, elixir.html, assinatura.html   Entradas (ELIXIR e a variante ASSINATURA)
-assets/css/app.css                          Folha de estilo única, com tokens de tema
+index.html, elixir.html, assinatura.html, perfume-social.html   Entradas (mesma lista de scripts, ?v=91)
+assets/css/fonts.css        DM Sans 400/500/600/700 (única fonte)
+assets/css/base.css         Tokens, tema claro/escuro, componentes globais, shell, blur e barras de rolagem
+assets/css/views/*.css      Uma folha por tela, só com seletores do próprio namespace (.v-*, .sh-*)
 assets/js/
-  data/      Catálogo, notas, comunidade demonstrativa (sem lógica de tela)
-  engine/    Motor de afinidade e identidade olfativa
-  core/      dom (utilitários), store (estado + migração), router, motion (tema, animações, modal), components
-  views/     Uma tela por arquivo: feed, stories, profile, explore, perfume, notes, collection, discovery, search, activity, compose, shell
-  actions.js Todas as interações: data-action="nome" chama Actions.nome
-  main.js    Ponto de entrada
-tests/       Verificações do motor e da descoberta
+  data/      Catálogo, notas, ingredientes, comunidade demonstrativa (sem lógica de tela)
+  engine/    Motores puros (afinidade, Guia, mapa olfativo)
+  core/      dom, profile-rules, store (v3 + migração), catalog, router, motion (Motion/Sheet/Theme),
+             components (UI.*), actions (despachante), weather
+  views/     Uma tela por arquivo; cada uma registra as próprias rotas com Router.add
+  actions.js Ações globais do core (Actions.add)
+  main.js    App.boot / App.render
+docs/        Especificação (redesign-spec.md), requisitos e contratos do core (contracts-core.md)
+tests/       Verificações em Node (npm test) e cenários de UX em Python Playwright (npm run test:ux)
 ```
 
-Fluxo: uma ação altera o estado com `Store.update()`, que salva e avisa o `App.render()`. As telas são funções puras que devolvem HTML. Curtir, salvar e favoritar atualizam só os botões afetados, sem redesenhar a página.
+Fluxo: uma ação altera o estado com `Store.update()`, que saneia, salva e redesenha sem transição. Trocas de rota usam View Transitions com blur (ou a animação equivalente quando o navegador não tem a API). Segmentos, curtidas, seguir e estantes atualizam no lugar.
 
 ## Rodar
 
@@ -57,3 +61,17 @@ npm test
 ## Créditos
 
 Perfis, métricas, selo de verificação e gostos são demonstrações. Retratos da comunidade e ilustrações de famílias foram gerados com IA; prompts nos manifests. Fotos de produtos e marcas pertencem aos seus titulares (fontes em `assets/products/catalog-images.json` e `assets/research/social-product-sources.json`). Base Scento adaptada sob CC BY 4.0, com atribuição nas páginas e em `assets/catalog-source/LICENSE`. Fontes DM Sans e Italiana sob OFL (`assets/LICENSE-*.txt`).
+
+## Testes
+
+```bash
+npm test          # sintaxe + verificações (motor, store v3, globais, CSS, catálogo, privacidade, Guia, intel)
+npm run test:ux   # cenários de interface com Python Playwright (Chromium headless)
+```
+
+Verificações de outros grupos que ainda não existem aparecem como PULADO, nunca como aprovadas.
+
+## Privacidade
+
+Tudo fica no navegador (`localStorage`). Em Ajustes › Privacidade e dados dá para exportar um JSON com tudo o que está salvo ou apagar os dados deste aparelho. O clima real só é buscado no Open-Meteo depois que você escolhe uma cidade ou permite a localização.
+

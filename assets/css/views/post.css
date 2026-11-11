@@ -1,0 +1,65 @@
+/* Post (feed): cartão editorial de publicação, grade 3 colunas e a folha "Mais opções". Só tokens de base.css. */
+.post{display:block;min-width:0}
+.post-in{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3)}
+
+/* autor */
+.post-head{display:flex;align-items:center;gap:var(--s1);min-height:44px;margin-right:calc(var(--s2)*-1)}
+.post-who{display:flex;align-items:center;gap:var(--s3);flex:1;min-width:0;min-height:44px;border-radius:var(--r-pill);color:inherit}
+.post-id{display:grid;gap:3px;min-width:0}
+.post-name{display:flex;align-items:center;gap:var(--s1);min-width:0}
+.post-name b{font:500 14px/1.2 var(--sans);letter-spacing:-.005em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.post-meta{font-size:12px;line-height:1.2;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.post-head .icon-btn{color:var(--muted)}
+
+/* foto 4:5 (duplo toque curte) */
+.post-media{position:relative;aspect-ratio:4/5;border-radius:var(--r-sm);overflow:hidden;background:var(--card);touch-action:manipulation;-webkit-user-select:none;user-select:none;cursor:default}
+.post-media>img{width:100%;height:100%;object-fit:cover;transition:opacity var(--d-4) var(--ease-out),transform var(--d-5) var(--ease-out)}
+.post-media>img.loading{opacity:0}
+.post-media>.plate{height:100%;aspect-ratio:auto;border-radius:0}
+.post-media>.plate img{padding:16%}
+@media (hover:hover){.post-media:hover>img{transform:scale(1.015)}}
+
+/* ações */
+.post-bar{display:flex;align-items:center;gap:var(--s1);margin:calc(var(--s2)*-1) calc(var(--s2)*-1) calc(var(--s2)*-1) calc(var(--s2)*-1)}
+.post-act{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:0 var(--s2);border-radius:var(--r-pill);color:var(--ink)}
+.post-act .icon{width:24px;height:24px}
+.post-act.heart.on{color:var(--like)}
+.post-n{font:500 13px/1 var(--sans);color:var(--muted)}
+.post-n:empty{display:none}
+.post-sp{flex:1}
+@media (hover:hover){.post-act:hover{background:var(--fill)}}
+
+/* legenda (3 linhas + "mais") e etiqueta do perfume */
+.post-cap{font-size:var(--t-body);line-height:1.5;color:var(--ink-2);overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.post-cap.open{display:block;-webkit-line-clamp:unset}
+.post-more-text{justify-self:start;min-height:44px;margin:calc(var(--s3)*-1) 0 calc(var(--s2)*-1);padding:0;font:500 14px/1 var(--sans);color:var(--muted)}
+.post-more-text[hidden]{display:none}
+.post-tag{justify-self:start;display:inline-flex;align-items:center;gap:var(--s3);max-width:100%;min-height:52px;padding:4px var(--s3) 4px 4px;border-radius:var(--r-pill);background:var(--fill);color:var(--ink)}
+.post-tag-img{width:44px;height:44px;flex:none;border-radius:50%;overflow:hidden}
+.post-tag-img .plate{width:100%;height:100%;aspect-ratio:1;border-radius:50%}
+.post-tag-img .plate img{padding:12%}
+.post-tag-img .fallback{display:none}
+.post-tag-txt{display:grid;gap:3px;min-width:0}
+.post-tag-txt b{font:500 14px/1.2 var(--sans);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.post-tag-txt small{font:500 10px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.post-tag>.icon{color:var(--muted);margin-left:calc(var(--s1)*-1)}
+@media (hover:hover){.post-tag:hover{background:var(--fill-press)}}
+
+/* compacto: grades e trilhos */
+.post--compact .post-media{aspect-ratio:1}
+.post--compact .post-cap{font-size:14px;-webkit-line-clamp:2}
+
+/* grade 3 colunas */
+.post-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;border-radius:var(--r-sm);overflow:hidden}
+.post-cell{position:relative;display:block;aspect-ratio:1;overflow:hidden;background:var(--card)}
+.post-cell>img{width:100%;height:100%;object-fit:cover;transition:transform var(--d-5) var(--ease-out),opacity var(--d-3)}
+.post-cell>img.loading{opacity:0}
+.post-cell>.plate{height:100%;aspect-ratio:auto;border-radius:0}
+.post-cell:focus-visible{outline-offset:-3px}
+@media (hover:hover){.post-cell:hover>img{transform:scale(1.03)}}
+
+/* folha "Mais opções" e publicação aberta numa folha */
+.post-sheet{display:grid}
+.post-sheet .link-row{width:100%;text-align:left}
+.post-sheet--card{padding-top:var(--s2)}
+.post-sheet--card .post-head .icon-btn{display:none}

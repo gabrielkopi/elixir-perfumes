@@ -1,0 +1,30 @@
+{
+  "chanel5": {
+    "image": "https://media.marionnaud.fr/medias/sys_master/prd-images/h46/hcf/12442197884958/prd-front-100005089_2000x2000/prd-front-100005089-2000x2000.png",
+    "source": "https://www.marionnaud.fr/parfum/parfum-femme/eau-de-parfum/n5-eau-de-parfum-chanel/p/BP_100005086"
+  },
+  "bleu": {
+    "image": "https://www.chanel.com/images/t_one/t_fragrance/q_auto%3Agood%2Cf_auto%2Cfl_lossy%2Cdpr_1.1/w_1920/bleu-de-chanel-eau-de-parfum-spray-5fl-oz--packshot-default-107370-9564893315102.jpg",
+    "source": "https://www.chanel.com/za/fragrance/p/107370/bleu-de-chanel-eau-de-parfum-spray/"
+  },
+  "terre": {
+    "image": "https://media.marionnaud.fr/medias/sys_master/prd-images/hd7/hb5/12440139563038/prd-front-102131861_2000x2000/prd-front-102131861-2000x2000.png",
+    "source": "https://www.marionnaud.fr/homme/parfum-homme/eau-de-toilette/terre-dhermes-eau-de-toilette-hermes/p/BP_102131861"
+  },
+  "chance": {
+    "image": "https://assets.woolworthsstatic.co.za/Eau-De-Toilette-Spray-50ml-503694470.jpg?V=Zver&o=eyJidWNrZXQiOiJ3dy1vbmxpbmUtaW1hZ2UtcmVzaXplIiwia2V5IjoiaW1hZ2VzL2VsYXN0aWNlcmEvcHJvZHVjdHMvaGVyby8yMDIxLTAxLTI4LzUwMzY5NDQ3MF81ME1MX2hlcm8uanBnIn0&q=75",
+    "source": "https://www.woolworths.co.za/prod/_/A-503694470"
+  },
+  "homem": {
+    "image": "https://dedcosmeticosonline.com.br/cdn/shop/files/ColoniaNaturaHomemTradicoinal100ml1.png?v=1751988760&width=1445",
+    "source": "https://dedcosmeticosonline.com.br/products/colonia-natura-homem-100-ml-natura?srsltid=AfmBOoqDBJABAHC3wNL4kK6wx9DpVJO1NnShQRUgtjkjOn_21t4ej_ya"
+  },
+  "hwyl": {
+    "image": "https://cms.brnstc.de/product_images/680x930_retina/cpro/s3li/1122x1536/20/06/9319944012941_0.jpg",
+    "source": "https://www.breuninger.com/de/marken/aesop/hwyl/1001073505/p/"
+  },
+  "exclusivo": {
+    "image": "https://cisterli.com/cdn/shop/files/Cirterli_essencial_esclusivo_deo_parfum_masculino.jpg?v=1727913159",
+    "source": "https://cisterli.com/products/essencial-exclusivo-deo-parfum-masculino"
+  }
+}

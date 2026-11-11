@@ -34,13 +34,27 @@ for(const p of COMMUNITY.products){const x=p.catalog&&byId(p.catalog);if(x&&!x.i
 /* Acesso unificado a pessoas, produtos e publicações (comunidade + perfis antigos + você). */
 const People={
  find(id){return COMMUNITY.people.find(p=>p.id===id);},
- legacy(id){return PEOPLE.find(p=>p.id===id);},
+ legacy(id){return typeof PEOPLE!=='undefined'?PEOPLE.find(p=>p.id===id):undefined;},
+ /* Todas as pessoas: comunidade + perfis antigos, unidos por id (avaliações de PEOPLE; notas, família e imagem da comunidade). */
+ all(){if(this._all&&this._n===COMMUNITY.people.length+(typeof PEOPLE!=='undefined'?PEOPLE.length:0))return this._all;
+  const legacy=typeof PEOPLE!=='undefined'?PEOPLE:[],ids=[...new Set([...COMMUNITY.people.map(p=>p.id),...legacy.map(p=>p.id)])];
+  const out=ids.map(id=>{const c=COMMUNITY.people.find(p=>p.id===id),l=legacy.find(p=>p.id===id),name=(c||l).name;
+   return {id,name,handle:c?c.handle:id,image:c?c.image:(l.image||''),initials:l&&l.initials?l.initials:name.split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase(),
+    verified:!!(c&&c.verified),role:c?c.role:'',bio:c?c.bio:(l?l.bio:''),followers:c?c.followers:0,following:c?c.following:0,family:c?c.family:'',nuance:c?c.nuance:'',
+    liked:c&&c.liked?c.liked:[],disliked:c&&c.disliked?c.disliked:[],picks:c&&c.picks?c.picks:[],ratings:{...(l?l.ratings:(c&&c.ratings)||{})},
+    shareMap:id!=='tiago',source:c&&l?'both':c?'community':'legacy'};});
+  this._n=COMMUNITY.people.length+legacy.length;this._all=out;return out;},
+ get(id){return this.all().find(p=>p.id===id)||null;},
+ handles(){return this.all().map(p=>p.handle);},
+ /* Afinidade só para ordenar internamente; nunca é exibida como um % global. */
+ affinity(id){const u=this.get(id);if(!u||typeof Engine==='undefined'||typeof state==='undefined')return 0;try{return Engine.compatibility(state.ratings,u).score||0;}catch(e){return 0;}},
  author(uid){
-  if(uid==='me')return {id:'me',name:state.name,handle:Select.handle(),avatar:UI.avatar(null),href:'#profile',own:true};
-  const s=this.find(uid);if(s)return {id:s.id,name:s.name,handle:s.handle,verified:s.verified,image:s.image,avatar:UI.avatar(s),href:'#person/'+s.id};
-  const u=this.legacy(uid);return u?{id:u.id,name:u.name,handle:u.id,avatar:UI.avatar(u),href:'#person/'+u.id}:{id:uid,name:'Perfil',handle:uid,avatar:UI.avatar({initials:'?'}),href:'#home'};
+  if(uid==='me'){const pr=typeof state!=='undefined'&&state.profile?state.profile:{name:'Você',handle:'voce'};return {id:'me',name:pr.name,handle:pr.handle,avatar:typeof UI!=='undefined'?UI.avatar(null):'',href:'#profile',own:true};}
+  const s=this.find(uid),av=u=>typeof UI!=='undefined'?UI.avatar(u):'';if(s)return {id:s.id,name:s.name,handle:s.handle,verified:s.verified,image:s.image,avatar:av(s),href:'#person/'+s.id};
+  const u=this.legacy(uid);return u?{id:u.id,name:u.name,handle:u.id,initials:u.initials,avatar:av(u),href:'#person/'+u.id}:{id:uid,name:'Perfil',handle:uid,avatar:av({initials:'?',name:'?'}),href:'#home'};
  },
- suggestions(n=4){return COMMUNITY.people.filter(p=>!state.following.includes(p.id)).slice(0,n);}
+ suggestions(n=4){const following=typeof state!=='undefined'?state.following:[];
+  return this.all().filter(p=>!following.includes(p.id)).map(p=>[this.affinity(p.id),p]).sort((a,b)=>b[0]-a[0]||(a[1].id<b[1].id?-1:1)).map(x=>x[1]).slice(0,n);}
 };
 const Products={
  all(){const extra=COMMUNITY.people.flatMap(p=>p.picks).filter(id=>!COMMUNITY.products.some(x=>x.id===id)).map(id=>{const x=byId(id);return x&&{id:'catalog-'+id,catalog:id,name:x.name,brand:x.brand,image:x.image,family:x.family,notes:x.noteWeights.slice(0,3).map(n=>n.name),reason:'Uma escolha para explorar este universo olfativo.',source:x.notes?.source||'https://www.scento.com/perfume-database'};}).filter(Boolean);return [...COMMUNITY.products,...extra];},
@@ -54,9 +68,9 @@ const Posts={
   const perfume=byId(p.perfume),n=Number(String(p.id).replace(/\D/g,''))||0;
   return {id:p.id,user:p.user,image:p.photo,text:p.text,occasion:p.occasion,likes:p.likes,rating:p.rating,when:p.user==='me'?'agora':(1+Math.floor(n/3))+' d',tag:perfume&&{name:perfume.name,brand:perfume.brand,image:perfume.image,action:`data-action="perfume" data-id="${perfume.id}"`}};
  },
- all(){const taken=new Set(COMMUNITY.people.map(p=>p.id)),legacy=POSTS.filter(p=>!taken.has(p.user)),a=[...COMMUNITY.posts],b=[...legacy],mixed=[];while(a.length||b.length){if(a.length)mixed.push(a.shift());if(b.length)mixed.push(b.shift());if(b.length)mixed.push(b.shift());}return [...state.posts,...mixed];},
+ all(){const taken=new Set(COMMUNITY.people.map(p=>p.id)),legacy=POSTS.filter(p=>!taken.has(p.user)),a=[...COMMUNITY.posts],b=[...legacy],mixed=[];while(a.length||b.length){if(a.length)mixed.push(a.shift());if(b.length)mixed.push(b.shift());if(b.length)mixed.push(b.shift());}return [...(typeof state!=='undefined'?state.posts:[]),...mixed];},
  find(id){return this.all().find(p=>p.id===id);},
  by(uid){return this.all().filter(p=>p.user===uid);},
  forPerfume(id){return this.all().filter(p=>p.perfume===id||Products.find(p.product||'')?.catalog===id);},
- likes(p){return p.likes+(state.likes.includes(p.id)?1:0);}
+ likes(p){return p.likes+(typeof state!=='undefined'&&state.likes.includes(p.id)?1:0);}
 };

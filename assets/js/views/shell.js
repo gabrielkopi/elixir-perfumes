@@ -1,17 +1,36 @@
 'use strict';
-/* Estrutura da página: navegação lateral, coluna central, sugestões e barra inferior. */
+/* Shell: barra superior, barra de abas, bandeja de comparação, faixa de blur inferior e região de anúncio. */
 const Shell={
- items:[['home','home','Início'],['explore','search','Explorar'],['ingredients','drop','Notas'],['collection','bookmark','Coleção'],['profile','user','Perfil']],
- nav(only){const current=Router.current().nav;return this.items.filter(([p])=>!only||only.includes(p)).map(([page,ic,label])=>{const active=current===page;return `<button data-action="nav" data-page="${page}" class="${active?'active':''}" ${active?'aria-current="page"':''} aria-label="${label}">${page==='profile'?UI.avatar(null):icon(ic)}<span>${label}</span></button>`;}).join('');},
- unread(){return Activity.unread()?'<i class="dot" aria-label="Novidades"></i>':'';},
- rail(){const next=Select.ranked().filter(x=>state.ratings[x.p.id]===undefined).slice(0,3),people=People.suggestions();return `<a class="rail-me" href="#profile">${UI.avatar(null)}<span><strong>${esc(Select.handle())}</strong><small>${esc(state.name)}</small></span></a>${people.length?`<section class="rail-block"><h3>Sugestões para você</h3>${people.map(p=>`<div class="rail-person"><a href="#person/${p.id}">${UI.avatar(p)}<span><strong>${esc(p.handle)}${p.verified?UI.badge():''}</strong><small>${esc(p.family)}</small></span></a><button class="link" data-action="follow" data-id="${p.id}">Seguir</button></div>`).join('')}</section>`:''}<section class="rail-block"><h3>Para experimentar</h3>${next.map(x=>UI.perfumeRow(x.p,{trail:`<em>${x.score}</em>`})).join('')}</section><p class="rail-foot">${BRAND.name} · <kbd>/</kbd> para buscar</p>`;},
- render(body){const layout=Router.current().layout;return `<div class="app" data-layout="${layout}">
-<aside class="sidebar"><a href="#home" class="wordmark" aria-label="${BRAND.name}">${BRAND.name}</a><a href="#home" class="monogram" aria-label="${BRAND.name}">${BRAND.monogram}</a>
-<nav class="side-nav" aria-label="Principal">${this.nav()}<button data-action="search" aria-label="Buscar">${icon('search')}<span>Buscar</span></button><button data-action="activity" aria-label="Atividade">${icon('bell')}<span>Atividade</span>${this.unread()}</button><button class="create" data-action="publish" aria-label="Publicar">${icon('plus')}<span>Publicar</span></button></nav>
-<div class="side-foot"><button data-action="theme">${Theme.button()}</button><button data-action="settings">${icon('settings')}<span>Ajustes</span></button></div></aside>
-<header class="mobile-head"><a href="#home" class="wordmark">${BRAND.name}</a><div><button class="icon-btn" data-action="search" aria-label="Buscar">${icon('search')}</button><button class="icon-btn" data-action="activity" aria-label="Atividade">${icon('bell')}${this.unread()}</button><button class="icon-btn" data-action="theme" aria-label="Alternar tema">${Theme.button()}</button></div></header>
-<main id="main" tabindex="-1">${body}</main>
-${layout==='social'?`<aside class="rail" id="rail">${this.rail()}</aside>`:''}
-<nav class="tabbar" aria-label="Principal">${this.nav(['home','explore'])}<button class="tab-create" data-action="publish" aria-label="Publicar">${icon('plus')}</button>${this.nav(['collection','profile'])}</nav>
-${Compare.tray()}</div>`;}
+ TABS:[{id:'home',label:'Início',icon:'home',fill:'home-fill'},{id:'explore',label:'Descobrir',icon:'search'},{id:'guide',label:'Guia',icon:'sparkle'},{id:'collection',label:'Coleção',icon:'bookmark',fill:'bookmark-fill'},{id:'profile',label:'Perfil'}],
+ GUIDE_LABEL:'Guia: saiba qual perfume comprar',
+ unread(){try{return typeof Activity!=='undefined'&&typeof Activity.unread==='function'?Math.max(0,Number(Activity.unread())||0):0;}catch(e){return 0;}},
+ key(){return Router.layoutOf();},
+ bell(cls=''){const n=this.unread();return UI.iconBtn('bell',{action:'activity',bare:true,cls,label:n?`Atividade, ${n} ${n===1?'nova':'novas'}`:'Atividade'}).replace('</button>',n?'<i class="dot-unread" aria-hidden="true"></i></button>':'</button>');},
+ topbar(){
+  const L=Router.layoutOf(),nav=Router.navOf(),page=route.page,title=Router.title();
+  const left=L==='push'?`<span class="tb-m">${UI.back()}</span>`:'';
+  const mark=`<a class="wordmark${L==='push'?' tb-d':''}" href="#home" aria-label="${esc(BRAND.name)}, início">${esc(BRAND.name)}</a>`;
+  const navItems=this.TABS.filter(t=>t.id!=='profile').map(t=>({id:t.id,label:t.label,href:'#'+t.id,title:t.id==='guide'?this.GUIDE_LABEL:''}));
+  const home=page==='home',onProfile=page==='profile';
+  const right=[
+   UI.iconBtn('search',{action:'search',bare:true,cls:'tb-d',label:'Buscar'}),
+   this.bell(home?'':'tb-d'),
+   UI.iconBtn('plus',{action:'sotd',bare:true,cls:home?'':'tb-d',label:'Usando hoje'}),
+   onProfile?UI.iconBtn('settings',{action:'settings',bare:true,label:'Ajustes'}):'',
+   `<a class="tb-avatar tb-d" href="#profile" aria-label="Perfil"${nav==='profile'?' aria-current="page"':''}>${UI.avatar(null,'sm')}</a>`
+  ].join('');
+  return `<header class="topbar glass"><div class="tb-side">${left}${mark}</div><div class="title" aria-hidden="true">${esc(home?'Hoje':title)}</div><div class="tb-nav">${UI.segNav(navItems,['home','explore','guide','collection'].includes(nav)?nav:'',{label:'Principal'})}</div><div class="tb-side tb-end">${right}</div></header>`;},
+ tabbar(){const nav=Router.navOf();
+  return `<nav class="tabbar glass" aria-label="Principal">${this.TABS.map(t=>{const on=nav===t.id,cur=on?' aria-current="page"':'';
+   if(t.id==='guide')return `<a class="center pressable" href="#guide" aria-label="${esc(this.GUIDE_LABEL)}"${cur}>${icon('sparkle')}</a>`;
+   if(t.id==='profile')return `<a class="pressable" href="#profile"${cur}>${UI.avatar(null,'xs')}<span>${t.label}</span></a>`;
+   return `<a class="pressable" href="#${t.id}"${cur}>${icon(on&&t.fill?t.fill:t.icon)}<span>${t.label}</span></a>`;}).join('')}</nav>`;},
+ /* Bandeja "Comparar (n)": oculta em compare, welcome, refine, modo loja e passos do Guia; visível em guide/results. */
+ trayVisible(){const n=state.compare.length,p=route.page,id=route.id;if(n<1)return false;
+  if(['compare','welcome','refine'].includes(p))return false;if(p==='connect'&&/^store\//.test(id))return false;if(p==='guide'&&/^(me|gift)\//.test(id))return false;return true;},
+ tray(){if(!this.trayVisible())return '';const ids=state.compare;
+  return `<div class="tray glass" role="region" aria-label="Comparação"><a class="tray-go pressable" href="${esc(Router.href('compare',ids.join(',')))}">Comparar (${ids.length})${icon('chevron-right')}</a>${UI.iconBtn('close',{action:'tray-clear',bare:true,label:'Limpar comparação'})}</div>`;},
+ backRow(){return Router.layoutOf()==='push'?`<div class="back-row"><button type="button" class="btn btn--tertiary pressable" data-action="back">${icon('chevron-left')}<span>Voltar</span></button></div>`:'';},
+ render(body){return `<a class="skip" href="#main" data-action="skip">Pular para o conteúdo</a>${this.topbar()}<main id="main" tabindex="-1">${this.backRow()}${body}</main>${this.tabbar()}${this.tray()}<p class="sr-only" id="route-live" aria-live="polite"></p><div class="fade-b" aria-hidden="true"></div>`;},
+ announce(text){const el=document.getElementById('route-live');if(!el)return;el.textContent='';setTimeout(()=>{el.textContent=text;},60);}
 };
