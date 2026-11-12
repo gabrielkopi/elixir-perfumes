@@ -90,7 +90,18 @@ ${c.divergent.length?`<p class="t-sm muted pf-comm-d">Fora das notas da marca:</
  shop(p){const links=Catalog.shopLinks(p).map(l=>UI.linkRow({icon:l.kind==='official'?'link':'search',title:l.label,sub:l.kind==='search'?'Compare preços em várias lojas':this.domain(l.href),href:l.href,external:true})).join('');
   return UI.section({title:'Onde experimentar e comprar',cls:'pf-sec',body:`<div class="list-hair pf-shop">${links}${UI.linkRow({icon:'qr',title:'Leve seu mapa à loja',sub:'ELIXIR Connect',href:'#connect'})}</div>
 <p class="t-sm muted pf-note-line">Resultados orgânicos. O ELIXIR não recebe por estes links e não tem parceiros.</p><p class="pf-tip">Experimente antes: peça uma amostra ou teste na pele numa loja; a pele muda o perfume ao longo do dia.</p>`});},
- rails(p){const out=[];const alt=this.alternatives(p,6);
+ price:{dir:'cheaper',origin:'any'},
+ priceBody(p){const P=this.price,list=Advisor.priceAlternatives?Advisor.priceAlternatives(p,{dir:P.dir,origin:P.origin,n:6}):[];
+  const rows=list.map(x=>{const meta=[x.p.brand,Advisor.tierLabel(x.tier),x.national?'Nacional':'Importado'].filter(Boolean).join(' · ');
+   const why=x.declared?'Inspiração declarada pela marca':x.shared.length?'Em comum: '+x.shared.slice(0,4).map(s=>String(s).toLowerCase()).join(', '):'Perfil olfativo parecido';
+   return `<li class="pf-alt-row">${UI.row(x.p,{sub:esc(meta),trail:`<span class="pf-sim"><b>${x.sim}%</b><small>parecido</small></span>`})}<p class="t-sm muted pf-alt-why">${esc(why)}</p></li>`;}).join('');
+  const t=Advisor.tier(p),empty=P.dir==='cheaper'&&t===1?'Este já está na faixa mais acessível.':P.dir==='pricier'&&t===4?'Este já está na faixa mais exclusiva.':'Nada parecido o bastante nesta combinação. Troque a faixa ou a origem.';
+  return list.length?`<ol class="list-hair pf-alts">${rows}</ol>`:`<p class="em pf-alt-empty">${esc(empty)}</p>`;},
+ priceSection(p){const P=this.price,t=Advisor.tier(p);if(!t)return '';
+  const seg=UI.seg([{id:'cheaper',label:'Mais acessível'},{id:'same',label:'Mesma faixa'},{id:'pricier',label:'Mais exclusivo'}],P.dir,'pf-price-dir',{variant:'quiet',name:'pf-price',label:'Faixa',block:true});
+  const chips=UI.chips([{id:'any',label:'Todos',on:P.origin==='any'},{id:'national',label:'Nacional',on:P.origin==='national'},{id:'imported',label:'Importado',on:P.origin==='imported'}],'pf-price-origin',{label:'Origem'});
+  return UI.section({title:'Mais barato ou mais caro, com notas parecidas',cls:'pf-sec pf-price',body:`<p class="t-sm muted">Este é <b>${esc(Advisor.tierLabel(t))}</b>. Faixa pela marca, não pelo preço. Parecido não é igual: vale testar na pele.</p>${seg}${chips}<div id="pf-price-list">${this.priceBody(p)}</div>`});},
+ rails(p){const out=[this.priceSection(p)];const alt=this.alternatives(p,6);
   if(alt.length)out.push(UI.section({title:'Alternativas de perfil parecido',rail:'pf-alt',body:UI.rail(alt.map((q,i)=>UI.tile(q,{i})),{name:'pf-alt',label:'Alternativas'})}));
   const lay=this.layering(p);if(lay&&lay.p)out.push(UI.section({title:'Em camadas com',body:`<div class="card pf-layer">${UI.row(lay.p)}${lay.why?`<p class="t-sm muted">${esc(lay.why)}</p>`:''}</div>`}));
   const q=this.quotes(p);if(q.length)out.push(UI.section({title:'Quem usa',rail:'pf-quotes',body:UI.rail(q.map(x=>UI.quote(x)),{name:'pf-quotes',label:'O que as pessoas dizem'})}));
@@ -188,3 +199,8 @@ Actions.input('rate-note-q',el=>{Rating.noteQ=el.value;const sug=document.getEle
  sug.innerHTML=list.length?`<div class="chips" role="group" aria-label="Sugestões de notas">${list.map(n=>`<button type="button" class="chip pressable" data-action="rate-note-add" data-v="${esc(n)}">${icon('plus','rt-plus')}<span>${esc(n)}</span></button>`).join('')}</div>`:el.value.trim().length>=2?`<p class="t-sm muted">Nenhuma nota com esse nome.</p>`:'';});
 
 Router.add('perfume',{view:id=>Perfume.view(id),title:id=>{const p=byId(id);return p?p.name:'Perfume';}});
+
+Actions.add({
+ 'pf-price-dir':el=>{Perfume.price.dir=el.dataset.id;UI.segSet(el.closest('.seg'),el.dataset.id);const p=byId(route.id),box=document.getElementById('pf-price-list');if(p&&box)Motion.swap(box,Perfume.priceBody(p));},
+ 'pf-price-origin':el=>{Perfume.price.origin=el.dataset.id;for(const b of el.parentElement.querySelectorAll('[data-action=pf-price-origin]'))b.setAttribute('aria-pressed',b===el);const p=byId(route.id),box=document.getElementById('pf-price-list');if(p&&box)Motion.swap(box,Perfume.priceBody(p));}
+});

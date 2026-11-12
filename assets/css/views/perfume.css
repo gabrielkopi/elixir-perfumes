@@ -99,3 +99,14 @@
 .sh-rate .rt-sug:empty{display:none}
 .sh-rate .rt-plus{width:16px;height:16px}
 .sh-rate .rt-foot{display:grid;gap:var(--s1);justify-items:center;margin:var(--s2) calc(var(--s5)*-1) calc(var(--s6)*-1)}
+
+/* Mais barato ou mais caro, com notas parecidas */
+.v-perfume .pf-price .seg{margin-top:var(--s3)}
+.v-perfume .pf-price .chips{margin-top:var(--s3)}
+.v-perfume .pf-alts{margin:var(--s3) 0 0;padding:0;list-style:none}
+.v-perfume .pf-alt-row{padding:var(--s2) 0}
+.v-perfume .pf-alt-why{margin:0 0 var(--s1);padding-left:calc(64px + var(--s3))}
+.v-perfume .pf-sim{display:grid;justify-items:end;line-height:1.1}
+.v-perfume .pf-sim b{font-weight:500;font-size:16px;letter-spacing:-.02em}
+.v-perfume .pf-sim small{font-size:11px;color:var(--muted)}
+.v-perfume .pf-alt-empty{margin:var(--s4) 0 0}

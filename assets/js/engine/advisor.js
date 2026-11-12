@@ -87,7 +87,24 @@ const Advisor=(()=>{
  function clean(ratings){const out={};for(const [id,r] of Object.entries(ratings||{})){const p=byIdSafe(id),n=Number(r);if(p&&Number.isFinite(n))out[p.id]=Math.max(0,Math.min(10,n));}return out;}
  function nearest(p,R,test){let best=null;for(const [id,r] of Object.entries(R)){if(id===p.id||!test(r))continue;const q=byIdSafe(id);if(!q)continue;const s=cos(p.vector,q.vector);if(!best||s>best.sim||s===best.sim&&q.id<best.p.id)best={p:q,sim:s,r};}return best;}
  function engineRec(p,R,ctx,prefs){try{return Engine.recommend(p,R,ctx||{},prefs||{});}catch(e){return {score:50,confidence:'Dados insuficientes',reason:'',risk:'',peers:[],observations:0};}}
- function catalog(){const seen=new Set(),out=[];for(const p of typeof PERFUMES!=='undefined'?PERFUMES:[]){if(!p||seen.has(p.id))continue;seen.add(p.id);out.push(p);}return out;}
+ /* Parecidos em outra faixa: perfil olfativo (cosseno) + notas em comum. Faixa é pela marca, nunca preço inventado.
+   Inspiração só quando a marca declara (campo inspiredBy no catálogo). */
+function noteKeySet(p){const m=new Map();for(const n of noteNames(p)){const k=String(n).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();if(k&&!m.has(k))m.set(k,n);}return m;}
+function isNationalBrand(p){return typeof NATIONAL_BRANDS!=='undefined'&&Array.isArray(NATIONAL_BRANDS)?NATIONAL_BRANDS.includes(p.brand):false;}
+function priceAlternatives(p,{dir='any',origin='any',n=6}={}){if(!p||!p.vector)return [];const t0=tier(p)||2,A=noteKeySet(p),out=[];
+  for(const q of catalog()){if(q.id===p.id||!q.vector)continue;
+   const declared=q.inspiredBy===p.id||p.inspiredBy===q.id;
+   const tq=tier(q);if(!tq&&!declared)continue;
+   if(dir==='cheaper'&&!(tq<t0))continue;if(dir==='pricier'&&!(tq>t0))continue;if(dir==='same'&&tq!==t0)continue;
+   const nat=isNationalBrand(q);if(origin==='national'&&!nat)continue;if(origin==='imported'&&nat)continue;
+   const B=noteKeySet(q),shared=[...A.keys()].filter(k=>B.has(k)).map(k=>A.get(k));
+   const c=cos(p.vector,q.vector),jac=shared.length/Math.max(1,Math.min(A.size,B.size));
+   if(!declared&&!(c>=.8||(shared.length>=3&&c>=.6)))continue;
+   out.push({p:q,sim:Math.round(c*100),shared,tier:tq,national:nat,declared,score:.55*c+.45*jac+(declared?2:0)});}
+  out.sort((a,b)=>b.score-a.score||cmpId(a.p.id,b.p.id));
+  const brands=new Map(),res=[];for(const x of out){const k=brands.get(x.p.brand)||0;if(k>=2&&!x.declared)continue;brands.set(x.p.brand,k+1);res.push(x);if(res.length>=n)break;}
+  return res;}
+function catalog(){const seen=new Set(),out=[];for(const p of typeof PERFUMES!=='undefined'?PERFUMES:[]){if(!p||seen.has(p.id))continue;seen.add(p.id);out.push(p);}return out;}
 
  function blindBuy(p,ratings={},prefs={}){
   if(!p)return {score:0,level:'Só com amostra',factors:[]};
@@ -235,6 +252,6 @@ const Advisor=(()=>{
   const known=Object.keys(R).length;
   return {safe,bold,lowSignal,excluded:known};}
 
- return {tier,tierLabel,season,occasionFit,polarity,versatility,intensity,hasNote,blindBuy,alternatives,layering,rank,gift,relaxAnswers,
+ return {priceAlternatives,isNationalBrand,tier,tierLabel,season,occasionFit,polarity,versatility,intensity,hasNote,blindBuy,alternatives,layering,rank,gift,relaxAnswers,
   families,famLabel,famWord,axes,topFamily,personAxes,OCCASIONS,OCC_ALIAS,TIERS:['Acessível','Intermediária','Premium','Nicho']};
 })();

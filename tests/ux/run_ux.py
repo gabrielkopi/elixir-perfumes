@@ -153,6 +153,24 @@ def live_flow(browser, url):
     pg.context.close()
 
 
+def price_flow(browser, url):
+    print('1f. Mais barato ou mais caro, com notas parecidas')
+    pg = new_page(browser)
+    demo(pg, url)
+    go(pg, url, 'perfume/sospiro-vibrato', 1300)
+    txt = pg.inner_text('.pf-price')
+    check('seção aparece com a faixa do perfume', 'Nicho' in txt and 'não pelo preço' in txt)
+    n1 = len(pg.query_selector_all('.pf-alt-row'))
+    check(f'mostra opções mais acessíveis ({n1})', n1 >= 3)
+    pg.click('[data-action=pf-price-origin][data-id=national]'); pg.wait_for_timeout(900)
+    rows = pg.evaluate("[...document.querySelectorAll('.pf-alt-row .row')].map(r=>r.innerText)")
+    check(f'Nacional filtra a lista ({len(rows)})', len(rows) > 0 and all('Nacional' in r for r in rows))
+    pg.click('[data-action=pf-price-dir][data-id=pricier]'); pg.wait_for_timeout(900)
+    check('Mais exclusivo explica quando não há opção acima', 'faixa mais exclusiva' in pg.inner_text('.pf-price'))
+    check('sem erros no console', not pg.errors, '; '.join(pg.errors[:3]))
+    pg.context.close()
+
+
 def onboarding_unknown(browser, url):
     print('1b. Onboarding: escala completa, "Não conheço" e retomada após recarregar')
     pg = new_page(browser)
@@ -422,7 +440,7 @@ def main():
     print('ELIXIR · testes de experiência ·', 'http' if use_http else 'file://')
     with sync_playwright() as p:
         b = p.chromium.launch()
-        for fn in [weather_home, first_run, accounts_flow, colors_flow, live_flow, onboarding_unknown, community_demo, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
+        for fn in [weather_home, first_run, accounts_flow, colors_flow, live_flow, price_flow, onboarding_unknown, community_demo, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
             try:
                 fn(b, url)
             except Exception as e:

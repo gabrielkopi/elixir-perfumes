@@ -107,6 +107,23 @@ check(g && g.lowSignal === true && [...g.safe, ...g.bold].every(x => x.level ===
 const legacyT = PEOPLE.find(p => p.id === 'tiago')
 check(!legacyT || Object.keys(legacyT.ratings || {}).length === 0, 'filtragem colaborativa não recebe as avaliações privadas')
 
+/* ---------- 8. Parecidos em outra faixa (mais acessível / mais exclusivo; nacional / importado) ---------- */
+console.log('8. Mais barato ou mais caro, com notas parecidas')
+const top = PERFUMES.find(p => p.vector && Advisor.tier(p) === 4)
+const cheaper = Advisor.priceAlternatives(top, { dir: 'cheaper', n: 6 })
+check(cheaper.length > 0 && cheaper.every(x => x.tier < 4), `mais acessíveis que ${top.name} estão todos abaixo da faixa (${cheaper.length})`)
+check(cheaper.every(x => x.sim >= 60 && (x.sim >= 80 || x.shared.length >= 3)), 'cada um é parecido de verdade (perfil ou 3+ notas em comum)')
+const nat = Advisor.priceAlternatives(top, { dir: 'cheaper', origin: 'national', n: 6 })
+check(nat.length > 0 && nat.every(x => x.national), `filtro Nacional só traz marcas nacionais (${nat.length})`)
+const imp = Advisor.priceAlternatives(top, { dir: 'any', origin: 'imported', n: 6 })
+check(imp.every(x => !x.national), 'filtro Importado só traz importados')
+const low = PERFUMES.find(p => p.vector && Advisor.tier(p) === 1 && p.id !== top.id)
+low.inspiredBy = top.id
+const withDecl = Advisor.priceAlternatives(top, { dir: 'cheaper', n: 6 })
+check(withDecl[0] && withDecl[0].p.id === low.id && withDecl[0].declared, 'inspiração declarada pela marca aparece primeiro')
+delete low.inspiredBy
+check(!Advisor.priceAlternatives(top, { dir: 'cheaper', n: 20 }).some(x => x.declared), 'sem declaração, nada é apresentado como "inspirado em"')
+
 /* ---------- versão do modelo ---------- */
 check(typeof OMap.version === 'string' && OMap.version.length > 0, `versão do modelo registrada (${OMap.version})`)
 
