@@ -554,3 +554,15 @@ html.sheet-open .tray{opacity:0;pointer-events:none}
 .acc-form .acc-vibe span{position:absolute;left:6px;bottom:5px;font:500 11px/1 var(--sans);color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.55)}
 .acc-form .acc-vibe[aria-pressed=true]{box-shadow:inset 0 0 0 3px var(--ink);transform:scale(.94)}
 .acc-form .q-foot{position:sticky;bottom:0;margin-top:auto;padding:var(--s5) 0 calc(var(--s4) + var(--safe-b));background:linear-gradient(to top,var(--bg) 62%,transparent)}
+
+/* ---------- Cor do frasco ---------- */
+.color-rail{display:flex;gap:var(--s2);padding-block:var(--s1)}
+.color-chip{display:inline-flex;align-items:center;gap:var(--s2);min-height:40px;padding:0 var(--s4) 0 var(--s3);border-radius:var(--r-pill);background:var(--fill);font:500 14px/1 var(--sans);color:var(--ink);white-space:nowrap;flex:none;
+  transition:background var(--d-2) var(--ease-out),color var(--d-2) var(--ease-out),transform var(--d-3) var(--ease-spring)}
+.color-chip .dot{width:16px;height:16px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px var(--hair-strong),0 1px 3px rgba(0,0,0,.18);transition:transform var(--d-3) var(--ease-spring)}
+.color-chip[aria-pressed=true]{background:var(--ink);color:var(--on-ink)}
+.color-chip[aria-pressed=true] .dot{transform:scale(1.15);box-shadow:0 0 0 2px var(--on-ink)}
+.color-chip:active{transform:scale(.95)}
+.xp-colors{margin:var(--s5) 0 var(--s2);display:grid;gap:var(--s2)}
+.xp-colors .t-eyebrow,.xp-tend{margin:0}
+.w-colors{margin-top:var(--s4)}

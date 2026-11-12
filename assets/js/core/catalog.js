@@ -24,7 +24,21 @@ const Catalog={
  index(){return this.cached('index',()=>PERFUMES.map(p=>({p,name:this.norm(p.name),brand:this.norm(p.brand),full:this.norm(p.brand+' '+p.name),words:this.words(p.name+' '+p.brand+' '+(p.subtitle||''))})));},
  rank(q,key,words){if(!q)return -1;if(key===q)return 0;if(key.startsWith(q))return 1;if(words&&words.some(w=>w.startsWith(q)))return 2;if(key.includes(q))return 4;return -1;},
  /* Busca única: perfumes, notas, marcas e pessoas; sem acento; prefixo antes de "contém". */
- search(q){const n=this.norm(q),out={perfumes:[],notes:[],brands:[],people:[]};if(!n)return out;
+ /* Cor do frasco/líquido lida da foto (data/colors.js). Âmbar junta âmbar, amarelo e laranja. */
+ COLORS:[{id:'azul',label:'Azul',hex:'#3F6FB5'},{id:'verde',label:'Verde',hex:'#3F7D4E'},{id:'rosa',label:'Rosa',hex:'#E2A2B4'},{id:'roxo',label:'Roxo',hex:'#7A4FA0'},
+  {id:'vermelho',label:'Vermelho',hex:'#B5313A'},{id:'ambar',label:'Âmbar',hex:'#D29A3A'},{id:'marrom',label:'Marrom',hex:'#7A5236'},{id:'preto',label:'Preto',hex:'#1F1F1F'},{id:'transparente',label:'Transparente',hex:'#E9EEF0'}],
+ colorOf(p){const c=p&&typeof PERFUME_COLORS!=='undefined'?PERFUME_COLORS[p.id]:null;if(!c)return null;const k=c[0];return ['amarelo','laranja'].includes(k)?'ambar':k;},
+ colorHex(p){const c=p&&typeof PERFUME_COLORS!=='undefined'?PERFUME_COLORS[p.id]:null;return c?c[1]:'';},
+ byColor(id){return PERFUMES.filter(p=>this.colorOf(p)===id);},
+ colorCounts(){return this.cached('colorCounts',()=>{const m={};for(const p of PERFUMES){const c=this.colorOf(p);if(c)m[c]=(m[c]||0)+1;}return m;});},
+ /* O que os frascos de uma cor costumam ser, medido no catálogo (eixos acima da média). Nunca uma regra fixa. */
+ colorTendency(id){return this.cached('colorTend:'+id,()=>{if(typeof OMap==='undefined'||typeof MAP_AXES==='undefined')return [];
+  const all=PERFUMES.filter(p=>p.vector),sel=all.filter(p=>this.colorOf(p)===id);if(sel.length<5)return [];
+  const mean=list=>MAP_AXES.map((a,i)=>list.reduce((s,p)=>s+OMap.axesOf(p)[i],0)/list.length);const A=mean(all),S=mean(sel);
+  return MAP_AXES.map((a,i)=>({label:a.label,lift:S[i]-A[i]})).filter(x=>x.lift>.04).sort((a,b)=>b.lift-a.lift).slice(0,2).map(x=>x.label);});},
+ search(q){const n=this.norm(q),out={perfumes:[],notes:[],brands:[],people:[],color:null};if(!n)return out;
+  const col=this.COLORS.find(c=>this.norm(c.label)===n||this.norm(c.label)+'s'===n||'frasco '+this.norm(c.label)===n);
+  if(col){out.color=col;out.perfumes=this.byColor(col.id);return out;}
   const qw=this.words(q),first=qw[0]||n;
   const ps=[];for(const x of this.index()){let r=this.rank(n,x.name,x.words);const rb=this.rank(n,x.brand);const rf=this.rank(n,x.full);
    if(r<0&&qw.length>1&&qw.every(w=>x.words.some(y=>y.startsWith(w))))r=3;

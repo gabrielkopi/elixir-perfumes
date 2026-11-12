@@ -277,7 +277,7 @@ let state=Store.defaults();
 const Accounts={
  regKey:'elixir-accounts-v1',sessKey:'elixir-session-account',
  PRESETS:[
-  {id:'gabriel',name:'Gabriel',handle:'gabriel',vibe:'jazz',cover:'night',bio:'Madeiras escuras, especiarias e noite longa.',love:['amadeirado','especiado','couro'],hate:['aquatico','frutado']},
+  {id:'gabriel',name:'Gabriel',handle:'gabriel',vibe:'night',cover:'woody',bio:'Madeiras escuras, especiarias e noite longa.',love:['amadeirado','especiado','couro'],hate:['aquatico','frutado']},
   {id:'vinicius',name:'Vinicius',handle:'vinicius',vibe:'sea',cover:'pool',bio:'Sal, sol e um cítrico que acorda.',love:['aquatico','citrico'],hate:['gourmand','ambar']},
   {id:'amanda',name:'Amanda',handle:'amanda',vibe:'flowers',cover:'floral',bio:'Flores frescas, frutas e algo que abraça.',love:['floral','frutado'],hate:['couro','incensado']},
   {id:'helo',name:'Heloísa',handle:'helo',vibe:'forest',cover:'rain',bio:'Mato molhado, chá verde e ervas.',love:['verde','aromatico','herbal'],hate:['gourmand','ambar']},
@@ -286,7 +286,7 @@ const Accounts={
  ss(){try{return typeof sessionStorage!=='undefined'?sessionStorage:null;}catch(e){return null;}},
  read(){const ls=Store.ls();let r=null;try{r=ls&&JSON.parse(ls.getItem(this.regKey)||'null');}catch(e){r=null;}
   r=r&&typeof r==='object'?r:{};const list=Array.isArray(r.list)?r.list.filter(a=>a&&typeof a.id==='string'&&/^[a-z0-9-]{2,24}$/.test(a.id)):[];
-  for(const p of this.PRESETS)if(!list.some(a=>a.id===p.id))list.push({id:p.id,name:p.name,handle:p.handle,vibe:p.vibe,preset:true,createdAt:0,lastAt:0});
+  for(const p of this.PRESETS){const a=list.find(x=>x.id===p.id);if(!a)list.push({id:p.id,name:p.name,handle:p.handle,vibe:p.vibe,preset:true,createdAt:0,lastAt:0});else{a.vibe=p.vibe;a.preset=true;}}
   return {active:typeof r.active==='string'&&list.some(a=>a.id===r.active)?r.active:'gabriel',list};},
  write(r){const ls=Store.ls();try{ls&&ls.setItem(this.regKey,JSON.stringify(r));}catch(e){}},
  list(){return this.read().list;},

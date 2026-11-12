@@ -77,7 +77,7 @@ Settings.accountsView=id=>{
   <div class="acc-grid stagger">${cards}<div class="acc-card" style="--i:${Math.min(list.length,8)}"><a class="acc-pick acc-new pressable" href="#accounts/new"><span class="acc-av acc-plus">${icon('plus')}</span><span class="acc-name">Criar novo login</span><span class="acc-sub">Nome, foto e o que você gosta</span></a></div></div>
   <p class="acc-note">${icon('lock','icon--20')}<span>Perfis de teste salvos só neste aparelho, sem senha. Não é uma conta: nada vai para servidor.</span></p>
   ${custom?`<div class="acc-tools">${UI.btn(ed?'Pronto':'Gerenciar perfis',{variant:'tertiary',action:'account-edit'})}</div>`:''}</section>`;};
-Settings.accountsNew=()=>{const d=Settings.acc.draft,covers=Object.values(PROFILE_RULES.covers);
+Settings.accountsNew=()=>{const d=Settings.acc.draft,covers=Object.values(PROFILE_RULES.covers).filter(c=>c.id!=='jazz');
  const prev=d.photo?`<img src="${esc(d.photo)}" alt="">`:d.vibe?`<img src="${esc(PROFILE_RULES.covers[d.vibe].src800)}" alt="">`:`<span class="acc-ini">${esc(UI.initials(d.name||'?'))}</span>`;
  return `<section class="v-accounts acc-form" data-view="accounts-new">${Guide.chrome({back:'account-back',step:1,total:5})}
   <h1 class="t-display q-title" id="q-title" tabindex="-1">Como você se chama?</h1><p class="q-sub muted">Seu nome e uma foto. A foto pode ser sua ou um lugar que tenha a sua vibe.</p>

@@ -107,6 +107,29 @@ def accounts_flow(browser, url):
     pg.context.close()
 
 
+def colors_flow(browser, url):
+    print('1d. Cor do frasco: filtrar, buscar e escolher no onboarding')
+    pg = new_page(browser)
+    demo(pg, url)
+    go(pg, url, 'explore', 1200)
+    pg.click('[data-action=explore-color][data-id=azul]'); pg.wait_for_timeout(900)
+    ok = pg.evaluate("(()=>{const ids=[...document.querySelectorAll('#panel-grid [data-id]')].map(e=>e.dataset.id).filter(id=>byId(id));return ids.length>0&&ids.every(id=>Catalog.colorOf(byId(id))==='azul')})()")
+    check('filtro Azul mostra só frascos azuis', ok)
+    check('mostra a tendência medida no catálogo', 'costumam ser' in pg.inner_text('#xp-colors'))
+    pg.click('[data-action=explore-color][data-id=azul]'); pg.wait_for_timeout(700)
+    check('tocar de novo desliga o filtro', pg.evaluate("Explore.state().filters.color.length") == 0)
+    r = pg.evaluate("(()=>{const s=Catalog.search('verde');return {c:s.color&&s.color.id,n:s.perfumes.length,all:s.perfumes.every(p=>Catalog.colorOf(p)==='verde')}})()")
+    check(f'buscar "verde" traz frascos verdes ({r["n"]})', r['c'] == 'verde' and r['n'] > 0 and r['all'])
+    pg2 = new_page(browser)
+    go(pg2, url, 'home', 900)
+    pg2.click('[data-action=welcome-go][data-n="2"]'); pg2.wait_for_timeout(700)
+    pg2.click('[data-action=welcome-color][data-id=rosa]'); pg2.wait_for_timeout(800)
+    ok2 = pg2.evaluate("(()=>{const ids=[...document.querySelectorAll('.w-pick')].map(e=>e.dataset.id);return ids.length>=3&&ids.every(id=>Catalog.colorOf(byId(id))==='rosa')})()")
+    check('no onboarding, escolher Rosa mostra frascos rosa', ok2)
+    check('sem erros no console', not pg.errors and not pg2.errors, '; '.join((pg.errors + pg2.errors)[:3]))
+    pg.context.close(); pg2.context.close()
+
+
 def onboarding_unknown(browser, url):
     print('1b. Onboarding: escala completa, "Não conheço" e retomada após recarregar')
     pg = new_page(browser)
@@ -376,7 +399,7 @@ def main():
     print('ELIXIR · testes de experiência ·', 'http' if use_http else 'file://')
     with sync_playwright() as p:
         b = p.chromium.launch()
-        for fn in [weather_home, first_run, accounts_flow, onboarding_unknown, community_demo, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
+        for fn in [weather_home, first_run, accounts_flow, colors_flow, onboarding_unknown, community_demo, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
             try:
                 fn(b, url)
             except Exception as e:

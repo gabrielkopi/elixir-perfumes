@@ -3,7 +3,7 @@
 const Discovery={
  RATE:[['Amo',8],['Gosto',6],['Neutro',5],['Não gosto',4],['Detesto',2]],
  OCC:['Dia a dia','Trabalho','Noite','Encontro','Festa','Evento','Ar livre'],
- sel:null,           /* escolhas do passo 2 (espelho de state.welcome.picked, que zera depois do onboarding) */
+ sel:null,color:'',           /* escolhas do passo 2 (espelho de state.welcome.picked, que zera depois do onboarding) */
 
  /* ---------- boas-vindas ---------- */
  picked(){if(!this.sel)this.sel=[...(state.welcome.picked||[])];this.sel=this.sel.filter(id=>byId(id));return this.sel;},
@@ -16,11 +16,12 @@ const Discovery={
    <div class="w-actions">${UI.btn('Começar',{size:'block',action:'welcome-go',attrs:'data-n="2"'})}${UI.btn('Explorar primeiro',{variant:'tertiary',action:'welcome-explore'})}</div></div></section>`;},
  pickTile(p,on){return `<button type="button" class="w-pick pressable" aria-pressed="${on}" data-action="welcome-pick" data-id="${esc(p.id)}">${UI.photo(p)}<span class="w-check" aria-hidden="true">${icon('check','icon--20')}</span><span class="name">${esc(p.name)}</span><span class="brand">${esc(p.brand)}</span></button>`;},
  countText(n){return n<3?`${n} de 3`:`${UI.plural(n,'escolhido','escolhidos')}`;},
- s2(){const sel=this.picked(),base=Catalog.trending(12),extra=sel.map(id=>byId(id)).filter(p=>p&&!base.some(b=>b.id===p.id));
+ s2(){const sel=this.picked(),base=this.color?Catalog.byColor(this.color).filter(p=>p.image).slice(0,12):Catalog.trending(12),extra=sel.map(id=>byId(id)).filter(p=>p&&!base.some(b=>b.id===p.id));
   const list=[...base,...extra];
   const find=typeof Search!=='undefined'&&Search.pick?`<button type="button" class="input w-find pressable" data-action="welcome-find">${icon('search','icon--20')}<span>Buscar outro perfume</span></button>`:'';
   return `<section class="v-welcome v-guide" data-view="welcome" data-step="2">${this.top(2)}<h1 class="t-display q-title" id="q-title" tabindex="-1">Quais destes você conhece?</h1>
-   <p class="q-sub muted">Escolha pelo menos 3. Pode ser de experimentar em loja.</p>
+   <p class="q-sub muted">Escolha pelo menos 3. Pode ser de experimentar em loja. Se preferir, vá pela cor do frasco.</p>
+   <div class="color-rail rail-x w-colors" role="group" aria-label="Cor do frasco"><button type="button" class="color-chip pressable" aria-pressed="${!this.color}" data-action="welcome-color" data-id=""><span>Em alta</span></button>${Catalog.COLORS.filter(c=>(Catalog.colorCounts()[c.id]||0)>=3).map(c=>`<button type="button" class="color-chip pressable" aria-pressed="${this.color===c.id}" data-action="welcome-color" data-id="${c.id}" style="--c:${c.hex}"><span class="dot" aria-hidden="true"></span><span>${esc(c.label)}</span></button>`).join('')}</div>
    <div class="w-grid stagger" role="group" aria-labelledby="q-title">${list.map((p,i)=>this.pickTile(p,sel.includes(p.id)).replace('class="w-pick',`style="--i:${Math.min(i,8)}" class="w-pick`)).join('')}</div>${find}
    <div class="q-foot w-foot"><p class="w-count" aria-live="polite">${this.countText(sel.length)}</p>${UI.btn('Continuar',{action:'welcome-go',attrs:`data-n="3"${sel.length<3?' disabled':''}`})}</div></section>`;},
  scale(p){const cur=this.nearest(state.ratings[p.id]),i=this.RATE.findIndex(r=>r[1]===cur);
@@ -112,6 +113,7 @@ Actions.add({
   const grid=document.querySelector('.v-welcome .w-grid');if(grid&&!grid.querySelector(`[data-id="${CSS.escape(p.id)}"]`)){grid.insertAdjacentHTML('beforeend',Discovery.pickTile(p,true));Motion.after(grid);}
   else if(grid){const t=grid.querySelector(`[data-id="${CSS.escape(p.id)}"]`);if(t)t.setAttribute('aria-pressed','true');}
   const n=Discovery.picked().length,c=document.querySelector('.v-welcome .w-count'),b=document.querySelector('.v-welcome [data-action=welcome-go][data-n="3"]');if(c)c.textContent=Discovery.countText(n);if(b)b.disabled=n<3;}});},
+ 'welcome-color':el=>{Discovery.color=el.dataset.id||'';App.render();},
  'welcome-unknown':el=>{const id=el.dataset.id;Discovery.setPicked(Discovery.picked().filter(x=>x!==id));
   if(state.ratings[id]!==undefined)Store.update(s=>{delete s.ratings[id];delete s.ratedAt[id];},{silent:true});
   const row=el.closest('.w-row');if(row){row.classList.add('w-out');setTimeout(()=>row.remove(),Motion.reduced()?0:260);}

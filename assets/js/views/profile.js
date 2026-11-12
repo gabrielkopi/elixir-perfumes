@@ -54,7 +54,7 @@ const Profile={
   if(c.kind==='signature')return `<div class="pf-cover pf-cover--sig" aria-hidden="true">${UI.photo(c.perfume,{eager:true})}</div>`;
   return `<div class="pf-cover pf-cover--none" aria-hidden="true"></div>`;},
  avatar(pr,person){if(person)return UI.avatar(person,'xl');
-  const html=UI.avatar({name:pr.name,photo:pr.photo,initials:UI.initials(pr.name)},'xl');return pr.photoBW&&pr.photo?html.replace('class="avatar ','class="avatar mono '):html;},
+  const vibe=!pr.photo&&pr.avatarVibe&&PROFILE_RULES.covers[pr.avatarVibe]?PROFILE_RULES.covers[pr.avatarVibe].src800:'';const html=UI.avatar({name:pr.name,photo:pr.photo||vibe,initials:UI.initials(pr.name)},'xl');return pr.photoBW&&pr.photo?html.replace('class="avatar ','class="avatar mono '):html;},
  stat(n,one,many){return `<div class="pf-stat"><dt>${esc(n===1?one:many)}</dt><dd>${esc(UI.count(n))}</dd></div>`;},
  privacyLabel(){const v=state.settings&&state.settings.privacy?state.settings.privacy.profile:'public';
   return v==='private'?'Perfil privado':v==='circle'?'Visível para o seu círculo':'';},

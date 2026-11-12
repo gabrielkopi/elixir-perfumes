@@ -16,7 +16,7 @@ const Explore={
  vs:null,io:null,_memo:{key:'',list:null},
 
  /* ---------- estado da tela (sobrevive a voltar, troca de aba e re-render) ---------- */
- blank(){return {family:[],notes:[],brands:[],conc:[],occasion:[],tier:[],audience:'',season:'',presence:'',origin:'',notOwned:false};},
+ blank(){return {color:[],family:[],notes:[],brands:[],conc:[],occasion:[],tier:[],audience:'',season:'',presence:'',origin:'',notOwned:false};},
  clean(f){const b=this.blank(),o=f&&typeof f==='object'?f:{};for(const k of Object.keys(b)){if(Array.isArray(b[k]))b[k]=Array.isArray(o[k])?o[k].map(String).slice(0,80):[];else if(typeof b[k]==='boolean')b[k]=!!o[k];else b[k]=typeof o[k]==='string'?o[k]:'';}return b;},
  state(){if(this.vs)return this.vs;let s=null;try{s=JSON.parse(sessionStorage.getItem(this.KEY)||'null');}catch(e){}
   s=s&&typeof s==='object'?s:{};
@@ -51,6 +51,7 @@ const Explore={
 
  /* ---------- filtro e ordenação ---------- */
  match(p,f,qset){if(qset&&!qset.has(p.id))return false;
+  if(f.color.length&&!f.color.includes(Catalog.colorOf(p)))return false;
   if(f.family.length){const fam=Catalog.families();if(!f.family.some(id=>{const x=fam.find(y=>y.id===id);return x&&(p.vector[x.d]||0)>=.5;}))return false;}
   if(f.notes.length&&!f.notes.some(id=>this.hasNote(p,id)))return false;
   if(f.brands.length&&!f.brands.includes(Catalog.slug(p.brand)))return false;
@@ -78,6 +79,7 @@ const Explore={
  /* Cabeçalho comum às 4 seções de Descobrir: título, navegação entre seções e o campo que abre a busca. */
  head(active){return `${UI.pageHead({title:'Descobrir'})}<div class="xp-head">${UI.segNav(this.SECTIONS,active,{label:'Seções de Descobrir',block:true})}<button type="button" class="input xp-field pressable" data-action="search" aria-label="Buscar perfumes, notas, marcas e pessoas">${icon('search','icon--20')}<span class="xp-ph">Buscar perfumes, notas, marcas, pessoas</span><kbd class="xp-kbd" aria-hidden="true">${this.kbd()}</kbd></button></div>`;},
  chipLabels(f=this.state().filters){const out=[],fam=typeof Catalog!=='undefined'?Catalog.families():[];
+  for(const id of f.color)out.push(['color',id,'Frasco '+((Catalog.COLORS.find(c=>c.id===id)||{}).label||id).toLowerCase()]);
   for(const id of f.family)out.push(['family',id,(fam.find(x=>x.id===id)||{}).name||id]);
   for(const id of f.notes){const n=typeof Notes!=='undefined'?Notes.get(id):null;out.push(['notes',id,n?n.name:id]);}
   for(const id of f.brands){const b=Catalog.brands().find(x=>x.slug===id);out.push(['brands',id,b?b.name:id]);}
@@ -95,6 +97,12 @@ const Explore={
   for(const [k,id,label] of this.chipLabels())chips.push(`<button type="button" class="chip pressable xp-x" data-action="explore-unchip" data-key="${esc(k)}" data-id="${esc(id)}" aria-label="Remover filtro ${esc(label)}"><span>${esc(label)}</span>${icon('close','xp-xi')}</button>`);
   const btn=`<button type="button" class="chip pressable xp-fbtn${n?' on':''}" data-action="filter-open" aria-haspopup="dialog" aria-label="${n?`Filtros, ${n} ${n===1?'ativo':'ativos'}`:'Filtros'}">${icon('sliders','xp-xi')}<span>Filtros</span>${n?`<span class="xp-badge" aria-hidden="true">${n}</span>`:''}</button>`;
   return `${btn}${chips.length?`<div class="chips rail-x xp-chips" role="group" aria-label="Filtros ativos">${chips.join('')}</div>`:''}`;},
+ /* Por cor do frasco: escolha rápida, um toque liga e desliga. */
+ colorsHtml(){const on=this.state().filters.color,cnt=Catalog.colorCounts();
+  const items=Catalog.COLORS.filter(c=>cnt[c.id]>=3);if(!items.length)return '';
+  const tend=on.length===1?Catalog.colorTendency(on[0]):[];
+  return `<div class="xp-colors"><p class="t-eyebrow muted">Por cor do frasco</p><div class="color-rail rail-x" role="group" aria-label="Cor do frasco">${items.map(c=>`<button type="button" class="color-chip pressable" aria-pressed="${on.includes(c.id)}" data-action="explore-color" data-id="${c.id}" style="--c:${c.hex}"><span class="dot" aria-hidden="true"></span><span>${esc(c.label)}</span></button>`).join('')}</div>
+${tend.length?`<p class="t-sm muted xp-tend">No catálogo, frascos ${esc((Catalog.COLORS.find(c=>c.id===on[0])||{}).label.toLowerCase())} costumam ser mais ${esc(tend.map(t=>t.toLowerCase()).join(' e '))}. Cor lida da foto, aproximada.</p>`:''}</div>`;},
  countText(n){return n===PERFUMES.length?UI.plural(n,'perfume','perfumes'):`${UI.plural(n,'perfume','perfumes')} de ${UI.count(PERFUMES.length)}`;},
  trendHtml(){const items=Catalog.trending(12).filter(Boolean);if(items.length<3)return '';
   return UI.section({title:'Em alta',rail:'xp-trend',cls:'xp-trend',body:UI.rail(items.map((p,i)=>UI.tile(p,{i})),{name:'xp-trend',label:'Perfumes em alta'})});},
@@ -108,6 +116,7 @@ const Explore={
  view(){const vs=this.state(),list=this.list();
   return `<section class="v-explore" data-view="explore">${this.head('explore')}
 <div id="xp-trend">${this.filtered()?'':this.trendHtml()}</div>
+<div id="xp-colors">${this.colorsHtml()}</div>
 <div class="xp-bar"><div class="xp-tools" id="xp-tools">${this.toolsHtml()}</div>
 <div class="xp-sort">${UI.seg(this.SORTS,vs.sort,'sort-set',{name:'grid',label:'Ordenar por'})}</div></div>
 <p class="xp-count t-sm muted" id="xp-count" aria-live="polite">${this.countText(list.length)}</p>
@@ -115,7 +124,7 @@ const Explore={
 <p class="xp-credit t-sm muted">Dados de catálogo: <a href="https://www.scento.com/perfume-database" target="_blank" rel="noopener noreferrer">Scento<span class="sr-only"> (abre em nova aba)</span></a> · CC BY 4.0</p></section>`;},
 
  /* ---------- atualização no lugar ---------- */
- refresh({swap=true}={}){this.save();const list=this.list();const tools=document.getElementById('xp-tools'),count=document.getElementById('xp-count'),trend=document.getElementById('xp-trend'),panel=document.getElementById('panel-grid');
+ refresh({swap=true}={}){this.save();const list=this.list();const xc=document.getElementById('xp-colors');if(xc)xc.innerHTML=this.colorsHtml();const tools=document.getElementById('xp-tools'),count=document.getElementById('xp-count'),trend=document.getElementById('xp-trend'),panel=document.getElementById('panel-grid');
   if(!panel){return;}
   if(tools)tools.innerHTML=this.toolsHtml();if(count)count.textContent=this.countText(list.length);
   if(trend){const want=!this.filtered();if(want!==!!trend.firstElementChild){trend.innerHTML=want?this.trendHtml():'';if(want)Motion.after(trend);}}
@@ -192,3 +201,5 @@ Actions.add({
 Actions.change('filter-owned',el=>{if(Filters.draft){Filters.draft.notOwned=!!el.checked;Filters.live();}});
 
 Router.add('explore',{view:()=>Explore.view(),title:'Descobrir',after:()=>Explore.after()});
+
+Actions.add({'explore-color':el=>{const vs=Explore.state(),id=el.dataset.id,f=vs.filters;f.color=f.color.includes(id)?f.color.filter(x=>x!==id):[...f.color,id];vs.batches=1;Explore.refresh();}});
