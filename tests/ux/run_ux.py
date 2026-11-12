@@ -32,11 +32,13 @@ def base_url(use_http):
     return f'http://127.0.0.1:{srv.server_address[1]}/index.html'
 
 
-def new_page(browser, mobile=True, scheme='light', reduced=False):
+def new_page(browser, mobile=True, scheme='light', reduced=False, session=True):
     ctx = browser.new_context(viewport={'width': 375, 'height': 812} if mobile else {'width': 1280, 'height': 800},
                               has_touch=mobile, color_scheme=scheme, reduced_motion='reduce' if reduced else 'no-preference')
     ctx.route('https://api.open-meteo.com/**', lambda r: r.fulfill(json=FORECAST))
     ctx.route('https://geocoding-api.open-meteo.com/**', lambda r: r.fulfill(json=GEO))
+    if session:  # pula a tela de perfis (já escolhido nesta sessão); o fluxo de perfis tem teste próprio
+        ctx.add_init_script("try{if(!sessionStorage.getItem('elixir-session-account'))sessionStorage.setItem('elixir-session-account','gabriel')}catch(e){}")
     pg = ctx.new_page()
     pg.errors = []
     pg.on('pageerror', lambda e: pg.errors.append('pageerror: ' + str(e)[:200]))
@@ -66,6 +68,84 @@ def weather_home(browser, url):
     check('mostra São Paulo e a temperatura', 'São Paulo' in pg.inner_text('.v-home') and '31°' in pg.inner_text('.v-home'))
     check('arte animada do tempo', pg.evaluate("(()=>{const s=document.querySelector('.wx-card .wx-art');return !!s&&document.getAnimations().some(a=>s.contains(a.effect&&a.effect.target))})()"))
     check('barra de abas com lente na aba ativa', pg.evaluate("getComputedStyle(document.querySelector('.tabbar')).getPropertyValue('--ti').trim()==='0'"))
+    check('sem erros no console', not pg.errors, '; '.join(pg.errors[:3]))
+    pg.context.close()
+
+
+def accounts_flow(browser, url):
+    print('1a. Perfis de teste: escolher, criar novo login e guardar')
+    pg = new_page(browser, session=False)
+    go(pg, url, 'home', 1200)
+    check('abre na tela de perfis', 'accounts' in pg.url and 'Quem está usando?' in pg.inner_text('main'))
+    names = pg.evaluate("[...document.querySelectorAll('.acc-name')].map(e=>e.textContent)")
+    check('perfis prontos: Gabriel, Vinicius, Amanda, Heloísa, Theo', all(n in names for n in ['Gabriel', 'Vinicius', 'Amanda', 'Heloísa', 'Theo']), str(names))
+    pg.click('[data-action=account-use][data-id=vinicius]'); pg.wait_for_timeout(1200)
+    st = pg.evaluate("({name:state.profile.name,n:Object.keys(state.ratings).length,onb:state.onboarded,page:route.page})")
+    check(f'Vinicius entra direto no Início com perfil montado ({st["n"]} avaliações)', st['page'] == 'home' and st['onb'] and st['n'] >= 6 and st['name'] == 'Vinicius', str(st))
+    fam = pg.evaluate("Select.map().primary.map(a=>a.id).join(',')")
+    check(f'o mapa do Vinicius é aquático ou cítrico ({fam})', any(f in fam for f in ['aquatico', 'citrico']))
+    go(pg, url, 'accounts', 900)
+    pg.click('a[href="#accounts/new"]'); pg.wait_for_timeout(800)
+    pg.fill('#acc-name', 'Joana Teste'); pg.click('[data-action=account-vibe][data-id=sea]'); pg.wait_for_timeout(200)
+    pg.click('[data-action=account-create]'); pg.wait_for_timeout(1000)
+    check('criar login leva às perguntas guiadas', 'welcome' in pg.url, pg.url)
+    for t in pg.query_selector_all('.w-pick')[:3]:
+        t.click()
+    pg.click('[data-action=welcome-go][data-n="3"]'); pg.wait_for_timeout(700)
+    for seg in pg.query_selector_all('.w-scale'):
+        seg.query_selector('[data-id="8"]').click()
+    pg.click('[data-action=welcome-go][data-n="4"]'); pg.wait_for_timeout(700)
+    pg.click('.q-foot [data-action=welcome-skip]'); pg.wait_for_timeout(700)
+    pg.click('[data-action=welcome-enter]'); pg.wait_for_timeout(1000)
+    st = pg.evaluate("({name:state.profile.name,vibe:state.profile.avatarVibe,n:Object.keys(state.ratings).length,acc:Accounts.active()})")
+    check('novo perfil com nome, vibe e avaliações próprias', st['name'] == 'Joana Teste' and st['vibe'] == 'sea' and st['n'] == 3 and st['acc'] == 'joana-teste', str(st))
+    go(pg, url, 'accounts', 900)
+    check('o novo login fica guardado na lista', 'Joana Teste' in pg.inner_text('main'))
+    pg.click('[data-action=account-use][data-id=vinicius]'); pg.wait_for_timeout(900)
+    check('cada perfil tem os próprios dados', pg.evaluate("state.profile.name") == 'Vinicius' and pg.evaluate("Object.keys(state.ratings).length") != 3)
+    check('sem erros no console', not pg.errors, '; '.join(pg.errors[:3]))
+    pg.context.close()
+
+
+def onboarding_unknown(browser, url):
+    print('1b. Onboarding: escala completa, "Não conheço" e retomada após recarregar')
+    pg = new_page(browser)
+    go(pg, url, 'home', 900)
+    pg.click('[data-action=welcome-go][data-n="2"]'); pg.wait_for_timeout(700)
+    for t in pg.query_selector_all('.w-pick')[:4]:
+        t.click()
+    pg.reload(); pg.wait_for_timeout(1200)
+    n = len(pg.query_selector_all('.w-pick[aria-pressed=true]'))
+    check(f'seleção sobrevive a recarregar a página ({n} de 4)', n == 4)
+    pg.click('[data-action=welcome-go][data-n="3"]'); pg.wait_for_timeout(700)
+    labels = pg.evaluate("[...document.querySelector('.w-scale').querySelectorAll('button')].map(b=>b.textContent.trim())")
+    check('escala Amo, Gosto, Neutro, Não gosto, Detesto', labels == ['Amo', 'Gosto', 'Neutro', 'Não gosto', 'Detesto'], str(labels))
+    pg.click('.w-row >> nth=0 >> [data-action=welcome-unknown]'); pg.wait_for_timeout(600)
+    left = pg.evaluate("Discovery.picked().length")
+    check(f'"Não conheço" tira o perfume sem registrar opinião ({left} restantes)', left == 3 and pg.evaluate("Object.keys(state.ratings).length") == 0)
+    for seg in pg.query_selector_all('.w-scale'):
+        seg.query_selector('[data-id="5"]').click()
+    pg.click('[data-action=welcome-go][data-n="4"]'); pg.wait_for_timeout(700)
+    check('neutro salvo como avaliação (3)', pg.evaluate("Object.values(state.ratings).filter(v=>v===5).length") == 3)
+    check('sem erros no console', not pg.errors, '; '.join(pg.errors[:3]))
+    pg.context.close()
+
+
+def community_demo(browser, url):
+    print('1c. Comunidade de demonstração rotulada')
+    pg = new_page(browser)
+    demo(pg, url)
+    go(pg, url, 'home', 1500)
+    n = pg.evaluate("Posts.all().length")
+    check(f'feed com mais publicações ({n})', n >= 60)
+    tags = pg.evaluate("[...document.querySelectorAll('.post')].filter(p=>p.querySelector('.demo-tag')).length")
+    total = pg.evaluate("document.querySelectorAll('.post').length")
+    check(f'toda publicação da comunidade tem o selo Demonstração ({tags}/{total})', total > 0 and tags == total)
+    go(pg, url, 'person/helena', 1200)
+    check('perfil de pessoa mostra "Perfil de demonstração"', 'Perfil de demonstração' in pg.inner_text('main'))
+    go(pg, url, 'perfume/vetiver', 1200)
+    txt = pg.inner_text('main')
+    check('página do perfume não mostra percepção inventada', 'O que as pessoas percebem' in txt and '% sentem' not in txt)
     check('sem erros no console', not pg.errors, '; '.join(pg.errors[:3]))
     pg.context.close()
 
@@ -296,7 +376,7 @@ def main():
     print('ELIXIR · testes de experiência ·', 'http' if use_http else 'file://')
     with sync_playwright() as p:
         b = p.chromium.launch()
-        for fn in [weather_home, first_run, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
+        for fn in [weather_home, first_run, accounts_flow, onboarding_unknown, community_demo, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
             try:
                 fn(b, url)
             except Exception as e:

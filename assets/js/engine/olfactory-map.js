@@ -31,6 +31,8 @@ const MAP_AXES=[
 ];
 
 const OMap=(()=>{
+ /* Versão do modelo: sobe a cada mudança de regra que altere pontuação ou explicação. */
+ const VERSION='baseline-1.1';
  const AX=MAP_AXES,NA=AX.length,IDX=Object.fromEntries(AX.map((a,i)=>[a.id,i]));
  const DAY=864e5,WINDOW=60*DAY;
  const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
@@ -285,17 +287,14 @@ const OMap=(()=>{
 
  /* ---------- percepções coletivas (demonstração, deterministas) ---------- */
  function officialNotes(p){const n=p&&p.notes;if(!n)return [];const tiers=[...(n.top||[]),...(n.heart||[]),...(n.base||[])];return [...new Set(tiers.length?tiers:(n.highlights||[]))];}
+ /* Percepções: notas oficiais da marca separadas do que foi relatado. Só relatos reais contam:
+    hoje, o do próprio usuário (a comunidade de demonstração não registra notas percebidas). Nada de % ou contagem inventados. */
  function perceptions(p,review=null){if(!p||!p.notes)return null;const off=officialNotes(p);if(!off.length)return null;
-  const wOf=name=>{const w=noteNames(p).find(x=>norm(x.name)===norm(name));return w?w.weight:.7;};
-  const felt=off.map(note=>{const j=.6+.4*frac(p.id+'|'+note);return {note,pct:round(35+55*wOf(note)*j),official:true};}).sort((a,b)=>b.pct-a.pct||byIdCmp(a.note,b.note));
-  const a=axesOf(p),offN=new Set(off.map(norm));
-  const cand=AX.map((x,i)=>({x,v:a[i]})).filter(o=>o.v>=.5&&!offN.has(norm(o.x.label))).sort((x,y)=>y.v-x.v||byIdCmp(x.x.id,y.x.id));
-  const nd=1+(hash(p.id)%2);
-  const divergent=cand.slice(0,nd).map((o,i)=>({note:o.x.label,pct:12+Math.round(18*frac(p.id+'#'+i)),official:false}));
-  const obs=typeof OBSERVATIONS!=='undefined'?OBSERVATIONS.filter(o=>o.id===p.id).length:0;
-  const top3=felt.slice(0,3),agreement=round(top3.reduce((s,x)=>s+x.pct,0)/Math.max(1,top3.length));
-  const you=review&&Array.isArray(review.perceived)?review.perceived.slice(0,8):[];
-  return {official:off,felt,n:obs+12+hash(p.id)%40,agreement,divergent,you,demo:true};}
+  const you=review&&Array.isArray(review.perceived)?review.perceived.map(String).filter(Boolean).slice(0,8):[];
+  const offN=new Set(off.map(norm));
+  const felt=[],divergent=[];
+  for(const note of you){const o={note,count:1,official:offN.has(norm(note))};(o.official?felt:divergent).push(o);}
+  return {official:off,felt,divergent,you,n:you.length?1:0,agreement:null,demo:false};}
 
  /* ---------- Hoje (§4.12) ---------- */
  const OCC_AXES={
@@ -442,6 +441,6 @@ const OMap=(()=>{
  function levelText(axis){const a=ob(axis);if(a.level==='comprovado')return a.corrected?'Comprovado · corrigido por você':'Comprovado · '+plural(a.n,'avaliação','avaliações');
   if(a.level==='hipotese')return 'Hipótese · '+plural(Math.max(a.n+a.nh,1),'sinal','sinais');return 'Sem dados';}
 
- return {axesOf,build,forPerson,chance,similar,explain,compat,bubble,perceptions,today,notes,occasions,portrait,fromShared,storeRank,label,levelText,
+ return {version:VERSION,axesOf,build,forPerson,chance,similar,explain,compat,bubble,perceptions,today,notes,occasions,portrait,fromShared,storeRank,label,levelText,
   series,hasNote,occasionFit,projection,tierOf,ratingSignal,index:id=>IDX[id]??-1,axis:id=>AX[IDX[id]]||null,lower};
 })();

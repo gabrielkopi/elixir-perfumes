@@ -71,7 +71,7 @@ const Profile={
   return `<header class="pf-head">${person?`<div class="pf-cover pf-cover--none" aria-hidden="true"></div>`:this.cover(pr)}
 <div class="pf-id"><div class="pf-top">${this.avatar(pr,person)}<div class="pf-actions">${actions}</div></div>
 <h1 class="t-h1 pf-name">${esc(name)}${person?UI.badge(person.verified):''}</h1>
-<p class="pf-handle"><span>@${esc(handle)}</span>${priv?`<span class="pf-priv">${icon('lock','icon--20')}${esc(priv)}</span>`:''}</p>
+<p class="pf-handle"><span>@${esc(handle)}</span>${person?'<span class="demo-tag">Perfil de demonstração</span>':''}${priv?`<span class="pf-priv">${icon('lock','icon--20')}${esc(priv)}</span>`:''}</p>
 ${bio?`<p class="pf-bio">${esc(bio)}</p>`:''}${link}
 ${tags.length?`<div class="pf-tags" aria-label="Estilo e trilha">${tags.map(t=>`<span class="chip">${esc(t)}</span>`).join('')}</div>`:''}
 <dl class="pf-stats">${stats}</dl></div>${preview?'':'<i data-sentinel aria-hidden="true"></i>'}</header>`;},

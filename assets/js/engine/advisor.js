@@ -204,7 +204,7 @@ const Advisor=(()=>{
 
  /* ---------- presentes (REQ §14) ---------- */
  function gift(result,person=null,{styles=[],wishlist=[]}={}){
-  const items=(result&&result.items)||[],R=person?clean(person.ratings):{},name=person?first(person.name):'';
+  const items=(result&&result.items)||[],R=person&&person.shareMap!==false?clean(person.ratings):{},name=person?first(person.name):'';
   const dislikes=person?[...(person.disliked||[])].map(s=>String(s).replace(/-/g,' ')):[];
   const bad=Object.entries(R).filter(([,r])=>r<=4).map(([id])=>byIdSafe(id)).filter(Boolean);
   const ok=x=>R[x.p.id]===undefined&&!dislikes.some(d=>hasNote(x.p,d))&&!bad.some(q=>cos(q.vector,x.p.vector)>=.9);

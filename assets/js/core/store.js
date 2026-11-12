@@ -6,7 +6,7 @@ const SHELF=[{id:'have',label:'Tenho'},{id:'want',label:'Quero'},{id:'tried',lab
 const LIST_NAMES=['Minha coleção','Quero experimentar','Favoritos','Já experimentei','Não compraria novamente','Perfumes para o trabalho','Perfumes para o verão','Perfumes para sair à noite'];
 
 const Store={
- key:SANDBOX?'elixir-presentation-sandbox-v1':'elixir-demo-v1',
+ get key(){return SANDBOX?'elixir-presentation-sandbox-v1':Accounts.keyFor(Accounts.active());},
  backupKey:'elixir-demo-v1-backup',
  weatherKey:SANDBOX?'elixir-weather-sandbox-v1':'elixir-weather-v1',
  version:3,
@@ -271,6 +271,57 @@ const Store={
 let state=Store.defaults();
 
 /* Seletores derivados, memorizados por revisão (Store.rev + Select.bump). */
+/* ---------- Perfis de teste no aparelho ----------
+   Não é conta nem login de verdade (o app não tem servidor): cada perfil guarda o próprio estado no navegador.
+   Sem senha. Gabriel usa a chave antiga, então os dados que já existiam continuam dele. */
+const Accounts={
+ regKey:'elixir-accounts-v1',sessKey:'elixir-session-account',
+ PRESETS:[
+  {id:'gabriel',name:'Gabriel',handle:'gabriel',vibe:'jazz',cover:'night',bio:'Madeiras escuras, especiarias e noite longa.',love:['amadeirado','especiado','couro'],hate:['aquatico','frutado']},
+  {id:'vinicius',name:'Vinicius',handle:'vinicius',vibe:'sea',cover:'pool',bio:'Sal, sol e um cítrico que acorda.',love:['aquatico','citrico'],hate:['gourmand','ambar']},
+  {id:'amanda',name:'Amanda',handle:'amanda',vibe:'flowers',cover:'floral',bio:'Flores frescas, frutas e algo que abraça.',love:['floral','frutado'],hate:['couro','incensado']},
+  {id:'helo',name:'Heloísa',handle:'helo',vibe:'forest',cover:'rain',bio:'Mato molhado, chá verde e ervas.',love:['verde','aromatico','herbal'],hate:['gourmand','ambar']},
+  {id:'theo',name:'Theo',handle:'theo',vibe:'city',cover:'woody',bio:'Baunilha, âmbar e a cidade à noite.',love:['gourmand','ambar'],hate:['aquatico','verde']}
+ ],
+ ss(){try{return typeof sessionStorage!=='undefined'?sessionStorage:null;}catch(e){return null;}},
+ read(){const ls=Store.ls();let r=null;try{r=ls&&JSON.parse(ls.getItem(this.regKey)||'null');}catch(e){r=null;}
+  r=r&&typeof r==='object'?r:{};const list=Array.isArray(r.list)?r.list.filter(a=>a&&typeof a.id==='string'&&/^[a-z0-9-]{2,24}$/.test(a.id)):[];
+  for(const p of this.PRESETS)if(!list.some(a=>a.id===p.id))list.push({id:p.id,name:p.name,handle:p.handle,vibe:p.vibe,preset:true,createdAt:0,lastAt:0});
+  return {active:typeof r.active==='string'&&list.some(a=>a.id===r.active)?r.active:'gabriel',list};},
+ write(r){const ls=Store.ls();try{ls&&ls.setItem(this.regKey,JSON.stringify(r));}catch(e){}},
+ list(){return this.read().list;},
+ active(){return this.read().active;},
+ get(id){return this.list().find(a=>a.id===id)||null;},
+ keyFor(id){return id==='gabriel'?'elixir-demo-v1':'elixir-acct-'+id;},
+ /* A tela de perfis aparece uma vez por sessão do navegador. */
+ chosen(){const ss=this.ss();try{return !!ss&&ss.getItem(this.sessKey)===this.active();}catch(e){return false;}},
+ slug(name){const base=String(name||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,18)||'perfil';
+  const taken=new Set(this.list().map(a=>a.id));let id=base,n=2;while(taken.has(id))id=base+'-'+(n++);return id;},
+ use(id){const r=this.read();if(!r.list.some(a=>a.id===id))return false;r.active=id;const a=r.list.find(x=>x.id===id);a.lastAt=Date.now();this.write(r);
+  const ss=this.ss();try{ss&&ss.setItem(this.sessKey,id);}catch(e){}
+  Store.flush&&clearTimeout(Store.saveTimer);Store.load();
+  const preset=this.PRESETS.find(p=>p.id===id);if(preset&&!state.onboarded&&!Object.keys(state.ratings).length)this.seed(preset);
+  return true;},
+ create({name,photo='',vibe=''}){const clean=String(name||'').replace(/[<>]/g,'').trim().slice(0,32);if(clean.length<2)return null;
+  const id=this.slug(clean),r=this.read();r.list.push({id,name:clean,handle:id.replace(/-/g,'.'),vibe:vibe||'',preset:false,createdAt:Date.now(),lastAt:Date.now()});this.write(r);
+  try{Store.ls().removeItem(this.keyFor(id));}catch(e){}
+  this.use(id);
+  Store.update(s=>{s.profile.name=clean;s.profile.handle=id.replace(/-/g,'.').slice(0,20);s.profile.photo=photo||'';s.profile.avatarVibe=vibe||'';s.onboarded=false;},{silent:true});
+  Store.flush();return id;},
+ remove(id){if(this.PRESETS.some(p=>p.id===id))return false;const r=this.read();r.list=r.list.filter(a=>a.id!==id);if(r.active===id)r.active='gabriel';this.write(r);
+  try{Store.ls().removeItem(this.keyFor(id));}catch(e){}return true;},
+ /* Perfis prontos e bem distintos, montados com perfumes reais do catálogo pelas famílias de cada um. Avaliações de teste. */
+ seed(p){const fam=x=>{try{const t=Advisor.topFamily(x);return t?t.id:'';}catch(e){return '';}};
+  const pool=PERFUMES.filter(x=>x.vector&&x.image),loved=[],hated=[];
+  for(const f of p.love)loved.push(...pool.filter(x=>fam(x)===f).slice(0,4));
+  for(const f of p.hate)hated.push(...pool.filter(x=>fam(x)===f).slice(0,2));
+  const now=Date.now();
+  Store.update(s=>{s.onboarded=true;s.profile.name=p.name;s.profile.handle=p.handle;s.profile.bio=p.bio;s.profile.avatarVibe=p.vibe;s.profile.cover=p.cover;
+   loved.forEach((x,i)=>{s.ratings[x.id]=[10,9,8,9][i%4];s.ratedAt[x.id]=now-i*864e5;if(i<4){s.shelf[x.id]='have';s.shelfAt[x.id]=now-i*864e5;}});
+   hated.forEach((x,i)=>{if(s.ratings[x.id]===undefined){s.ratings[x.id]=[2,3][i%2];s.ratedAt[x.id]=now-(i+5)*864e5;}});
+   s.profile.pinned=loved.slice(0,5).map(x=>x.id);},{silent:true});Store.flush();}
+};
+
 const Select={
  cache:new Map(),seen:-1,extra:0,
  clear(){this.cache.clear();},

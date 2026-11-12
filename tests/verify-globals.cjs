@@ -6,7 +6,7 @@ const ROOT=path.join(__dirname,'..');
 /* ---------- registro §3.2 + globais existentes (data/engine/dom) ---------- */
 const REG={
  'core/components.js':['UI','avatar','card','back'],'core/motion.js':['Motion','Sheet','Theme','Modal','openModal','closeModal','reducedMotion'],
- 'core/router.js':['Router','route'],'core/store.js':['Store','state','Select','SHELF','LIST_NAMES','SANDBOX'],'core/actions.js':['Actions'],'main.js':['App'],
+ 'core/router.js':['Router','route'],'core/store.js':['Store','state','Select','SHELF','LIST_NAMES','SANDBOX','Accounts'],'core/actions.js':['Actions'],'main.js':['App'],
  'core/catalog.js':['Catalog'],'core/profile-rules.js':['PROFILE_RULES','ProfileRules'],'views/shell.js':['Shell'],'views/settings.js':['Settings'],
  'views/feed.js':['Feed','Post'],'views/stories.js':['Stories'],'views/compose.js':['Compose'],'views/explore.js':['Explore','Filters'],'views/search.js':['Search'],
  'views/perfume.js':['Perfume','Rating'],'views/notes.js':['Notes','Radar'],'views/brand.js':['Brands'],'data/editions.js':['EDITIONS','Editions'],'engine/advisor.js':['Advisor'],
@@ -19,7 +19,7 @@ const REG={
  'data/brand.js+':['BRAND'],'data/data.js+':['DIMENSIONS','RAW','VERIFIED','PRODUCT_PHOTOS','PERFUMES','byId','PEOPLE','POST_SEEDS','POSTS','OBSERVATIONS','EDITORIALS'],
  'data/catalog-100.js+':['CATALOG_100'],'data/notes.js+':['NoteModel','NOTE_CHOICES','STYLE_CHOICES','EXTRA_NOTES'],'data/catalog-photos.js+':['CatalogPhotos'],
  'data/ingredients.js+':['INGREDIENTS','NOTE_GROUPS','FAMILIES','noteImage'],'engine/engine.js+':['Engine'],'engine/taste-engine.js+':['BaseTasteProfile','BaseTasteRecommend'],
- 'data/community.js+':['COMMUNITY','People','Products','Posts'],
+ 'data/community.js+':['COMMUNITY','PRIVATE_MAP','People','Products','Posts'],
  'core/dom.js+':['$','$$','esc','compact','toggle','plural','ICONS','icon','Toast','toast','readImage']
 };
 /* Nomes antigos que o grupo dono ainda precisa remover (§3.2). Só avisam; colisão continua sendo falha. Apague a linha ao remover. */

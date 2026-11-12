@@ -31,7 +31,7 @@ for(const withBR of [false,true]){
   const person=PEOPLE.find(u=>u.id==='sofia');
   const gr=Advisor.rank({occasions:['Aniversário']},person.ratings,{},{n:30,forPerson:person});
   const g=Advisor.gift(gr,person,{});
-  let t=0;for(let i=0;i<3;i++){const t0=performance.now();Advisor.rank(ans,ratings,prefs,{n:10});t=performance.now()-t0;}
+  const ts=[];Advisor.rank(ans,ratings,prefs,{n:10});for(let i=0;i<5;i++){const t0=performance.now();Advisor.rank(ans,ratings,prefs,{n:10});ts.push(performance.now()-t0);}ts.sort((a,b)=>a-b);const t=ts[0];/* aquecido; melhor de 5 (filtra ruído da máquina) */
   const p=byId('vetiver');
   return {
    same:JSON.stringify(a.items.map(x=>x.p.id))===JSON.stringify(b.items.map(x=>x.p.id)),

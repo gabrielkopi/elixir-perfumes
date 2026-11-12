@@ -81,13 +81,12 @@ const Perfume={
   const lines=[src?`Fonte: <a href="${esc(n.source)}" target="_blank" rel="noopener noreferrer">${esc(src)}${icon('arrow-up-right','pf-ext')}<span class="sr-only"> (abre em nova aba)</span></a>${n.accessed?' · consultado em '+esc(UI.date(n.accessed,'short')):''}${n.reliability==='Em revisão'?' · em revisão':''}`:'',
    cred&&cred.domain?`Imagem: ${cred.page&&/^https:\/\//.test(cred.page)?`<a href="${esc(cred.page)}" target="_blank" rel="noopener noreferrer">${esc(cred.domain)}<span class="sr-only"> (abre em nova aba)</span></a>`:esc(cred.domain)}`:''].filter(Boolean);
   return UI.section({title:'Notas oficiais',cls:'pf-sec',body:`<div class="pf-pyr">${cols.map(([t,l])=>`<div class="pf-tier"><h3 class="t-eyebrow muted">${esc(t)}</h3><div class="chips">${l.map(x=>this.noteChip(x)).join('')}</div></div>`).join('')}</div>${lines.length?`<p class="pf-src t-sm muted">${lines.join('<br>')}</p>`:''}`});},
- community(p){const rev=state.reviews[p.id]||null,c=this.perceptions(p,rev);if(!c||!c.felt||!c.felt.length)return '';
-  const mine=rev&&rev.perceived&&rev.perceived.length?rev.perceived:[];
-  return UI.section({title:'O que a comunidade sente',cls:'pf-sec pf-comm',body:`<p class="t-sm muted pf-demo">Percepções de demonstração · a partir de ${UI.plural(c.n,'relato','relatos')}</p>
-<div class="pf-bars">${UI.bars(c.felt.slice(0,5).map(f=>({label:f.note,value:f.pct,text:f.pct+'% sentem'})),5)}</div>
-<p class="pf-agree">Concordância com as notas oficiais: <b>${Math.round(c.agreement)}%</b></p>
-${c.divergent&&c.divergent.length?`<ul class="pf-div">${c.divergent.map(d=>`<li><b>${esc(d.note)}</b> · ${Math.round(d.pct)}% · <span class="muted">não está nas notas oficiais</span></li>`).join('')}</ul>`:''}
-${mine.length?`<p class="pf-mine-notes">Você também sentiu: <b>${mine.map(esc).join(', ')}</b></p>`:''}`});},
+ community(p){const rev=state.reviews[p.id]||null,c=this.perceptions(p,rev);if(!c)return '';
+  const chips=list=>`<div class="chips">${list.map(x=>`<span class="chip">${esc(x.note)}</span>`).join('')}</div>`;
+  const yours=c.you.length?`<p class="t-eyebrow muted pf-comm-k">O que você sentiu</p>${c.felt.length?chips(c.felt):''}
+${c.divergent.length?`<p class="t-sm muted pf-comm-d">Fora das notas da marca:</p>${chips(c.divergent)}`:''}`
+   :`<p class="em pf-comm-empty">Ainda não há relatos sobre as notas percebidas deste perfume.</p>${UI.btn('Contar o que você sentiu',{variant:'tertiary',action:'rate',attrs:`data-id="${esc(p.id)}"`,icon:'chevron-right'})}`;
+  return UI.section({title:'O que as pessoas percebem',cls:'pf-sec pf-comm',body:`<p class="t-sm muted pf-demo">Percepção é opinião, não fórmula. As notas declaradas pela marca ficam na pirâmide acima.</p>${yours}`});},
  shop(p){const links=Catalog.shopLinks(p).map(l=>UI.linkRow({icon:l.kind==='official'?'link':'search',title:l.label,sub:l.kind==='search'?'Compare preços em várias lojas':this.domain(l.href),href:l.href,external:true})).join('');
   return UI.section({title:'Onde experimentar e comprar',cls:'pf-sec',body:`<div class="list-hair pf-shop">${links}${UI.linkRow({icon:'qr',title:'Leve seu mapa à loja',sub:'ELIXIR Connect',href:'#connect'})}</div>
 <p class="t-sm muted pf-note-line">Resultados orgânicos. O ELIXIR não recebe por estes links e não tem parceiros.</p><p class="pf-tip">Experimente antes: peça uma amostra ou teste na pele numa loja; a pele muda o perfume ao longo do dia.</p>`});},

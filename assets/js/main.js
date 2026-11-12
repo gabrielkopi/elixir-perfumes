@@ -10,6 +10,7 @@ const App={
   catch(e){if(!def.placeholder)console.warn('Tela indisponível ('+route.page+'):',e&&e.message);return this.placeholder(route.page,route.id);}},
  gate(){return !state.onboarded&&route.page==='home'&&Router.has('welcome')&&!Router.def('welcome').placeholder;},
  render({transition=false,dir='none'}={}){
+  if(!SANDBOX&&typeof Accounts!=='undefined'&&!Accounts.chosen()&&route.page!=='accounts'){Router.go('accounts','',{replace:true});return;}
   if(this.gate()){Router.go('welcome','1',{replace:true});return;}
   const layout=Router.layoutOf(),body=this.view(),html=Shell.render(body),h=document.documentElement,routeChange=transition;
   const y=scrollY;

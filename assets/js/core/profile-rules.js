@@ -21,7 +21,7 @@ const PROFILE_RULES={
 };
 
 const ProfileRules={
- defaults(){return {name:'Gabriel',handle:'gabriel',bio:'',photo:'',photoBW:false,cover:'none',tone:'papel',signature:null,pinned:[],families:[],
+ defaults(){return {name:'Gabriel',handle:'gabriel',bio:'',photo:'',photoBW:false,avatarVibe:'',cover:'none',tone:'papel',signature:null,pinned:[],families:[],
   styleTags:[],musicTags:[],link:'',sections:{collection:true,want:true,reviews:true,dna:true,diary:true}};},
  fold(s){return String(s??'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();},
  /* Nome: NFC, sem emoji, símbolos ou controles, espaços colapsados, 2–32 caracteres. */
@@ -56,6 +56,7 @@ const ProfileRules={
   d.bio=this.cleanBio(o.bio);d.link=this.cleanLink(o.link);
   d.photo=typeof o.photo==='string'&&/^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(o.photo)&&o.photo.length<=L.photoKB*1024*1.37?o.photo:'';
   d.photoBW=o.photoBW===true;
+  d.avatarVibe=PROFILE_RULES.covers[o.avatarVibe]?o.avatarVibe:'';
   d.tone=this.cleanTone(o.tone);
   const valid=id=>typeof id==='string'&&typeof byId==='function'&&!!byId(id);
   d.signature=valid(o.signature)?byId(o.signature).id:null;

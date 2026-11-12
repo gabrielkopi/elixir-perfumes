@@ -55,3 +55,56 @@ Actions.add({
   toast(v==='public'?'Perfil público':v==='circle'?'Visível para o seu círculo':'Perfil privado');}
 });
 Actions.change('settings-share',el=>{const k=el.name;if(!['shareMap','shareCollection'].includes(k))return;const on=el.checked;Store.update(s=>{s.settings.privacy[k]=on;},{silent:true});});
+
+
+/* ---------- Perfis de teste: quem está usando? (rota accounts, tela cheia) ---------- */
+Settings.acc={draft:{name:'',photo:'',vibe:''},editing:false};
+Settings.accFam=a=>{const p=Accounts.PRESETS.find(x=>x.id===a.id);if(!p)return a.preset?'':'Perfil criado neste aparelho';
+ const L={amadeirado:'Amadeirado',especiado:'Especiado',couro:'Couro',aquatico:'Aquático',citrico:'Cítrico',floral:'Floral',frutado:'Frutado',verde:'Verde',aromatico:'Aromático',herbal:'Herbal',gourmand:'Gourmand',ambar:'Âmbar'};
+ return p.love.slice(0,2).map(f=>L[f]||f).join(' · ');};
+Settings.accAvatar=a=>{const v=a.vibe&&PROFILE_RULES.covers[a.vibe];
+ let photo='';if(a.id===Accounts.active()&&state.profile.photo)photo=state.profile.photo;
+ return `<span class="acc-av">${photo?`<img src="${esc(photo)}" alt="">`:v?`<img src="${esc(v.src800)}" alt="">`:`<span class="acc-ini">${esc(UI.initials(a.name))}</span>`}</span>`;};
+Settings.accountsView=id=>{
+ if(id==='new')return Settings.accountsNew();
+ const list=Accounts.list().sort((a,b)=>(b.lastAt||0)-(a.lastAt||0)||(a.preset===b.preset?0:a.preset?1:-1));const ed=Settings.acc.editing;
+ const cards=list.map((a,i)=>`<div class="acc-card" style="--i:${Math.min(i,8)}"><button type="button" class="acc-pick pressable" data-action="account-use" data-id="${esc(a.id)}">${Settings.accAvatar(a)}
+  <span class="acc-name">${esc(a.name)}</span><span class="acc-sub">${esc(Settings.accFam(a)||'@'+a.handle)}</span></button>
+  ${ed&&!a.preset?`<button type="button" class="acc-del pressable" data-action="account-remove" data-id="${esc(a.id)}" aria-label="Remover ${esc(a.name)}">${icon('close','icon--20')}</button>`:''}</div>`).join('');
+ const custom=list.some(a=>!a.preset);
+ return `<section class="v-accounts" data-view="accounts"><div class="acc-head"><p class="t-eyebrow muted">ELIXIR · perfis de teste</p><h1 class="t-display">Quem está usando?</h1>
+  <p class="muted acc-lead">Escolha um perfil para ver o app do jeito dele, ou crie o seu em um minuto.</p></div>
+  <div class="acc-grid stagger">${cards}<div class="acc-card" style="--i:${Math.min(list.length,8)}"><a class="acc-pick acc-new pressable" href="#accounts/new"><span class="acc-av acc-plus">${icon('plus')}</span><span class="acc-name">Criar novo login</span><span class="acc-sub">Nome, foto e o que você gosta</span></a></div></div>
+  <p class="acc-note">${icon('lock','icon--20')}<span>Perfis de teste salvos só neste aparelho, sem senha. Não é uma conta: nada vai para servidor.</span></p>
+  ${custom?`<div class="acc-tools">${UI.btn(ed?'Pronto':'Gerenciar perfis',{variant:'tertiary',action:'account-edit'})}</div>`:''}</section>`;};
+Settings.accountsNew=()=>{const d=Settings.acc.draft,covers=Object.values(PROFILE_RULES.covers);
+ const prev=d.photo?`<img src="${esc(d.photo)}" alt="">`:d.vibe?`<img src="${esc(PROFILE_RULES.covers[d.vibe].src800)}" alt="">`:`<span class="acc-ini">${esc(UI.initials(d.name||'?'))}</span>`;
+ return `<section class="v-accounts acc-form" data-view="accounts-new">${Guide.chrome({back:'account-back',step:1,total:5})}
+  <h1 class="t-display q-title" id="q-title" tabindex="-1">Como você se chama?</h1><p class="q-sub muted">Seu nome e uma foto. A foto pode ser sua ou um lugar que tenha a sua vibe.</p>
+  <div class="acc-preview"><span class="acc-av acc-av--lg" id="acc-prev">${prev}</span></div>
+  <label class="field"><span>Nome</span><input id="acc-name" type="text" maxlength="32" autocomplete="given-name" placeholder="Ex.: Vinicius" value="${esc(d.name)}" data-input="account-name"></label>
+  <div class="acc-photo"><label class="btn btn--secondary btn--sm pressable">${icon('camera','icon--20')}<span>Usar uma foto minha</span><input type="file" accept="image/jpeg,image/png,image/webp" hidden data-change="account-photo"></label></div>
+  <p class="t-eyebrow muted acc-vibe-t">Ou escolha a sua vibe</p>
+  <div class="acc-vibes">${covers.map(c=>`<button type="button" class="acc-vibe pressable" aria-pressed="${d.vibe===c.id&&!d.photo}" data-action="account-vibe" data-id="${esc(c.id)}"><img src="${esc(c.src800)}" alt="" loading="lazy"><span>${esc(c.label)}</span></button>`).join('')}</div>
+  <div class="q-foot">${UI.btn('Continuar',{size:'block',action:'account-create',attrs:d.name.trim().length<2?'disabled':''})}</div></section>`;};
+Settings.accRefreshPrev=()=>{const d=Settings.acc.draft,el=document.getElementById('acc-prev');if(!el)return;
+ el.innerHTML=d.photo?`<img src="${esc(d.photo)}" alt="">`:d.vibe?`<img src="${esc(PROFILE_RULES.covers[d.vibe].src800)}" alt="">`:`<span class="acc-ini">${esc(UI.initials(d.name||'?'))}</span>`;
+ const b=document.querySelector('[data-action=account-create]');if(b)b.disabled=d.name.trim().length<2;};
+Router.add('accounts',{view:id=>Settings.accountsView(id),title:id=>id==='new'?'Criar novo login':'Perfis',layout:'full',nav:'none',
+ after:id=>{if(id==='new'){const i=document.getElementById('acc-name');if(i&&!Motion.touch())try{i.focus({preventScroll:true});}catch(e){}}}});
+Actions.add({
+ 'account-use':el=>{const id=el.dataset.id;if(!Accounts.use(id))return;Settings.acc.editing=false;
+  if(typeof Discovery!=='undefined')Discovery.sel=null;const a=Accounts.get(id);
+  Router.go(state.onboarded?'home':'welcome',state.onboarded?'':'2',{replace:true});toast(`Olá, ${a?a.name.split(' ')[0]:''}.`);},
+ 'account-edit':()=>{Settings.acc.editing=!Settings.acc.editing;App.render();},
+ 'account-remove':el=>{const a=Accounts.get(el.dataset.id);if(!a)return;Accounts.remove(a.id);toast(`${a.name} removido deste aparelho.`);App.render();},
+ 'account-back':()=>Router.go('accounts','',{replace:true}),
+ 'account-vibe':el=>{const d=Settings.acc.draft;d.vibe=el.dataset.id;d.photo='';for(const b of document.querySelectorAll('.acc-vibe'))b.setAttribute('aria-pressed',b===el);Settings.accRefreshPrev();},
+ 'account-create':()=>{const d=Settings.acc.draft;const id=Accounts.create({name:d.name,photo:d.photo,vibe:d.vibe});if(!id){toast('Escreva um nome com pelo menos 2 letras.');return;}
+  Settings.acc.draft={name:'',photo:'',vibe:''};if(typeof Discovery!=='undefined')Discovery.sel=null;Router.go('welcome','2',{replace:true});}
+});
+Actions.input('account-name',t=>{Settings.acc.draft.name=t.value;Settings.accRefreshPrev();});
+Actions.change('account-photo',async el=>{const f=el.files&&el.files[0];if(!f)return;
+ try{const url=await readImage(f,{max:360,square:true,quality:.8});if(url.length>200*1024*1.37){toast('Foto grande demais. Tente outra.');return;}
+  Settings.acc.draft.photo=url;Settings.acc.draft.vibe='';for(const b of document.querySelectorAll('.acc-vibe'))b.setAttribute('aria-pressed','false');Settings.accRefreshPrev();}
+ catch(e){toast(e.message||'Não foi possível ler a foto.');}});

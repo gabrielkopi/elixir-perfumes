@@ -8,7 +8,8 @@ const UI={
  /* ---------- pessoas ---------- */
  avatar(user,cls=''){
   const me=!user,p=me?(typeof state!=='undefined'?state.profile:{name:''}):user,name=p.name||'';
-  const src=me?p.photo:(user.photo||user.image||'');const ini=user&&user.initials?user.initials:UI.initials(name);
+  const vibe=me&&!p.photo&&p.avatarVibe&&typeof PROFILE_RULES!=='undefined'&&PROFILE_RULES.covers[p.avatarVibe]?PROFILE_RULES.covers[p.avatarVibe].src800:'';
+  const src=me?(p.photo||vibe):(user.photo||user.image||'');const ini=user&&user.initials?user.initials:UI.initials(name);
   const mono=me&&p.photoBW?' mono':'';
   return `<span class="avatar ${esc(cls)}${mono}" data-initials="${esc(ini)}">${src?`<img src="${esc(src)}" alt="" loading="lazy" decoding="async">`:esc(ini)}</span>`;},
  personRow(u,{affinity=false,follow=true}={}){if(!u)return '';

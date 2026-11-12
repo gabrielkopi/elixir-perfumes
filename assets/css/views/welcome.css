@@ -53,3 +53,7 @@
 .v-welcome .w-axis{max-width:none;animation:unblur var(--d-5) var(--ease-out) both}
 .v-welcome .w-bars{margin-top:var(--s5)}
 .v-welcome .w-conf{margin:var(--s4) 0 0;color:var(--muted);font-size:var(--t-sm);max-width:44ch}
+
+.v-welcome .w-unknown{margin-left:auto;flex:none;color:var(--muted);font-size:13px}
+.v-welcome .w-row{transition:opacity var(--d-3) var(--ease-out),transform var(--d-3) var(--ease-out),filter var(--d-3) var(--ease-out)}
+.v-welcome .w-row.w-out{opacity:0;transform:translateX(-12px);filter:blur(6px)}

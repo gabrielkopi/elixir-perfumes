@@ -1,14 +1,14 @@
 'use strict';
 /* Boas-vindas (welcome/1–4, done; REQ §1) e Refinar meu mapa (refine/1–5). Respostas salvas em silêncio a cada toque. */
 const Discovery={
- RATE:[['Amo',8],['Gosto',6],['Neutro',4],['Detesto',2]],
+ RATE:[['Amo',8],['Gosto',6],['Neutro',5],['Não gosto',4],['Detesto',2]],
  OCC:['Dia a dia','Trabalho','Noite','Encontro','Festa','Evento','Ar livre'],
  sel:null,           /* escolhas do passo 2 (espelho de state.welcome.picked, que zera depois do onboarding) */
 
  /* ---------- boas-vindas ---------- */
  picked(){if(!this.sel)this.sel=[...(state.welcome.picked||[])];this.sel=this.sel.filter(id=>byId(id));return this.sel;},
  setPicked(list){this.sel=[...new Set(list)].slice(0,12);const ids=this.sel;Store.update(s=>{s.welcome.picked=ids;},{silent:true});},
- nearest(v){if(v===undefined||v===null)return null;const n=Number(v);return n>=7?8:n>=5?6:n>=3?4:2;},
+ nearest(v){if(v===undefined||v===null)return null;const n=Number(v);return n>=7?8:n>=5.5?6:n>=4.5?5:n>=3?4:2;},
  top(step,{back=true,skip=true}={}){return Guide.chrome({back:back?'welcome-back':'',end:skip?UI.btn('Pular',{variant:'tertiary',action:'welcome-skip'}):'',step:step-1,total:4});},
  s1(){const now=new Date();
   return `<section class="v-welcome v-guide" data-view="welcome" data-step="1"><div class="w-hero full">${UI.cover({image:'night',eyebrow:[UI.date(now,'month-year'),'Elixir','Rede olfativa'],title:'ELIXIR',mega:true,text:'Perfumes, pessoas e o seu mapa olfativo.',eager:true,ratio:'3/4'})}</div>
@@ -24,13 +24,14 @@ const Discovery={
    <div class="w-grid stagger" role="group" aria-labelledby="q-title">${list.map((p,i)=>this.pickTile(p,sel.includes(p.id)).replace('class="w-pick',`style="--i:${Math.min(i,8)}" class="w-pick`)).join('')}</div>${find}
    <div class="q-foot w-foot"><p class="w-count" aria-live="polite">${this.countText(sel.length)}</p>${UI.btn('Continuar',{action:'welcome-go',attrs:`data-n="3"${sel.length<3?' disabled':''}`})}</div></section>`;},
  scale(p){const cur=this.nearest(state.ratings[p.id]),i=this.RATE.findIndex(r=>r[1]===cur);
-  return `<div class="seg seg--quiet seg--block w-scale${i<0?' seg--none':''}" role="radiogroup" aria-label="Como você se sente com ${esc(p.name)}" style="--n:4;--i:${Math.max(0,i)}">${this.RATE.map(([l,v],k)=>`<button type="button" role="radio" aria-checked="${k===i}" tabindex="${k===i||i<0&&k===0?0:-1}" data-action="welcome-rate" data-p="${esc(p.id)}" data-id="${v}">${esc(l)}</button>`).join('')}</div>`;},
- rateRow(p,i,scale){return `<li class="w-row" style="--i:${Math.min(i,8)}"><div class="w-info"><span class="thumb plate">${p.image?`<img src="${esc(p.image)}" alt="" loading="lazy" decoding="async" data-brand="${esc(p.brand)}" data-name="${esc(p.name)}">`:''}</span><span class="grow"><b>${esc(p.name)}</b><span class="muted t-sm">${esc(p.brand)}</span></span></div>${scale}</li>`;},
- allRated(){const sel=this.picked();return sel.length>0&&sel.every(id=>state.ratings[id]!==undefined);},
+  return `<div class="seg seg--quiet seg--block w-scale${i<0?' seg--none':''}" role="radiogroup" aria-label="Como você se sente com ${esc(p.name)}" style="--n:5;--i:${Math.max(0,i)}">${this.RATE.map(([l,v],k)=>`<button type="button" role="radio" aria-checked="${k===i}" tabindex="${k===i||i<0&&k===0?0:-1}" data-action="welcome-rate" data-p="${esc(p.id)}" data-id="${v}">${esc(l)}</button>`).join('')}</div>`;},
+ rateRow(p,i,scale,unknown=false){return `<li class="w-row" style="--i:${Math.min(i,8)}" data-row="${esc(p.id)}"><div class="w-info"><span class="thumb plate">${p.image?`<img src="${esc(p.image)}" alt="" loading="lazy" decoding="async" data-brand="${esc(p.brand)}" data-name="${esc(p.name)}">`:''}</span><span class="grow"><b>${esc(p.name)}</b><span class="muted t-sm">${esc(p.brand)}</span></span>${unknown?`<button type="button" class="btn btn--tertiary btn--sm w-unknown pressable" data-action="welcome-unknown" data-id="${esc(p.id)}">Não conheço</button>`:''}</div>${scale}</li>`;},
+ /* Não obriga 3 avaliações: basta responder os que ficaram (os "Não conheço" saem da lista sem opinião). */
+ allRated(){const sel=this.picked();return sel.every(id=>state.ratings[id]!==undefined);},
  s3(){const sel=this.picked();if(sel.length<3)return null;
   return `<section class="v-welcome v-guide" data-view="welcome" data-step="3">${this.top(3)}<h1 class="t-display q-title" id="q-title" tabindex="-1">Como você se sente com cada um?</h1>
-   <p class="q-sub muted">Uma resposta por perfume. Dá para mudar depois.</p>
-   <ol class="w-rate list-hair stagger">${sel.map((id,i)=>{const p=byId(id);return this.rateRow(p,i,this.scale(p));}).join('')}</ol>
+   <p class="q-sub muted">Uma resposta por perfume. Se não lembrar de algum, toque em Não conheço.</p>
+   <ol class="w-rate list-hair stagger">${sel.map((id,i)=>{const p=byId(id);return this.rateRow(p,i,this.scale(p),true);}).join('')}</ol>
    <div class="q-foot">${UI.btn('Continuar',{size:'block',action:'welcome-go',attrs:`data-n="4"${this.allRated()?'':' disabled'}`})}</div></section>`;},
  seg(items,value,action,label){const i=items.indexOf(value);
   return `<div class="seg seg--quiet seg--block w-seg${i<0?' seg--none':''}" role="radiogroup" aria-label="${esc(label)}" style="--n:${items.length};--i:${Math.max(0,i)}">${items.map((x,k)=>`<button type="button" role="radio" aria-checked="${k===i}" tabindex="${k===i||i<0&&k===0?0:-1}" data-action="${action}" data-id="${esc(x)}">${esc(x)}</button>`).join('')}</div>`;},
@@ -58,7 +59,7 @@ const Discovery={
   const conf=/moderada|boa/i.test(level)?level.toLowerCase():'baixa';
   return {primary,axes:axes.slice(0,3),n,conf};},
  done(){const m=this.firstMap();
-  const line=m.n?`Confiança inicial: ${m.conf} · ${UI.plural(m.n,'avaliação','avaliações')}. O mapa melhora a cada avaliação.`:'Avalie 3 perfumes para o mapa aparecer.';
+  const line=m.n?`Seu perfil está começando a se formar. Confiança ${m.conf}, a partir de ${UI.plural(m.n,'avaliação','avaliações')}: avalie mais fragrâncias para aumentar a confiança.`:'Você já pode explorar. Avalie alguns perfumes para o mapa aparecer.';
   return `<section class="v-welcome v-guide" data-view="welcome" data-step="done">${Guide.chrome({step:4,total:4})}<div class="w-done">
    <p class="t-eyebrow muted">Seu primeiro mapa</p><h1 class="t-display q-title w-axis" id="q-title" tabindex="-1">${esc(m.primary?m.primary.label:'Ainda sem dados')}</h1>
    ${m.axes.length?`<div class="w-bars">${UI.axisBars(m.axes,{limit:3})}</div>`:''}<p class="w-conf">${esc(line)}</p></div>
@@ -111,7 +112,11 @@ Actions.add({
   const grid=document.querySelector('.v-welcome .w-grid');if(grid&&!grid.querySelector(`[data-id="${CSS.escape(p.id)}"]`)){grid.insertAdjacentHTML('beforeend',Discovery.pickTile(p,true));Motion.after(grid);}
   else if(grid){const t=grid.querySelector(`[data-id="${CSS.escape(p.id)}"]`);if(t)t.setAttribute('aria-pressed','true');}
   const n=Discovery.picked().length,c=document.querySelector('.v-welcome .w-count'),b=document.querySelector('.v-welcome [data-action=welcome-go][data-n="3"]');if(c)c.textContent=Discovery.countText(n);if(b)b.disabled=n<3;}});},
- 'welcome-rate':el=>{const id=el.dataset.p,v=Number(el.dataset.id);if(!byId(id)||![2,4,6,8].includes(v))return;Store.update(s=>{s.ratings[id]=v;s.ratedAt[id]=Date.now();},{silent:true});
+ 'welcome-unknown':el=>{const id=el.dataset.id;Discovery.setPicked(Discovery.picked().filter(x=>x!==id));
+  if(state.ratings[id]!==undefined)Store.update(s=>{delete s.ratings[id];delete s.ratedAt[id];},{silent:true});
+  const row=el.closest('.w-row');if(row){row.classList.add('w-out');setTimeout(()=>row.remove(),Motion.reduced()?0:260);}
+  const b=document.querySelector('.v-welcome [data-action=welcome-go][data-n="4"]');if(b)b.disabled=!Discovery.allRated();toast('Tirado da lista. Nada foi registrado sobre ele.');},
+ 'welcome-rate':el=>{const id=el.dataset.p,v=Number(el.dataset.id);if(!byId(id)||![2,4,5,6,8].includes(v))return;Store.update(s=>{s.ratings[id]=v;s.ratedAt[id]=Date.now();},{silent:true});
   UI.segSet(el.closest('.seg'),String(v));const b=document.querySelector('.v-welcome [data-action=welcome-go][data-n="4"]');if(b)b.disabled=!Discovery.allRated();},
  'welcome-fam':el=>{const id=el.dataset.id,cur=el.dataset.state||'',next=cur===''?'like':cur==='like'?'avoid':'';
   Store.update(s=>{if(next)s.map.priors[id]=next;else delete s.map.priors[id];},{silent:true});
