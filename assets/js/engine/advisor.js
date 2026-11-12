@@ -104,6 +104,10 @@ function priceAlternatives(p,{dir='any',origin='any',n=6}={}){if(!p||!p.vector)r
   out.sort((a,b)=>b.score-a.score||cmpId(a.p.id,b.p.id));
   const brands=new Map(),res=[];for(const x of out){const k=brands.get(x.p.brand)||0;if(k>=2&&!x.declared)continue;brands.set(x.p.brand,k+1);res.push(x);if(res.length>=n)break;}
   return res;}
+/* Recomendações (Guia, presentes, layering) usam fichas com foto ou da base curada: mostram o frasco e são mais confiáveis.
+   O resto do catálogo continua na busca, em Descobrir e nos "parecidos em outra faixa". */
+let poolCache=null,poolN=-1;
+function rankPool(){const n=typeof PERFUMES!=='undefined'?PERFUMES.length:0;if(poolCache&&poolN===n)return poolCache;poolN=n;poolCache=catalog().filter(p=>p.image||p.origin!=='studio');return poolCache;}
 function catalog(){const seen=new Set(),out=[];for(const p of typeof PERFUMES!=='undefined'?PERFUMES:[]){if(!p||seen.has(p.id))continue;seen.add(p.id);out.push(p);}return out;}
 
  function blindBuy(p,ratings={},prefs={}){
@@ -137,7 +141,7 @@ function catalog(){const seen=new Set(),out=[];for(const p of typeof PERFUMES!==
  function layering(p,ratings={},prefs={},{owned=[]}={}){if(!p||!p.vector)return null;const tp=topFamily(p);if(!tp)return null;
   const R=clean(ratings),own=new Set((owned||[]).map(id=>(byIdSafe(id)||{}).id).filter(Boolean)),want=COMPLEMENT[tp.id]||['amadeirado','citrico'];
   const avoid=prefs.dislikedNotes||[];let best=null;
-  for(const q of catalog()){if(q.id===p.id||!q.vector)continue;if(R[q.id]!==undefined&&R[q.id]<=4)continue;const tq=topFamily(q);if(!tq||tq.id===tp.id)continue;const k=want.indexOf(tq.id);if(k<0)continue;
+  for(const q of rankPool()){if(q.id===p.id||!q.vector)continue;if(R[q.id]!==undefined&&R[q.id]<=4)continue;const tq=topFamily(q);if(!tq||tq.id===tp.id)continue;const k=want.indexOf(tq.id);if(k<0)continue;
    const s=cos(p.vector,q.vector);if(s<.3||s>.82)continue;if(avoid.some(x=>hasNote(q,x)))continue;
    const sc=(3-k)*.3+tq.value*.4+(1-Math.abs(s-.55))*.5+(own.has(q.id)?.6:0)+(R[q.id]>=6?(R[q.id]-5)/8:0)+(q.image?.08:0);
    if(!best||sc>best.sc||sc===best.sc&&q.id<best.q.id)best={q,tq,sc};}
@@ -171,7 +175,7 @@ function catalog(){const seen=new Set(),out=[];for(const p of typeof PERFUMES!==
    if(avoidFam.length){const ax=axes(p),tp=topFamily(p);for(const k of avoidFam)if(ax[k]>=.4||tp&&tp.id===k)f.push('fam:'+k);}
    return f;};
   const gain={},pool=[];
-  for(const p of catalog()){if(!p.vector||ex.has(p.id))continue;if(forPerson?R[p.id]!==undefined:R[p.id]!==undefined&&R[p.id]<=4)continue;
+  for(const p of rankPool()){if(!p.vector||ex.has(p.id))continue;if(forPerson?R[p.id]!==undefined:R[p.id]!==undefined&&R[p.id]<=4)continue;
    const f=fails(p);if(!f.length)pool.push(p);else if(f.length===1)gain[f[0]]=(gain[f[0]]||0)+1;}
   const scored=pool.map(p=>{const eng=engineRec(p,R,ectx,eprefs),s=season(p),it=intensity(p),ax=axes(p),pf=perf(p);
    const sm=a.climate==='Calor'?s.warm:a.climate==='Frio'?s.cold:a.climate==='Meia-estação'?1-Math.abs(s.warm-s.cold):.5;

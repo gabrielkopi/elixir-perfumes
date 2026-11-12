@@ -97,7 +97,7 @@ ${c.divergent.length?`<p class="t-sm muted pf-comm-d">Fora das notas da marca:</
    return `<li class="pf-alt-row">${UI.row(x.p,{sub:esc(meta),trail:`<span class="pf-sim"><b>${x.sim}%</b><small>parecido</small></span>`})}<p class="t-sm muted pf-alt-why">${esc(why)}</p></li>`;}).join('');
   const t=Advisor.tier(p),empty=P.dir==='cheaper'&&t===1?'Este já está na faixa mais acessível.':P.dir==='pricier'&&t===4?'Este já está na faixa mais exclusiva.':'Nada parecido o bastante nesta combinação. Troque a faixa ou a origem.';
   return list.length?`<ol class="list-hair pf-alts">${rows}</ol>`:`<p class="em pf-alt-empty">${esc(empty)}</p>`;},
- priceSection(p){const P=this.price,t=Advisor.tier(p);if(!t)return '';
+ priceSection(p){if(this.price.id!==p.id)this.price={dir:'cheaper',origin:'any',id:p.id};const P=this.price,t=Advisor.tier(p);if(!t)return '';
   const seg=UI.seg([{id:'cheaper',label:'Mais acessível'},{id:'same',label:'Mesma faixa'},{id:'pricier',label:'Mais exclusivo'}],P.dir,'pf-price-dir',{variant:'quiet',name:'pf-price',label:'Faixa',block:true});
   const chips=UI.chips([{id:'any',label:'Todos',on:P.origin==='any'},{id:'national',label:'Nacional',on:P.origin==='national'},{id:'imported',label:'Importado',on:P.origin==='imported'}],'pf-price-origin',{label:'Origem'});
   return UI.section({title:'Mais barato ou mais caro, com notas parecidas',cls:'pf-sec pf-price',body:`<p class="t-sm muted">Este é <b>${esc(Advisor.tierLabel(t))}</b>. Faixa pela marca, não pelo preço. Parecido não é igual: vale testar na pele.</p>${seg}${chips}<div id="pf-price-list">${this.priceBody(p)}</div>`});},

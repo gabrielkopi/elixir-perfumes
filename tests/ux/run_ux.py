@@ -63,7 +63,11 @@ def weather_home(browser, url):
     print('0. Clima de hoje no Início (São Paulo, Open-Meteo simulado)')
     pg = new_page(browser)
     demo(pg, url)
-    go(pg, url, 'home', 2200)
+    go(pg, url, 'home', 800)
+    try:
+        pg.wait_for_selector('.v-home .wx-card', timeout=8000)
+    except Exception:
+        pass
     check('cartão de clima aparece', pg.query_selector('.v-home .wx-card') is not None)
     check('mostra São Paulo e a temperatura', 'São Paulo' in pg.inner_text('.v-home') and '31°' in pg.inner_text('.v-home'))
     check('arte animada do tempo', pg.evaluate("(()=>{const s=document.querySelector('.wx-card .wx-art');return !!s&&document.getAnimations().some(a=>s.contains(a.effect&&a.effect.target))})()"))
@@ -167,6 +171,11 @@ def price_flow(browser, url):
     check(f'Nacional filtra a lista ({len(rows)})', len(rows) > 0 and all('Nacional' in r for r in rows))
     pg.click('[data-action=pf-price-dir][data-id=pricier]'); pg.wait_for_timeout(900)
     check('Mais exclusivo explica quando não há opção acima', 'faixa mais exclusiva' in pg.inner_text('.pf-price'))
+    go(pg, url, 'perfume/creed-aventus', 1300)
+    first = pg.evaluate("(document.querySelector('.pf-alt-row')||{}).innerText||''")
+    check('Aventus: o inspirado declarado (New Venttus, Azza) aparece primeiro', 'New Venttus' in first and 'Inspiração declarada' in first, first[:120])
+    n = pg.evaluate("PERFUMES.length")
+    check(f'catálogo atualizado ({n} perfumes)', n >= 2000)
     check('sem erros no console', not pg.errors, '; '.join(pg.errors[:3]))
     pg.context.close()
 

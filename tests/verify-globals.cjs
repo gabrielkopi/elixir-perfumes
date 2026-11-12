@@ -17,7 +17,7 @@ const REG={
  'views/today.js':['Today','Context','OUTFITS'],'views/bubble.js':['Bubble'],'views/circle.js':['Circle'],'views/connect.js':['Connect'],
  /* existentes antes do v3 ("data/engine globals stay where they are") */
  'data/brand.js+':['BRAND'],'data/data.js+':['DIMENSIONS','RAW','VERIFIED','PRODUCT_PHOTOS','PERFUMES','byId','PEOPLE','POST_SEEDS','POSTS','OBSERVATIONS','EDITORIALS'],
- 'data/catalog-100.js+':['CATALOG_100'],'data/notes.js+':['NoteModel','NOTE_CHOICES','STYLE_CHOICES','EXTRA_NOTES'],'data/catalog-photos.js+':['CatalogPhotos'],'data/colors.js':['PERFUME_COLORS'],
+ 'data/catalog-100.js+':['CATALOG_100'],'data/notes.js+':['NoteModel','NOTE_CHOICES','STYLE_CHOICES','EXTRA_NOTES'],'data/catalog-photos.js+':['CatalogPhotos'],'data/colors.js':['PERFUME_COLORS'],'data/catalog-studio.js':['CATALOG_STUDIO'],
  'data/ingredients.js+':['INGREDIENTS','NOTE_GROUPS','FAMILIES','noteImage'],'engine/engine.js+':['Engine'],'engine/taste-engine.js+':['BaseTasteProfile','BaseTasteRecommend'],
  'data/community.js+':['COMMUNITY','PRIVATE_MAP','People','Products','Posts'],
  'core/dom.js+':['$','$$','esc','compact','toggle','plural','ICONS','icon','Toast','toast','readImage']
@@ -58,7 +58,7 @@ function topNames(src){
 
 /* ---------- ordem §3.1 nas 4 páginas ---------- */
 const ORDER=`data/brand.js data/data.js data/catalog-100.js data/notes.js data/catalog-br.js data/image-credits.js data/catalog-photos.js data/colors.js
-data/ingredients.js data/brand-tiers.js data/editions.js engine/engine.js engine/taste-engine.js engine/advisor.js engine/olfactory-map.js
+data/ingredients.js data/brand-tiers.js data/catalog-studio.js data/editions.js engine/engine.js engine/taste-engine.js engine/advisor.js engine/olfactory-map.js
 core/dom.js core/profile-rules.js core/store.js core/catalog.js core/router.js core/motion.js core/components.js core/actions.js core/weather.js
 data/community.js vendor/qrcode.js views/shell.js views/settings.js views/feed.js views/stories.js views/compose.js
 views/explore.js views/search.js views/perfume.js views/notes.js views/brand.js views/guide.js views/compare.js views/discovery.js
