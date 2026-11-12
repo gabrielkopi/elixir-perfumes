@@ -24,6 +24,8 @@ const Activity={
   /* 5. curtidas nas suas publicações */
   for(const post of state.posts){const n=Number(post.likes)||0,p=byId(post.perfume);if(!n)continue;
    out.push({id:'likes-'+post.id,kind:'likes',at:Math.min(now,this.at(post.when)+2*36e5),perfume:p,html:`<b>${esc(UI.plural(n,'pessoa','pessoas'))}</b> curtiram sua publicação${p?' com '+esc(p.name):''}.`,href:'#profile',demo:true});}
+  /* 6. ao vivo (demonstração): publicações, comentários, seguidores, curtidas e novidades do catálogo nesta sessão */
+  if(typeof Live!=='undefined')out.push(...Live.items);
   const dis=new Set(state.activity.dismissed||[]);
   return out.filter(x=>!dis.has(x.id)).sort((a,b)=>b.at-a.at||(a.id<b.id?-1:1));},
  isNew(x){return x.at>(Number(state.activity.seenAt)||0);},
@@ -47,3 +49,51 @@ const Activity={
   b.querySelector('.ac-top')?.remove();toast('Tudo marcado como lido');}
 };
 Actions.add({'activity-read':()=>Activity.readNow()});
+
+/* ---------- Ao vivo (demonstração) ----------
+   Enquanto o app está aberto, a comunidade de demonstração "acontece": publicações novas, comentários, seguidores,
+   curtidas e novidades do catálogo. Tudo rotulado como demonstração; nada é enviado para fora do aparelho. */
+const Live={
+ released:[],items:[],comments:{},timer:null,n:0,started:false,
+ queue(){return typeof COMMUNITY!=='undefined'&&Array.isArray(COMMUNITY.livePosts)?COMMUNITY.livePosts:[];},
+ people(){return (typeof People!=='undefined'?People.all():[]).filter(u=>u.id!=='me'&&u.shareMap!==false);},
+ pick(list,k){return list.length?list[(this.n*7+k*13)%list.length]:null;},
+ start(){if(this.started||(typeof SANDBOX!=='undefined'&&SANDBOX))return;this.started=true;this.next(14000);
+  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'){clearTimeout(this.timer);this.timer=null;}else if(!this.timer)this.next(8000);});},
+ next(ms){clearTimeout(this.timer);this.timer=setTimeout(()=>{this.timer=null;try{this.tick();}catch(e){console.warn(e);}this.next(22000+(this.n*9301%17000));},ms);},
+ KINDS:['post','comment','follow','news','post','like','comment','post','news'],
+ tick(kind){if(typeof state==='undefined'||!state.onboarded)return null;this.n++;kind=kind||this.KINDS[(this.n-1)%this.KINDS.length];
+  const ev=this[kind]?this[kind]():null;if(!ev)return kind!=='post'?this.post():null;
+  ev.at=Date.now();ev.demo=true;ev.live=true;this.items.unshift(ev);this.items=this.items.slice(0,30);
+  this.banner(ev);this.refreshBell();return ev;},
+ post(){const q=this.queue().filter(p=>!this.released.some(r=>r.id===p.id));const p=q[0];if(!p)return null;this.released.unshift({...p});
+  const u=typeof People!=='undefined'?People.get(p.user):null,f=byId(p.perfume);
+  if(route.page==='home')this.newPill();
+  return {id:'live-'+p.id,kind:'post',person:u,perfume:f,html:`<b>${esc(u?u.name.split(' ')[0]:'Alguém')}</b> publicou${f?' com <b>'+esc(f.name)+'</b>':''}.`,href:'#home'};},
+ comment(){const ppl=this.people(),u=this.pick(ppl,1),txt=this.pick((typeof COMMUNITY!=='undefined'&&COMMUNITY.comments)||['Que escolha!'],2);if(!u)return null;
+  const mine=state.posts[0];
+  if(mine){Store.update(s=>{s.comments[mine.id]=[...(s.comments[mine.id]||[]),{text:txt,at:new Date().toISOString(),by:u.id,demo:true}];},{silent:true});
+   return {id:'live-c-'+this.n,kind:'comment',person:u,html:`<b>${esc(u.name.split(' ')[0])}</b> comentou na sua publicação: “${esc(txt)}”`,href:'#profile'};}
+  const liked=state.likes.map(id=>Posts.find(id)).filter(Boolean),post=liked[0]||Posts.all().find(p=>p.user!=='me');if(!post)return null;
+  (this.comments[post.id]=this.comments[post.id]||[]).push({text:txt,by:u.id,at:new Date().toISOString(),demo:true});
+  const a=People.get(post.user);
+  return {id:'live-c-'+this.n,kind:'comment',person:u,html:`<b>${esc(u.name.split(' ')[0])}</b> comentou ${liked.length?'num post que você curtiu':'no post de '+esc(a?a.name.split(' ')[0]:'alguém')}: “${esc(txt)}”`,href:'#home'};},
+ follow(){const ppl=this.people().filter(u=>!state.following.includes(u.id)),u=this.pick(ppl,3);if(!u)return null;
+  return {id:'live-f-'+u.id,kind:'person',person:u,html:`<b>${esc(u.name)}</b> começou a seguir você.`,href:'#person/'+encodeURIComponent(u.id)};},
+ like(){const ids=Object.keys(state.ratings),id=this.pick(ids,4),p=id&&byId(id),u=this.pick(this.people(),5);if(!p||!u)return null;
+  return {id:'live-l-'+this.n,kind:'likes',person:u,perfume:p,html:`<b>${esc(u.name.split(' ')[0])}</b> curtiu sua avaliação de <b>${esc(p.name)}</b>.`,href:'#perfume/'+encodeURIComponent(p.id)};},
+ /* Novidade real: perfumes que entraram no catálogo do ELIXIR na atualização mais recente. */
+ news(){const fresh=PERFUMES.filter(p=>p.origin==='br'&&p.image),p=this.pick(fresh,6);if(!p)return null;
+  return {id:'live-n-'+p.id,kind:'perfume',perfume:p,html:`Novo no catálogo do ELIXIR: <b>${esc(p.name)}</b>, ${esc(p.brand)}.`,href:'#perfume/'+encodeURIComponent(p.id),news:true};},
+ refreshBell(){for(const b of document.querySelectorAll('[data-action=activity]')){if(!b.querySelector('.dot-unread'))b.insertAdjacentHTML('beforeend','<i class="dot-unread live-ping" aria-hidden="true"></i>');}},
+ newPill(){const host=document.querySelector('.v-home .feed');if(!host||host.querySelector('.feed-new'))return;
+  host.insertAdjacentHTML('afterbegin','<button type="button" class="feed-new pressable" data-action="feed-new">'+icon('arrow-up-right','icon--20')+'<span>Novas publicações</span></button>');},
+ banner(ev){if(Sheet.isOpen())return;let el=document.getElementById('live-banner');if(el)el.remove();
+  const av=ev.person?UI.avatar(ev.person,'sm'):ev.perfume?`<span class="lb-img">${UI.photo(ev.perfume)}</span>`:'';
+  document.body.insertAdjacentHTML('beforeend',`<a id="live-banner" class="live-banner glass" href="${esc(ev.href||'#home')}" data-action="live-open" role="status">${av}<span class="lb-txt"><span class="lb-msg">${ev.html}</span><small>${ev.news?'Catálogo':'Demonstração'} · agora</small></span></a>`);
+  el=document.getElementById('live-banner');clearTimeout(this.bt);this.bt=setTimeout(()=>{if(el.isConnected){el.classList.add('out');setTimeout(()=>el.remove(),400);}},4800);}
+};
+Actions.add({
+ 'feed-new':el=>{el.remove();window.scrollTo({top:0,behavior:Motion.reduced()?'auto':'smooth'});App.render();},
+ 'live-open':el=>{const href=el.getAttribute('href')||'#home';el.remove();if(location.hash!==href)location.hash=href;}
+});

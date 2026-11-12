@@ -68,8 +68,10 @@ const Compose={
  /* ---------- Comentários ---------- */
  comments(postId){const id=String(postId||'');if(!id)return;
   Sheet.open({title:'Comentários',body:this.cbody(id),cls:'sh-comments',focus:'.sh-comments input'});this.cscroll();},
- cbody(id){const list=state.comments[id]||[],me={name:state.profile.name};
-  const items=list.length?`<ul class="sh-comments-list">${list.map(c=>`<li>${UI.avatar(null,'sm')}<div><p class="sh-comments-who"><b>${esc(me.name)}</b><span>${esc(UI.when(c.at))}</span></p><p>${esc(c.text)}</p></div></li>`).join('')}</ul>`
+ cbody(id){const post=typeof Posts!=='undefined'?Posts.find(id):null,demoList=post&&Array.isArray(post.comments)?post.comments.map(c=>({...c,at:null,demo:true})):[];
+  const live=typeof Live!=='undefined'&&Live.comments[id]?Live.comments[id]:[],list=[...demoList,...live,...(state.comments[id]||[])],me={name:state.profile.name};
+  const who=c=>{if(!c.by)return {u:null,name:me.name};const u=typeof People!=='undefined'?People.get(c.by):null;return {u,name:u?u.name:'Alguém'};};
+  const items=list.length?`<ul class="sh-comments-list">${list.map(c=>{const w=who(c);return `<li>${UI.avatar(w.u,'sm')}<div><p class="sh-comments-who"><b>${esc(w.name)}</b>${c.at?`<span>${esc(UI.when(c.at))}</span>`:''}${c.demo?'<span class="demo-tag">Demonstração</span>':''}</p><p>${esc(c.text)}</p></div></li>`;}).join('')}</ul>`
    :UI.empty({icon:'comment',title:'Nenhum comentário ainda',text:'Seja a primeira pessoa a comentar.'});
   return `${items}<form class="sheet-foot sh-comments-form" data-submit="comment-send" data-id="${esc(id)}"><label class="field" data-input="comment-text"><span class="sr-only">Comentário</span><input name="text" maxlength="280" placeholder="Escreva um comentário" autocomplete="off" enterkeyhint="send"></label>${UI.btn('Enviar',{size:'sm',attrs:'type="submit" disabled'}).replace('type="button" ','')}</form>`;},
  cscroll(){const d=document.getElementById('sheet');if(d)requestAnimationFrame(()=>{d.scrollTop=d.scrollHeight;});},

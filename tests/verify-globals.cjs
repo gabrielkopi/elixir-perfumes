@@ -11,7 +11,7 @@ const REG={
  'views/feed.js':['Feed','Post'],'views/stories.js':['Stories'],'views/compose.js':['Compose'],'views/explore.js':['Explore','Filters'],'views/search.js':['Search'],
  'views/perfume.js':['Perfume','Rating'],'views/notes.js':['Notes','Radar'],'views/brand.js':['Brands'],'data/editions.js':['EDITIONS','Editions'],'engine/advisor.js':['Advisor'],
  'data/brand-tiers.js':['BRAND_TIERS','NATIONAL_BRANDS','TIER_LABELS'],'views/guide.js':['Guide'],'views/compare.js':['Compare'],'views/discovery.js':['Discovery'],
- 'views/collection.js':['Collection','Lists'],'views/profile.js':['Profile'],'views/profile-edit.js':['ProfileEdit'],'views/activity.js':['Activity'],
+ 'views/collection.js':['Collection','Lists'],'views/profile.js':['Profile'],'views/profile-edit.js':['ProfileEdit'],'views/activity.js':['Activity','Live'],
  'data/catalog-br.js':['CATALOG_BR'],'data/image-credits.js':['IMAGE_CREDITS'],'data/data.js':['PERFUME_ALIASES'],'data/ingredients.js':['INGREDIENT_ALIASES'],
  'engine/olfactory-map.js':['MAP_AXES','OMap'],'core/weather.js':['Weather'],'vendor/qrcode.js':['qrcode'],'views/map.js':['MapView'],
  'views/today.js':['Today','Context','OUTFITS'],'views/bubble.js':['Bubble'],'views/circle.js':['Circle'],'views/connect.js':['Connect'],

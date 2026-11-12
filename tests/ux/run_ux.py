@@ -130,6 +130,29 @@ def colors_flow(browser, url):
     pg.context.close(); pg2.context.close()
 
 
+def live_flow(browser, url):
+    print('1e. App vivo: publicações, comentários, notificações e novidades (demonstração)')
+    pg = new_page(browser)
+    demo(pg, url)
+    go(pg, url, 'home', 1500)
+    pg.evaluate("Live.tick('post')"); pg.wait_for_timeout(500)
+    check('chega uma publicação nova com aviso no topo', pg.query_selector('#live-banner') is not None and 'publicou' in pg.inner_text('#live-banner'))
+    check('o aviso diz que é demonstração', 'Demonstração' in pg.inner_text('#live-banner'))
+    check('aparece "Novas publicações" no feed', pg.query_selector('.feed-new') is not None)
+    pg.click('.feed-new'); pg.wait_for_timeout(900)
+    first = pg.evaluate("document.querySelector('.v-home .post')?.dataset.post")
+    check(f'tocar mostra a publicação nova no topo ({first})', bool(first) and first.startswith('live'))
+    pg.evaluate("Live.tick('comment')"); pg.wait_for_timeout(300)
+    pg.evaluate("Live.tick('news')"); pg.wait_for_timeout(300)
+    check('novidade do catálogo vem de perfume real recém-adicionado', 'Novo no catálogo' in pg.inner_text('#live-banner'))
+    n = pg.evaluate("Activity.events().filter(e=>e.live).length")
+    check(f'tudo entra nas notificações ({n})', n >= 3)
+    check('o sino ganha o ponto de novidade', pg.query_selector('[data-action=activity] .dot-unread') is not None)
+    check('faixa "Chegou no ELIXIR" no Início', 'Chegou no ELIXIR' in pg.inner_text('main'))
+    check('sem erros no console', not pg.errors, '; '.join(pg.errors[:3]))
+    pg.context.close()
+
+
 def onboarding_unknown(browser, url):
     print('1b. Onboarding: escala completa, "Não conheço" e retomada após recarregar')
     pg = new_page(browser)
@@ -399,7 +422,7 @@ def main():
     print('ELIXIR · testes de experiência ·', 'http' if use_http else 'file://')
     with sync_playwright() as p:
         b = p.chromium.launch()
-        for fn in [weather_home, first_run, accounts_flow, colors_flow, onboarding_unknown, community_demo, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
+        for fn in [weather_home, first_run, accounts_flow, colors_flow, live_flow, onboarding_unknown, community_demo, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
             try:
                 fn(b, url)
             except Exception as e:

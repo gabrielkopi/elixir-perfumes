@@ -178,7 +178,7 @@ const Store={
   /* social */
   out.following=[...new Set((Array.isArray(s.following)?s.following:[]).filter(id=>this.person(id)))];
   out.likes=this.strs(s.likes,500,80);out.saved=this.strs(s.saved,500,80);out.seenStories=this.strs(s.seenStories,200,80);out.socialShelf=this.strs(s.socialShelf,200,80);
-  for(const [pid,list] of Object.entries(this.obj(s.comments)))if(Array.isArray(list)){const l=list.filter(c=>c&&typeof c.text==='string'&&c.text.trim()).map(c=>({text:c.text.slice(0,280),at:this.iso(c.at,new Date(Number(c.at)||now).toISOString())}));if(l.length)out.comments[String(pid).slice(0,80)]=l;}
+  for(const [pid,list] of Object.entries(this.obj(s.comments)))if(Array.isArray(list)){const l=list.filter(c=>c&&typeof c.text==='string'&&c.text.trim()).map(c=>({text:c.text.slice(0,280),at:this.iso(c.at,new Date(Number(c.at)||now).toISOString()),...(typeof c.by==='string'&&/^[a-z0-9-]{2,40}$/.test(c.by)?{by:c.by,demo:true}:{})}));if(l.length)out.comments[String(pid).slice(0,80)]=l;}
   const posts=(Array.isArray(s.posts)?s.posts:[]).filter(p=>p&&typeof p.id==='string').map(p=>{const o={id:p.id.slice(0,60),user:'me',perfume:this.canon(p.perfume)||'',photo:typeof p.photo==='string'&&(p.photo.startsWith('data:image/')||/^assets\//.test(p.photo))?p.photo:'',
     text:typeof p.text==='string'?p.text.slice(0,280):'',occasion:typeof p.occasion==='string'?p.occasion.slice(0,40):'',likes:Math.max(0,Number(p.likes)||0),when:this.iso(p.when,new Date(now).toISOString())};
     if(Number.isFinite(Number(p.rating))&&p.rating!==null&&p.rating!=='')o.rating=Math.round(Math.min(10,Math.max(0,Number(p.rating))));if(p.sotd)o.sotd=true;return o;})

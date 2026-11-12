@@ -24,7 +24,7 @@ const Post={
    avatar:own?null:(u?{name:u.name,image:u.image,initials:u.initials}:{name:a.name,initials:a.initials}),
    image,perfume,text:String(raw.text||''),occasion:String(raw.occasion||''),at:this.at(raw,fallback),
    likes:(Number(raw.likes)||0)+(state.likes.includes(String(raw.id))?1:0),liked:state.likes.includes(String(raw.id)),saved:state.saved.includes(String(raw.id)),
-   comments:(state.comments[raw.id]||[]).length};},
+   comments:(raw.comments||[]).length+(typeof Live!=='undefined'&&Live.comments[raw.id]?Live.comments[raw.id].length:0)+(state.comments[raw.id]||[]).length};},
  find(id){const raw=typeof Posts!=='undefined'?Posts.find(id):null;return raw?this.data(raw):null;},
  who(d){return esc(d.author.name.split(/\s+/)[0]);},
  media(d,{compact=false}={}){
@@ -137,9 +137,13 @@ ${UI.btn('Mais opções para hoje',{href:'#today',variant:'tertiary',icon:'arrow
  view(){
   const wx=this.weather(),head=UI.pageHead({eyebrow:UI.date(new Date(),'eyebrow'),title:'Hoje',actions:wx?'':this.chip()});
   const stories=typeof Stories!=='undefined'&&Stories.rail?Stories.rail():'';
-  const today=this.today(),day=this.day(),eds=this.eds(),people=this.people(),feed=this.feed();
+  const today=this.today(),day=this.day(),eds=this.eds()+this.fresh(),people=this.people(),feed=this.feed();
   if(this.desk())return `<section class="v-home" data-view="home">${head}<div class="layout-split"><div class="main">${wx}${stories}${day}${feed}</div><aside class="aside" aria-label="Para hoje e sugestões">${today}${people}${eds}</aside></div></section>`;
   return `<section class="v-home" data-view="home">${head}<div class="main">${wx}${stories}${today}${day}${eds}${people}${feed}</div></section>`;},
+ /* Novo no catálogo: perfumes que entraram na atualização mais recente do ELIXIR (dado real, não lançamento de mercado). */
+ fresh(){const list=PERFUMES.filter(p=>p.origin==='br'&&p.image);if(list.length<4)return '';const d=new Date().getDate(),start=(d*17)%Math.max(1,list.length-10);
+  const items=list.slice(start,start+10);
+  return UI.section({eyebrow:'Novo no catálogo',title:'Chegou no ELIXIR',rail:'home-fresh',body:UI.rail(items.map((p,i)=>UI.tile(p,{i})),{name:'home-fresh',label:'Novo no catálogo'})});},
  /* Clima de agora (Open-Meteo, São Paulo por padrão) com a arte animada; toque abre o Contexto do dia. */
  weather(){if(typeof Weather==='undefined')return '';let r=null;try{r=Weather.cached();}catch(e){}if(!r)return '';
   const L=state.location||{},place=L.name||'São Paulo',n=v=>Number.isFinite(v)?Math.round(v)+'°':'—';
