@@ -11,7 +11,7 @@ const Router={
   guide:[id=>/^(me|gift)\//.test(id)?'full':id==='results'?'push':'tab','guide','Guia'],
   today:['push','guide','Hoje'],bubble:['push','guide','Fora da Bolha'],circle:['push','guide','Meu círculo'],
   connect:[id=>/^store\//.test(id)?'full':'push',id=>/^store\//.test(id)?'none':'guide','ELIXIR Connect'],
-  map:['push','profile','Mapa olfativo'],compare:['push','origin','Comparar'],welcome:['full','none','Boas-vindas'],refine:['full','profile','Refinar assinatura'],
+  map:['push','profile','Mapa olfativo'],compare:['push','origin','Comparar'],welcome:['full','none','Boas-vindas'],refine:['full','profile','Refinar meu mapa'],
   collection:['tab','collection','Coleção'],list:['push','collection','Lista'],profile:['tab','profile','Perfil'],person:['push','origin','Perfil']
  },
  NAVS:['home','explore','guide','collection','profile','none','origin'],

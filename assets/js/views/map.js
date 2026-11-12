@@ -46,7 +46,7 @@ const MapView={
    ${c.contrasts.map(x=>`<p class="em">Você gosta de <b>${esc(x.note.toLowerCase())}</b>, mas não com ${esc(x.with.toLowerCase())}.</p>`).join('')}</div>`;},
  summary(map,{own=true,person=null}={}){
   if(!map)return '';
-  if(own&&map.evidence.ratings<3)return `<div class="mapv">${UI.empty({icon:'compass',title:'Seu mapa aparece depois de 3 avaliações',text:'Avalie perfumes que você conhece. Com poucos dados, tudo é hipótese.',cta:{label:'Refinar assinatura',href:'#refine/1'}})}</div>`;
+  if(own&&map.evidence.ratings<3)return `<div class="mapv">${UI.empty({icon:'compass',title:'Seu mapa aparece depois de 3 avaliações',text:'Avalie perfumes que você conhece. Com poucos dados, tudo é hipótese.',cta:{label:'Refinar meu mapa',href:'#refine/1'}})}</div>`;
   if(!own&&!map.axes.some(a=>a.level!=='sem-dados'))return '';
   const comp=map.axes.filter(a=>a.level==='comprovado'&&a.sign!=='evita').sort((a,b)=>b.value-a.value).slice(0,4);
   const hyp=map.axes.filter(a=>a.level==='hipotese'&&a.sign==='gosta').sort((a,b)=>b.value-a.value).slice(0,3);
@@ -96,7 +96,7 @@ const MapView={
    UI.section({eyebrow:'Evidências',title:'De onde vem',body:this.evidenceRows(map)})].join('')+(ratings<3?'':'');},
  view(){const map=Select.map();
   if(!map)return `<section class="v-map" data-view="map">${UI.pageHead({eyebrow:'Perfil',title:'Seu mapa olfativo'})}${UI.empty({icon:'compass',title:'O mapa não carregou',text:'Tente abrir esta tela de novo.',cta:{label:'Ir para o perfil',href:'#profile'}})}</section>`;
-  if(map.total===0)return `<section class="v-map" data-view="map">${UI.pageHead({eyebrow:'Perfil',title:'Seu mapa olfativo'})}${UI.empty({icon:'compass',title:'Seu mapa aparece depois de 3 avaliações',text:'Avalie perfumes que você já conhece. Leva menos de um minuto.',cta:{label:'Refinar assinatura',href:'#refine/1'}})}</section>`;
+  if(map.total===0)return `<section class="v-map" data-view="map">${UI.pageHead({eyebrow:'Perfil',title:'Seu mapa olfativo'})}${UI.empty({icon:'compass',title:'Seu mapa aparece depois de 3 avaliações',text:'Avalie perfumes que você já conhece. Leva menos de um minuto.',cta:{label:'Refinar meu mapa',href:'#refine/1'}})}</section>`;
   const sub=map.evidence.ratings<3?'Com poucos dados, tudo aqui é hipótese.':this.sentence(map);
   return `<section class="v-map" data-view="map">${UI.pageHead({eyebrow:'Perfil',title:'Seu mapa olfativo',sub:esc(sub)})}<div id="panel-map" class="mapv-page">${this.body(map)}</div></section>`;},
  /* Uma foto por mês (silenciosa), para o histórico do mapa. */

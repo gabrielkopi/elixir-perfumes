@@ -1,5 +1,5 @@
 'use strict';
-/* Boas-vindas (welcome/1–4, done; REQ §1) e Refinar assinatura (refine/1–5). Respostas salvas em silêncio a cada toque. */
+/* Boas-vindas (welcome/1–4, done; REQ §1) e Refinar meu mapa (refine/1–5). Respostas salvas em silêncio a cada toque. */
 const Discovery={
  RATE:[['Amo',8],['Gosto',6],['Neutro',4],['Detesto',2]],
  OCC:['Dia a dia','Trabalho','Noite','Encontro','Festa','Evento','Ar livre'],
@@ -97,7 +97,7 @@ const Discovery={
 Router.add('welcome',{view:id=>Discovery.welcome(id),title:'Boas-vindas',layout:'full',nav:'none',after:id=>{
  const step=String(id||'1');if(step==='3'&&Discovery.picked().length<3)Router.replace('welcome','2');else if(!['1','2','3','4','done'].includes(step))Router.replace('welcome','1');
  if(step!=='1')Discovery.focus();}});
-Router.add('refine',{view:id=>Discovery.refine(id),title:'Refinar assinatura',layout:'full',nav:'profile',after:id=>{if(String(id)!==String(Math.max(1,Math.min(5,Number(id)||1))))Router.replace('refine',String(Math.max(1,Math.min(5,Number(id)||1))));Discovery.focus();}});
+Router.add('refine',{view:id=>Discovery.refine(id),title:'Refinar meu mapa',layout:'full',nav:'profile',after:id=>{if(String(id)!==String(Math.max(1,Math.min(5,Number(id)||1))))Router.replace('refine',String(Math.max(1,Math.min(5,Number(id)||1))));Discovery.focus();}});
 
 Actions.add({
  'welcome-go':el=>{const n=el.dataset.n;if(n==='3'&&Discovery.picked().length<3)return;if(n==='4'&&!Discovery.allRated())return;Router.go('welcome',n);},

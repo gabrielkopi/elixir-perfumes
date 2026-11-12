@@ -7,12 +7,21 @@ const Motion={
  html(){return document.documentElement;},
  /* Reduzir movimento: ajuste do app ('on') ou do sistema. */
  reduced(){const s=typeof state!=='undefined'&&state.settings?state.settings.reduceMotion:'system';return s==='on'||reducedMotion.matches;},
+ touchMQ:typeof matchMedia==='function'?matchMedia('(hover:none) and (pointer:coarse)'):null,
+ touch(){return !!(this.touchMQ&&this.touchMQ.matches);},
  syncMotion(){this.html().dataset.motion=this.reduced()?'reduce':'full';},
  wait(el,ms){return new Promise(res=>{let done=false;const on=e=>{if(e.target===el)fin();};const fin=()=>{if(done)return;done=true;if(el)el.removeEventListener('animationend',on);res();};if(el)el.addEventListener('animationend',on);setTimeout(fin,ms);});},
  /* Transição de página com blur: View Transitions, ou .page-out → apply → .page-in. Sem corrida de setTimeout. */
  page(apply,{dir='none'}={}){
   const h=this.html();h.dataset.nav=dir;
   if(this.reduced()){apply();return Promise.resolve();}
+  /* Toque (iPhone, Android): troca imediata e só o conteúdo novo sai do desfoque. Sem congelar a tela num snapshot. */
+  if(this.touch()){
+   try{this.vt&&this.vt.skipTransition();}catch(e){}
+   const t=++this.token;apply();const m=document.getElementById('main');if(!m){this.clearHero();return Promise.resolve();}
+   m.classList.remove('page-out','page-in');void m.offsetWidth;m.classList.add('page-in');
+   return this.wait(m,420).then(()=>{if(t===this.token){m.classList.remove('page-in');this.clearHero();}});
+  }
   if(document.startViewTransition){
    try{this.vt&&this.vt.skipTransition();}catch(e){}
    let ran=false;const run=()=>{if(ran)return;ran=true;apply();};
@@ -55,6 +64,8 @@ const Motion={
   const t=(this.swaps.get(el)||0)+1;this.swaps.set(el,t);
   const done=()=>{this.after(el,{quiet:false});};
   if(this.reduced()){el.innerHTML=html;done();return Promise.resolve();}
+  if(this.touch()){el.innerHTML=html;el.classList.remove('swap-out','swap-in');void el.offsetWidth;el.classList.add('swap-in');done();
+   return this.wait(el,380).then(()=>{if(this.swaps.get(el)===t)el.classList.remove('swap-in');});}
   el.style.minHeight=el.offsetHeight+'px';el.classList.remove('swap-in');el.classList.add('swap-out');
   return this.wait(el,180).then(()=>{if(this.swaps.get(el)!==t)return;el.innerHTML=html;el.classList.remove('swap-out');el.classList.add('swap-in');
    if(dir)el.style.setProperty('--swap-x',(dir>0?16:-16)+'px');done();
@@ -114,7 +125,7 @@ const Motion={
   this.sentIO=new IntersectionObserver(es=>{for(const e of es)h.classList.toggle('scrolled',!e.isIntersecting&&e.boundingClientRect.top<top+1);},{rootMargin:`-${Math.round(top)}px 0px 0px 0px`});
   this.sentIO.observe(s);},
  /* Herói compartilhado: o nome vai na .plate tocada (nunca na img, nunca estático no CSS). */
- hero(plateEl){this.clearHero();if(!plateEl||this.reduced()||!document.startViewTransition)return;plateEl.style.viewTransitionName='hero';this.heroPending=true;},
+ hero(plateEl){this.clearHero();if(!plateEl||this.reduced()||this.touch()||!document.startViewTransition)return;plateEl.style.viewTransitionName='hero';this.heroPending=true;},
  consumeHero(){const v=this.heroPending;this.heroPending=false;return v;},
  clearHero(){for(const el of document.querySelectorAll('[style*="view-transition-name"]'))if(el.style.viewTransitionName==='hero')el.style.viewTransitionName='';},
  /* Texto que ocupa a largura (wordmarks, nomes de marca): entre --t-display e --t-mega. */

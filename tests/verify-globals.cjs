@@ -63,11 +63,15 @@ core/dom.js core/profile-rules.js core/store.js core/catalog.js core/router.js c
 data/community.js vendor/qrcode.js views/shell.js views/settings.js views/feed.js views/stories.js views/compose.js
 views/explore.js views/search.js views/perfume.js views/notes.js views/brand.js views/guide.js views/compare.js views/discovery.js
 views/collection.js views/profile.js views/profile-edit.js views/activity.js views/map.js views/today.js views/bubble.js views/circle.js views/connect.js actions.js main.js`.split(/\s+/);
-let fails=0,warns=0;const fail=m=>{fails++;console.log('  FAIL '+m);},warn=m=>{warns++;console.log('  AVISO '+m);};
+let fails=0,warns=0;const VERSIONS=new Set();const fail=m=>{fails++;console.log('  FAIL '+m);},warn=m=>{warns++;console.log('  AVISO '+m);};
 for(const html of ['index.html','elixir.html','perfume-social.html','assinatura.html']){
  const src=fs.readFileSync(path.join(ROOT,html),'utf8');const list=[...src.matchAll(/<script src="assets\/js\/([^"?]+)(\?v=\d+)?"/g)].map(m=>m[1]);
  if(JSON.stringify(list)!==JSON.stringify(ORDER))fail(html+': ordem de scripts difere de §3.1');
- if(/<script src="[^"]*\?v=(?!91")/.test(src))fail(html+': ?v diferente de 91');}
+ /* Uma única versão de cache (?v=) por página e igual nas quatro entradas; sobe a cada publicação. */
+ const vs=[...new Set([...src.matchAll(/\?v=(\d+)"/g)].map(m=>m[1]))];
+ if(vs.length!==1)fail(html+': ?v misturado ('+vs.join(', ')+')');
+ else{VERSIONS.add(vs[0]);if(Number(vs[0])<91)fail(html+': ?v abaixo de 91');}}
+if(VERSIONS.size>1)fail('versões ?v diferentes entre as entradas: '+[...VERSIONS].join(', '));
 
 /* ---------- declarações ---------- */
 const seen={};

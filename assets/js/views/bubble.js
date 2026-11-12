@@ -16,7 +16,7 @@ const Bubble={
     ${UI.why({...x.explain,line:''},{compact:false})}
     <div class="bb-actions">${UI.btn('Quero provar',{action:'bubble-yes',variant:'secondary',size:'sm',attrs:`data-id="${esc(p.id)}"`})}${UI.btn('Não é pra mim',{action:'bubble-no',variant:'tertiary',attrs:`data-id="${esc(p.id)}"`})}</div></div></article>`;},
  list(mode=state.bubble.mode){
-  if(!this.ready())return UI.empty({icon:'compass',title:'Primeiro precisamos conhecer a sua bolha',text:'Avalie pelo menos 3 perfumes que você conhece. Depois mostramos o que fica fora dela.',cta:{label:'Refinar assinatura',href:'#refine/1'}});
+  if(!this.ready())return UI.empty({icon:'compass',title:'Primeiro precisamos conhecer a sua bolha',text:'Avalie pelo menos 3 perfumes que você conhece. Depois mostramos o que fica fora dela.',cta:{label:'Refinar meu mapa',href:'#refine/1'}});
   const items=this.items(mode).filter(x=>!this.hidden.has(x.p.id));
   if(!items.length)return UI.empty({icon:'compass',title:'Você já viu tudo o que encontramos por enquanto',text:'Avalie mais perfumes e voltamos com novas pontes.',cta:mode==='ousado'?null:{label:'Tentar o modo Ousado',action:'bubble-mode',attrs:'data-id="ousado"'}});
   return `<div class="bb-list list-hair stagger">${items.map((x,i)=>this.card(x,i)).join('')}</div>`;},

@@ -9,7 +9,7 @@
   --fill:rgba(10,10,10,.05); --fill-press:rgba(10,10,10,.09);
   --signal:#B8873B; --signal-soft:rgba(184,135,59,.12); --like:#E5484D; --danger:#C2362F;
   --on-ink:#FAFAF8; --overlay:rgba(10,10,10,.22);
-  --lg-fill:linear-gradient(180deg,rgba(255,255,255,.52),rgba(255,255,255,.26)); --lg-hi:rgba(255,255,255,.9); --lg-edge:rgba(0,0,0,.08); --lg-lens:rgba(255,255,255,.72); --lg-shadow:0 12px 32px -10px rgba(0,0,0,.22),0 2px 8px rgba(0,0,0,.06);
+  --lg-fill:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,.5)); --lg-hi:rgba(255,255,255,.9); --lg-edge:rgba(0,0,0,.08); --lg-lens:rgba(255,255,255,.72); --lg-shadow:0 12px 32px -10px rgba(0,0,0,.22),0 2px 8px rgba(0,0,0,.06);
   --glass-bg:color-mix(in srgb,var(--bg) 80%,transparent);
   --img-bw:grayscale(1) contrast(1.06) brightness(1.02);
   --sb-thumb:rgba(10,10,10,.18); --sb-thumb-h:rgba(10,10,10,.34);
@@ -255,7 +255,7 @@ input[type=range]{accent-color:var(--ink);width:100%;min-height:44px}
 .seg button[aria-selected=true],.seg button[aria-checked=true],.seg button[aria-pressed=true]{color:var(--ink)}
 .seg--quiet{background:var(--fill)} .seg--quiet::before{background:var(--lg-lens);box-shadow:inset 0 1px 0 var(--lg-hi),inset 0 0 0 .5px var(--lg-edge),0 4px 14px -6px rgba(0,0,0,.18);-webkit-backdrop-filter:blur(12px) saturate(1.8);backdrop-filter:blur(12px) saturate(1.8)}
 .seg--quiet button{color:var(--muted)} .seg--quiet button:is([aria-selected=true],[aria-checked=true],[aria-pressed=true]){color:var(--ink)}
-.seg--block{width:100%} .seg--block button{padding:0 var(--s1);min-width:0;overflow:hidden;text-overflow:ellipsis}
+.seg--block{width:100%;grid-template-columns:repeat(var(--n),minmax(0,1fr))} .seg--block button{padding:0 var(--s1);min-width:0;overflow:hidden;white-space:normal;line-height:1.1;text-wrap:balance}
 .seg--none::before{opacity:0}
 @media (max-width:399px){.seg button{font-size:13px;padding:0 12px} .seg--block button{padding:0 2px}}
 .seg a{display:grid;place-items:center;min-height:44px;padding:0 18px;border-radius:var(--r-pill);font:500 14px/1 var(--sans);color:var(--muted);white-space:nowrap;transition:color var(--d-3) var(--ease-out)} .seg a[aria-current=page]{color:var(--ink)}
@@ -407,7 +407,7 @@ html.scrolled .topbar.glass{background:var(--glass-bg);-webkit-backdrop-filter:s
 .back-row{display:none}
 .tabbar{position:fixed;z-index:var(--z-bar);left:12px;right:12px;bottom:calc(max(10px,var(--safe-b)) + 6px);height:var(--tabbar-h);border-radius:var(--r-pill);
   display:grid;grid-template-columns:repeat(5,1fr);align-items:center;padding:0 6px;isolation:isolate;--ti:0}
-.tabbar.glass{background:var(--lg-fill);-webkit-backdrop-filter:blur(30px) saturate(2.2) brightness(1.04);backdrop-filter:blur(30px) saturate(2.2) brightness(1.04);
+.tabbar.glass{background:var(--lg-fill);-webkit-backdrop-filter:blur(40px) saturate(2.2) brightness(1.04);backdrop-filter:blur(40px) saturate(2.2) brightness(1.04);
   box-shadow:inset 0 1px 0 var(--lg-hi),inset 0 -.5px 0 var(--lg-hi),inset 0 0 0 .5px var(--lg-edge),var(--lg-shadow)}
 .tabbar::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;
   background:radial-gradient(120% 90% at 20% -20%,var(--lg-hi),transparent 55%);opacity:.55}
@@ -435,7 +435,8 @@ html.scrolled .topbar.glass{background:var(--glass-bg);-webkit-backdrop-filter:s
 @keyframes tray-in{from{opacity:0;transform:translate(-50%,12px)}}
 @media (min-width:1024px){.tray{bottom:var(--s6)}}
 html.sheet-open .tray{opacity:0;pointer-events:none}
-.tray.glass{background:var(--lg-fill);-webkit-backdrop-filter:blur(28px) saturate(2.2);backdrop-filter:blur(28px) saturate(2.2);box-shadow:inset 0 1px 0 var(--lg-hi),inset 0 0 0 .5px var(--lg-edge),var(--lg-shadow)}
+.tray.glass{background:var(--ink);color:var(--on-ink);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:inset 0 1px 0 var(--lg-hi),var(--lg-shadow)}
+.tray.glass .icon-btn{color:var(--on-ink)}
 
 /* ---------- 2.11 Explicação, confiança e hubs ---------- */
 .why{display:grid;gap:var(--s1)} .why .em{font-size:var(--t-body)}

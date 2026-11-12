@@ -56,7 +56,7 @@ const Perfume={
   const x=this.explain(p),ch=Number(x.chance);
   return `<article class="data-card pf-you"><p class="t-eyebrow muted">Para você</p><div class="pf-you-top"><div><p class="pf-num">${UI.num(Number.isFinite(ch)?ch:null,'%')}</p><p class="t-sm muted">Chance de gostar</p></div>${Number.isFinite(ch)?UI.gauge(ch,{size:104}):''}</div>${UI.why({...x,chance:undefined},{feedback:'perfume'})}</article>`;},
  cardBlind(p){const n=this.ratingsCount();
-  if(n<3)return `<article class="data-card pf-blind"><p class="t-eyebrow muted">Compra às cegas</p><p class="t-h2">Avalie 3 perfumes para ver</p><p class="t-sm muted">Com poucas avaliações, qualquer palpite seria chute.</p><div class="dc-foot">${UI.btn('Refinar assinatura',{variant:'tertiary',href:'#refine/1',icon:'arrow'})}</div></article>`;
+  if(n<3)return `<article class="data-card pf-blind"><p class="t-eyebrow muted">Compra às cegas</p><p class="t-h2">Avalie 3 perfumes para ver</p><p class="t-sm muted">Com poucas avaliações, qualquer palpite seria chute.</p><div class="dc-foot">${UI.btn('Refinar meu mapa',{variant:'tertiary',href:'#refine/1',icon:'arrow'})}</div></article>`;
   const b=this.blind(p);
   return `<article class="data-card pf-blind"><p class="t-eyebrow muted">Compra às cegas</p><p class="t-h2">${esc(b.level)}</p><ul class="pf-factors">${(b.factors||[]).slice(0,3).map(f=>`<li>${esc(f)}</li>`).join('')}</ul><p class="t-sm muted">Experimente na pele antes.</p></article>`;},
  cardSeason(p){const s=Explore.season(p),x=Math.max(0,Math.min(1,(Number(s.warm)-Number(s.cold)+1)/2));

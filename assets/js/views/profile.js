@@ -79,9 +79,9 @@ ${tags.length?`<div class="pf-tags" aria-label="Estilo e trilha">${tags.map(t=>`
  /* ---------- blocos ---------- */
  sigCard(p,{own=true}={}){
   if(!p){if(!own)return '';
-   return `<section class="pf-sig pf-sig--empty"><div class="pf-sig-plate" aria-hidden="true"><div class="plate"></div></div><div class="pf-sig-txt"><p class="t-eyebrow muted">Assinatura</p><h2 class="t-h3">Escolha seu perfume assinatura</h2><p class="t-sm muted">O perfume que as pessoas lembram quando pensam em você.</p>${UI.btn('Escolher',{action:'profile-edit',variant:'tertiary',icon:'chevron-right',attrs:'data-id="signature"'})}</div></section>`;}
+   return `<section class="pf-sig pf-sig--empty"><div class="pf-sig-plate" aria-hidden="true"><div class="plate"></div></div><div class="pf-sig-txt"><p class="t-eyebrow muted">Meu Elixir</p><h2 class="t-h3">Escolha o seu Elixir</h2><p class="t-sm muted">O perfume que as pessoas lembram quando pensam em você.</p>${UI.btn('Escolher',{action:'profile-edit',variant:'tertiary',icon:'chevron-right',attrs:'data-id="signature"'})}</div></section>`;}
   const notes=this.topNotes(p,3);
-  return `<a class="pf-sig pressable" href="#perfume/${esc(p.id)}" data-action="perfume" data-id="${esc(p.id)}"><div class="pf-sig-plate">${UI.photo(p)}</div><div class="pf-sig-txt"><p class="t-eyebrow muted">Assinatura</p><h2 class="t-h2">${esc(p.name)}</h2><p class="pf-sig-brand">${esc(p.brand)}</p>${notes.length?`<p class="pf-sig-notes">${notes.map(esc).join(' · ')}</p>`:''}</div></a>`;},
+  return `<a class="pf-sig pressable" href="#perfume/${esc(p.id)}" data-action="perfume" data-id="${esc(p.id)}"><div class="pf-sig-plate">${UI.photo(p)}</div><div class="pf-sig-txt"><p class="t-eyebrow muted">Meu Elixir</p><h2 class="t-h2">${esc(p.name)}</h2><p class="pf-sig-brand">${esc(p.brand)}</p>${notes.length?`<p class="pf-sig-notes">${notes.map(esc).join(' · ')}</p>`:''}</div></a>`;},
  pinned(ids,{own=true}={}){
   const ps=(ids||[]).map(byId).filter(Boolean);
   if(!own&&ps.length<2)return '';
@@ -124,7 +124,7 @@ ${tags.length?`<div class="pf-tags" aria-label="Estilo e trilha">${tags.map(t=>`
    return UI.row(p,{sub,trail:UI.btn(lab,{action:'rate',variant:'secondary',size:'sm',attrs:`data-id="${esc(id)}" aria-label="Sua avaliação: ${esc(lab)}. Mudar avaliação de ${esc(p.name)}"`})});}).join('')}</div>`;},
  /* Mapa: MapView.summary quando o intel existe; senão um resumo honesto com o que houver. */
  mapTab(){const n=Object.keys(state.ratings).length;
-  const empty=UI.empty({icon:'compass',title:'Seu mapa aparece depois de 3 avaliações',text:'Avalie perfumes que você conhece. O mapa mostra do que você gosta e com que confiança.',cta:{label:'Refinar assinatura',href:'#refine/1'}});
+  const empty=UI.empty({icon:'compass',title:'Seu mapa aparece depois de 3 avaliações',text:'Avalie perfumes que você conhece. O mapa mostra do que você gosta e com que confiança.',cta:{label:'Refinar meu mapa',href:'#refine/1'}});
   if(n<3)return empty;
   const map=this.mapRef();
   if(typeof MapView!=='undefined'&&MapView.summary&&map){try{const h=MapView.summary(map,{own:true});if(h)return h;}catch(e){console.warn(e);}}

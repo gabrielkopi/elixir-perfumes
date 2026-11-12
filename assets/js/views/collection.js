@@ -102,7 +102,7 @@ ${UI.btn('Ver perfume',{variant:'secondary',size:'block',href:'#perfume/'+encode
   Sheet.open({title:UI.date(date,'long'),body,cls:'sh-lists'});},
 
  /* ---------- listas e salvos ---------- */
- AUTO:{'Favoritos':{test:r=>r>=7,sub:'Perfumes que você avaliou como Amo ou Assinatura.',empty:'Ainda não há favoritos'},'Não gostei':{test:r=>r<=3,sub:'Perfumes que você avaliou como Não é pra mim. Eles mostram ao mapa o que evitar.',empty:'Nada por aqui'}},
+ AUTO:{'Favoritos':{test:r=>r>=7,sub:'Perfumes que você avaliou como Amo ou Elixir.',empty:'Ainda não há favoritos'},'Não gostei':{test:r=>r<=3,sub:'Perfumes que você avaliou como Não é pra mim. Eles mostram ao mapa o que evitar.',empty:'Nada por aqui'}},
  auto(name){const a=this.AUTO[name];if(!a||state.lists[name])return null;
   return Object.keys(state.ratings).filter(id=>byId(id)&&a.test(state.ratings[id])).sort((x,y)=>state.ratings[y]-state.ratings[x]||(state.ratedAt[y]||0)-(state.ratedAt[x]||0));},
  stack(ids){const ps=ids.slice(0,3).map(byId).filter(Boolean);return `<span class="cl-stack" aria-hidden="true" data-n="${ps.length}">${ps.length?ps.map(p=>UI.photo(p)).join(''):'<span class="plate"></span>'}</span>`;},

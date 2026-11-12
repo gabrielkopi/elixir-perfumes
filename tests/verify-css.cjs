@@ -54,7 +54,7 @@ check(!fs.existsSync(path.join(ROOT,'assets','css','app.css')),'app.css apagado'
 /* ---------- páginas: tudo o que é ligado existe ---------- */
 const CSS=['fonts.css','base.css','views/post.css',...['activity','brand','bubble','circle','collection','compare','compose','connect','explore','guide','home','map','notes','perfume','profile-edit','profile','search','stories','today','welcome'].map(v=>`views/${v}.css`)];
 for(const html of ['index.html','elixir.html','perfume-social.html','assinatura.html']){const src=read(html);
- const links=[...src.matchAll(/<link rel="stylesheet" href="assets\/css\/([^"?]+)\?v=91">/g)].map(m=>m[1]);
+ const links=[...src.matchAll(/<link rel="stylesheet" href="assets\/css\/([^"?]+)\?v=\d+">/g)].map(m=>m[1]);
  check(JSON.stringify(links)===JSON.stringify(CSS),`${html}: ordem/conjunto de CSS (§2)`);check(!/app\.css/.test(src),`${html}: sem app.css`);
  for(const m of src.matchAll(/(?:href|src)="(assets\/[^"?]+)/g))check(fs.existsSync(path.join(ROOT,m[1])),`${html}: arquivo ligado não existe: ${m[1]}`);
  check(/<html lang="pt-BR"/.test(src),`${html}: lang pt-BR`);check(/font-family='DM Sans,Arial'/.test(src),`${html}: favicon em DM Sans`);

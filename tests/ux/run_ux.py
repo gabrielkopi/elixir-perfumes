@@ -172,7 +172,7 @@ def today_flow(browser, url):
     demo(pg, url)
     go(pg, url, 'today', 900)
     try:
-        pg.get_by_role('button', name='Outra cidade').first.click(); pg.wait_for_timeout(600)
+        pg.get_by_role('button', name='Trocar cidade').or_(pg.get_by_role('button', name='Outra cidade')).first.click(); pg.wait_for_timeout(600)
         pg.fill('#sheet input[type=search], #sheet input', 'Recife'); pg.wait_for_timeout(1200)
         pg.click('#sheet .cy-opt'); pg.wait_for_timeout(1500)
     except Exception as e:

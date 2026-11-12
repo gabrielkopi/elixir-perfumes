@@ -118,7 +118,7 @@ const UI={
  /* Grupo de cores (tons): name também é a ação de clique; ←/→ movem (core/actions.js). */
  swatches(name,options,value,{label=''}={}){return `<div class="swatches" role="radiogroup" aria-label="${esc(label||name)}" data-radios="${esc(name)}">${options.map(o=>`<button type="button" class="swatch" role="radio" aria-checked="${o.id===value}" tabindex="${o.id===value?0:-1}" aria-label="${esc(o.label)}" data-action="${esc(name)}" data-id="${esc(o.id)}" data-tone="${esc(o.id)}"><i${o.css?` style="background:${esc(o.css)}"`:''}></i></button>`).join('')}</div>`;},
  progress(step,total){const t=Math.max(1,total),s=Math.max(0,Math.min(t,step));return `<div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="${t}" aria-valuenow="${s}" aria-label="Progresso" style="--p:${(s/t).toFixed(3)}"><i></i></div>`;},
- RATING:[[2,'Não é pra mim'],[4,'Ok'],[6,'Gosto'],[8,'Amo'],[10,'Assinatura']],
+ RATING:[[2,'Não é pra mim'],[4,'Ok'],[6,'Gosto'],[8,'Amo'],[10,'Elixir']],
  ratingStep(v){if(v===null||v===undefined||v==='')return -1;const n=Number(v);return n>=9?4:n>=7?3:n>=5?2:n>=3?1:0;},
  ratingLabel(v){const i=UI.ratingStep(v);return i<0?'':UI.RATING[i][1];},
  ratingScale(value,action='rate-set'){const i=UI.ratingStep(value);
