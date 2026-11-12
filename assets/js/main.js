@@ -41,6 +41,7 @@ const App={
   document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')Store.flush();});
   this.render({transition:false});
   if(typeof Live!=='undefined')Live.start();
+  if(typeof Cloud!=='undefined'&&Cloud.active())Cloud.pull().catch(()=>{});
   if(Router.pendingScroll)window.scrollTo(0,Router.pendingScroll);
   const notes=[...new Set(Store.notices)];Store.notices=[];notes.forEach((t,i)=>setTimeout(()=>toast(t),300+i*4600));
  }

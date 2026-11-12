@@ -6,7 +6,7 @@ const ROOT=path.join(__dirname,'..');
 /* ---------- registro §3.2 + globais existentes (data/engine/dom) ---------- */
 const REG={
  'core/components.js':['UI','avatar','card','back'],'core/motion.js':['Motion','Sheet','Theme','Modal','openModal','closeModal','reducedMotion'],
- 'core/router.js':['Router','route'],'core/store.js':['Store','state','Select','SHELF','LIST_NAMES','SANDBOX','Accounts'],'core/actions.js':['Actions'],'main.js':['App'],
+ 'core/router.js':['Router','route'],'core/store.js':['Store','state','Select','SHELF','LIST_NAMES','SANDBOX','Accounts'],'core/cloud.js':['Cloud'],'core/actions.js':['Actions'],'main.js':['App'],
  'core/catalog.js':['Catalog'],'core/profile-rules.js':['PROFILE_RULES','ProfileRules'],'views/shell.js':['Shell'],'views/settings.js':['Settings'],
  'views/feed.js':['Feed','Post'],'views/stories.js':['Stories'],'views/compose.js':['Compose'],'views/explore.js':['Explore','Filters'],'views/search.js':['Search'],
  'views/perfume.js':['Perfume','Rating'],'views/notes.js':['Notes','Radar'],'views/brand.js':['Brands'],'data/editions.js':['EDITIONS','Editions'],'engine/advisor.js':['Advisor'],
@@ -59,7 +59,7 @@ function topNames(src){
 /* ---------- ordem §3.1 nas 4 páginas ---------- */
 const ORDER=`data/brand.js data/data.js data/catalog-100.js data/notes.js data/catalog-br.js data/image-credits.js data/catalog-photos.js data/colors.js
 data/ingredients.js data/brand-tiers.js data/catalog-studio.js data/editions.js engine/engine.js engine/taste-engine.js engine/advisor.js engine/olfactory-map.js
-core/dom.js core/profile-rules.js core/store.js core/catalog.js core/router.js core/motion.js core/components.js core/actions.js core/weather.js
+core/dom.js core/profile-rules.js core/store.js core/cloud.js core/catalog.js core/router.js core/motion.js core/components.js core/actions.js core/weather.js
 data/community.js vendor/qrcode.js views/shell.js views/settings.js views/feed.js views/stories.js views/compose.js
 views/explore.js views/search.js views/perfume.js views/notes.js views/brand.js views/guide.js views/compare.js views/discovery.js
 views/collection.js views/profile.js views/profile-edit.js views/activity.js views/map.js views/today.js views/bubble.js views/circle.js views/connect.js actions.js main.js`.split(/\s+/);

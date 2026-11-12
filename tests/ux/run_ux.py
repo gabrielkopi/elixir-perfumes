@@ -180,6 +180,59 @@ def price_flow(browser, url):
     pg.context.close()
 
 
+def cloud_flow(browser, url):
+    print('1g. Conta na nuvem: criar, sincronizar entre aparelhos e apagar (API local em memória)')
+    import subprocess, socket, time, urllib.request
+    if not url.startswith('http'):
+        check('conta na nuvem só no modo http', True); return
+    sock = socket.socket(); sock.bind(('127.0.0.1', 0)); api_port = sock.getsockname()[1]; sock.close()
+    origin = url.rsplit('/', 1)[0]
+    proc = subprocess.Popen(['node', str(ROOT / 'server' / 'test' / 'dev-server.js'), str(api_port), origin], cwd=str(ROOT / 'server'), stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    api = f'http://127.0.0.1:{api_port}'
+    try:
+        for _ in range(60):
+            try:
+                urllib.request.urlopen(urllib.request.Request(api + '/api/health', headers={'Origin': origin}), timeout=1); break
+            except Exception:
+                time.sleep(.25)
+        a = new_page(browser, session=False)
+        a.context.add_init_script(f"try{{localStorage.setItem('elixir-api','{api}')}}catch(e){{}}")
+        go(a, url, 'accounts', 1200)
+        check('com servidor, aparece "Entrar com e-mail"', 'Entrar com e-mail' in a.inner_text('main'))
+        a.click('a[href="#accounts/login"]'); a.wait_for_timeout(700)
+        a.click('[data-action=cloud-mode][data-id=register]'); a.wait_for_timeout(600)
+        a.fill('input[name=name]', 'Lia Nuvem'); a.fill('input[name=email]', 'lia@teste.com'); a.fill('input[name=password]', 'senha-segura-9')
+        a.click('form.acc-login [type=submit]'); a.wait_for_timeout(1800)
+        check('criar conta leva às perguntas guiadas', 'welcome' in a.url, a.url)
+        for t in a.query_selector_all('.w-pick')[:3]:
+            t.click()
+        a.click('[data-action=welcome-go][data-n="3"]'); a.wait_for_timeout(600)
+        for seg in a.query_selector_all('.w-scale'):
+            seg.query_selector('[data-id="8"]').click()
+        a.click('[data-action=welcome-go][data-n="4"]'); a.wait_for_timeout(600)
+        a.click('.q-foot [data-action=welcome-skip]'); a.wait_for_timeout(600)
+        a.click('[data-action=welcome-enter]'); a.wait_for_timeout(3500)
+        ids = a.evaluate("Object.keys(state.ratings).sort().join()")
+        rev = a.evaluate("(Cloud.session()||{}).revision||0")
+        check(f'o perfil foi salvo no servidor (revisão {rev})', rev >= 1)
+        b = new_page(browser, session=False)
+        b.context.add_init_script(f"try{{localStorage.setItem('elixir-api','{api}')}}catch(e){{}}")
+        go(b, url, 'accounts/login', 1200)
+        b.fill('input[name=email]', 'lia@teste.com'); b.fill('input[name=password]', 'senha-segura-9')
+        b.click('form.acc-login [type=submit]'); b.wait_for_timeout(2500)
+        idsb = b.evaluate("Object.keys(state.ratings).sort().join()")
+        check('em outro aparelho, entrar traz o mesmo perfil', bool(ids) and idsb == ids and b.evaluate("state.profile.name") == 'Lia Nuvem', f'{ids} / {idsb}')
+        check('outro aparelho entra direto no Início', b.evaluate("route.page") == 'home')
+        b.evaluate("Cloud.deleteAccount()"); b.wait_for_timeout(800)
+        r = a.evaluate("fetch(Cloud.base()+'/api/me',{headers:{Authorization:'Bearer '+Cloud.session().token}}).then(r=>r.status)")
+        check('apagar a conta invalida a sessão do outro aparelho', r == 401)
+        errs = [e for e in a.errors + b.errors if 'status of 401' not in e]  # o 401 é o próprio teste conferindo a sessão apagada
+        check('sem erros no console', not errs, '; '.join(errs[:3]))
+        a.context.close(); b.context.close()
+    finally:
+        proc.terminate()
+
+
 def onboarding_unknown(browser, url):
     print('1b. Onboarding: escala completa, "Não conheço" e retomada após recarregar')
     pg = new_page(browser)
@@ -403,7 +456,8 @@ def layout(browser, url, scheme):
         for h in ROUTES:
             go(pg, url, h, 700)
             if pg.evaluate("document.documentElement.scrollWidth - innerWidth") > 0:
-                bad.append(h)
+                who = pg.evaluate("""(()=>{const W=innerWidth;for(const e of document.querySelectorAll('body *')){const b=e.getBoundingClientRect();if(b.right>W+1&&b.width>0&&!e.closest('.rail-x'))return e.tagName+'.'+[...e.classList].join('.')+'#'+(e.id||'')}return '?'})()""")
+                bad.append(h + ' (' + who + ')')
             t = pg.inner_text('body')
             if any(x in t for x in ['undefined', 'NaN', '[object Object]']):
                 junk.append(h)
@@ -449,7 +503,7 @@ def main():
     print('ELIXIR · testes de experiência ·', 'http' if use_http else 'file://')
     with sync_playwright() as p:
         b = p.chromium.launch()
-        for fn in [weather_home, first_run, accounts_flow, colors_flow, live_flow, price_flow, onboarding_unknown, community_demo, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
+        for fn in [weather_home, first_run, accounts_flow, colors_flow, live_flow, price_flow, cloud_flow, onboarding_unknown, community_demo, guide_flow, shelf_rating, compare_flow, today_flow, connect_flow, search_flow, navigation, reduced_motion, other_entries]:
             try:
                 fn(b, url)
             except Exception as e:

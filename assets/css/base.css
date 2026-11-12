@@ -95,7 +95,7 @@ html[data-brand=assinatura][data-theme=dark]{--signal:#C9A678}
 /* ---------- 2.2 Reset e tipografia ---------- */
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scrollbar-gutter:stable;background:var(--bg);touch-action:manipulation;-webkit-tap-highlight-color:transparent}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--t-body)/1.5 var(--sans);-webkit-font-smoothing:antialiased;
+body{margin:0;overflow-x:clip;background:var(--bg);color:var(--ink);font:400 var(--t-body)/1.5 var(--sans);-webkit-font-smoothing:antialiased;
   -webkit-tap-highlight-color:transparent;text-rendering:optimizeLegibility;overflow-x:clip}
 img{display:block;max-width:100%}
 button,input,select,textarea{font:inherit;color:inherit}
@@ -584,3 +584,8 @@ html.sheet-open .tray{opacity:0;pointer-events:none}
 .feed-new{position:sticky;top:calc(var(--topbar-h) + 8px);z-index:3;display:flex;align-items:center;gap:var(--s2);margin:0 auto var(--s3);min-height:40px;padding:0 var(--s4);border-radius:var(--r-pill);
   background:var(--ink);color:var(--on-ink);font:500 14px/1 var(--sans);box-shadow:var(--sh-float);animation:unblur var(--d-4) var(--ease-spring) both}
 .feed-new .icon{transform:rotate(-45deg)}
+
+.v-accounts .acc-cloud{display:grid;gap:var(--s2);justify-items:start;margin-top:var(--s7);padding-top:var(--s5);border-top:.5px solid var(--hair)}
+.v-accounts .acc-cloud p{margin:0}
+.acc-form .acc-login{display:grid;gap:var(--s2);margin-top:var(--s5);flex:1}
+.acc-form .acc-err{margin:var(--s2) 0 0;color:var(--danger)}

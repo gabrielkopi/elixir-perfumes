@@ -59,7 +59,7 @@ Actions.change('settings-share',el=>{const k=el.name;if(!['shareMap','shareColle
 
 /* ---------- Perfis de teste: quem está usando? (rota accounts, tela cheia) ---------- */
 Settings.acc={draft:{name:'',photo:'',vibe:''},editing:false};
-Settings.accFam=a=>{const p=Accounts.PRESETS.find(x=>x.id===a.id);if(!p)return a.preset?'':'Perfil criado neste aparelho';
+Settings.accFam=a=>{if(a.cloud)return 'Conta na nuvem'+(a.email?' · '+a.email:'');const p=Accounts.PRESETS.find(x=>x.id===a.id);if(!p)return a.preset?'':'Perfil criado neste aparelho';
  const L={amadeirado:'Amadeirado',especiado:'Especiado',couro:'Couro',aquatico:'Aquático',citrico:'Cítrico',floral:'Floral',frutado:'Frutado',verde:'Verde',aromatico:'Aromático',herbal:'Herbal',gourmand:'Gourmand',ambar:'Âmbar'};
  return p.love.slice(0,2).map(f=>L[f]||f).join(' · ');};
 Settings.accAvatar=a=>{const v=a.vibe&&PROFILE_RULES.covers[a.vibe];
@@ -67,6 +67,7 @@ Settings.accAvatar=a=>{const v=a.vibe&&PROFILE_RULES.covers[a.vibe];
  return `<span class="acc-av">${photo?`<img src="${esc(photo)}" alt="">`:v?`<img src="${esc(v.src800)}" alt="">`:`<span class="acc-ini">${esc(UI.initials(a.name))}</span>`}</span>`;};
 Settings.accountsView=id=>{
  if(id==='new')return Settings.accountsNew();
+ if(id==='login')return Settings.accountsLogin();
  const list=Accounts.list().sort((a,b)=>(b.lastAt||0)-(a.lastAt||0)||(a.preset===b.preset?0:a.preset?1:-1));const ed=Settings.acc.editing;
  const cards=list.map((a,i)=>`<div class="acc-card" style="--i:${Math.min(i,8)}"><button type="button" class="acc-pick pressable" data-action="account-use" data-id="${esc(a.id)}">${Settings.accAvatar(a)}
   <span class="acc-name">${esc(a.name)}</span><span class="acc-sub">${esc(Settings.accFam(a)||'@'+a.handle)}</span></button>
@@ -75,7 +76,8 @@ Settings.accountsView=id=>{
  return `<section class="v-accounts" data-view="accounts"><div class="acc-head"><p class="t-eyebrow muted">ELIXIR · perfis de teste</p><h1 class="t-display">Quem está usando?</h1>
   <p class="muted acc-lead">Escolha um perfil para ver o app do jeito dele, ou crie o seu em um minuto.</p></div>
   <div class="acc-grid stagger">${cards}<div class="acc-card" style="--i:${Math.min(list.length,8)}"><a class="acc-pick acc-new pressable" href="#accounts/new"><span class="acc-av acc-plus">${icon('plus')}</span><span class="acc-name">Criar novo login</span><span class="acc-sub">Nome, foto e o que você gosta</span></a></div></div>
-  <p class="acc-note">${icon('lock','icon--20')}<span>Perfis de teste salvos só neste aparelho, sem senha. Não é uma conta: nada vai para servidor.</span></p>
+  ${Cloud.enabled()?`<div class="acc-cloud">${Cloud.active()?`<p class="t-sm muted">Conectado como <b>${esc((Cloud.session()||{}).email||'')}</b>. Seu perfil sincroniza entre aparelhos.</p>${UI.btn('Sair da conta',{variant:'secondary',size:'sm',action:'cloud-logout'})}`:`${UI.btn('Entrar com e-mail',{variant:'secondary',href:'#accounts/login',icon:'arrow-up-right'})}<p class="t-sm muted">Com conta, seu perfil acompanha você em qualquer aparelho.</p>`}</div>`:''}
+  <p class="acc-note">${icon('lock','icon--20')}<span>${Cloud.enabled()?'Perfis de teste ficam só neste aparelho, sem senha. Contas com e-mail sincronizam pelo servidor do ELIXIR.':'Perfis de teste salvos só neste aparelho, sem senha. Não é uma conta: nada vai para servidor.'}</span></p>
   ${custom?`<div class="acc-tools">${UI.btn(ed?'Pronto':'Gerenciar perfis',{variant:'tertiary',action:'account-edit'})}</div>`:''}</section>`;};
 Settings.accountsNew=()=>{const d=Settings.acc.draft,covers=Object.values(PROFILE_RULES.covers).filter(c=>c.id!=='jazz');
  const prev=d.photo?`<img src="${esc(d.photo)}" alt="">`:d.vibe?`<img src="${esc(PROFILE_RULES.covers[d.vibe].src800)}" alt="">`:`<span class="acc-ini">${esc(UI.initials(d.name||'?'))}</span>`;
@@ -108,3 +110,25 @@ Actions.change('account-photo',async el=>{const f=el.files&&el.files[0];if(!f)re
  try{const url=await readImage(f,{max:360,square:true,quality:.8});if(url.length>200*1024*1.37){toast('Foto grande demais. Tente outra.');return;}
   Settings.acc.draft.photo=url;Settings.acc.draft.vibe='';for(const b of document.querySelectorAll('.acc-vibe'))b.setAttribute('aria-pressed','false');Settings.accRefreshPrev();}
  catch(e){toast(e.message||'Não foi possível ler a foto.');}});
+
+Settings.cloudMode='login';
+Settings.accountsLogin=()=>{const reg=Settings.cloudMode==='register';
+ return `<section class="v-accounts acc-form" data-view="accounts-login">${Guide.chrome({back:'account-back'})}
+  <h1 class="t-display q-title" id="q-title" tabindex="-1">${reg?'Criar conta':'Entrar'}</h1><p class="q-sub muted">${reg?'Seu perfil fica salvo no servidor do ELIXIR e acompanha você em qualquer aparelho.':'Use o e-mail e a senha da sua conta ELIXIR.'}</p>
+  ${UI.seg([{id:'login',label:'Entrar'},{id:'register',label:'Criar conta'}],Settings.cloudMode,'cloud-mode',{variant:'quiet',name:'cloud-mode',label:'Entrar ou criar conta',block:true})}
+  <form class="acc-login" data-submit="cloud-auth">
+   ${reg?`<label class="field"><span>Nome</span><input name="name" type="text" maxlength="32" autocomplete="name" required></label>`:''}
+   <label class="field"><span>E-mail</span><input name="email" type="email" maxlength="254" autocomplete="email" inputmode="email" required></label>
+   <label class="field"><span>Senha</span><input name="password" type="password" minlength="8" autocomplete="${reg?'new-password':'current-password'}" required></label>
+   <p class="acc-err t-sm" role="alert" hidden></p>
+   <div class="q-foot">${UI.btn(reg?'Criar conta':'Entrar',{size:'block',attrs:'type="submit"'}).replace('type="button" ','')}</div>
+  </form></section>`;};
+Actions.add({
+ 'cloud-mode':el=>{Settings.cloudMode=el.dataset.id;App.render();},
+ 'cloud-logout':async()=>{await Cloud.logout();Accounts.use('gabriel');toast('Você saiu da conta. Os dados continuam salvos no servidor.');Router.go('accounts','',{replace:true});App.render();}
+});
+Actions.submit&&Actions.submit('cloud-auth',async form=>{const f=new FormData(form),errEl=form.querySelector('.acc-err'),btn=form.querySelector('[type=submit]');
+ if(errEl){errEl.hidden=true;errEl.textContent='';}if(btn)btn.disabled=true;
+ try{const u=await Cloud.auth(Settings.cloudMode,{email:String(f.get('email')||''),password:String(f.get('password')||''),name:String(f.get('name')||'')});
+  toast(`Olá, ${u.name.split(' ')[0]}. Seu perfil agora sincroniza.`);Router.go(state.onboarded?'home':'welcome',state.onboarded?'':'2',{replace:true});}
+ catch(e){if(errEl){errEl.textContent=e.message;errEl.hidden=false;}}finally{if(btn)btn.disabled=false;}});

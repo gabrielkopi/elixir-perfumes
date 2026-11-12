@@ -221,7 +221,7 @@ const Store={
  saveTimer:null,
  save(){if(this.saveTimer)return;this.saveTimer=setTimeout(()=>{this.saveTimer=null;this.flush();},150);},
  flush(){clearTimeout(this.saveTimer);this.saveTimer=null;const ls=this.ls();if(!ls||!this.available&&!this.retryable)return false;
-  try{ls.setItem(this.key,JSON.stringify(state));this.available=true;return true;}
+  try{ls.setItem(this.key,JSON.stringify(state));this.available=true;if(typeof Cloud!=='undefined')Cloud.schedule();return true;}
   catch(e){const quota=e&&(e.name==='QuotaExceededError'||e.code===22||e.code===1014);
    if(quota){const p=state.posts.find(x=>x.photo&&x.photo.startsWith('data:'));if(p){p.photo='';try{ls.setItem(this.key,JSON.stringify(state));if(typeof toast==='function')toast('Sem espaço para a foto. O registro foi salvo sem ela.');return true;}catch(e2){}}}
    if(this.available&&typeof toast==='function')toast('Seus dados ficarão só nesta sessão.');this.available=false;return false;}},

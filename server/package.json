@@ -1,0 +1,20 @@
+{
+  "name": "elixir-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ELIXIR · API híbrida: contas, sincronização do perfil, exportar/apagar dados e ELIXIR Connect.",
+  "main": "src/index.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/index.js",
+    "migrate": "node src/migrate.js up",
+    "migrate:down": "node src/migrate.js down",
+    "test": "node --test test/api.test.js"
+  },
+  "dependencies": {
+    "pg": "8.23.1"
+  },
+  "devDependencies": {
+    "pg-mem": "3.0.14"
+  }
+}
