@@ -12,6 +12,15 @@ export async function exportCard(node, name) {
       const style = document.createElement('style');
       style.textContent = '.elx-profile-card, .elx-profile-card * { transition: none !important; animation: none !important; }';
       document.head.append(style);
+      const portrait = document.querySelector('.elx-profile-card__portrait');
+      if (portrait) {
+        const box = portrait.getBoundingClientRect();
+        const parent = portrait.parentElement.getBoundingClientRect();
+        Object.assign(portrait.style, {
+          inset: 'auto', left: `${box.left - parent.left}px`, top: `${box.top - parent.top}px`,
+          width: `${box.width}px`, height: `${box.height}px`, transform: 'none',
+        });
+      }
     },
   });
   const png = await new Promise((resolve, reject) => {
