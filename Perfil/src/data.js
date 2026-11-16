@@ -1,3 +1,4 @@
+import library from './library.json';
 export const asset = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 export const families = [
@@ -10,6 +11,7 @@ export const families = [
 ];
 
 export const palettes = {
+  paper: { name: 'Papel', paper: '#fafbf8', text: '#30372e', muted: '#757b71', accent: '#79929b', photoBg: '#e1e4dc', line: '#e2e5dc' },
   santal: { name: 'Sândalo', paper: '#f3e6bd', text: '#352319', muted: '#675442', accent: '#8e4c35', photoBg: '#bc9566', line: '#cdbb95' },
   blush: { name: 'Íris', paper: '#e9d8d1', text: '#452a31', muted: '#73535b', accent: '#925262', photoBg: '#ba8b92', line: '#c8b0af' },
   herbal: { name: 'Folha', paper: '#e1e5ce', text: '#253624', muted: '#4c6246', accent: '#496530', photoBg: '#98a784', line: '#aeb796' },
@@ -18,33 +20,27 @@ export const palettes = {
   ink: { name: 'Carvão', paper: '#222221', text: '#f2eee5', muted: '#c6c1b8', accent: '#d2caa7', photoBg: '#686764', line: '#64605a' },
 };
 
-function note(id, name, family, paper, ink) {
-  return { id, name, family, paper, ink, art: asset(`notes/${id}.png`) };
-}
-
-export const notes = [
-  note('bergamot', 'Bergamota', 'citrus', '#eddfa4', '#504314'),
-  note('cedar', 'Cedro', 'woody', '#dfd8b2', '#39452c'),
-  note('amber', 'Âmbar', 'amber', '#e9c292', '#674026'),
-  note('jasmine', 'Jasmim', 'floral', '#ebddd0', '#785041'),
-  note('iris', 'Íris', 'floral', '#ded3e3', '#684c70'),
-  note('vanilla', 'Baunilha', 'gourmand', '#ebd6ad', '#76532a'),
-  note('sandalwood', 'Sândalo', 'woody', '#dfc4a6', '#704633'),
-  note('fig', 'Figo', 'fresh', '#e0ced6', '#673953'),
-  note('tea', 'Chá verde', 'fresh', '#d5dfbc', '#455835'),
-];
-
+const legacyIds = { bergamota: 'bergamot', cedro: 'cedar', ambar: 'amber', jasmim: 'jasmine', iris: 'iris', baunilha: 'vanilla', sandalo: 'sandalwood', figo: 'fig', cha: 'tea' };
+const familyIds = ['citrus', 'floral', 'woody', 'gourmand', 'amber', 'amber', 'woody', 'fresh', 'fresh'];
+export const noteGroups = library.groups;
+export const notes = library.notes.map((item) => ({
+  ...item, id: legacyIds[item.id] || item.id, libraryId: item.id, group: item.family,
+  family: familyIds[item.family] || 'fresh', art: asset(`library/${item.id}.webp`),
+  paper: 'transparent', ink: '#33372e', aliases: library.aliases[item.id] || [],
+}));
+const normalize = (value) => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
 const noteById = new Map(notes.map((item) => [item.id, item]));
-const familyArt = { woody: 'cedar', floral: 'jasmine', amber: 'amber', fresh: 'tea', citrus: 'bergamot', gourmand: 'vanilla' };
-const normalize = (value) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
-
+const noteByName = new Map();
+for (const note of notes) {
+  for (const alias of note.aliases) if (!noteByName.has(normalize(alias))) noteByName.set(normalize(alias), note);
+}
+for (const note of notes) {
+  noteByName.set(normalize(note.name), note);
+  noteByName.set(normalize(note.libraryId), note);
+}
 export function resolveNote(record) {
-  if (noteById.has(record.id)) return { ...noteById.get(record.id), uses: record.uses };
-  const identity = normalize(record.name);
-  const match = notes.find((item) => normalize(item.name) === identity);
-  if (match) return { ...match, uses: record.uses };
-  const fallback = noteById.get(familyArt[record.family]) || noteById.get('cedar');
-  return { ...fallback, id: `elixir-${identity}`, name: record.name, uses: record.uses };
+  const match = noteById.get(record.id) || noteByName.get(normalize(record.name));
+  return match ? { ...match, uses: record.uses } : { ...record, id: record.id || normalize(record.name), art: '', paper: 'transparent' };
 }
 
 const demo = (id, name, handle, family, bio, extras = {}) => ({ id, name, handle, family, bio, photo: asset(`photos/${id}.jpg`), ...extras });
@@ -68,9 +64,9 @@ export function createProfile(example = demos[0]) {
   return {
     name: example.name, handle: example.handle, bio: example.bio, verified: !!example.verified,
     photo: example.photo, originalPhoto: example.photo, transparent: false, originalTransparent: false, exampleId: example.id,
-    family: family.id, uses: familyUses(family.id), noteSource: 'studio', paletteId: 'auto', customColor: '#f3e6bd', photoColor: '',
-    format: 'landscape', side: 'right', treatment: 'frame', motif: 'botanical', filter: example.filter,
-    zoom: 1, offsetX: 0, offsetY: 0, type: 'serif', grain: true,
+    family: family.id, uses: familyUses(family.id), noteSource: 'studio', paletteId: 'paper', customColor: '#f3e6bd', photoColor: '',
+    format: 'landscape', side: 'left', treatment: 'circle', layout: 'signature', motif: 'none', filter: example.filter,
+    zoom: 1, offsetX: 0, offsetY: 0, type: 'sans', grain: false, designVersion: 2,
   };
 }
 

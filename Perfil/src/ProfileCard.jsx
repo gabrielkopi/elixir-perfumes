@@ -45,7 +45,7 @@ function Motif({ name, note, className }) {
     );
   }
 
-  if (note?.art) return <img className={className} src={note.art} alt="" draggable="false" />;
+  if (note?.borderArt) return <img className={className} src={note.borderArt} alt="" draggable="false" />;
 
   return (
     <svg className={className} viewBox="0 0 240 240" fill="none" aria-hidden="true">
@@ -89,7 +89,7 @@ const ProfileCard = forwardRef(function ProfileCard({ profile, notes = [], palet
 
   const {
     name, handle, bio, verified, photo, format = 'landscape', side = 'right', treatment = 'frame',
-    motif = 'botanical', filter = 'original', zoom = 1, offsetX = 0, offsetY = 0, type = 'serif', grain,
+    motif = 'none', filter = 'original', zoom = 1, offsetX = 0, offsetY = 0, type = 'serif', grain,
   } = profile;
   const { lines, size } = nameLayout(name, type, format);
   const cleanHandle = (handle || '').trim().replace(/^@+/, '');
@@ -111,6 +111,7 @@ const ProfileCard = forwardRef(function ProfileCard({ profile, notes = [], palet
       ref={element}
       className="elx-profile-card"
       data-format={format}
+      data-layout={profile.layout || 'signature'}
       data-side={side}
       data-treatment={treatment}
       data-filter={filter}
@@ -119,6 +120,7 @@ const ProfileCard = forwardRef(function ProfileCard({ profile, notes = [], palet
       style={cardStyle}
       aria-label={name ? `Perfil de ${name}` : 'Prévia do perfil'}
     >
+      <Motif name={motif} note={{ borderArt: notes[0] ? `${import.meta.env.BASE_URL}notes/${['floral'].includes(notes[0].family) ? 'jasmine' : 'cedar'}.png` : '' }} className="elx-profile-card__border-art" />
       {grain && <div className="elx-profile-card__grain" aria-hidden="true" />}
       <div className="elx-profile-card__identity">
         <div className="elx-profile-card__brand"><Drop /> Elixir</div>
@@ -150,7 +152,6 @@ const ProfileCard = forwardRef(function ProfileCard({ profile, notes = [], palet
       <div className="elx-profile-card__visual">
         <div className="elx-profile-card__portrait">
           <div className="elx-profile-card__photomat" aria-hidden="true" />
-          <Motif name={motif} note={notes[0]} className="elx-profile-card__motif" />
           {photo ? (
             <img className="elx-profile-card__photo" src={photo} alt={name ? `Retrato de ${name}` : 'Retrato do perfil'} draggable="false" />
           ) : (

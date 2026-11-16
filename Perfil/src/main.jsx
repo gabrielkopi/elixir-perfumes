@@ -6,11 +6,7 @@ import {
   Minus, Monitor, Moon, Orbit, Palette, Plus, RectangleHorizontal, RectangleVertical,
   RotateCcw, ScanLine, Share, Smartphone, Sparkles, Square, Sun, Upload, User, X,
 } from 'lucide-react';
-import '@fontsource/instrument-serif/latin-400.css';
-import '@fontsource/instrument-serif/latin-400-italic.css';
-import '@fontsource/instrument-serif/latin-ext-400.css';
-import '@fontsource/instrument-serif/latin-ext-400-italic.css';
-import { createProfile, demos, families, familyUses, getPalette, getTopNotes, notes, palettes } from './data';
+import { createProfile, demos, families, familyUses, getPalette, getTopNotes, notes, palettes, noteGroups } from './data';
 import { readElixirIdentity, subscribeElixirNotes } from './elixir';
 import { preparePhoto, removePhotoBackground } from './photo';
 import PhotoMaskEditor from './PhotoMaskEditor';
@@ -27,7 +23,7 @@ const sideOptions = [['left', 'Esquerda', LayoutPanelLeft], ['right', 'Direita',
 const treatments = [['frame', 'Moldura', Square], ['circle', 'Círculo', Circle], ['cutout', 'Recorte', ScanLine], ['bleed', 'Foto inteira', Maximize]];
 const motifs = [['botanical', 'Botânico', Flower2], ['orbit', 'Órbita', Orbit], ['stars', 'Estrelas', Sparkles], ['none', 'Nenhum', X]];
 const filters = [['original', 'Original'], ['mono', 'P&B'], ['warm', 'Quente']];
-const fonts = [['serif', 'Clássica'], ['sans', 'Moderna'], ['mono', 'Mono']];
+const fonts = [['sans', 'Essencial'], ['serif', 'Editorial'], ['mono', 'Mono']];
 const tabs = [['profile', 'Perfil', User], ['style', 'Estilo', Palette], ['notes', 'Notas', Flower2]];
 const devices = [['desktop', 'Computador', Monitor], ['ios', 'iOS', Smartphone]];
 const params = new URLSearchParams(location.search);
@@ -119,6 +115,7 @@ function StyleEditor({ profile, update, palette }) {
   return <>
     <div className="section-head"><h2>Composição</h2></div>
     <div className="field-stack">
+      <span>Layout</span><Choice items={[["signature", "Assinatura"], ["editorial", "Retrato"]]} value={profile.layout} onChange={(layout) => update({ layout })} label="Layout do card"/>
       <span>Posição do retrato</span><Choice items={sideOptions} value={profile.side} onChange={(side) => update({ side })} label="Lado do retrato"/>
       <span>Forma do retrato</span><Choice items={treatments} value={profile.treatment} onChange={(treatment) => update({ treatment })} label="Forma do retrato"/>
       <span>Tipografia</span><Choice items={fonts} value={profile.type} onChange={(type) => update({ type })} label="Tipografia"/>
@@ -132,7 +129,7 @@ function StyleEditor({ profile, update, palette }) {
       <label className="custom-swatch" title="Cor personalizada"><Droplet size={15}/><input type="color" aria-label="Cor personalizada" value={profile.customColor} onChange={(event) => update({ paletteId: 'custom', customColor: event.target.value })}/></label>
     </div>
     <div className="field-stack motif-picker">
-      <span>Arte de fundo</span><Choice items={motifs} value={profile.motif} onChange={(motif) => update({ motif })} label="Arte de fundo"/>
+      <span>Desenho nas bordas</span><Choice items={motifs} value={profile.motif} onChange={(motif) => update({ motif })} label="Desenho nas bordas"/>
     </div>
     <div className="portrait-color-row">
       <label>Cor atrás do retrato<input type="color" value={palette.photoBg} onChange={(event) => update({ photoColor: event.target.value })}/></label>
@@ -143,6 +140,14 @@ function StyleEditor({ profile, update, palette }) {
 }
 
 function NotesEditor({ profile, update, topNotes, elixirNotes }) {
+  const [query, setQuery] = useState('');
+  const [group, setGroup] = useState('');
+  const normalize = (text) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const filtered = notes.filter((note) => (group === '' || note.group === Number(group)) && normalize([note.name, ...note.aliases].join(' ')).includes(normalize(query)));
+  const manual = profile.noteSource !== 'elixir' || !elixirNotes.length;
+  function feature(id) {
+    update((current) => ({ uses: { ...current.uses, [id]: Math.min(999, Math.max(0, ...Object.values(current.uses)) + 1) } }));
+  }
   function count(id, amount) {
     update((current) => ({ uses: { ...current.uses, [id]: Math.min(999, Math.max(0, (current.uses[id] || 0) + amount)) } }));
   }
@@ -158,14 +163,21 @@ function NotesEditor({ profile, update, topNotes, elixirNotes }) {
       }}>{families.map((family) => <option key={family.id} value={family.id}>{family.name}</option>)}</select></label>
       <p className="hint">Registre os usos por nota. As três com mais usos aparecem no card.</p>
     </>}
+    {manual && <>
+      <div className="selected-notes">{topNotes.map((note) => <button type="button" key={note.id} onClick={() => update((current) => ({ uses: { ...current.uses, [note.id]: 0 } }))} aria-label={'Remover ' + note.name + ' da seleção'}><img src={note.art} alt=""/>{note.name}<X size={12}/></button>)}</div>
+      <label className="library-search">Buscar na biblioteca<input type="search" placeholder="Ex. whiskey, tabaco, noz-moscada" value={query} onChange={(event) => setQuery(event.target.value)}/></label>
+      <label className="family-field">Categoria<select value={group} onChange={(event) => setGroup(event.target.value)}><option value="">Todas as categorias</option>{noteGroups.map((name, index) => <option key={name} value={index}>{name}</option>)}</select></label>
+      <p className="library-count">{filtered.length} de {notes.length} notas disponíveis</p>
+    </>}
     <div className="note-list">
-      {(profile.noteSource === 'elixir' && elixirNotes.length ? topNotes : notes).map((note) => {
+      {(profile.noteSource === 'elixir' && elixirNotes.length ? topNotes : filtered).map((note) => {
         const live = profile.noteSource === 'elixir' && elixirNotes.length > 0;
         const rank = topNotes.findIndex(({ id }) => id === note.id);
         const uses = live ? note.uses : profile.uses[note.id] || 0;
         return <div className="note-line" key={note.id}>
-          <span className="note-thumb" style={{ background: note.paper }}><img src={note.art} alt=""/></span>
-          <span className="note-name">{note.name}{rank >= 0 && <small>{rank + 1}º no card</small>}</span>
+          <span className="note-thumb" style={{ background: note.paper }}><img src={note.art} alt="" loading="lazy"/></span>
+          <span className="note-name" title={note.description}>{note.name}{rank >= 0 && <small>{rank + 1}º no card</small>}</span>
+          {!live && rank < 0 && <button type="button" className="note-feature" aria-label={'Destacar ' + note.name} onClick={() => feature(note.id)}><Plus size={13}/></button>}
           {!live && <div className="counter"><button type="button" aria-label={'Retirar uso de ' + note.name} disabled={!uses} onClick={() => count(note.id, -1)}><Minus size={14}/></button>
             <span aria-label={uses + ' usos'}>{uses}</span><button type="button" aria-label={'Registrar uso de ' + note.name} disabled={uses >= 999} onClick={() => count(note.id, 1)}><Plus size={14}/></button></div>}
         </div>;
@@ -220,7 +232,7 @@ function App() {
     let mounted = true;
     loadDraft().then((draft) => {
       if (!mounted || revision.current || !draft?.profile) return;
-      setProfile({ ...createProfile(), ...draft.profile });
+      setProfile({ ...createProfile(), ...draft.profile, ...(draft.profile.designVersion !== 2 ? { type: 'sans', layout: 'signature', motif: 'none', grain: false, paletteId: 'paper', treatment: 'circle', side: 'left', designVersion: 2 } : {}) });
       setTheme(draft.theme === 'dark' ? 'dark' : 'light');
       if (draft.device === 'ios') setDevice('ios');
     }).catch(() => {}).finally(() => mounted && setReady(true));
@@ -345,7 +357,7 @@ function App() {
 
     <main className="workspace">
       <div className="page-head">
-        <div><h1>Ateliê de perfil<span>.</span></h1><p>Um retrato em três notas.</p></div>
+        <div><h1>Ateliê de perfil<span>.</span></h1><p>Sua identidade. Suas notas.</p></div>
         <a className="back-link" href={baseLink.href}>Voltar ao Elixir <ArrowUpRight size={15}/></a>
       </div>
       <div className="workspace-grid">

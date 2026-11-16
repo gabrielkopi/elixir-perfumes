@@ -422,3 +422,48 @@ img.elx-profile-card__motif {
     transition-duration: 0s;
   }
 }
+
+/* The library's transparent objects keep their original silhouettes. */
+.elx-profile-card__note-art { border-radius: 0; overflow: visible; background: transparent !important; }
+.elx-profile-card__note-art img { object-fit: contain; }
+.elx-profile-card__note-name { font-weight: 400; color: var(--card-muted); }
+.elx-profile-card[data-type='sans'] .elx-profile-card__name { font-weight: 400; letter-spacing: -.045em; }
+.elx-profile-card__border-art { position: absolute; z-index: 0; pointer-events: none; width: 25%; height: 48%; object-fit: contain; right: -9%; top: -16%; opacity: .22; transform: rotate(-25deg); color: var(--card-accent); }
+.elx-profile-card[data-layout='signature'] { aspect-ratio: 2.7; display: grid; grid-template-columns: 20% 40% 40%; align-items: center; padding: 5% 4%; }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__identity { display: contents; }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__brand { position: absolute; bottom: 5%; left: 5%; font-size: calc(var(--profile-u) * .85); opacity: .5; letter-spacing: .25em; }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__visual { position: relative; width: 100%; height: 100%; left: auto; top: auto; grid-column: 1; grid-row: 1; }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__copy { grid-column: 2; grid-row: 1; padding: 0 9% 0 4%; }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__name { font-size: calc(var(--profile-u) * min(var(--card-name-size), 3.5)); line-height: 1.16; }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__verified { width: calc(var(--profile-u) * 1.6); height: calc(var(--profile-u) * 1.6); margin-left: calc(var(--profile-u) * .8); }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__handle { font-family: var(--font-sans); font-size: max(7px, calc(var(--profile-u) * 1.15)); margin-top: calc(var(--profile-u) * 1); }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__bio { font-size: max(8px, calc(var(--profile-u) * 1.3)); margin-top: calc(var(--profile-u) * 2); line-height: 1.7; -webkit-line-clamp: 3; }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__portrait { inset: 10% 9%; border-radius: 0; }
+.elx-profile-card[data-layout='signature'][data-treatment='circle'] .elx-profile-card__portrait { inset: auto; top: 50%; left: 50%; width: 88%; transform: translate(-50%,-50%); border-radius: 50%; }
+.elx-profile-card[data-layout='signature'][data-treatment='cutout'] .elx-profile-card__portrait { inset: 0; }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__notes { position: relative; grid-row: 1; grid-column: 3; width: 100%; max-width: 100%; height: 88%; align-items: center; justify-content: space-evenly; gap: 3%; border-top: 0; border-left: 1px solid var(--card-line); padding: 5% 0 0 8%; }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__notes::before { content: 'AS TRÊS NOTAS QUE FICAM'; position: absolute; top: 0; left: 8%; width: 92%; text-align: center; font-size: max(5px,calc(var(--profile-u) * .78)); letter-spacing: .14em; color: var(--card-muted); }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__note { width: 30%; gap: calc(var(--profile-u) * 1.2); }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__note-art { width: 100%; }
+.elx-profile-card[data-layout='signature'] .elx-profile-card__note-name { font-size: max(6px,calc(var(--profile-u) * 1.05)); }
+.elx-profile-card[data-layout='signature'][data-side='right'] { grid-template-columns: 40% 40% 20%; }
+.elx-profile-card[data-layout='signature'][data-side='right'] .elx-profile-card__visual { grid-column: 3; }
+.elx-profile-card[data-layout='signature'][data-side='right'] .elx-profile-card__copy { grid-column: 2; padding-left: 9%; padding-right: 4%; }
+.elx-profile-card[data-layout='signature'][data-side='right'] .elx-profile-card__notes { grid-column: 1; border-left: 0; border-right: 1px solid var(--card-line); padding-left: 0; padding-right: 8%; }
+.elx-profile-card[data-layout='signature'][data-side='right'] .elx-profile-card__notes::before { left:0; }
+.elx-profile-card[data-layout='signature']:is([data-format='square'],[data-format='portrait']) { aspect-ratio: 1; grid-template-columns: 30% 70%; grid-template-rows: 53% 47%; padding: 8%; }
+.elx-profile-card[data-layout='signature'][data-format='portrait'] { aspect-ratio: 4 / 5; }
+.elx-profile-card[data-layout='signature']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__visual { grid-column: 1; grid-row: 1; }
+.elx-profile-card[data-layout='signature']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__copy { grid-column: 2; grid-row: 1; padding: 0 0 0 10%; }
+.elx-profile-card[data-layout='signature']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__notes { grid-column: 1 / -1; grid-row: 2; border: 0; border-top: 1px solid var(--card-line); padding: 10% 2% 0; height: 100%; }
+.elx-profile-card[data-layout='signature']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__notes::before { top: 6%; left: 0; width: 100%; font-size: calc(var(--profile-u) * 1.6); }
+.elx-profile-card[data-layout='signature']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__note { width: 26%; }
+.elx-profile-card[data-layout='signature']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__note-name { font-size: calc(var(--profile-u) * 2.4); }
+.elx-profile-card[data-layout='signature']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__name { font-size: calc(var(--profile-u) * min(var(--card-name-size), 6)); }
+.elx-profile-card[data-layout='signature']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__bio { font-size: calc(var(--profile-u) * 2.6); }
+.elx-profile-card[data-layout='signature']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__handle { font-size: calc(var(--profile-u) * 2.2); }
+
+.elx-profile-card[data-layout='signature'][data-side='right']:is([data-format='square'],[data-format='portrait']) { grid-template-columns: 70% 30%; }
+.elx-profile-card[data-layout='signature'][data-side='right']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__visual { grid-column: 2; }
+.elx-profile-card[data-layout='signature'][data-side='right']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__copy { grid-column: 1; padding: 0 10% 0 0; }
+.elx-profile-card[data-layout='signature'][data-side='right']:is([data-format='square'],[data-format='portrait']) .elx-profile-card__notes { grid-column: 1 / -1; }
