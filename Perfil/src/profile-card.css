@@ -1,0 +1,424 @@
+.elx-profile-card {
+  --profile-u: 1cqw;
+  --card-media-size: 45%;
+  --card-copy-size: 55%;
+  --card-ease: cubic-bezier(.22, 1, .36, 1);
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.745;
+  overflow: hidden;
+  background-color: var(--card-paper, #f4e6bb);
+  color: var(--card-ink, #2e1815);
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  transition: background-color .55s var(--card-ease), color .55s var(--card-ease);
+}
+
+.elx-profile-card,
+.elx-profile-card * {
+  box-sizing: border-box;
+}
+
+.elx-profile-card[data-format='square'] {
+  --card-media-size: 44%;
+  --card-copy-size: 56%;
+  aspect-ratio: 1;
+}
+
+.elx-profile-card[data-format='portrait'] {
+  aspect-ratio: 4 / 5;
+}
+
+.elx-profile-card__identity,
+.elx-profile-card__visual {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition:
+    left .65s var(--card-ease), top .65s var(--card-ease),
+    width .65s var(--card-ease), height .65s var(--card-ease);
+}
+
+.elx-profile-card__identity {
+  left: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: calc(var(--profile-u) * 2.7);
+  width: var(--card-copy-size);
+  padding: calc(var(--profile-u) * 6.7) calc(var(--profile-u) * 2.3) calc(var(--profile-u) * 6.1) calc(var(--profile-u) * 6.5);
+}
+
+.elx-profile-card__visual {
+  left: var(--card-copy-size);
+  width: var(--card-media-size);
+}
+
+.elx-profile-card[data-side='left'] .elx-profile-card__identity {
+  left: var(--card-media-size);
+  padding-right: calc(var(--profile-u) * 4.5);
+  padding-left: calc(var(--profile-u) * 4.3);
+}
+
+.elx-profile-card[data-side='left'] .elx-profile-card__visual {
+  left: 0;
+}
+
+.elx-profile-card[data-format='portrait'] .elx-profile-card__visual {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 51%;
+}
+
+.elx-profile-card[data-format='portrait'] .elx-profile-card__identity {
+  top: 51%;
+  left: 0;
+  width: 100%;
+  height: 49%;
+  gap: calc(var(--profile-u) * 1.4);
+  padding: calc(var(--profile-u) * 2.3) calc(var(--profile-u) * 7) calc(var(--profile-u) * 4.7);
+}
+
+.elx-profile-card[data-format='portrait'][data-side='left'] .elx-profile-card__visual {
+  top: 49%;
+}
+
+.elx-profile-card[data-format='portrait'][data-side='left'] .elx-profile-card__identity {
+  top: 0;
+  padding-top: calc(var(--profile-u) * 5);
+  padding-bottom: calc(var(--profile-u) * 2);
+}
+
+.elx-profile-card[data-format='landscape'][data-lines='2'] .elx-profile-card__identity {
+  gap: calc(var(--profile-u) * 1.8);
+}
+
+.elx-profile-card__brand {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--profile-u) * .77);
+  min-width: 0;
+  font-size: max(7px, calc(var(--profile-u) * 1.5));
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+}
+
+.elx-profile-card__brand svg {
+  width: calc(var(--profile-u) * .82);
+  height: calc(var(--profile-u) * 1.58);
+}
+
+.elx-profile-card[data-format='portrait'] .elx-profile-card__brand {
+  font-size: max(7px, calc(var(--profile-u) * 2));
+}
+
+.elx-profile-card__copy {
+  align-self: center;
+  min-width: 0;
+}
+
+.elx-profile-card__name {
+  margin: 0;
+  color: inherit;
+  font-family: var(--font-serif, 'Instrument Serif', 'Times New Roman', serif);
+  font-size: calc(var(--profile-u) * var(--card-name-size, 10.5));
+  font-weight: 400;
+  letter-spacing: -.045em;
+  line-height: .89;
+  transition: font-size .4s var(--card-ease);
+}
+
+.elx-profile-card__name-line {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.elx-profile-card[data-type='serif'] .elx-profile-card__name-line:nth-child(2) {
+  font-style: italic;
+}
+
+.elx-profile-card[data-type='sans'] .elx-profile-card__name {
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-weight: 650;
+  letter-spacing: -.072em;
+}
+
+.elx-profile-card[data-type='mono'] .elx-profile-card__name {
+  font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+  font-weight: 400;
+  letter-spacing: -.07em;
+}
+
+.elx-profile-card__verified {
+  flex: 0 0 auto;
+  width: max(10px, calc(var(--profile-u) * 2.9));
+  height: max(10px, calc(var(--profile-u) * 2.9));
+  margin-left: calc(var(--profile-u) * 1.1);
+  color: var(--card-accent, currentColor);
+}
+
+.elx-profile-card[data-format='portrait'] .elx-profile-card__verified {
+  width: max(10px, calc(var(--profile-u) * 3.7));
+  height: max(10px, calc(var(--profile-u) * 3.7));
+}
+
+.elx-profile-card__handle,
+.elx-profile-card__bio {
+  overflow: hidden;
+  max-width: 35em;
+  margin: 0;
+  color: var(--card-muted, var(--card-ink));
+  overflow-wrap: anywhere;
+}
+
+.elx-profile-card__handle {
+  margin-top: calc(var(--profile-u) * 1.75);
+  font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+  font-size: max(8px, calc(var(--profile-u) * 1.75));
+  font-weight: 500;
+  letter-spacing: -.04em;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.elx-profile-card__bio {
+  display: -webkit-box;
+  margin-top: calc(var(--profile-u) * 1.1);
+  font-size: max(9px, calc(var(--profile-u) * 1.87));
+  line-height: 1.38;
+  white-space: pre-line;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.elx-profile-card[data-format='portrait'] .elx-profile-card__handle,
+.elx-profile-card[data-format='portrait'] .elx-profile-card__bio {
+  font-size: max(9px, calc(var(--profile-u) * 2.3));
+}
+
+.elx-profile-card__notes {
+  display: flex;
+  gap: calc(var(--profile-u) * 2.2);
+  align-items: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: calc(var(--profile-u) * 1.7) 0 0;
+  border-top: 1px solid var(--card-line, currentColor);
+  list-style: none;
+}
+
+.elx-profile-card__note {
+  display: grid;
+  justify-items: center;
+  width: max(37px, calc(var(--profile-u) * 9.6));
+  gap: calc(var(--profile-u) * .9);
+}
+
+.elx-profile-card__note-art {
+  display: grid;
+  place-items: center;
+  width: max(27px, calc(var(--profile-u) * 9.6));
+  max-width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: var(--card-photo-bg);
+  color: var(--card-accent);
+  transition: background-color .5s var(--card-ease), color .5s var(--card-ease);
+}
+
+.elx-profile-card__note-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.elx-profile-card__note-art svg {
+  width: 25%;
+  height: 45%;
+}
+
+.elx-profile-card__note-name {
+  display: block;
+  max-width: 100%;
+  font-size: max(7px, calc(var(--profile-u) * 1.34));
+  font-weight: 650;
+  line-height: 1.12;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.elx-profile-card[data-format='portrait'] .elx-profile-card__notes {
+  gap: calc(var(--profile-u) * 3.4);
+}
+
+.elx-profile-card[data-format='portrait'] .elx-profile-card__note {
+  width: max(38px, calc(var(--profile-u) * 10.5));
+}
+
+.elx-profile-card[data-format='portrait'] .elx-profile-card__note-name {
+  font-size: max(7px, calc(var(--profile-u) * 1.75));
+}
+
+.elx-profile-card__portrait {
+  position: absolute;
+  inset: 5.5% 8.5% 5.5% 0;
+  overflow: hidden;
+  border-radius: 0;
+  transition: inset .55s var(--card-ease), border-radius .55s var(--card-ease), transform .55s var(--card-ease);
+}
+
+.elx-profile-card[data-treatment='frame'][data-side='left'] .elx-profile-card__portrait {
+  inset: 5.5% 0 5.5% 8.5%;
+}
+
+.elx-profile-card[data-treatment='frame'][data-format='portrait'] .elx-profile-card__portrait {
+  inset: 8% 7% 3%;
+}
+
+.elx-profile-card[data-treatment='frame'][data-format='portrait'][data-side='left'] .elx-profile-card__portrait {
+  inset: 3% 7% 8%;
+}
+
+.elx-profile-card__photomat {
+  position: absolute;
+  inset: 0;
+  background-color: var(--card-photo-bg, var(--card-accent));
+  transition: background-color .55s var(--card-ease), border-radius .55s var(--card-ease), inset .55s var(--card-ease);
+}
+
+.elx-profile-card__motif {
+  position: absolute;
+  inset: 4% 3% 4% 4%;
+  display: block;
+  width: 93%;
+  height: 92%;
+  color: var(--card-accent);
+  object-fit: contain;
+  opacity: .56;
+  pointer-events: none;
+}
+
+img.elx-profile-card__motif {
+  opacity: .44;
+  mix-blend-mode: multiply;
+  transform: rotate(-12deg) scale(1.12);
+}
+
+.elx-profile-card__photo {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  transform: translate(var(--photo-x), var(--photo-y)) scale(var(--photo-zoom));
+  transform-origin: center;
+  transition: transform .22s var(--card-ease), filter .5s var(--card-ease);
+  user-select: none;
+}
+
+.elx-profile-card[data-filter='warm'] .elx-profile-card__photo {
+  filter: sepia(.24) saturate(.89) contrast(.96);
+}
+
+.elx-profile-card[data-filter='mono'] .elx-profile-card__photo {
+  filter: grayscale(1) contrast(1.03);
+}
+
+.elx-profile-card__photo-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 29%;
+  height: 57%;
+  color: var(--card-accent);
+  opacity: .8;
+  transform: translate(-50%, -50%);
+}
+
+.elx-profile-card[data-treatment='circle'] .elx-profile-card__portrait {
+  inset: auto;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.elx-profile-card[data-format='portrait'][data-treatment='circle'] .elx-profile-card__portrait {
+  width: 60%;
+}
+
+.elx-profile-card[data-treatment='cutout'] .elx-profile-card__portrait {
+  inset: 0;
+}
+
+.elx-profile-card[data-treatment='cutout'] .elx-profile-card__photomat {
+  inset: 50% auto auto 50%;
+  width: 92%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.elx-profile-card[data-treatment='cutout'] .elx-profile-card__photo {
+  object-fit: contain;
+  object-position: center bottom;
+  transform-origin: center bottom;
+}
+
+.elx-profile-card[data-format='portrait'][data-treatment='cutout'] .elx-profile-card__photomat {
+  width: 60%;
+}
+
+.elx-profile-card[data-treatment='bleed'] .elx-profile-card__portrait {
+  inset: 0;
+}
+
+.elx-profile-card__grain {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath d='M0 0h150v150H0z' filter='url(%23g)' opacity='.62'/%3E%3C/svg%3E");
+  background-size: 150px 150px;
+  opacity: .13;
+  pointer-events: none;
+}
+
+@container (max-width: 430px) {
+  .elx-profile-card[data-format='landscape'] .elx-profile-card__identity {
+    gap: calc(var(--profile-u) * 1.5);
+    padding-top: calc(var(--profile-u) * 5);
+    padding-bottom: calc(var(--profile-u) * 4);
+  }
+
+  .elx-profile-card[data-format='landscape'] .elx-profile-card__bio {
+    -webkit-line-clamp: 1;
+  }
+}
+
+@container (max-width: 260px) {
+  .elx-profile-card[data-format='portrait'][data-lines='2'] .elx-profile-card__bio {
+    -webkit-line-clamp: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .elx-profile-card,
+  .elx-profile-card * {
+    transition-duration: 0s;
+  }
+}

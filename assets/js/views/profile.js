@@ -149,8 +149,10 @@ ${proof.length||hyp.length?`<article class="data-card">${UI.axisBars([...proof,.
  /* ---------- telas ---------- */
  view(){const pr=state.profile,sig=pr.signature?byId(pr.signature):null,st=Select.mapInput();
   const gift=typeof PROFILE_RULES!=='undefined'&&PROFILE_RULES.giftSite?`<div class="pf-gift">${UI.linkRow({icon:'gift',title:'Minha lista de presentes',sub:'Abre o site separado da lista, para quem quer me dar um perfume.',href:PROFILE_RULES.giftSite,external:true})}</div>`:'';
+  const atelierHref='Perfil/dist/?origem=perfil'+(new URLSearchParams(location.search).has('sandbox')?'&sandbox':'');
+  const atelier=UI.linkRow({icon:'spark',title:'Ateliê de perfil',sub:'Crie e exporte um card com suas notas olfativas.',href:atelierHref});
   return `<section class="v-profile" data-view="profile" data-tone="${esc(pr.tone)}">${this.header(pr,{own:true})}${gift}
-<div class="pf-body">${this.sigCard(sig,{own:true})}${this.pinned(pr.pinned,{own:true})}${this.threeNotes(st,{own:true})}
+<div class="pf-body">${atelier}${this.sigCard(sig,{own:true})}${this.pinned(pr.pinned,{own:true})}${this.threeNotes(st,{own:true})}
 ${pr.sections.collection!==false?this.shelfRail('have','Tenho','#collection/have'):''}${pr.sections.want!==false?this.shelfRail('want','Quero','#collection/want'):''}${this.tabsBlock(pr)}</div></section>`;},
  /* Outra pessoa: sem % global; compatibilidade só por eixo (MapView.compat). */
  compat(u){

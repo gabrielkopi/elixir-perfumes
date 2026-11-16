@@ -1,0 +1,224 @@
+.mask-dialog {
+  --mask-paper: #f6f1e8;
+  --mask-ink: #24231e;
+  --mask-muted: #59564c;
+  --mask-rule: #dfd6c7;
+  --mask-emphasis: #25291d;
+  --mask-on-emphasis: #fcf7ec;
+  --mask-checker: #e1d9cb;
+  position: fixed;
+  inset: 0;
+  width: min(680px, calc(100% - 28px));
+  max-height: calc(100% - 28px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--mask-rule);
+  border-radius: 20px;
+  background: var(--mask-paper);
+  color: var(--mask-ink);
+  box-shadow: 0 28px 100px #1c19134d;
+}
+
+[data-theme='dark'] .mask-dialog,
+.mask-dialog[data-theme='dark'] {
+  --mask-paper: #1d1e18;
+  --mask-ink: #eee8db;
+  --mask-muted: #c0b9aa;
+  --mask-rule: #4d4b40;
+  --mask-emphasis: #eee8db;
+  --mask-on-emphasis: #23231d;
+  --mask-checker: #3e3e34;
+}
+
+.mask-dialog::backdrop {
+  background: #191b15a6;
+  backdrop-filter: blur(7px);
+}
+
+.mask-dialog[open] {
+  animation: mask-appear 240ms cubic-bezier(.2, .7, .3, 1);
+}
+
+@keyframes mask-appear {
+  from { opacity: 0; transform: translateY(9px) scale(.988); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.mask-panel {
+  display: grid;
+  gap: 16px;
+  padding: clamp(14px, 3vw, 24px);
+}
+
+.mask-panel [hidden] {
+  display: none;
+}
+
+.mask-header,
+.mask-footer,
+.mask-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mask-header,
+.mask-footer {
+  justify-content: space-between;
+}
+
+.mask-header {
+  align-items: flex-start;
+}
+
+.mask-header h2 {
+  margin: 0 0 6px;
+  color: inherit;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(25px, 4vw, 37px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.mask-header p,
+.mask-status {
+  margin: 0;
+  color: var(--mask-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.mask-panel button {
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--mask-rule);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--mask-ink);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 180ms, color 180ms, border-color 180ms;
+}
+
+.mask-panel button:hover:not(:disabled),
+.mask-panel button[aria-pressed='true'] {
+  border-color: var(--mask-muted);
+  background: var(--mask-rule);
+}
+
+.mask-panel button:focus-visible,
+.mask-panel input:focus-visible {
+  outline: 2px solid var(--mask-muted);
+  outline-offset: 2px;
+}
+
+.mask-panel button:disabled {
+  opacity: .45;
+  cursor: default;
+}
+
+.mask-panel .mask-close {
+  flex: 0 0 auto;
+  width: 40px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.mask-preview {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid var(--mask-rule);
+  border-radius: 11px;
+  background: var(--mask-rule);
+}
+
+.mask-canvas-wrap {
+  position: relative;
+  width: min(100%, calc(48vh * var(--mask-image-ratio)));
+  width: min(100%, calc(max(130px, 48dvh) * var(--mask-image-ratio)));
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.mask-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: var(--mask-paper);
+  background-image: conic-gradient(var(--mask-checker) 25%, transparent 0 50%, var(--mask-checker) 0 75%, transparent 0);
+  background-size: 18px 18px;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.mask-cursor {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 1px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #191b15b3;
+  pointer-events: none;
+}
+
+.mask-canvas[data-original='true'] {
+  cursor: default;
+}
+
+.mask-controls {
+  flex-wrap: wrap;
+}
+
+.mask-brushes {
+  display: flex;
+  gap: 5px;
+}
+
+.mask-size {
+  display: flex;
+  flex: 1 1 100px;
+  align-items: center;
+  gap: 7px;
+  color: var(--mask-muted);
+  font-size: 12px;
+}
+
+.mask-size input {
+  flex: 1;
+  width: 0;
+  min-width: 46px;
+  accent-color: var(--mask-emphasis);
+}
+
+.mask-footer {
+  padding-top: 14px;
+  border-top: 1px solid var(--mask-rule);
+}
+
+.mask-footer .mask-apply {
+  border-color: var(--mask-emphasis);
+  background: var(--mask-emphasis);
+  color: var(--mask-on-emphasis);
+}
+
+.mask-footer .mask-apply:hover:not(:disabled) {
+  border-color: var(--mask-emphasis);
+  background: var(--mask-emphasis);
+  opacity: .85;
+}
+
+@media (max-width: 500px) {
+  .mask-panel button { min-height: 44px; }
+  .mask-panel .mask-close { width: 44px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mask-dialog[open], .mask-panel button {
+    animation: none;
+    transition: none;
+  }
+}
