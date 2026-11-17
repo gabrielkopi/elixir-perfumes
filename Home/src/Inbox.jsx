@@ -73,7 +73,7 @@ export default function Inbox({ personId, conversations, append, navigate, getPe
           <div className="chat-composer">
             {available.length > 0 && <SelectMenu className="dropdown-up" label="Indicar perfume" value="" options={[{ value: '', label: 'Indicar perfume' }, ...available.map((item) => ({ value: item.id, label: item.name }))]} onChange={(id) => { if (id) append(active.id, { kind: 'perfume', id }); }} />}
             <form onSubmit={send}>
-              <input value={draft} onChange={(event) => setDraft(event.target.value)} maxLength={350} placeholder="Escreva uma mensagem" aria-label="Mensagem" />
+              <input value={draft} onChange={(event) => setDraft(event.target.value)} maxLength={350} placeholder="Mensagem" aria-label="Mensagem" />
               <button className="icon-button" aria-label="Enviar mensagem" disabled={!draft.trim()}><Send size={17} /></button>
             </form>
           </div>
