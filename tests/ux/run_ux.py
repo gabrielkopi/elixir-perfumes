@@ -24,12 +24,12 @@ def check(name, ok, detail=''):
 
 def base_url(use_http):
     if not use_http:
-        return ROOT.joinpath('index.html').as_uri()
+        return ROOT.joinpath('elixir.html').as_uri()
     handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(ROOT))
     handler.log_message = lambda *a: None
     srv = socketserver.TCPServer(('127.0.0.1', 0), handler)
     threading.Thread(target=srv.serve_forever, daemon=True).start()
-    return f'http://127.0.0.1:{srv.server_address[1]}/index.html'
+    return f'http://127.0.0.1:{srv.server_address[1]}/elixir.html'
 
 
 def new_page(browser, mobile=True, scheme='light', reduced=False, session=True):
@@ -433,7 +433,7 @@ def navigation(browser, url):
         pg.evaluate(f"location.hash='#{h}'"); pg.wait_for_timeout(700)
     for _ in range(3):
         pg.go_back(); pg.wait_for_timeout(700)
-    check('3 avanços e 3 voltas retornam ao Início', pg.url.endswith('#home') or pg.url.endswith('index.html'), pg.url)
+    check('3 avanços e 3 voltas retornam ao Início', pg.url.endswith('#home') or pg.url.endswith('elixir.html'), pg.url)
     go(pg, url, 'nao-existe', 800)
     check('endereço desconhecido cai no Início', pg.query_selector('[data-view=home]') is not None)
     go(pg, url, 'perfume/nao-existe', 800)
@@ -490,9 +490,9 @@ def reduced_motion(browser, url):
 
 def other_entries(browser, url):
     print('11. Outras entradas')
-    for f in ['elixir.html', 'perfume-social.html', 'assinatura.html', 'elixir-apresentacao.html']:
+    for f in ['perfume-social.html', 'assinatura.html', 'elixir-apresentacao.html']:
         pg = new_page(browser, mobile=False)
-        pg.goto(url.replace('index.html', f)); pg.wait_for_timeout(1500)
+        pg.goto(url.rsplit('/', 1)[0] + '/' + f); pg.wait_for_timeout(1500)
         check(f'{f} abre sem erros', not pg.errors, '; '.join(pg.errors[:2]))
         pg.context.close()
 

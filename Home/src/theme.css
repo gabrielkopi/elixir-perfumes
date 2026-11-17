@@ -1,0 +1,217 @@
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  color: var(--ink);
+  background: var(--cream);
+  scrollbar-color: #687164 var(--cream);
+  --ink: #eeefe7;
+  --muted: #b4baad;
+  --cream: #111310;
+  --dark: #c6d3ba;
+  --line: #343a32;
+  --surface: #1b1e19;
+  --raised: #252a23;
+  --control-border: #737c6e;
+  --accent: #b9c9ac;
+  --solid-ink: #1b2418;
+  --solid-hover: #dde6d5;
+  --focus: #e9cd90;
+  --photo-mat: #e5e4dc;
+}
+
+.app[data-theme="dark"] {
+  color: var(--ink);
+  background: var(--cream);
+}
+
+.app[data-theme="dark"] :is(button, a, input, select):focus-visible {
+  outline-color: var(--focus);
+}
+
+.app[data-theme="dark"] ::selection {
+  color: var(--solid-ink);
+  background: var(--solid-hover);
+}
+
+.app[data-theme="dark"] .site-header {
+  background: var(--cream);
+  box-shadow: inset 0 -1px var(--line);
+}
+
+.app[data-theme="dark"] :is(.header-avatar, .profile-actions .icon-button) {
+  color: var(--ink);
+  border-color: var(--control-border);
+}
+
+.app[data-theme="dark"] :is(.desktop-nav, .mobile-nav) button:hover {
+  background: var(--raised);
+  color: var(--ink);
+}
+
+.app[data-theme="dark"] :is(.desktop-nav, .mobile-nav) button[aria-current] {
+  color: var(--solid-ink);
+  background: var(--dark);
+}
+
+.app[data-theme="dark"] .mobile-nav {
+  color: var(--ink);
+  background: #181b16;
+  border-color: var(--control-border);
+  box-shadow: 0 5px 14px rgb(0 0 0 / .32);
+}
+
+.app[data-theme="dark"] .mobile-nav button:not([aria-current]) {
+  color: var(--muted);
+}
+
+.app[data-theme="dark"] :is(.button-dark, .chip[aria-pressed="true"]) {
+  color: var(--solid-ink);
+  background: var(--dark);
+}
+
+.app[data-theme="dark"] :is(.button-dark, .chip[aria-pressed="true"]):hover {
+  background: var(--solid-hover);
+  box-shadow: none;
+}
+
+.app[data-theme="dark"] :is(.button-outline, .chip, .search-box, .rating select) {
+  border-color: var(--control-border);
+}
+
+.app[data-theme="dark"] :is(.button-outline, .chip:not([aria-pressed="true"]), .icon-button, .post-author):hover {
+  background: var(--raised);
+}
+
+.app[data-theme="dark"] :is(.skip-link, .search-box, .rating select) {
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.app[data-theme="dark"] .search-box:focus-within {
+  border-color: var(--focus);
+}
+
+.app[data-theme="dark"] :is(.search-box, .comments) input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.app[data-theme="dark"] .comments input {
+  color: var(--ink);
+}
+
+.app[data-theme="dark"] :is(.section-heading, .page-heading, .perfume-meta, .profile-feature, .profile-notes, .library-notes) .eyebrow {
+  color: var(--accent);
+}
+
+.app[data-theme="dark"] :is(.perfume-open, .post, .profile-card, .collection-empty, .perfume-dialog, .library-notes) {
+  background: var(--surface);
+  border-color: var(--line);
+  box-shadow: none;
+}
+
+.app[data-theme="dark"] .perfume-open:hover {
+  border-color: var(--control-border);
+}
+
+.app[data-theme="dark"] :is(.perfume-image, .detail-photo) {
+  background: var(--photo-mat);
+}
+
+.app[data-theme="dark"] :is(.perfume-image, .detail-photo):has(.no-photo) {
+  background: var(--raised);
+}
+
+.app[data-theme="dark"] .no-photo {
+  color: var(--muted);
+}
+
+.app[data-theme="dark"] :is(.card-bookmark, .post-photo .icon-button, .dialog-close, .image-switch) {
+  color: var(--ink);
+  background: rgb(24 28 22 / .94);
+  border-color: var(--control-border);
+}
+
+.app[data-theme="dark"] :is(.card-bookmark, .post-photo .icon-button, .dialog-close, .image-switch):hover,
+.app[data-theme="dark"] .card-bookmark[aria-pressed="true"] {
+  color: var(--solid-ink);
+  background: var(--dark);
+}
+
+.app[data-theme="dark"] .family-tile {
+  color: var(--ink);
+  background: var(--raised);
+  background: color-mix(in srgb, var(--family) 10%, var(--surface));
+  border-color: var(--line);
+}
+
+.app[data-theme="dark"] .family-tile:hover {
+  border-color: var(--control-border);
+}
+
+.app[data-theme="dark"] .profile-feature {
+  background: var(--surface);
+}
+
+.app[data-theme="dark"] :is(.story .avatar, .profile-person .avatar, .profile-feature img) {
+  border-color: var(--raised);
+  box-shadow: none;
+}
+
+.app[data-theme="dark"] .story .avatar {
+  outline-color: var(--control-border);
+}
+
+.app[data-theme="dark"] .post-actions .icon-button[aria-pressed="true"] {
+  color: var(--focus);
+}
+
+.app[data-theme="dark"] .perfume-dialog {
+  color: var(--ink);
+  border-color: var(--control-border);
+}
+
+.app[data-theme="dark"] .perfume-dialog::backdrop {
+  background: rgb(6 8 5 / .76);
+}
+
+.app[data-theme="dark"] .lower-third {
+  background: rgb(30 34 27 / .96);
+  border-color: var(--control-border);
+  box-shadow: 0 14px 42px rgb(0 0 0 / .45);
+}
+
+.app[data-theme="dark"] .tour-bars span {
+  background: var(--control-border);
+}
+
+.app[data-theme="dark"] .tour-bars .filled {
+  background: var(--accent);
+}
+
+.app[data-theme="dark"] :is(.site-footer, .toast) {
+  color: var(--ink);
+}
+
+.app[data-theme="dark"] .toast {
+  background: var(--raised);
+  border: 1px solid var(--control-border);
+}
+
+.app[data-theme="dark"] :is(.dropdown-trigger, .dropdown-options, .tool-tile, .note-grid .note-button) {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+.app[data-theme="dark"] :is(.dropdown-trigger:hover, .dropdown-trigger[aria-expanded="true"], .tool-tile:hover) {
+  border-color: var(--control-border);
+}
+
+.app[data-theme="dark"] :is(.dropdown-options [role="option"][data-active="true"], .note-button:hover, .tool-tile:hover, .tools-switch[aria-pressed="true"]) {
+  color: var(--ink);
+  background: var(--raised);
+}
+
+.app[data-theme="dark"] :is(.chat-board, .chat-suggestion) { background: var(--surface); }
+.app[data-theme="dark"] :is(.chat-people button:hover, .chat-people button[aria-current], .chat-message) { background: var(--raised); }
+.app[data-theme="dark"] .chat-message.outgoing { background: #313b2a; }

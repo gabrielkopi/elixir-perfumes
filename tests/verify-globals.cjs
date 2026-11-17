@@ -56,7 +56,7 @@ function topNames(src){
  return names;
 }
 
-/* ---------- ordem §3.1 nas 4 páginas ---------- */
+/* ---------- ordem §3.1 nas entradas do aplicativo clássico ---------- */
 const ORDER=`data/brand.js data/data.js data/catalog-100.js data/notes.js data/catalog-br.js data/image-credits.js data/catalog-photos.js data/colors.js
 data/ingredients.js data/brand-tiers.js data/catalog-studio.js data/editions.js engine/engine.js engine/taste-engine.js engine/advisor.js engine/olfactory-map.js
 core/dom.js core/profile-rules.js core/store.js core/cloud.js core/catalog.js core/router.js core/motion.js core/components.js core/actions.js core/weather.js
@@ -64,10 +64,10 @@ data/community.js vendor/qrcode.js views/shell.js views/settings.js views/feed.j
 views/explore.js views/search.js views/perfume.js views/notes.js views/brand.js views/guide.js views/compare.js views/discovery.js
 views/collection.js views/profile.js views/profile-edit.js views/activity.js views/map.js views/today.js views/bubble.js views/circle.js views/connect.js actions.js main.js`.split(/\s+/);
 let fails=0,warns=0;const VERSIONS=new Set();const fail=m=>{fails++;console.log('  FAIL '+m);},warn=m=>{warns++;console.log('  AVISO '+m);};
-for(const html of ['index.html','elixir.html','perfume-social.html','assinatura.html']){
+for(const html of ['elixir.html','perfume-social.html','assinatura.html']){
  const src=fs.readFileSync(path.join(ROOT,html),'utf8');const list=[...src.matchAll(/<script src="assets\/js\/([^"?]+)(\?v=\d+)?"/g)].map(m=>m[1]);
  if(JSON.stringify(list)!==JSON.stringify(ORDER))fail(html+': ordem de scripts difere de §3.1');
- /* Uma única versão de cache (?v=) por página e igual nas quatro entradas; sobe a cada publicação. */
+ /* Uma única versão de cache (?v=) por página, igual em todas as entradas. */
  const vs=[...new Set([...src.matchAll(/\?v=(\d+)"/g)].map(m=>m[1]))];
  if(vs.length!==1)fail(html+': ?v misturado ('+vs.join(', ')+')');
  else{VERSIONS.add(vs[0]);if(Number(vs[0])<91)fail(html+': ?v abaixo de 91');}}

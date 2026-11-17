@@ -1,0 +1,262 @@
+[
+  {
+    "id": "arbo-atlantica", "name": "Arbo Atlântica", "brand": "O Boticário", "concentration": "Desodorante Colônia", "family": "Fougère aromático",
+    "pyramid": {
+      "top": ["Bergamota", "Limão", "Cardamomo", "Tangerina", "Hortelã"],
+      "heart": ["Sálvia", "Notas aquosas", "Gálbano", "Acorde Cachoeira Salto Morato"],
+      "base": ["Patchouli", "Musgo", "Vetiver", "Almíscar", "Cashmeran", "Sândalo"]
+    },
+    "accords": ["Aquático", "Verde", "Aromático", "Amadeirado"],
+    "description": "Hortelã e cítricos na saída. No coração, a água fria de Salto Morato encontra folhas verdes. No fundo ficam vetiver, musgo e sândalo.",
+    "source": "https://www.boticario.com.br/produto/arbo-atlantica-desodorante-colonia-100ml",
+    "image": "studio/media/perfumes/arbo-atlantica.webp",
+    "imageSource": "https://cdn.gbmedia.com.br/images/w_800,f_webp,q_auto:eco/v1/imagens/product/B55366/a916ff40-95ba-46ed-8ac4-5a22603fa11b-bot-55366-arbo-atlantica-desodorante-colonia-01.jpg",
+    "editorialImage": "studio/media/perfumes/arbo-atlantica-cachoeira.webp",
+    "editorialImageSource": "https://cdn.gbmedia.com.br/images/w_800,f_webp,q_auto:eco/v1/imagens/product/B55366/25c1ef4e-6d9c-40db-a27e-febfe9f46482-bot-55366-arbo-atlantica-desodorante-colonia-06.jpg"
+  },
+  {
+    "id": "insensatez", "name": "Insensatez", "brand": "O Boticário", "concentration": "Desodorante Colônia", "family": "Cítrico fresco",
+    "pyramid": {
+      "top": ["Bergamota", "Tangerina", "Mamão papaia", "Abacaxi"],
+      "heart": ["Rosa", "Violeta", "Jasmim", "Lírio-do-vale", "Chá verde"],
+      "base": ["Almíscar", "Musgo de carvalho", "Complexo amadeirado"]
+    },
+    "accords": ["Cítrico", "Floral", "Frutado", "Amadeirado"],
+    "description": "Bergamota e abacaxi dão lugar a chá verde e flores suaves. O almíscar e as madeiras ficam rente à pele.",
+    "source": "https://www.boticario.com.br/insensatez-desodorante-colonia-100ml-2",
+    "image": "studio/media/perfumes/insensatez.webp",
+    "imageSource": "https://cdn.gbmedia.com.br/images/w_800,f_webp,q_auto:eco/v1/imagens/products/B48144/Insensatez-Desodorante-Colonia-100ml-V3_B48144.jpg",
+    "editorialImage": "studio/media/perfumes/insensatez-conceito.webp",
+    "editorialImageSource": "https://cdn.gbmedia.com.br/images/w_800,f_webp,q_auto:eco/v1/imagens/products/B48144/Insensatez-Desodorante-Colonia-100ml-V3_B48144_conceito.jpg"
+  },
+  {
+    "id": "arbo", "family": "Fougère fresco",
+    "pyramid": {
+      "top": ["Acorde Ar da Montanha", "Folha de laranjeira", "Gerânio", "Menta", "Mandarina", "Toranja"],
+      "heart": ["Artemísia", "Sálvia", "Notas verdes"],
+      "base": ["Musgo", "Sândalo", "Almíscar"]
+    },
+    "accords": ["Verde", "Aromático", "Cítrico", "Amadeirado"],
+    "source": "https://www.boticario.com.br/produto/arbo-desodorante-colonia-100ml-v4",
+    "image": "studio/media/perfumes/arbo.webp"
+  },
+  {
+    "id": "o-boticario-arbo-botanic-deo-colonia", "family": "Fougère fresco",
+    "pyramid": {
+      "top": ["Acorde Energy", "Limão", "Bergamota", "Pimenta rosa", "Gengibre", "Notas verdes"],
+      "heart": ["Gerânio do Egito", "Cipreste", "Lavanda", "Violeta"],
+      "base": ["Cedro", "Âmbar", "Almíscar", "Olíbano", "Vetiver"]
+    },
+    "accords": ["Aromático", "Verde", "Cítrico", "Amadeirado"],
+    "source": "https://www.boticario.com.br/produto/arbo-botanic-desodorante-colonia-100ml-v2",
+    "image": "studio/media/perfumes/arbo-botanic.webp",
+    "imageSource": "https://cdn.gbmedia.com.br/images/w_800,f_webp,q_auto:eco/v1/imagens/products/B74444/DES-COL-ARBO-BOTANIC_B74444.jpg"
+  },
+  {
+    "id": "o-boticario-arbo-puro-deo-colonia", "family": "Fougère fresco",
+    "pyramid": {
+      "top": ["Cardamomo", "Bergamota", "Melão", "Pimenta preta", "Toranja", "Limão-cravo"],
+      "heart": ["Gerânio", "Lavanda", "Lírio-do-vale", "Acorde Bambu", "Hortelã", "Chá verde", "Violeta"],
+      "base": ["Âmbar", "Almíscar", "Cumarina", "Cedro", "Cashmeran", "Patchouli"]
+    },
+    "accords": ["Verde", "Cítrico", "Especiado fresco", "Aromático"],
+    "source": "https://www.boticario.com.br/produto/arbo-puro-desodorante-colonia-100ml",
+    "image": "studio/media/perfumes/arbo-puro.webp",
+    "imageSource": "https://cdn.gbmedia.com.br/images/w_800,f_webp,q_auto:eco/v1/imagens/product/B52898/6c9d926d-19f5-43ab-8f5e-76565f83fb22-bot-52898-arbo-puro-desodorante-colonia-frontal-01.jpg"
+  },
+  {
+    "id": "arbo-intenso", "name": "Arbo Intenso", "brand": "O Boticário", "concentration": "Desodorante Colônia", "family": "Fougère aromático",
+    "pyramid": {
+      "top": ["Toranja", "Maçã verde", "Abacaxi", "Limão"],
+      "heart": ["Patchouli", "Lavanda", "Gerânio", "Folha de cedro", "Laurissilva Forest"],
+      "base": ["Cedro", "Âmbar", "Sândalo"]
+    },
+    "accords": ["Amadeirado", "Verde", "Cítrico", "Aromático"],
+    "source": "https://www.boticario.com.br/produto/arbo-intenso-desodorante-colonia-100ml",
+    "image": "studio/media/perfumes/arbo-intenso.webp",
+    "imageSource": "https://cdn.gbmedia.com.br/images/w_800,f_webp,q_auto:eco/v1/imagens/product/B50651/a1d25fef-c967-4aeb-b31d-f63735c7a935-50651.jpg"
+  },
+  {
+    "id": "arbo-forest", "name": "Arbo Forest", "brand": "O Boticário", "concentration": "Desodorante Colônia", "family": "Fougère verde",
+    "pyramid": {
+      "top": ["Notas cítricas", "Notas verdes", "Lavanda", "Maçã"],
+      "heart": ["Cedro", "Notas ozônicas", "Violeta", "Ruibarbo"],
+      "base": ["Âmbar", "Almíscar", "Musgo de carvalho", "Ládano", "Patchouli", "Vetiver"]
+    },
+    "accords": ["Verde", "Amadeirado", "Aromático", "Terroso"],
+    "source": "https://www.boticario.com.br/produto/arbo-forest-desodorante-colonia-100ml",
+    "image": "studio/media/perfumes/arbo-forest.webp",
+    "imageSource": "https://cdn.gbmedia.com.br/images/w_800,f_webp,q_auto:eco/v1/imagens/product/B47851/84d4302c-b97b-431e-9d72-113da57575dd-47851.jpg"
+  },
+  {
+    "id": "arbo-liberte", "name": "Arbo Liberté", "brand": "O Boticário", "concentration": "Desodorante Colônia", "family": "Fougère fresco",
+    "pyramid": {
+      "top": ["Bergamota", "Lima", "Toranja"],
+      "heart": ["Lírio-do-vale", "Jasmim", "Lavandim", "Sálvia", "Manjericão", "Pimenta preta", "Notas verdes", "Cardamomo", "Headspace Queda d’Água"],
+      "base": ["Musgo", "Sândalo", "Almíscar"]
+    },
+    "accords": ["Cítrico", "Aquático", "Herbal", "Amadeirado"],
+    "source": "https://www.boticario.com.br/produto/arbo-liberte-o-boticario-desodorante-colonia-masculino-100ml/",
+    "image": "studio/media/perfumes/arbo-liberte.webp",
+    "imageSource": "https://cdn.gbmedia.com.br/images/w_800,f_webp,q_auto:eco/v1/imagens/product/B74440/ae7439f8-b6de-4f2e-b3b1-69185421974a-74440.jpg"
+  },
+  {
+    "id": "arbo-reserva", "name": "Arbo Reserva", "brand": "O Boticário", "concentration": "Desodorante Colônia", "family": "Fougère amadeirado",
+    "notes": ["Cedro", "Patchouli", "Vetiver", "Folhas úmidas de orvalho"],
+    "accords": ["Amadeirado", "Verde", "Terroso"],
+    "source": "https://www.boticario.com.br/arbo/reserva",
+    "sourceLabel": "Marca · destaques de composição",
+    "image": "studio/media/perfumes/arbo-reserva.webp",
+    "imageSource": "https://www.dite.com.br/index.php/bt75906-arbo-reserva-deo-colonia-100ml-boticario/p"
+  },
+  {
+    "id": "boticario-zaad-santal", "family": "Amadeirado",
+    "pyramid": { "top": ["Bergamota", "Gengibre", "Noz-moscada"], "heart": ["Acorde de whisky"], "base": ["Sândalo"] },
+    "accords": ["Amadeirado", "Especiado fresco", "Ambarado"],
+    "source": "https://www.boticario.com.br/dicas-de-beleza/conheca-o-novo-zaad-santal/",
+    "image": "studio/media/perfumes/zaad-santal.webp",
+    "imageSource": "https://cdn.gbmedia.com.br/images/w_800,f_webp,q_auto:eco/v1/imagens/products/B81382/81382-01.png"
+  },
+  {
+    "id": "o-boticario-quasar-classic-deo-colonia", "family": "Fougère fresco",
+    "pyramid": {
+      "top": ["Bergamota", "Mandarina", "Limão"],
+      "heart": ["Estragão", "Lavanda", "Sálvia", "Gálbano"],
+      "base": ["Musgo de carvalho", "Almíscar", "Sândalo", "Cedro", "Patchouli"]
+    },
+    "accords": ["Cítrico", "Aromático", "Verde", "Amadeirado"],
+    "source": "https://www.boticario.com.br/produto/quasar-classic-desodorante-colonia-100ml/"
+  },
+  {
+    "id": "egeo-melancia", "name": "Egeo Melancia", "brand": "O Boticário", "concentration": "Desodorante Colônia", "family": "Frutal amadeirado",
+    "pyramid": { "top": ["Melancia", "Pêssego", "Melão-cantalupo"], "heart": ["Rosa", "Flores brancas", "Manjericão"], "base": ["Praliné", "Cedro"] },
+    "accords": ["Frutado", "Aquático", "Gourmand", "Amadeirado"],
+    "source": "https://www.boticario.com.br/produto/egeo-melancia-desodorante-colonia-v2-90ml",
+    "image": "studio/media/perfumes/egeo-melancia.webp",
+    "imageSource": "https://cdn.gbmedia.com.br/images/w_1500,f_webp,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B97381/a73e421d-2219-434e-b50f-7f5a69e772d2-bot-86982-egeo-melancia-frontal-01.jpg"
+  },
+  {
+    "id": "egeo-banana", "name": "Egeo Banana", "brand": "O Boticário", "concentration": "Desodorante Colônia", "family": "Frutal amadeirado",
+    "pyramid": {
+      "top": ["Limão-siciliano", "Banana", "Pera portuguesa"],
+      "heart": ["Rosa", "Jasmim", "Mirtilo"],
+      "base": ["Folha de cedro", "Baunilha", "Almíscar", "Sândalo"]
+    },
+    "accords": ["Frutado", "Doce", "Floral", "Amadeirado"],
+    "source": "https://www.boticario.com.br/dicas-de-beleza/chegou-egeo-melancia-e-banana-saiba-qual-usar-em-cada-ocasiao/",
+    "image": "studio/media/perfumes/egeo-banana.webp",
+    "imageSource": "https://cdn.gbmedia.com.br/images/w_1500,f_webp,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B97384/cf0188f6-7c19-4369-8d8c-602b75d03688-bot-58919-egeo-banana-frontal-01.jpg"
+  },
+  {
+    "id": "malbec-vert", "name": "Malbec Vert", "brand": "O Boticário", "concentration": "Desodorante Colônia", "family": "Amadeirado fresco aromático",
+    "pyramid": {
+      "top": ["Pimenta rosa", "Cardamomo", "Pera", "Toranja", "Notas ozônicas"],
+      "heart": ["Noz-moscada", "Vetiver", "Acorde Ice Wine"],
+      "base": ["Musgo de carvalho", "Patchouli", "Âmbar"]
+    },
+    "accords": ["Amadeirado", "Aromático", "Especiado fresco", "Verde"],
+    "source": "https://www.boticario.com.br/produto/malbec-vert-desodorante-colonia-100ml/",
+    "image": "studio/media/perfumes/malbec-vert.webp",
+    "imageSource": "https://cdn.gbmedia.com.br/images/w_1500,f_webp,fl_progressive,q_auto:eco,w_800/v1/imagens/product/B48133/586fd2af-bc60-4b90-892a-73a4545eeb9e-b48133-malbec-vert.jpg"
+  },
+  {
+    "id": "tom-ford-tobacco-vanille", "family": "Âmbar especiado",
+    "notes": ["Folha de tabaco", "Baunilha", "Gengibre", "Especiarias", "Fava-tonka", "Cacau", "Acorde de frutas secas"],
+    "accords": ["Tabaco", "Doce", "Especiado quente", "Gourmand"],
+    "source": "https://www.tomfordbeauty.com/products/tobacco-vanille-eau-de-parfum",
+    "sourceLabel": "Marca · destaques de composição",
+    "image": "studio/media/perfumes/tobacco-vanille.webp", "imageSource": "Acervo Elixir"
+  },
+  {
+    "id": "tom-ford-oud-wood", "family": "Amadeirado",
+    "notes": ["Oud", "Cardamomo", "Pimenta rosa", "Patchouli", "Âmbar", "Fava-tonka"],
+    "accords": ["Amadeirado", "Âmbar", "Especiado quente", "Terroso"],
+    "source": "https://www.tomfordbeauty.com/products/oud-wood-eau-de-parfum",
+    "sourceLabel": "Marca · destaques de composição",
+    "image": "studio/media/perfumes/oud-wood.webp", "imageSource": "Acervo Elixir"
+  },
+  {
+    "id": "maison-margiela-jazz-club", "family": "Âmbar amadeirado",
+    "pyramid": {
+      "top": ["Pimenta rosa", "Limão Primofiore", "Néroli"],
+      "heart": ["Absoluto de rum", "Sálvia-esclareia", "Vetiver de Java"],
+      "base": ["Resina de estoraque", "Absoluto de folha de tabaco", "Baunilha CO₂"]
+    },
+    "accords": ["Tabaco", "Amadeirado", "Defumado", "Âmbar"],
+    "source": "https://www.maisonmargiela-fragrances.eu/en_GB/fragrances/discover/replica-memories/replica-jazz-club/3614273185868.html",
+    "image": "studio/media/perfumes/jazz-club.webp", "imageSource": "Acervo Elixir"
+  },
+  {
+    "id": "santal", "family": "Amadeirado",
+    "notes": ["Cardamomo", "Íris", "Violeta", "Sândalo australiano", "Cedro", "Notas especiadas", "Couro", "Almíscar"],
+    "accords": ["Amadeirado", "Couro", "Atalcado", "Especiado fresco"],
+    "source": "https://www.lelabofragrances.com/santal-33-147.html",
+    "sourceLabel": "Marca · destaques de composição",
+    "image": "studio/media/perfumes/santal-33.webp", "imageSource": "Acervo Elixir"
+  },
+  {
+    "id": "boticario-floratta-cerejeira-em-flor", "concentration": "Desodorante Colônia", "family": "Floriental frutal",
+    "pyramid": {
+      "top": ["Mandarina", "Frutas silvestres", "Damasco"],
+      "heart": ["Lírio-do-vale", "Madressilva", "Gardênia", "Jasmim", "Flor de laranjeira"],
+      "base": ["Sândalo", "Âmbar", "Praliné", "Almíscar", "Caramelo"]
+    },
+    "accords": ["Floral", "Frutado", "Gourmand", "Âmbar"],
+    "source": "https://www.boticario.com.br/produto/floratta-cerejeira-em-flor-desodorante-colonia-75ml-v2/"
+  },
+  {
+    "id": "boticario-floratta-simple-love", "concentration": "Desodorante Colônia", "family": "Chipre floral",
+    "pyramid": {
+      "top": ["Bergamota", "Toranja", "Mandarina", "Frutas vermelhas", "Pêssego"],
+      "heart": ["Lírio-do-vale", "Rosa", "Magnólia", "Tuberosa"],
+      "base": ["Almíscar", "Âmbar", "Amêndoa", "Patchouli", "Baunilha", "Resinoide de ládano"]
+    },
+    "accords": ["Floral", "Frutado", "Cítrico", "Âmbar"],
+    "source": "https://www.boticario.com.br/produto/floratta-simple-love-desodorante-colonia-75ml"
+  },
+  {
+    "id": "boticario-egeo-red", "concentration": "Desodorante Colônia", "family": "Floriental amadeirado",
+    "pyramid": {
+      "top": ["Mandarina", "Pera", "Pimenta rosa", "Acorde de rum"],
+      "heart": ["Jasmim sambac", "Marshmallow", "Orquídea chocolate"],
+      "base": ["Cedro", "Sândalo", "Baunilha", "Praliné"]
+    },
+    "accords": ["Gourmand", "Amadeirado", "Frutado", "Especiado quente"],
+    "source": "https://www.boticario.com.br/dicas-de-beleza/descubra-qual-egeo-feminino-combina-com-voce/"
+  },
+  { "id": "clash", "image": "studio/media/perfumes/clash.webp", "imageSource": "Acervo Elixir" },
+  { "id": "malbec", "image": "studio/media/perfumes/malbec.webp", "imageSource": "Acervo Elixir" },
+  { "id": "exclusivo", "image": "studio/media/perfumes/essencial-exclusivo.webp", "imageSource": "Acervo Elixir" },
+  {
+    "id": "boticario-malbec-black-legend", "image": "studio/media/perfumes/malbec-black-legend.webp",
+    "imageSource": "https://www.boticario.com.br/produto/malbec-black-legend-desodorante-colonia-100ml/"
+  },
+  {
+    "id": "boticario-portinari", "image": "studio/media/perfumes/portinari.webp",
+    "imageSource": "https://www.boticario.com.br/dicas-de-beleza/conheca-a-historia-da-fragrancia-portinari/"
+  },
+  {
+    "id": "boticario-portinari-absoluto", "image": "studio/media/perfumes/portinari-absoluto.webp",
+    "imageSource": "https://www.boticario.com.br/produto/boticollection-portinari-absoluto-desodorante-colonia-100ml"
+  },
+  {
+    "id": "boticario-botica-214-fiji-paradise-feminino", "image": "studio/media/perfumes/fiji-paradise-feminino.webp",
+    "imageSource": "https://www.boticario.com.br/produto/botica-214-fiji-paradise-floral-especiado-eau-de-parfum-75ml/"
+  },
+  {
+    "id": "boticario-malbec-flame", "family": "Amadeirado chypre",
+    "pyramid": {
+      "top": ["Bergamota", "Maçã", "Noz-moscada", "Tomilho"],
+      "heart": ["Mix de pimentas", "Gardênia", "Flor de laranjeira", "Alecrim"],
+      "base": ["Acorde Profundo Uvas Nerello", "Guáiaco", "Avelã", "Patchouli", "Musgo", "Âmbar", "Resinas balsâmicas", "Cashmeran", "Couro", "Cedro", "Baunilha"]
+    },
+    "accords": ["Amadeirado", "Especiado quente", "Âmbar", "Frutado"],
+    "source": "https://www.boticario.com.br/produto/malbec-flame-desodorante-colonia-100ml-v2",
+    "image": "studio/media/perfumes/malbec-flame.webp",
+    "imageSource": "https://www.boticario.com.br/produto/malbec-flame-desodorante-colonia-100ml-v2"
+  },
+  {
+    "id": "boticario-quasar-brave", "image": "studio/media/perfumes/quasar-brave.webp",
+    "imageSource": "https://www.boticario.com.br/produto/quasar-brave-desodorante-colonia-100ml-v2/"
+  }
+]

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f5f0" />
+    <meta name="description" content="Descubra perfumes, explore notas e encontre sua assinatura olfativa no Elixir." />
+    <script>
+      try {
+        if (localStorage.getItem('elixir-home.theme') === '"dark"') {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      } catch {}
+    </script>
+    <title>Elixir — Perfumaria, com intenção</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

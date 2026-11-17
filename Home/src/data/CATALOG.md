@@ -1,0 +1,8 @@
+# Catálogo do Elixir
+
+`catalog.json` é gerado a partir dos dados do Elixir e das fichas de `catalog-curation.json`. O mesmo comando exporta para `note-library.json` as ilustrações, os grupos e os sinônimos da biblioteca original. Atualize os dados de origem e execute `node Home/scripts/prepare-catalog.mjs` na raiz do repositório.
+
+- As fichas herdadas preservam os identificadores, as referências e as notas conhecidas do catálogo. A parcela derivada do [Scento Perfume Database](https://www.scento.com/perfume-database) usa [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). As adaptações incluem seleção de campos, normalização dos registros e a organização de notas e descritores em um formato comum.
+- `pyramid` reúne as camadas registradas pela fonte. `notes` reúne essas camadas e os destaques de composição disponíveis. `accords` usa descritores editoriais do Elixir. Os nomes de acordes divulgados pelas marcas, como Cachoeira Salto Morato, são mantidos na camada indicada pela fonte.
+- `image` e `editorialImage` são caminhos para arquivos do próprio app. `imageSource` e `editorialImageSource` atribuem as imagens novas às páginas ou aos arquivos de origem. Os frascos do acervo Elixir foram recodificados em WebP para esta tela. `legacyImage` indica arquivos existentes na raiz do Elixir.
+- `findNote` procura nomes e IDs exatos após normalizar acentos, maiúsculas e pontuação. Em seguida tenta as equivalências visuais desta edição, os sinônimos da biblioteca e as traduções cadastradas no Elixir. A imagem resultante pode representar a nota ou uma referência próxima, como o ícone de tabaco para um absoluto de folha de tabaco. O nome presente na ficha do perfume é preservado.

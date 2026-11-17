@@ -1,0 +1,175 @@
+html[data-legacy] {
+  --bg: #f6f5f0;
+  --bg-elev: #fcfbf7;
+  --card: #efefe7;
+  --card-2: #e8e9df;
+  --plate: #eeeee6;
+  --ink: #262822;
+  --ink-2: #404739;
+  --muted: #65685a;
+  --on-ink: #f6f5f0;
+  --signal: #79663d;
+  --glass-bg: var(--bg);
+  --lg-fill: var(--bg-elev);
+  --lg-lens: var(--card-2);
+}
+
+html[data-legacy-look="dark"] {
+  color-scheme: dark;
+  --bg: #111310;
+  --bg-elev: #1b1e19;
+  --card: #20241e;
+  --card-2: #252a23;
+  --plate: #e5e4dc;
+  --ink: #eeefe7;
+  --ink-2: #d0d4c8;
+  --muted: #b4baad;
+  --on-ink: #1b2418;
+  --signal: #e9cd90;
+  --lg-lens: #343f30;
+}
+
+html[data-legacy] .fade-b,
+html[data-legacy] .tabbar::before {
+  display: none;
+}
+
+html[data-legacy] .app :is(.topbar, .tabbar, .tray).glass {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+html[data-legacy] .topbar.glass {
+  background: var(--bg);
+  box-shadow: inset 0 -1px var(--hair);
+}
+
+html[data-legacy] .tabbar.glass {
+  background: var(--bg-elev);
+  box-shadow: inset 0 0 0 1px var(--hair-strong), var(--sh-2);
+}
+
+html[data-legacy] .tabbar::after {
+  box-shadow: none;
+}
+
+html[data-legacy] .sheet-foot {
+  background: var(--bg-elev);
+}
+
+html[data-legacy] dialog.sheet::backdrop {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+html[data-studio] {
+  --topbar-h: 0px;
+  --tabbar-h: 0px;
+  --safe-b: 0px;
+  --studio-visible-top: 0px;
+  --studio-hidden-bottom: 0px;
+  --studio-visible-height: 100dvh;
+  --studio-layout-height: 740px;
+  scrollbar-gutter: auto;
+}
+
+html[data-studio] .app {
+  min-height: 0;
+}
+
+html[data-studio] #main {
+  display: flow-root;
+  padding-bottom: 24px;
+}
+
+html[data-studio].has-tray #main {
+  padding-bottom: 86px;
+}
+
+html[data-studio] :is(.tabbar, .topbar .tb-side:first-child, .topbar .title, .topbar .tb-nav, .topbar .tb-avatar) {
+  display: none;
+}
+
+html[data-studio] .app .topbar {
+  position: static;
+  height: auto;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 0 var(--gutter);
+  background: var(--bg);
+  box-shadow: none;
+  view-transition-name: none;
+}
+
+html[data-studio] .topbar .tb-end :is(button, .icon-btn) {
+  display: inline-grid;
+}
+
+html[data-studio] .topbar .icon-btn {
+  min-height: 44px;
+}
+
+html[data-studio] .back-row {
+  display: flex;
+  padding-top: var(--s2);
+}
+
+html[data-studio] :is(.v-guide.q, .v-guide.v-welcome) {
+  min-height: min(580px, var(--studio-layout-height));
+}
+
+html[data-studio] .v-welcome[data-step="1"] {
+  min-height: min(620px, var(--studio-layout-height));
+}
+
+html[data-studio] .v-welcome .w-hero .cover {
+  min-height: min(420px, calc(var(--studio-layout-height) * .58));
+}
+
+html[data-studio] .v-welcome[data-step="1"] .w-hero {
+  height: auto;
+}
+
+html[data-studio] .v-perfume .pf-plate {
+  max-height: min(560px, var(--studio-layout-height));
+}
+
+html[data-studio] .tray {
+  bottom: calc(var(--studio-hidden-bottom) + 10px);
+}
+
+html[data-studio] .toast {
+  bottom: calc(var(--studio-hidden-bottom) + 10px);
+}
+
+html[data-studio].has-tray .toast {
+  bottom: calc(var(--studio-hidden-bottom) + 74px);
+}
+
+html[data-studio] dialog.sheet {
+  position: fixed;
+  inset-block: var(--studio-visible-top) var(--studio-hidden-bottom);
+  max-height: max(44px, calc(var(--studio-visible-height) - 14px));
+}
+
+html[data-studio] dialog.sheet--full {
+  height: max(44px, calc(var(--studio-visible-height) - 14px));
+}
+
+html[data-studio] .story-view {
+  inset-block: var(--studio-visible-top) var(--studio-hidden-bottom);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+html[data-studio] .story-view .story-stage {
+  max-height: var(--studio-visible-height);
+}
+
+html[data-studio] .sh-comments {
+  min-height: min(420px, calc(var(--studio-visible-height) * .52));
+}
+
+html[data-studio] .set-row:has(#set-theme) {
+  display: none;
+}
